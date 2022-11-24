@@ -1,0 +1,96 @@
+body{
+	margin:0;
+}
+.header{ 
+	display:flex;
+	flex-wrap:nowrap;
+	flex-direction:row;
+	justify-content:space-between;
+	align-content:center;
+	align-items:center;
+}
+.header-logo{
+	width:180px;
+	margin-left:50px;
+	margin-top: 20px;
+}
+.navbar{
+	position:sticky;
+}
+.navbar ul li{
+	display:inline;
+	margin-top:50%;
+	margin:20px;
+}
+.navbar ul li a{
+font-family:'Open Sans';
+text-decoration:none;
+padding:10px;
+font-size:15px;
+margin-top:10px;
+position:sticky;
+}
+.navbar ul li a:hover {
+	border-bottom:3px solid #ff5757;
+} 
+.active{
+    border-bottom: 3px solid #ff5757;
+}
+.header button{
+	text-align:center;
+	margin-top:px;
+	font-size:15px;	
+    background-color:#ff5757;
+	color:white;
+	border-radius:8px;
+	padding:15px;
+	border:none;
+	margin-right:80px;
+}
+.contact{
+    text-align: center;
+    margin-top: 70px;
+}
+.contactdetails{
+    margin-left: 70px;
+}
+.gape{
+	display: flex;
+	margin-left: 270px;
+	outline: 0;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-start;
+	
+}
+input {
+	border-top: 0;
+	border-right: 0;
+	border-left:0;
+	outline: none;
+	padding: 7px;
+	align-content: space-around;
+	width: 400px;
+}
+.content-of-address-form{
+	display: flex;
+}
+.part3 input{
+	width:99%;
+}
+.get-in-touch{
+	content: '/e9a5';
+	padding: 15px;
+	background-color: #ff5757;
+	color: white;
+	margin-left: 575px;
+	margin-top: 50px;
+    border-radius: 50px;
+	border:white;
+
+}
+.faq{
+	text-align: center;
+	padding: 10%;
+}

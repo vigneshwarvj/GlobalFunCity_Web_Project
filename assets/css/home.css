@@ -1,0 +1,85 @@
+body{
+	margin:0;
+}
+.header{ 
+	display:flex;
+	flex-wrap:nowrap;
+	flex-direction:row;
+	justify-content:space-between;
+	align-content:center;
+	align-items:center;
+}
+.header-logo{
+	width:180px;
+	margin-left:50px;
+	margin-top: 20px;
+}
+.navbar{
+	position:sticky;
+}
+.navbar ul li{
+	display:inline;
+	margin-top:50%;
+	margin:20px;
+}
+.navbar ul li a{
+font-family:'Open Sans';
+text-decoration:none;
+padding:10px;
+border-bottom: :#ff5757;
+font-size:15px;
+margin-top:10px;
+position:sticky;
+}
+.navbar ul li a:hover {
+	border-bottom:2px solid #ff5757;
+} 
+.active{
+    border-bottom: 3px solid #ff5757;
+}
+
+.header button{
+	text-align:center;
+	margin-top:px;
+	font-size:15px;	
+    background-color:#ff5757;
+	color:white;
+	border-radius:8px;
+	padding:15px;
+	border:none;
+	margin-right:80px;
+}
+.about{
+    text-align: center;
+    margin-top: 70px;
+}
+.para{
+    text-align: center;
+}
+.facilities{
+	text-align: center;
+}
+.fac_photo {
+	height:120vh;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: space-around;
+}
+.lockerroom{
+	width:350px;
+	display: block;
+	position: relative;
+}
+.locker{
+	margin-top: -30px;
+}
+footer{
+	background-color:#ff5757;
+	padding:30px;
+	text-align:center;
+	justify-content:space-evenly;
+	left:0;
+	width:1424px;
+}
