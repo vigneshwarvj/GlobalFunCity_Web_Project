@@ -1,0 +1,162 @@
+body{
+	margin:0;
+	padding: 0;
+}
+.header{ 
+	display:flex;
+	flex-wrap:nowrap;
+	flex-direction:row;
+	justify-content:space-between;
+	align-content:center;
+	align-items:center;
+}
+.header-logo{
+	width:180px;
+	margin-left:50px;
+	margin-top: 20px;
+}
+.navbar{
+	position:sticky;
+}
+.navbar ul li{
+	display:inline;
+	margin-top:50%;
+	margin:20px;
+}
+.navbar ul li a{
+font-family:'Open Sans';
+text-decoration:none;
+padding:10px;
+font-size:15px;
+margin-top:10px;
+position:sticky;
+}
+.navbar ul li a:hover {
+	border-bottom:3px solid #ff5757;
+} 
+.active{
+    border-bottom: 3px solid #ff5757;
+}
+.header button{
+	text-align:center;
+	margin-top:px;
+	font-size:15px;	
+    background-color:#ff5757;
+	color:white;
+	border-radius:8px;
+	padding:15px;
+	border:none;
+	margin-right:80px;
+}
+.ticket{
+ text-align: center;
+ margin-top: 6%;
+ font-family: 'league spartan';
+font-size: 40px;
+}
+.back-video{
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	
+}
+
+/* .video{
+	width: 98.9vw;
+	height: 95vh;
+	left: 100
+} */
+.sq-box{
+    display: flex;
+	justify-content: space-around;
+	margin-top: 120px;
+	width: 98.9vw;
+	height: 80vh;
+
+}
+.upward-ticketprices{
+	position: absolute;
+	top: 0;
+}
+.adult-ticket{
+	border: 2px solid black;
+	height: 350px;
+	width:500px;
+	text-align: center;
+	background-color:white;
+	border: none;
+	border-radius: 10px;
+    padding-top: 40px;
+}
+.adult-ticket h3{
+    margin-top: 20px;
+	font-family: 'league spartan';
+	font-size: 25px;
+}
+.adult-ticket h2{
+    font-family: 'poppins';
+	font-size: 20px;
+	color:#179eaf;
+	margin-top: 40px;
+}
+.adult-ticket p{
+	margin-top: 30px;
+	font-family: 'poppins';
+	margin-top: 50px;
+}
+.price-colour{
+	color: #ff5757;
+}
+.background-video{
+	position: relative;
+}
+.adult-ticket button{
+	padding-right: 422px;
+	padding-top:20px;
+	padding-bottom: 20px;
+	margin-top: 90px;
+	background-color: aqua;
+	border:10px;
+	border-radius: none;
+    font-family:'league spartan';
+	font-size: 14px;
+
+}
+.get-updates{
+	height: 350px;
+	width: 1485px;
+	background-color: #eee;
+	margin-bottom: 50px;
+	margin-top: 70px;
+}
+.get-updates h1{
+	font-family: 'league spartan';
+	text-align: center;
+	padding: 60px;
+	font-size: 50px;
+    margin-bottom: auto;
+}
+.email-address{
+	margin-left: 480px;
+}
+.email-address button{
+	border-radius: 80pc;
+    background-color: #ffa51d;
+	border: #ffa51d;
+	font-family: 'league spartan';
+	padding: 20px 30px 20px 30px;
+	color: white;
+}
+.email-address input{
+	border-radius: 80pc;
+	width: 350px;
+	background-color: white;
+	border: #eee;
+	padding: 20px 30px 20px 30px;
+	border-color: white;
+}
+.privacypolicy{
+	margin-left: 480px;
+	padding: 20px;
+	font-family: 'poppins';
+}
