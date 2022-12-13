@@ -1,0 +1,83 @@
+body{
+	margin:0;
+}
+.header{ 
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.header-logo{
+	width:180px;
+	margin-left:50px;
+	margin-top: 20px;
+}
+
+.navbar ul li{
+	display:inline;
+	margin-top:50%;
+	margin:10px;
+}
+.navbar ul li a{
+font-family:'Open Sans';
+text-decoration:none;
+padding:10px;
+font-size:15px;
+margin-top:10px;
+}
+.navbar ul li a:hover {
+	border-bottom:3px solid #ff5757;
+} 
+.active{
+    border-bottom: 3px solid #ff5757;
+}
+.header button{
+	text-align:center;
+	font-size:15px;	
+    background-color:#ff5757;
+	border-radius:8px;
+	padding:15px;
+	border:none;
+	margin-right:80px;
+}
+.header button a{
+	text-decoration: none;
+    color:white;
+}
+.congrats-image{
+    display: flex;
+	justify-content: space-around;
+	padding-top: 100px;
+}
+.congrats h2{
+    font-family: 'league spartan';
+}
+.congrats p{
+	font-family: 'poppins';
+	color: #ff4612;
+}
+
+.delivery h3{
+	font-family: 'league spartan';
+
+} 
+.delivery p, .status p{
+	font-family: 'poppins';
+	
+} 
+
+.status h3{
+	font-family: 'League spartan';
+}
+.btn-cancel{
+	background-color: #ffa51d;
+	border: 3px solid #ffa51d;
+	padding: 10px;
+    color: azure;
+	border-radius: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-size: 18px;
+	font-family: 'League Spartan';
+    margin-top: 50px;
+}
+

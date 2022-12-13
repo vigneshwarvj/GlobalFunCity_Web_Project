@@ -1,12 +1,10 @@
 body{
 	margin:0;
+	padding: 0;
 }
 .header{ 
 	display:flex;
-	flex-wrap:nowrap;
-	flex-direction:row;
 	justify-content:space-between;
-	align-content:center;
 	align-items:center;
 }
 .header-logo{
@@ -20,27 +18,26 @@ body{
 .navbar ul li{
 	display:inline;
 	margin-top:50%;
-	margin:20px;
+	margin:10px;
 }
 .navbar ul li a{
 font-family:'Open Sans';
 text-decoration:none;
 padding:10px;
-border-bottom: :#ff5757;
+border-bottom:#ff5757;
 font-size:15px;
 margin-top:10px;
 position:sticky;
 }
 .navbar ul li a:hover {
-	border-bottom:2px solid #ff5757;
+	border-bottom:3px solid #ff5757;
 } 
-.active{
+.navbar ul li a.active{
     border-bottom: 3px solid #ff5757;
 }
 
 .header button{
 	text-align:center;
-	margin-top:px;
 	font-size:15px;	
     background-color:#ff5757;
 	color:white;
@@ -48,16 +45,39 @@ position:sticky;
 	padding:15px;
 	border:none;
 	margin-right:80px;
+	cursor: pointer;
+}
+.about-our-amusement-park{
+   background-color: #eee;
+   width: 98.7vw;
+   height: 70vh;
+   position: relative;
 }
 .about{
     text-align: center;
-    margin-top: 70px;
+	padding: 50px;
 }
-.para{
+.about p{
+	/* background-image: url(../../assets/images/Amusement\ park-bro.png); */
+	font-family: 'League Spartan';
+	font-size: 57px;
+	color:black;
+	margin: 0;
+	margin-top: 30px;
+}
+.para p{
     text-align: center;
+	font-family: 'Poppins';
+	font-size: 20px;
+	padding: 50px;
+	padding-top: 30px;
+	padding-bottom:100px; 
 }
 .facilities{
 	text-align: center;
+	font-family: 'League Spartan';
+	font-size: 57px;
+	padding-top: 30px;
 }
 .fac_photo {
 	height:120vh;
@@ -72,14 +92,171 @@ position:sticky;
 	display: block;
 	position: relative;
 }
+.fac_photo img:hover{
+	transition: all;
+	transform: scale(1.1);
+}
+.fac_photo h2{
+	font-family: 'Poppins';
+}
 .locker{
 	margin-top: -30px;
 }
+
+/*.best-celebration-for-you{
+	width:1485px;
+	height: 900px;
+	background-color:#f6f6f6; 
+}*/
+.best-celebration-for-you{
+	background-image: url(https://festy.ancorathemes.com/wp-content/uploads/2021/12/image-13.jpg);
+}
+.gaiety-holiday{
+	height: 500px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.gaiety-holiday h2{
+	color: #ff4612;
+	font-family:'league spartan';
+	font-size: 20px;
+	margin-left: 200px;
+	padding-top: 100px;
+}
+.gaiety-holiday p{
+	font-family: 'league spartan', sans-serif;
+	font-size:60px ;
+	font-weight: 50px;
+	margin-left: 200px;
+	width: 450px;
+	color: #f6f6f6;
+}
+.gaiety-holiday button{
+	margin-left: 200px;
+	padding: 20px 30px 20px 30px;
+	background-color: #ffa51d;
+	border: none;
+	border-radius: 40px;
+	color: #f6f6f6;
+	font-family: 'league spartan';
+	font-size: 15px;
+}
+
 footer{
-	background-color:#ff5757;
-	padding:30px;
+	background-color: #121a21;
+	padding:0px;
 	text-align:center;
 	justify-content:space-evenly;
 	left:0;
-	width:1424px;
+	width:100%;
 }
+.footer-logo{
+	width: 180px;
+	margin: 50px 0px 30px 0px;
+}
+.address-open-hours-contact{
+	display: flex;
+	justify-content:space-evenly;
+	text-align: left;
+	padding: 0px 0px 30px 0px;
+}
+.address h3, .open-hours h3, .contact-for-more h3{
+	font-family: 'league spartan';
+	color: #ffa51d;
+}
+.address p, .contact-for-more p, .open-hours p{
+	font-family: 'poppins';
+	color: white;
+	width: 300px;
+}
+.social-medias a{
+	display: inline-block;
+	width: 40px; 
+    margin:0 10px 10px 0;
+	text-align:center;
+	border-radius: 50px;
+	border: 1px solid white;
+	line-height: 40px;
+	color: #f6f6f6;
+	transition:0.5s;
+}
+.social-medias{
+	display: flex;
+	justify-content: center;
+	padding:10px 0px 0px 0px ;
+}
+
+.facebook a:hover{
+	background-color: #4267B2;
+}
+.twitter a:hover{
+	background-color:#1DA1F2;
+}
+.instagram a:hover{
+	background-color:#E1306C;
+}
+.pinterest a:hover{
+	background-color: #E60023;
+}
+.youtube a:hover{
+	background-color: #FF0000;
+}
+/* footer-for-about-us-etc */
+.navbar-footer ul{
+	display: flex;
+	justify-content: center;
+}
+.navbar-footer ul li a{
+	padding: 10px;
+	color: white;
+	text-decoration:none;
+}
+.navbar-footer ul li{
+	list-style: none;
+	font-family: 'league spartan';
+}
+.navbar-footer a:hover{
+	color:#ff5757;
+}
+/* footer-for-privacy-etc */
+.other-navbar-footer ul{
+    display: flex;
+	justify-content: center;
+}
+.other-navbar-footer ul li{
+	padding: 10px;
+	font-family: 'league spartan';
+	list-style: none;
+}
+.other-navbar-footer ul li a{
+	text-decoration: none;
+	color: #f6f6f6;
+}
+.other-navbar-footer a:hover{
+	color: #ff5757;
+}
+.copyright{
+	text-align: center;
+	font-family: 'poppins';
+	color: #eee;
+	padding: 20px;
+}
+
+a:hover:after{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

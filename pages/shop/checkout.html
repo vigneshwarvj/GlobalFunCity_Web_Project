@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title> Checkout - Shop - Global Fun City</title>
+<link rel="stylesheet" href="../../assets/store css/checkout.css" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/1024979679.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="header" >
+<img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px"/>
+
+   	 <nav class="navbar">
+	 <ul>
+	 <li> <a class="navigation__link" href="../../pages/homepage/index.html"> <b>HOME</b> </a> </li>
+     <li> <a class="navigation__link" href="../../pages/other pages/home.html"><b>ABOUT</b></a></li>
+	 <li> <a class="navigation__link" href="../../pages/other pages/events.html"> <b>EVENTS </b> </a> </li>
+	 <li> <a class="navigation__link" href="../../pages/other pages/ticketprices.html"> <b>TICKET  PRICES </b></a> </li>
+  	 <li> <a class="navigation__link" href="../../pages/shop/shop.html"> <b>SHOP</b></a> </li>
+	 <li> <a class="navigation__link" href="../../pages/other pages/attractions.html"> <b>ATTRACTIONS </b></a> </li>
+	 <li> <a class="navigation__link" href="../../pages/other pages/contact.html"> <b>CONTACT </b> </a> </li>
+     <li> <a class="active" href="../shop/cart.html"> <i class="fa-solid fa-bag-shopping"></i> <b> </b> </a> </li>
+	 
+	 </ul>
+
+	 </nav>
+	 <div>
+	 	 <button> <b> <a href="../../pages/other pages/booknow.html"> BOOK NOW </b> </button> </a>
+</div>
+</div>
+
+<hr>
+<div class="checkout">
+        <h1>Checkout</h1>
+</div>
+
+<!--div for billing details-->
+<div class="billing-details-orders-payments">
+<div class="billing-details-of-users">
+<div class="billing">
+    <h1>Complete Your Order</h1>
+</div>
+
+<div class="first-last-name">
+<div class="first-name">
+        <p>First name <g>*</g></p>
+        <input type="text" id="username" name="firstname"></div>
+        &nbsp; &nbsp;
+<div class="last-name">        
+        <p>Last name <g>*</g></p>
+        <input type="text" id="password" name="lastname">
+</div>
+</div>
+
+<div class="content-of-others">
+    <p>Country/Region <g>*</g></p>
+        <!-- <input type="text" id="country/region" name="country/region"> -->
+        <select>
+            <option value="india">India</option>
+            <option value="australia">Australia</option>
+            <option value="switzerland">Switzerland</option>
+            <option value="united-states-of-america">United States of America</option>
+            <option value="russia">Russia</option>
+            <option value="germany">Germany</option>
+            <option value="belgium">Belgium</option>
+            <option value="srilanka">Srilanka</option>
+            <option value="japan">Japan</option>
+            <option value="china">China</option>
+            <option value="norway">Norway</option>
+            <option value="poland">Poland</option>
+            <option value="pakisthan">Pakisthan</option>
+            <option value="ukrain">Ukrain</option>
+            <option value="netherland">Netherland</option>
+            <option value="africa">Africa</option>
+            <option value="britain">Britain</option>
+            <option value="england">England</option>
+            <option value="georgia">Gerogia</option>
+            <option value="france">France</option>
+        </select>
+
+        <p>Door.No <g>*</g></p>
+        <input type="text" id="door-no" name="door-no">
+
+        <p>Street address <g>*</g></p>
+        <input type="text" id="door-no" name="door-no">
+
+        <p>Town/City <g>*</g></p>
+        <input type="text" id="town-city" name="town-city">
+
+        <p>State <g>*</g></p>
+        <input type="text" id="state" name="state">
+
+        <p>ZIP Code <g>*</g></p>
+        <input type="text" id="code" name="code">
+
+        <p>Phone <g>*</g></p>
+        <input type="tel" id="phone" name="phone">
+
+        <p>Email address <g>*</g></p>
+        <input type="email" id="email" name="email">
+
+        <p>Order notes (optional)</p>
+        <input type="text" id="order-notes" name="order-notes">
+
+</div>
+</div>
+
+
+<!--To link the orders & payment-->
+<div class="orders-payments">
+<div class="your-order">
+    <h1>Your Orders</h1>
+</div>
+
+<table class="orders">
+    <tr>
+        <th>White T-shirt With Logo x 1</th>
+        <th>$199.00</th>
+    </tr>
+
+    <tr>
+        <th>Black T-Shirt with Events x 1</th>
+        <th>$299.00</th>
+    </tr>
+
+    <tr>
+        <th>Total</th>
+        <th>$498.00</th>
+    </tr>
+</table>
+
+<div class="payto-shirts">
+    <h1>Payment</h1>
+</div>
+
+<div class="tickets">
+    <ul>
+        <li><input type="radio" name="payment-method">
+            Cash on delivery<p>Pay with cash on delivery</p> </li>
+        <li><input type="radio" name="payment-method">
+        Paytm</li>
+        <li><input type="radio" name="payment-method"> Google pay </li>
+    </ul>
+    <a href="../../pages/shop/proceedcheckout.html"><button class="btn-proceed">Proceed</button></a>
+    <a href="../../pages/shop/shop.html"> <button class="btn-cancel">Cancel Order</button></a>
+</div>
+</div>
+</div>
+
+
+
+
+
+    
+
+</body>
+</html>    

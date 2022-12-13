@@ -1,0 +1,126 @@
+body{
+	margin:0;
+}
+.header{ 
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.header-logo{
+	width:180px;
+	margin-left:50px;
+	margin-top: 20px;
+}
+.navbar ul li{
+	display:inline;
+	margin-top:50%;
+	margin:10px;
+}
+.navbar ul li a{
+font-family:'Open Sans';
+text-decoration:none;
+padding:10px;
+font-size:15px;
+margin-top:10px;
+}
+.navbar ul li a:hover {
+	border-bottom:3px solid #ff5757;
+} 
+.active{
+    border-bottom: 3px solid #ff5757;
+}
+.header button{
+	font-size:15px;	
+    background-color:#ff5757;
+	border-radius:8px;
+	padding:15px;
+	border:none;
+	margin-right:80px;
+}
+.header button a{
+	text-decoration: none;
+    color:white;
+}
+.checkout{
+    text-align: center;
+    font-family: 'league spartan';
+	padding: 40px;
+	font-size: 26px;
+}
+.billing{
+    font-family: 'league spartan';
+    font-size:20px ;
+}
+.first-last-name{
+    display: flex;
+    flex-direction: row;
+
+}
+.first-last-name input{
+    width: 250px;
+    border-top: 0;
+	border-right: 0;
+	border-left:0;
+	outline: none;
+}
+.billing-details-of-users{
+    font-family: 'poppins';
+}
+.your-order{
+    font-family: 'league spartan';
+}
+.orders{
+    height: 300px;
+    width: 400px;
+    background-color: #eee;
+}
+.orders th{
+    
+    border-bottom: 3px solid white;
+}
+.tickets{
+    height:200px ;
+    width: 400px;
+    background-color: #eee;
+}
+.tickets ul li{
+    list-style: none;
+    padding: 15px;
+}
+.billing-details-orders-payments{
+    display: flex;
+    justify-content: space-around;
+}
+.content-of-others input{
+    border-top: 0;
+	border-right: 0;
+	border-left:0;
+	outline: none;
+	width: 520px;
+}
+.billing-details-of-users g{
+	color: #ff4612;
+}
+.content-of-others select{
+    width: 350px;
+    border-top: 0;
+	border-right: 0;
+	border-left:0;
+	outline: none;
+}
+.payto-shirts{
+	font-family: 'league spartan';
+	padding-top:  70px ;
+}
+.btn-proceed, .btn-cancel{
+	background-color: #ffa51d;
+	border: 3px solid #ffa51d;
+	padding: 10px;
+    color: azure;
+	border-radius: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-size: 18px;
+	font-family: 'League Spartan';
+    margin-top: 50px;
+}

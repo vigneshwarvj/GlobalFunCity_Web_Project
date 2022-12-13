@@ -1,0 +1,102 @@
+body{
+	margin:0;
+}
+.header{ 
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.header-logo{
+	width:180px;
+	margin-left:50px;
+	margin-top: 20px;
+}
+.navbar ul li{
+	display:inline;
+	margin-top:50%;
+	margin:20px;
+}
+.navbar ul li a{
+font-family:'Open Sans';
+text-decoration:none;
+padding:10px;
+border-bottom: #ff5757;
+font-size: 15px;
+margin-top: 10px;
+}
+.navbar ul li a:hover {
+	border-bottom:2px solid #ff5757;
+} 
+.header button{
+	text-align:center;
+	font-size:15px;	
+    background-color:#ff5757;
+	color:white;
+	border-radius:8px;
+	border:none;
+	margin-right:80px;
+	padding: 15px;
+}
+.header button a{
+	text-decoration: none;
+	color: #f6f6f6;
+}
+.background-color{
+	width: 1485px;
+	height:1500px;
+	background-color: #eee;
+}
+.safety-of-visitors{
+	text-align: center;
+	font-family: 'league spartan';
+	font-size: 20px;
+	padding: 40px;
+	color: #ff5757;
+}
+.instructions {
+	font-family: 'Poppins';
+    line-height: 32px;
+	width: 83%;
+}
+.instructions p{
+	display: inline-block;
+	text-align: justify;
+	padding-left: 100px;
+}
+.instructions-for-peoples ul {
+	display: inline-block;
+	text-align: left;
+	font-family: 'Poppins';
+    width: 70%;
+	line-height: 32px;
+}
+.instructions-for-peoples {
+	text-align: center;
+	
+}
+.general-tips h2{
+	font-family: 'league spartan';
+	font-size: 29px;
+}
+.general-tips ul{
+	display: inline-block;
+	text-align: left;
+	font-family: 'Poppins';
+    width: 70%;
+	line-height: 32px
+
+}
+.general-tips{
+	text-align: center;
+}
+.water-quality h2{
+	font-family: 'league spartan';
+	font-size: 29px;
+	text-align: center;
+}
+.water-quality p{
+	font-family: 'Poppins';
+	line-height: 32px;
+	width: 83%;
+	padding-left: 100px;
+}
