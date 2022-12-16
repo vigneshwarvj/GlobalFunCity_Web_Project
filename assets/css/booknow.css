@@ -12,7 +12,6 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
@@ -26,7 +25,6 @@ margin-top:10px;
 	border-bottom:3px solid #ff5757;
 } 
 .header button{
-	text-align:center;
 	font-size:15px;	
     background-color:#ff5757;
 	color:white;
@@ -40,27 +38,41 @@ margin-top:10px;
 	color: #f6f6f6;
 }
 .book-now{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	text-align: center;
 	font-size: 25px;
 	padding: 30px 0px 30px 0px;
 }
+.background-0{
+	width: 1485px;
+	height: 800px;
+	background-color: #eee;
+}
 .background-color{
 	width: 1200px;
-    height: 580px;
-	background-color: #eee;
+    height: 610px;
+	background-color: wheat;
 	margin-left: 165px;
 }
-.search-availablity-information-msg{
+.btn-sub, .btn-add{
+	padding: 14px 16px 14px 16px;
+	background-color: white;
+	margin: auto;
+	border:white;
+	color: #ffa51d;
 	
-	display: flex;
+}
+input{
 
+}
+.search-availablity-information-msg{
+	display: flex;
 	justify-content: space-around;
 	/* margin-left: 165px; */
 	align-items: center;
 }
 .search{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ff4612;
 	padding: 8px 0px 0px 30px;
 
@@ -70,29 +82,31 @@ margin-top:10px;
 	/* padding-left: 20px; */
 }
 .search-information h3{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 }
 .search-information input{
 	padding: 10px;
 }
 .room{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 }
 .room-adult-children p{ 
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 }
  .room-adult-children{ 
 	display: flex;
 }
 .room-adult-children input{
-	padding: 5px 5px 5px 5px;
+	padding: 14px 10px 14px 10px;
+    border: none;
+	margin: auto;
 }
 .another-room{
 	padding-top: 20px;
 }
 .another-room button{
 	padding: 15px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	background-color:white;
 	color: #ffa51d;
 	border: none;
@@ -103,7 +117,7 @@ margin-top:10px;
 }
 .check-availablity button{
     padding: 17px 25px 17px 25px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	background-color:#ffa51d;
 	color: white;
 	border: none;
@@ -122,7 +136,7 @@ margin-top:10px;
 .information p{
 	width: 200px;
 	color: #ff5757;
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 
 }
 .facilities{
@@ -134,7 +148,7 @@ margin-top:10px;
 }
 .facilities ul li{
 	list-style: none;
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 	color: white;
 }
 .facilities ul{

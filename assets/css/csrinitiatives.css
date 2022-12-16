@@ -13,16 +13,14 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
 font-size:15px;
 margin-top:10px;
-position:sticky;
 }
 .navbar ul li a:hover {
 	border-bottom:3px solid #ff5757;
@@ -50,24 +48,24 @@ position:sticky;
 }
 
 .csr{
-    font-family: 'league spartan';
+    font-family: 'league spartan', sans-serif;
 	text-align: center;
 	font-size: 26px;
 	color: black;
 }
 .about-c{
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     line-height: 32px;
 	width: 83%;
     padding-left: 100px;
 }
 .para p{
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
     line-height: 30px;
 	width: 800px;
 }
 .para g{
-	font-family: 'open sans';
+	font-family: 'open sans', sans-serif;
 	font-size: 18px;
 }
 .photo-of-director img{
@@ -82,7 +80,7 @@ position:sticky;
    padding: 15px;
    background-color:#ffa51d;
    color: white;
-   font-family: 'poppins';
+   font-family: 'poppins', sans-serif;
    border: none;
    border-radius: 5px;
    cursor: pointer;

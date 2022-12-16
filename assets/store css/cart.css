@@ -13,11 +13,10 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
 font-size:15px;
@@ -89,8 +88,8 @@ margin-top:10px;
 	padding-left: 40px;
 	padding-right: 40px;
 	font-size: 18px;
-	font-family: 'League Spartan';
-    margin-left: 1000px;
+	font-family: 'League Spartan', sans-serif;
+    margin: 80px 0px 0px 1100px;
     
 }
 .btn-shopping a{
@@ -98,7 +97,7 @@ margin-top:10px;
     color: white;
 }
 .cart-details{
-    font-family: 'league spartan';
+    font-family: 'league spartan', sans-serif;
 }
 .card-totals{
     height: 100px;
@@ -111,7 +110,7 @@ margin-top:10px;
     display: table-row;
 }
 .card-totals th{
-    font-family: 'poppins';
+    font-family: 'poppins', sans-serif;
     padding: 50px 60px 50px 60px;
     border-bottom: 2px solid white;
 }
@@ -123,7 +122,7 @@ margin-top:10px;
 	padding-left: 70px;
 	padding-right: 70px;
 	font-size: 18px;
-	font-family: 'League Spartan';
+	font-family: 'League Spartan', sans-serif;
     margin-top: 30px;
 }
 .btn-checkout a{

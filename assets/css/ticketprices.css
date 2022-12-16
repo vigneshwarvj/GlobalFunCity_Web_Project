@@ -14,11 +14,10 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans',sans-serif;
 text-decoration:none;
 padding:10px;
 font-size:15px;
@@ -31,7 +30,6 @@ margin-top:10px;
     border-bottom: 3px solid #ff5757;
 }
 .header button{
-	text-align:center;
 	font-size:15px;	
     background-color:#ff5757;
 	color:white;
@@ -126,6 +124,9 @@ font-size: 40px;
 	padding: 60px;
 	font-size: 50px;
     margin-bottom: auto;
+}
+.btn-book-now{
+	
 }
 .email-address{
 	margin-left: 480px;

@@ -43,10 +43,13 @@ margin-top:10px;
 	font-size: 25px;
 	padding: 30px 0px 30px 0px;
 }
+.background-0{
+	background-color: #eee;
+}
 .background-color{
 	width: 1200px;
     height: 1660px;
-	background-color: #eee;
+	background-color: wheat;
 	margin-left: 165px;
 	align-items: center;
 }

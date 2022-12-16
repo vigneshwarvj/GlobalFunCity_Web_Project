@@ -12,11 +12,10 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
 font-size:15px;
@@ -39,20 +38,23 @@ margin-top:10px;
 	color: #f6f6f6;
 }
 .book-now{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	text-align: center;
 	font-size: 25px;
 	padding: 30px 0px 30px 0px;
 }
+.background-0{
+	background-color: #eee;
+}
 .background-color{
 	width: 1200px;
     height: 700px;
-	background-color: #eee;
+	background-color: wheat;
 	margin-left: 165px;
 	align-items: center;
 }
 .search{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ff4612;
 	padding: 8px 0px 0px 0px;
 }
@@ -65,7 +67,7 @@ margin-top:10px;
 	border-bottom-right-radius: 4px;
 }
 .btn-modify button{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ff4612;
 	padding: 15px 18px 15px 18px;
 	font-size: 15px;
@@ -81,7 +83,7 @@ margin-top:10px;
 	justify-content: space-between;
 }
 .guest-info{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ff4612;
 	padding: 8px 0px 0px 30px;
 }
@@ -118,7 +120,7 @@ margin-top:10px;
 	border: white;
 }
 .btn-book-now p{
-	font-family: 'open sans';
+	font-family: 'open sans', sans-serif;
 	color: #ff4612;
 }
 .btn-book-now button{
@@ -126,7 +128,7 @@ margin-top:10px;
 	background-color: #ffa51d;
 	font-size: 15px;
 	color: white;
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	border: none;
 	cursor: pointer;
 
@@ -168,6 +170,6 @@ margin-top:10px;
 
 table tr td{
 	padding: 0px 100px 10px 0px; 
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 
 }

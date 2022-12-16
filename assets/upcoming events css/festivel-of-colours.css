@@ -13,11 +13,10 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans',sans-serif;
 text-decoration:none;
 padding:10px;
 border-bottom: #ff5757;
@@ -32,7 +31,6 @@ margin-top: 10px;
     border-bottom: 3px solid #ff5757;
 }
 .header button{
-	text-align:center;
 	font-size:15px;	
     background-color:#ff5757;
 	color:white;
@@ -50,14 +48,14 @@ margin-top: 10px;
 }
 .festivel{
     text-align: center;
-    font-family: 'league spartan';
+    font-family: 'league spartan', sans-serif;
     font-size: 30px;
     padding: 50px 0px 0px 0px;
     
 }
 .timing{
     text-align: center;
-    font-family: 'poppins';
+    font-family: 'poppins', sans-serif;
     color: #ffa51d;
 }
 .img-festivel img{
@@ -65,7 +63,7 @@ margin-top: 10px;
     
 }
 .content{
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     line-height: 32px;
 	width: 83%;
     padding: 40px 0px 0px 130px;
@@ -80,7 +78,7 @@ iframe{
 .count{
     text-align: center;
     color: #ff4617;
-    font-family: 'league spartan';
+    font-family: 'league spartan', sans-serif;
     padding: 60px 0px 0px 0px;
     font-size: 25px;
 }
@@ -90,7 +88,7 @@ iframe{
 }
 .numbers h3{
     padding: 0px 30px 0px 0px;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     color: black;
     font-size: 40px;
 }
@@ -101,7 +99,7 @@ iframe{
 }
 .days p{
     padding: 0px 20px 0px 20px;
-    font-family: 'poppins';
+    font-family: 'poppins', sans-serif;
 
 }
 .background-color-2{
@@ -116,15 +114,15 @@ iframe{
     justify-content: space-around;
 }
 .details-organizer-venue h2{
-    font-family: 'league spartan';
+    font-family: 'league spartan', sans-serif;
     color: #ff4617;
     font-size: 29px;
 }
 .details-organizer-venue h3{
-    font-family: 'poppins';
+    font-family: 'poppins', sans-serif;
 }
 .details-organizer-venue p{
-    font-family: 'open sans';
+    font-family: 'open sans', sans-serif;
     color: #838285;
 }
 
@@ -142,11 +140,7 @@ iframe{
 
 footer{
 	background-color: #121a21;
-	padding:0px;
 	text-align:center;
-	justify-content:space-evenly;
-	left:0;
-	width:100%;
 }
 .footer-logo{
 	width: 180px;
@@ -159,11 +153,11 @@ footer{
 	padding: 0px 0px 30px 0px;
 }
 .address h3, .open-hours h3, .contact-for-more h3{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ffa51d;
 }
 .address p, .contact-for-more p, .open-hours p{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: white;
 	width: 300px;
 }
@@ -211,7 +205,7 @@ footer{
 }
 .navbar-footer ul li{
 	list-style: none;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 }
 .navbar-footer a:hover{
 	color:#ff5757;
@@ -223,7 +217,7 @@ footer{
 }
 .other-navbar-footer ul li{
 	padding: 10px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	list-style: none;
 }
 .other-navbar-footer ul li a{
@@ -235,7 +229,7 @@ footer{
 }
 .copyright{
 	text-align: center;
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: #eee;
 	padding: 20px;
 }

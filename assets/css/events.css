@@ -13,11 +13,10 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
 border-bottom: #ff5757;
@@ -32,7 +31,6 @@ margin-top: 10px;
     border-bottom: 3px solid #ff5757;
 }
 .header button{
-	text-align:center;
 	font-size:15px;	
     background-color:#ff5757;
 	color:white;
@@ -45,7 +43,7 @@ margin-top: 10px;
 .events{
     text-align: center;
     margin-top: 70px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	font-size: 20px;
 }
 .rollercoaster{
@@ -67,7 +65,7 @@ margin-top: 10px;
 .upcoming{
 	text-align: center;
 	margin: 50px 0px 50px 0px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	font-size: 29px;
 	top:80px;
 	position: relative;
@@ -81,7 +79,7 @@ margin-top: 10px;
     transition: 1s;
 }
 .festivel h2{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: #ff4612;
 	
 }
@@ -100,8 +98,14 @@ margin-top: 10px;
 	background-color: #eee;
 
 }
-
-
+.videos{
+	display: flex;
+	justify-content: space-evenly;
+	padding: 40px;
+}
+.circus h2{
+	font-family: 'Poppins', sans-serif;
+}
 .full-subscribe-products{
 	display: flex;
 	justify-content: space-around;
@@ -112,7 +116,7 @@ margin-top: 10px;
 }
 
 .subscribe h1{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	font-size: 48px;
 	width: 400px;
 }
@@ -134,7 +138,7 @@ margin-top: 10px;
 	border-radius: 80pc;
     background-color: #ffa51d;
 	border: #ffa51d;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	padding: 20px 30px 20px 30px;
 	color: white;
 	cursor: pointer;
@@ -157,11 +161,7 @@ margin-top: 10px;
 
 footer{
 	background-color: #121a21;
-	padding:0px;
 	text-align:center;
-	justify-content:space-evenly;
-	left:0;
-	width:100%;
 }
 .footer-logo{
 	width: 180px;
@@ -174,11 +174,11 @@ footer{
 	padding: 0px 0px 30px 0px;
 }
 .address h3, .open-hours h3, .contact-for-more h3{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ffa51d;
 }
 .address p, .contact-for-more p, .open-hours p{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: white;
 	width: 300px;
 }
@@ -226,7 +226,7 @@ footer{
 }
 .navbar-footer ul li{
 	list-style: none;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 }
 .navbar-footer a:hover{
 	color:#ff5757;
@@ -238,7 +238,7 @@ footer{
 }
 .other-navbar-footer ul li{
 	padding: 10px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	list-style: none;
 }
 .other-navbar-footer ul li a{
@@ -250,7 +250,7 @@ footer{
 }
 .copyright{
 	text-align: center;
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: #eee;
 	padding: 20px;
 }

@@ -4,7 +4,6 @@ body{
 .header{ 
 	display:flex;
 	justify-content:space-between;
-	align-content:center;
 	align-items:center;
 }
 .header-logo{
@@ -14,20 +13,23 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
-font-size:15px;
-margin-top:10px;
-position:sticky;
 }
 .navbar ul li a:hover {
 	border-bottom:3px solid #ff5757;
 } 
+.navbar ul li a:after{
+	width: 0;
+	transition: 0.3s;
+}
+.navbar ul li a:hover:after{
+	width: 100%;
+}
 .active{
     border-bottom: 3px solid #ff5757;
 }
@@ -51,7 +53,6 @@ position:sticky;
 	position: relative;
 	z-index: 2;
 	bottom: 100px;
-
 }
 .bg2{
 	position:relative;
@@ -71,7 +72,7 @@ position:sticky;
 }
 .box h2{
 	margin-left: 630px;
-	color: #f6f6f6;
+	color: white;
 }
 .box h1{
     margin-left: 540px;
@@ -87,7 +88,7 @@ position:sticky;
 	padding:50px 0px 50px 0px;
 }
 .messages .step h3 {
-    font-family: 'League Spartan';
+    font-family: 'League Spartan', sans-serif;
 }
 .step h3{
 margin-top:230px;
@@ -105,7 +106,7 @@ text-align: center;
 }
 .weare p{
 	text-align:center;
-	font-family:'Poppins';
+	font-family:'Poppins', sans-serif;
 	font-size:1.00em;
 	padding-top:20px;
 	
@@ -126,7 +127,7 @@ justify-content:space-around;
 }
 .updown div p{
 	margin-left:150px;
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 	
 
 } 
@@ -152,7 +153,7 @@ height:auto;
 }
 .goodday{
 	padding: 60px;
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 	font-size:15px ;
 	position: relative;
 	right: 120px;
@@ -167,7 +168,7 @@ height:auto;
 .parktour{
 	width:1485px;
 	height: 1000px;
-	background-color:#f6f6f6; 
+	background-color:white; 
 	text-align: center;
 	
 }
@@ -178,15 +179,15 @@ height:auto;
 }
 .gaiety-excursion h2{
     color: #ff4612;
-	font-family:'league spartan';
+	font-family:'league spartan', sans-serif;
 	font-size: 20px;
 }
 .gaiety-excursion h1{
-    font-family: 'league spartan';
+    font-family: 'league spartan', sans-serif;
 	font-size:50px ;
 }
 .gaiety-excursion p{
-    font-family: 'poppins';
+    font-family: 'poppins', sans-serif;
 	padding-bottom: 40px;
 }
 .bubble{
@@ -202,7 +203,7 @@ height:auto;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	font-family: 'League Spartan';
+	font-family: 'League Spartan', sans-serif;
 	position: relative;
     
 }
@@ -223,7 +224,7 @@ height:auto;
 	
 	font-size: 18px;
 	cursor: pointer;
-	font-family: 'League Spartan';
+	font-family: 'League Spartan', sans-serif;
 }
 .tickets a{
 	text-decoration: none;
@@ -234,7 +235,7 @@ height:auto;
 	padding: 40px;
 }
 .customer h2{
-	font-family:'League Spartan';
+	font-family:'League Spartan', sans-serif;
 	font-size: 50px;
 }
 footer{
@@ -256,11 +257,11 @@ footer{
 	padding: 0px 0px 30px 0px;
 }
 .address h3, .open-hours h3, .contact-for-more h3{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ffa51d;
 }
 .address p, .contact-for-more p, .open-hours p{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: white;
 	width: 300px;
 }
@@ -288,7 +289,7 @@ footer{
 	background-color:#1DA1F2;
 }
 .instagram a:hover{
-	background-color:#E1306C;
+	background-image: linear-gradient(315deg, pink, purple);
 }
 .pinterest a:hover{
 	background-color: #E60023;
@@ -308,7 +309,7 @@ footer{
 }
 .navbar-footer ul li{
 	list-style: none;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 }
 .navbar-footer a:hover{
 	color:#ff5757;
@@ -320,42 +321,19 @@ footer{
 }
 .other-navbar-footer ul li{
 	padding: 10px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	list-style: none;
 }
 .other-navbar-footer ul li a{
 	text-decoration: none;
-	color: #f6f6f6;
+	color: white;
 }
 .other-navbar-footer a:hover{
 	color: #ff5757;
 }
 .copyright{
 	text-align: center;
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: #eee;
 	padding: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-.navbar-footer ul li:after{
-	content: ;
-	position: absolute;
-	background-color: #f6f6f6;
-	height: 3px;
-	width: 110;
-	left: 0;
-	bottom: -10px;
-	transition: 0.3s;
-}
-a:hover:after{
-	width: 100%;
 }
