@@ -13,11 +13,10 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
 font-size:15px;
@@ -43,12 +42,12 @@ margin-top:10px;
 }
 .checkout{
     text-align: center;
-    font-family: 'league spartan';
+    font-family: 'league spartan', sans-serif;
 	padding: 40px;
 	font-size: 26px;
 }
 .billing{
-    font-family: 'league spartan';
+    font-family: 'league spartan', sans-serif;
     font-size:20px ;
 }
 .first-last-name{
@@ -64,10 +63,11 @@ margin-top:10px;
 	outline: none;
 }
 .billing-details-of-users{
-    font-family: 'poppins';
+    font-family: 'poppins', sans-serif;
+	padding: 0px 0px 50px 0px;
 }
 .your-order{
-    font-family: 'league spartan';
+    font-family: 'league spartan', sans-serif;
 }
 .orders{
     height: 300px;
@@ -75,7 +75,7 @@ margin-top:10px;
     background-color: #eee;
 }
 .orders th{
-    
+    font-family: 'open sans', sans-serif;
     border-bottom: 3px solid white;
 }
 .tickets{
@@ -108,8 +108,11 @@ margin-top:10px;
 	border-left:0;
 	outline: none;
 }
+.tickets ul li{
+    font-family: 'open sans', sans-serif;
+}
 .payto-shirts{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	padding-top:  70px ;
 }
 .btn-proceed, .btn-cancel{
@@ -121,6 +124,30 @@ margin-top:10px;
 	padding-left: 40px;
 	padding-right: 40px;
 	font-size: 18px;
-	font-family: 'League Spartan';
+	font-family: 'League Spartan', sans-serif;
     margin-top: 50px;
+}
+
+
+.background-footer{
+	background-color: #121a21;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.navbar-footer-logo{
+	padding: 25px 0px 0px 0px ;
+}
+.address{
+	font-family: 'open sans', sans-serif;
+	color: white;
+	padding: 20px 0px 0px 0px ;
+}
+.other-policies a{
+	font-family: 'open sans', sans-serif;
+	text-decoration: none;
+	color: white;
+}
+.other-policies a:hover{
+	color: #ff5757;
 }

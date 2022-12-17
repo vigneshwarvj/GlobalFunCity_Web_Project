@@ -45,6 +45,8 @@ margin-top:10px;
 }
 .background-0{
 	background-color: #eee;
+	width: 1485px;
+	height: 950px;
 }
 .background-color{
 	width: 1200px;
@@ -71,6 +73,7 @@ margin-top:10px;
 	color: #ff4612;
 	padding: 15px 18px 15px 18px;
 	font-size: 15px;
+	cursor: pointer;
 }
 .btn-modify button a{
 	text-decoration: none;
@@ -116,7 +119,7 @@ margin-top:10px;
 	padding: 0px 0px 0px 50px;
 }
 .over-1 input{
-	padding: 15px 100px 15px 0px;
+	padding: 15px 100px 15px 8px;
 	border: white;
 }
 .btn-book-now p{
@@ -172,4 +175,27 @@ table tr td{
 	padding: 0px 100px 10px 0px; 
 	font-family: 'poppins', sans-serif;
 
+}
+
+.background-footer{
+	background-color: #121a21;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.navbar-footer-logo{
+	padding: 25px 0px 0px 0px ;
+}
+.address{
+	font-family: 'open sans', sans-serif;
+	color: white;
+	padding: 20px 0px 0px 0px ;
+}
+.other-policies a{
+	font-family: 'open sans', sans-serif;
+	text-decoration: none;
+	color: white;
+}
+.other-policies a:hover{
+	color: #ff5757;
 }

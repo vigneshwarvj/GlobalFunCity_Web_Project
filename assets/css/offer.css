@@ -15,12 +15,11 @@ body {
 }
 .navbar ul li {
 	display: inline;
-	margin-top: 50%;
 	margin: 10px;
 }
 
 .navbar ul li a {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	text-decoration: none;
 	padding: 10px;
 	font-size: 15px;
@@ -42,7 +41,7 @@ body {
 	padding: 15px;
 	border: none;
 	color: white;
-	font-family: 'open sans';
+	font-family: 'open sans', sans-serif;
 	margin-right: 80px;
 	cursor: pointer;
 }
@@ -54,7 +53,7 @@ body {
 .exciting {
 	text-align: center;
 	margin-top: 0px;
-	font-family: 'League Spartan';
+	font-family: 'League Spartan', sans-serif;
 	font-size: 35px;
 	padding: 50px;
 }
@@ -80,13 +79,13 @@ body {
 }
 
 .card-container h2 {
-	font-family: 'League Spartan';
+	font-family: 'League Spartan', sans-serif;
 	color: white;
 	text-align: center;
 }
 
 .card-container p {
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 	color: white;
 	text-align: center;
 }
@@ -104,7 +103,7 @@ body {
 	width: 130px;
 	padding: 10px;
 	margin-left: 30px;
-	font-family: 'League Spartan';
+	font-family: 'League Spartan', sans-serif;
 	font-weight: 600;
 	font-size: 15px;
 	color: #ff5757;
@@ -116,7 +115,7 @@ body {
 	width: 130px;
 	padding: 10px;
 	margin-left: 30px;
-	font-family: 'League Spartan';
+	font-family: 'League Spartan', sans-serif;
 	font-weight: 600;
 	font-size: 15px;
 	color: #ff5757;
@@ -141,13 +140,13 @@ body {
 
 .card-container-2 h2 {
 	text-align: center;
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 	color: white;
 }
 
 .card-container-2 p {
 	text-align: center;
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 	color: white;
 }
 
@@ -162,11 +161,8 @@ body {
 
 footer{
 	background-color: #121a21;
-	padding:0px;
 	text-align:center;
-	justify-content:space-evenly;
-	left:0;
-	width:100%;
+
 }
 .footer-logo{
 	width: 180px;
@@ -179,11 +175,11 @@ footer{
 	padding: 0px 0px 30px 0px;
 }
 .address h3, .open-hours h3, .contact-for-more h3{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ffa51d;
 }
 .address p, .contact-for-more p, .open-hours p{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: white;
 	width: 300px;
 }
@@ -231,7 +227,7 @@ footer{
 }
 .navbar-footer ul li{
 	list-style: none;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 }
 .navbar-footer a:hover{
 	color:#ff5757;
@@ -243,7 +239,7 @@ footer{
 }
 .other-navbar-footer ul li{
 	padding: 10px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	list-style: none;
 }
 .other-navbar-footer ul li a{
@@ -255,7 +251,7 @@ footer{
 }
 .copyright{
 	text-align: center;
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: #eee;
 	padding: 20px;
 }

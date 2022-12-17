@@ -15,7 +15,7 @@ body{
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans, sans-serif';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
 font-size:15px;
@@ -35,4 +35,8 @@ margin-top:10px;
 .header button a{
 	text-decoration: none;
 	color:white;
+}
+.hurrah h1{
+	font-family: 'league spartan', sans-serif;
+	font-size: 50px;
 }

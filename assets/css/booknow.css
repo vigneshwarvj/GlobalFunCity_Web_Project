@@ -45,7 +45,7 @@ margin-top:10px;
 }
 .background-0{
 	width: 1485px;
-	height: 800px;
+	height: 825px;
 	background-color: #eee;
 }
 .background-color{
@@ -62,9 +62,7 @@ margin-top:10px;
 	color: #ffa51d;
 	
 }
-input{
 
-}
 .search-availablity-information-msg{
 	display: flex;
 	justify-content: space-around;
@@ -80,8 +78,9 @@ input{
 .search-information{
     display: flex;
 	/* padding-left: 20px; */
+	justify-content: space-around;
 }
-.search-information h3{
+.search-information p{
 	font-family: 'poppins', sans-serif;
 }
 .search-information input{
@@ -92,6 +91,7 @@ input{
 }
 .room-adult-children p{ 
 	font-family: 'poppins', sans-serif;
+	padding: 0px 0px 0px 40px;
 }
  .room-adult-children{ 
 	display: flex;
@@ -122,6 +122,7 @@ input{
 	color: white;
 	border: none;
     font-size: 17px;
+	cursor: pointer;
 }
 .check-availablity button a{
 	text-decoration: none;
@@ -153,4 +154,28 @@ input{
 }
 .facilities ul{
 	padding: 10px 5px 10px 5px ;
+}
+
+
+.background-footer{
+	background-color: #121a21;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.navbar-footer-logo{
+	padding: 25px 0px 0px 0px ;
+}
+.address{
+	font-family: 'open sans', sans-serif;
+	color: white;
+	padding: 20px 0px 0px 0px ;
+}
+.other-policies a{
+	font-family: 'open sans', sans-serif;
+	text-decoration: none;
+	color: white;
+}
+.other-policies a:hover{
+	color: #ff5757;
 }

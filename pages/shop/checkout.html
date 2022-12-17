@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
+    <meta charset='UTF-8'>
+	<link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
 
 <title> Checkout - Shop - Global Fun City</title>
 <link rel="stylesheet" href="../../assets/store css/checkout.css" />
@@ -14,21 +17,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
-
-<script src="https://kit.fontawesome.com/1024979679.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
 
 <div class="header" >
-<img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px"/>
+<img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px"alt="logo" />
 
    	 <nav class="navbar">
 	 <ul>
-	 <li> <a class="navigation__link" href="../../pages/homepage/index.html"> <b>HOME</b> </a> </li>
+	 <li> <a class="navigation__link" href="../../index.html"> <b>HOME</b> </a> </li>
      <li> <a class="navigation__link" href="../../pages/other pages/home.html"><b>ABOUT</b></a></li>
 	 <li> <a class="navigation__link" href="../../pages/other pages/events.html"> <b>EVENTS </b> </a> </li>
 	 <li> <a class="navigation__link" href="../../pages/other pages/ticketprices.html"> <b>TICKET  PRICES </b></a> </li>
@@ -60,18 +58,18 @@
 <div class="first-last-name">
 <div class="first-name">
         <p>First name <g>*</g></p>
-        <input type="text" id="username" name="firstname"></div>
+        <input type="text" id="username" name="firstname" required></div>
         &nbsp; &nbsp;
 <div class="last-name">        
         <p>Last name <g>*</g></p>
-        <input type="text" id="password" name="lastname">
+        <input type="text" id="password" name="lastname" required>
 </div>
 </div>
 
 <div class="content-of-others">
     <p>Country/Region <g>*</g></p>
-        <!-- <input type="text" id="country/region" name="country/region"> -->
-        <select>
+        
+        <select required>
             <option value="india">India</option>
             <option value="australia">Australia</option>
             <option value="switzerland">Switzerland</option>
@@ -95,25 +93,25 @@
         </select>
 
         <p>Door.No <g>*</g></p>
-        <input type="text" id="door-no" name="door-no">
+        <input type="text" id="door-no" name="door-no" required>
 
         <p>Street address <g>*</g></p>
-        <input type="text" id="door-no" name="door-no">
+        <input type="text" id="door-no" name="door-no" required>
 
         <p>Town/City <g>*</g></p>
-        <input type="text" id="town-city" name="town-city">
+        <input type="text" id="town-city" name="town-city" required>
 
         <p>State <g>*</g></p>
-        <input type="text" id="state" name="state">
+        <input type="text" id="state" name="state" required>
 
         <p>ZIP Code <g>*</g></p>
-        <input type="text" id="code" name="code">
+        <input type="text" id="code" name="code" required>
 
         <p>Phone <g>*</g></p>
-        <input type="tel" id="phone" name="phone">
+        <input type="tel" id="phone" name="phone" required>
 
         <p>Email address <g>*</g></p>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" required>
 
         <p>Order notes (optional)</p>
         <input type="text" id="order-notes" name="order-notes">
@@ -163,6 +161,24 @@
 </div>
 </div>
 
+
+<footer>
+    <div class="background-footer">
+    
+    <div class="navbar-footer-logo">
+        <img src="../../assets/images/globalfuncitylogo.png" width="200" alt="logo"/>
+    </div>
+    
+    <div class="address">
+        <p>11113 W Baldwin RD, Monrovia, MD 21770, USA</p>
+        <h4><i class="fa-solid fa-phone"></i> +1 860 817 1080</h4>
+        <h4><i class="fa-solid fa-envelope"></i> info@globalfuncity.in</h4>
+    </div>
+    
+    <div class="other-policies">
+        <a href="#" >Book now Policy</a>
+    </div>
+    </div>
 
 
 

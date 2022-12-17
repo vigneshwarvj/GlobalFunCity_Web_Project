@@ -87,7 +87,7 @@ margin-top:10px;
 	position: relative;
 }
 .fac_photo img:hover{
-	transition: all;
+	transition: 0.5s;
 	transform: scale(1.1);
 }
 .fac_photo h2{

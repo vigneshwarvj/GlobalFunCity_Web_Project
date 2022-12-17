@@ -56,7 +56,7 @@ padding:10px;
 }
 .bg2{
 	position:relative;
-	margin-left:230px;
+	margin-left:260px;
 	bottom: 290px;
 }
 .box{
@@ -71,11 +71,11 @@ padding:10px;
 	padding: 10px;
 }
 .box h2{
-	margin-left: 630px;
+	text-align: center;
 	color: white;
 }
 .box h1{
-    margin-left: 540px;
+    text-align: center;
 	padding: 5px;
 	font-size: 45px;
 }
@@ -103,6 +103,28 @@ text-align: center;
 	width:160px;
 	height:3px;
 	margin:10px auto;
+}
+.gif-tickets{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.content-of-tickets{
+	width:300px ;
+	height: 280px;
+	background-color: #eee;
+	padding: 30px 0px 0px 40px;
+}
+.content-of-tickets h2{
+    font-family: 'poppins', sans-serif;
+	color: #ff5757;
+}
+.content-of-tickets p{
+	font-family: 'Poppins', sans-serif;
+}
+.content-of-tickets span{
+	font-family: 'open sans', sans-serif;
+	color: #ff4612;
 }
 .weare p{
 	text-align:center;
@@ -168,7 +190,7 @@ height:auto;
 .parktour{
 	width:1485px;
 	height: 1000px;
-	background-color:white; 
+	background-color:#eee; 
 	text-align: center;
 	
 }

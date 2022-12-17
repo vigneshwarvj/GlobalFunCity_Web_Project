@@ -13,11 +13,10 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
 font-size:15px;
@@ -30,7 +29,6 @@ margin-top:10px;
     border-bottom: 3px solid #ff5757;
 }
 .header button{
-	text-align:center;
 	font-size:15px;	
     background-color:#ff5757;
 	color:white;
@@ -43,7 +41,7 @@ margin-top:10px;
 .book{
     text-align: center;
     margin-top: 70px;
-	font-family: 'League Spartan';
+	font-family: 'League Spartan', sans-serif;
 	font-size: 35px;
 }
 .new-year-photo-offer{
@@ -94,7 +92,7 @@ margin-top:10px;
 	color: black;
 }
 .con ul li{
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 	font-size: 18px;
 	color: black;
 }
@@ -105,10 +103,10 @@ margin-top:10px;
 	margin: 5.5% 5.5% 0;
 }
 .termsandconditions h2{
-	font-family: 'league Spartan';
+	font-family: 'league Spartan', sans-serif;
 }
 .termsandconditions ul li{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 }
 
 
@@ -124,11 +122,7 @@ margin-top:10px;
 
 footer{
 	background-color: #121a21;
-	padding:0px;
 	text-align:center;
-	justify-content:space-evenly;
-	left:0;
-	width:100%;
 }
 .footer-logo{
 	width: 180px;
@@ -141,11 +135,11 @@ footer{
 	padding: 0px 0px 30px 0px;
 }
 .address h3, .open-hours h3, .contact-for-more h3{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ffa51d;
 }
 .address p, .contact-for-more p, .open-hours p{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: white;
 	width: 300px;
 }
@@ -193,7 +187,7 @@ footer{
 }
 .navbar-footer ul li{
 	list-style: none;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 }
 .navbar-footer a:hover{
 	color:#ff5757;
@@ -205,7 +199,7 @@ footer{
 }
 .other-navbar-footer ul li{
 	padding: 10px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	list-style: none;
 }
 .other-navbar-footer ul li a{
@@ -217,7 +211,7 @@ footer{
 }
 .copyright{
 	text-align: center;
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: #eee;
 	padding: 20px;
 }

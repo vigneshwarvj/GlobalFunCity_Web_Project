@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset='UTF-8'>
+<link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
 <title>Book Now - Global Fun City </title>
 <link rel="stylesheet" href="../../assets/book now css/guestinformation.css"/>
 
@@ -19,8 +21,8 @@
 <body>
 
 <div class="header" >
-<a href="../../pages/homepage/index.html" >
-<img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px"/>
+<a href="../../index.html" >
+<img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo"/>
 </a>
 <nav class="navbar">
     <ul>
@@ -80,20 +82,23 @@
 
 <div class="over-1">
 <div class="form">
-    <input type="text" id="name" name="name" placeholder="First name and Last name"> 
+    <label>
+    <input type="text" id="name" name="name" placeholder="First name and Last name" required="true"> 
+    </label>
 </div>
 
 <br>
 
 <div class="email">
-    <input type="email" id="mail" name="email" placeholder="Email Address"> &nbsp;
-    <input type="tel" id="phone-number" name="phone-number" placeholder="Phone Number">
+    
+    <input type="email" id="mail" name="email" placeholder="Email Address" required="true"> &nbsp;
+    <input type="tel" id="phone-number" name="phone-number" placeholder="Phone Number" required="true">
 </div>
 
 <br>
 
 <div class="requests">
-    <input type="text" id="special-requests" name="special-requests" placeholder="Special Requests" >
+    <input type="text" id="special-requests" name="special-requests" placeholder="Special Requests" required="true">
     
 </div>
 
@@ -109,6 +114,7 @@
 <div class="in-out">
 <div class="check-in">
 <table>
+    
     <tr>
         <td>Check In</td>
         <td>14 Dec 2022</td>
@@ -153,7 +159,6 @@
         <td>Grand Total</td>
         <td>$1600</td>
     </tr>
-
 </table>
 </div>
 </div>
@@ -162,11 +167,24 @@
 </div>
 
 </div>
-<!-- <footer>
-    <div class="footer-logo">
-        <img src="../../assets/images/globalfuncitylogo.png" width="200px">
+
+<div class="background-footer">
+
+    <div class="navbar-footer-logo">
+        <img src="../../assets/images/globalfuncitylogo.png" width="200" alt="logo"/>
     </div>
-</footer> -->
+    
+    <div class="address">
+        <p>11113 W Baldwin RD, Monrovia, MD 21770, USA</p>
+        <h4><i class="fa-solid fa-phone"></i> +1 860 817 1080</h4>
+        <h4><i class="fa-solid fa-envelope"></i> info@globalfuncity.in</h4>
+    </div>
+    
+    <div class="other-policies">
+        <a href="#" >Book now Policy</a>
+    </div>
+    </div>
+
 
 
 

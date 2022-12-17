@@ -12,11 +12,10 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
 font-size:15px;
@@ -38,13 +37,15 @@ margin-top:10px;
 	color: #f6f6f6;
 }
 .book-now{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	text-align: center;
 	font-size: 25px;
 	padding: 30px 0px 30px 0px;
 }
 .background-0{
 	background-color: #eee;
+	width: 1485px;
+	height: 1930px;
 }
 .background-color{
 	width: 1200px;
@@ -54,7 +55,7 @@ margin-top:10px;
 	align-items: center;
 }
 .search{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ff4612;
 	padding: 8px 0px 0px 0px;
 }
@@ -67,18 +68,19 @@ margin-top:10px;
 	border-bottom-right-radius: 4px;
 }
 .search-2{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ff4612;
 	padding: 8px 0px 0px 30px;
 }
 .btn-modify button{
-	font-family: 'league spartan';
-	color: #ff4612;
+	font-family: 'league spartan', sans-serif;
 	padding: 15px 18px 15px 18px;
 	font-size: 15px;
+	cursor: pointer;
 }
 .btn-modify button a{
 	text-decoration: none;
+	color: #ff4612;
 }
 .btn-modify{
 	margin: 15px 16px 14px 16px;
@@ -88,11 +90,11 @@ margin-top:10px;
 	justify-content: space-between;
 }
 .hotels-resorts{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	padding: 0px 0px 20px 20px;
 }
 .select-rooms{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ff4612;
 }
 .photo-of-room{
@@ -107,28 +109,28 @@ margin-top:10px;
 	padding:20px 0px 0px 0px ;
 }
 .about h4{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	font-size: 20px;
 }
 .about h3{
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 }
 .about h5{
-	font-family: 'open sans';
+	font-family: 'open sans', sans-serif;
 }
 /* .about-price{ */
 	/* display: flex; */
 .hurry{
 	margin: 0px 0px 0px 400px;
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 }
 .hurry span{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ff5757;
 	font-size: 25px;
 }
 .hurry h5{
-	font-family: 'open sans';
+	font-family: 'open sans', sans-serif;
 }
 .hurry p{
 	height: 30px;
@@ -145,10 +147,10 @@ margin-top:10px;
 }
 .price{
 	padding: 0px 100px 0px 0px;
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 }
 .price span{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ff5757;
 	font-size: 25px;
 	padding: 0px 0px 10px 0px;
@@ -158,15 +160,39 @@ margin-top:10px;
 	padding: 15px 15px 15px 15px ;
 	border: none;
 	border-radius: 8px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	font-size: 15px;
 	color: #f6f6f6;
+	cursor: pointer;
 }
 
 .room-with-break{
-    font-family: 'open sans';
+    font-family: 'open sans', sans-serif;
 	padding:0px 0px 0px 30px ;
 }
 .room-with-break g{
+	color: #ff5757;
+}
+
+.background-footer{
+	background-color: #121a21;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.navbar-footer-logo{
+	padding: 25px 0px 0px 0px ;
+}
+.address{
+	font-family: 'open sans', sans-serif;
+	color: white;
+	padding: 20px 0px 0px 0px ;
+}
+.other-policies a{
+	font-family: 'open sans', sans-serif;
+	text-decoration: none;
+	color: white;
+}
+.other-policies a:hover{
 	color: #ff5757;
 }
