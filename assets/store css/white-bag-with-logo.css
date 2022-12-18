@@ -13,11 +13,10 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
 font-size:15px;
@@ -49,28 +48,26 @@ margin-top:10px;
 	background-color: #eee;
 }
 .photo-of-store{
-    margin-left: 100px;
     margin-top: 70px;
 }
 .photo-and-content{
     display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
-.content{
-    margin-left: 70px;
-    margin-top: 80px;
-}
+
 .content h2{
-    font-family: 'league spartan';
+    font-family: 'league spartan', sans-serif;
     font-size: 40px;
     color: black;
 }
 .content h3{
-    font-family: 'league spartan';
+    font-family: 'league spartan', sans-serif;
     color: #ffa51d;
     font-size: 28px;
 }
 .content p{
-    font-family: 'poppins';
+    font-family: 'poppins', sans-serif;
 }
 input{
     padding: 14px 13px 14px 13px;
@@ -92,13 +89,13 @@ input{
 	border-radius: 40px;
 	cursor: pointer;
 	font-size: 18px;
-	font-family: 'League Spartan';
+	font-family: 'League Spartan', sans-serif;
 }
 .content h4{
-    font-family: 'poppins';
+    font-family: 'poppins', sans-serif;
 }
 .relatable{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	margin-left: 100px;
 	margin-top: 80px;
 	font-size: 25px;
@@ -114,12 +111,16 @@ input{
 	transition: 1s;
 	transform: scale(1.1);
 }
+.product-img a{
+	text-decoration: none;
+	color: black;
+}
 .related-pics h3{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 
 }
 .related-pics p{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: #ffa51d;
 }
 
@@ -131,7 +132,7 @@ input{
 }
 
 .subscribe h1{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	font-size: 48px;
 	width: 400px;
 }
@@ -153,7 +154,7 @@ input{
 	border-radius: 80pc;
     background-color: #ffa51d;
 	border: #ffa51d;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	padding: 20px 30px 20px 30px;
 	color: white;
 	cursor: pointer;
@@ -175,11 +176,7 @@ input{
 
 footer{
 	background-color: #121a21;
-	padding:0px;
 	text-align:center;
-	justify-content:space-evenly;
-	left:0;
-	width:100%;
 }
 .footer-logo{
 	width: 180px;
@@ -192,11 +189,11 @@ footer{
 	padding: 0px 0px 30px 0px;
 }
 .address h3, .open-hours h3, .contact-for-more h3{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ffa51d;
 }
 .address p, .contact-for-more p, .open-hours p{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: white;
 	width: 300px;
 }
@@ -244,7 +241,7 @@ footer{
 }
 .navbar-footer ul li{
 	list-style: none;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 }
 .navbar-footer a:hover{
 	color:#ff5757;
@@ -256,7 +253,7 @@ footer{
 }
 .other-navbar-footer ul li{
 	padding: 10px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	list-style: none;
 }
 .other-navbar-footer ul li a{
@@ -268,7 +265,7 @@ footer{
 }
 .copyright{
 	text-align: center;
-	font-family: 'poppins';
+	font-family: 'poppins',sans-serif;
 	color: #eee;
 	padding: 20px;
 }

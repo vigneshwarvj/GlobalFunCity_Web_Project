@@ -113,6 +113,24 @@ font-size: 40px;
 	font-size: 14px;
 
 }
+.content-gif{
+	display: flex;
+	justify-content:space-around ;
+	align-items: center;
+}
+.content button{
+	border-radius: 80pc;
+    background-color: #ffa51d;
+	border: #ffa51d;
+	font-family: 'league spartan', sans-serif;
+	padding: 20px 30px 20px 30px;
+	color: white;
+}
+.content h1{
+	width: 350px;
+	font-size: 50px;
+	font-family: 'league spartan', sans-serif;
+}
 .get-updates{
 	height: 350px;
 	width: 1485px;

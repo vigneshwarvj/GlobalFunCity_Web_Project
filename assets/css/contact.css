@@ -13,11 +13,10 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
 font-size:15px;
@@ -42,15 +41,15 @@ margin-top:10px;
 .contact{
     text-align: center;
     margin-top: 70px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	font-size: 40px;
 }
 .contactdetails{
     margin-left: 70px;
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 }
 .contactdetails p{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
     font-size: 30px;
 	color:#ff4617;
 }
@@ -76,9 +75,7 @@ input {
 .content-of-address-form{
 	display: flex;
 }
-.part3 input{
-	/*width:400%;*/
-}
+
 .get-in-touch{
 	padding: 20px 25px 20px 25px;
 	background-color:#ffa51d;
@@ -87,7 +84,7 @@ input {
 	/*margin-top: 40px;*/
     border-radius: 50px;
 	border:white;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	font-size: 16px;
 
 }
@@ -106,11 +103,7 @@ input {
 
 footer{
 	background-color: #121a21;
-	padding:0px;
 	text-align:center;
-	justify-content:space-evenly;
-	left:0;
-	width:100%;
 }
 .footer-logo{
 	width: 180px;
@@ -123,11 +116,11 @@ footer{
 	padding: 0px 0px 30px 0px;
 }
 .address h3, .open-hours h3, .contact-for-more h3{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ffa51d;
 }
 .address p, .contact-for-more p, .open-hours p{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: white;
 	width: 300px;
 }
@@ -175,7 +168,7 @@ footer{
 }
 .navbar-footer ul li{
 	list-style: none;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 }
 .navbar-footer a:hover{
 	color:#ff5757;
@@ -187,7 +180,7 @@ footer{
 }
 .other-navbar-footer ul li{
 	padding: 10px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	list-style: none;
 }
 .other-navbar-footer ul li a{
@@ -199,7 +192,7 @@ footer{
 }
 .copyright{
 	text-align: center;
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: #eee;
 	padding: 20px;
 }

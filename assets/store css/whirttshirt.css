@@ -48,16 +48,14 @@ margin-top:10px;
 	background-color: #eee;
 }
 .photo-of-store{
-    margin-left: 100px;
     margin-top: 70px;
 }
 .photo-and-content{
     display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
-.content{
-    margin-left: 70px;
-    margin-top: 80px;
-}
+
 .content h2{
     font-family: 'league spartan', sans-serif;
     font-size: 40px;
@@ -111,6 +109,10 @@ input{
 .product-img img:hover{
 	transition: 1s;
 	transform: scale(1.1);
+}
+.product-img a{
+	text-decoration: none;
+	color: black;
 }
 .related-pics h3{
 	font-family: 'league spartan', sans-serif;
@@ -179,9 +181,6 @@ input{
 footer{
 	background-color: #121a21;
 	text-align:center;
-	/* justify-content:space-evenly;
-	left:0;
-	width:100%; */
 }
 .footer-logo{
 	width: 180px;

@@ -13,11 +13,10 @@ body{
 }
 .navbar ul li{
 	display:inline;
-	margin-top:50%;
 	margin:10px;
 }
 .navbar ul li a{
-font-family:'Open Sans';
+font-family:'Open Sans', sans-serif;
 text-decoration:none;
 padding:10px;
 font-size:15px;
@@ -44,7 +43,7 @@ margin-top:10px;
 .attractions{
  text-align: center;
  margin-top: 70px;
- font-family: 'league spartan';
+ font-family: 'league spartan', sans-serif;
  font-size: 25px;
 }
 .photoattractions {
@@ -65,7 +64,7 @@ margin-top:10px;
 	transform: scale(1.1);
 }
 .photoattractions h2{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 }
 .attracts-you{
 	width: 1485px;
@@ -77,19 +76,28 @@ margin-top:10px;
 	text-align: center;
 	color:#ff4612;
 	font-size: 40px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
     top: 50px;
 }
+.gif-content{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.content{
+	width: 200px;
+	line-height: 50px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 27px;
+    color: #ff5757;
 
+
+}
 
 
 footer{
 	background-color: #121a21;
-	padding:0px;
 	text-align:center;
-	justify-content:space-evenly;
-	left:0;
-	width:100%;
 }
 .footer-logo{
 	width: 180px;
@@ -102,11 +110,11 @@ footer{
 	padding: 0px 0px 30px 0px;
 }
 .address h3, .open-hours h3, .contact-for-more h3{
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	color: #ffa51d;
 }
 .address p, .contact-for-more p, .open-hours p{
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: white;
 	width: 300px;
 }
@@ -154,7 +162,7 @@ footer{
 }
 .navbar-footer ul li{
 	list-style: none;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 }
 .navbar-footer a:hover{
 	color:#ff5757;
@@ -166,7 +174,7 @@ footer{
 }
 .other-navbar-footer ul li{
 	padding: 10px;
-	font-family: 'league spartan';
+	font-family: 'league spartan', sans-serif;
 	list-style: none;
 }
 .other-navbar-footer ul li a{
@@ -178,7 +186,7 @@ footer{
 }
 .copyright{
 	text-align: center;
-	font-family: 'poppins';
+	font-family: 'poppins', sans-serif;
 	color: #eee;
 	padding: 20px;
 }
