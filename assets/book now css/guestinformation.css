@@ -157,12 +157,9 @@ margin-top:10px;
 }
 .total-subtotal h4{
     padding: 0px 100px 0px 0px ;
+	text-align: right;
     
 }
-.total-subtotal h4{
-    text-align: right;
-}
-
 .total-2 {
     text-align: right;
 }
