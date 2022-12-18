@@ -262,11 +262,7 @@ height:auto;
 }
 footer{
 	background-color: #121a21;
-	padding:0px;
 	text-align:center;
-	justify-content:space-evenly;
-	left:0;
-	width:100%;
 }
 .footer-logo{
 	width: 180px;
@@ -291,7 +287,6 @@ footer{
 	display: inline-block;
 	width: 40px; 
     margin:0 10px 10px 0;
-	text-align:center;
 	border-radius: 50px;
 	border: 1px solid white;
 	line-height: 40px;
