@@ -1,44 +1,24 @@
 body{
 	margin:0;
 }
-.header{ 
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
+.bag{
+   position: absolute;
+   top: 20px;
+   left: 30px;
 }
-.header-logo{
-	width:180px;
-	margin-left:50px;
-	margin-top: 20px;
+.shop-logo{
+	display: flex;
+	justify-content: space-evenly;
+	box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
 }
-.navbar ul li{
-	display:inline;
-	margin:10px;
+.bag i{
+	color: #ff5757;
+	
+	
 }
-.navbar ul li a{
-font-family:'Open Sans', sans-serif;
-text-decoration:none;
-padding:10px;
-font-size:15px;
-margin-top:10px;
-}
-.navbar ul li a:hover {
-	border-bottom:3px solid #ff5757;
-} 
-.active{
-    border-bottom: 3px solid #ff5757;
-}
-.header button{
-	font-size:15px;	
-    background-color:#ff5757;
-	border-radius:8px;
-	padding:15px;
-	border:none;
-	margin-right:80px;
-}
-.header button a{
+.bag a{
 	text-decoration: none;
-    color:white;
+	font-family: 'poppins ', sans-serif;
 }
 .checkout{
     text-align: center;
@@ -79,7 +59,7 @@ margin-top:10px;
     border-bottom: 3px solid white;
 }
 .tickets{
-    height:290px ;
+    height:190px ;
     width: 400px;
     background-color: #eee;
 }

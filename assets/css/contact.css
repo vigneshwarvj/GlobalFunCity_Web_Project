@@ -1,10 +1,23 @@
 body{
 	margin:0;
 }
+.visit-signin{
+	display: flex;
+	justify-content: space-around;
+	box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+	font-family: 'poppins', sans-serif;
+	font-weight: 5px;
+	font-size: 16px;
+}
+.sign-in a{
+	text-decoration: none;
+	color: #ff5757;
+}
 .header{ 
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
+	box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
 }
 .header-logo{
 	width:180px;
@@ -45,8 +58,9 @@ margin-top:10px;
 	font-size: 40px;
 }
 .contactdetails{
-    margin-left: 70px;
 	font-family: 'poppins', sans-serif;
+	width: 250px;
+	line-height: 40px;
 }
 .contactdetails p{
 	font-family: 'league spartan', sans-serif;
@@ -55,7 +69,6 @@ margin-top:10px;
 }
 .gape{
 	display: flex;
-	margin-left: 270px;
 	outline: 0;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -74,6 +87,7 @@ input {
 }
 .content-of-address-form{
 	display: flex;
+	justify-content: space-around;
 }
 
 .get-in-touch{

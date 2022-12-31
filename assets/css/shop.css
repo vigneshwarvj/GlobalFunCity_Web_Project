@@ -1,90 +1,208 @@
 body{
-	margin:0;
+	margin: 0;
 }
-.header{ 
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
+.shipping{
+	text-align: center;
+	font-family: 'open sans', sans-serif;
+	background-color: #121a21;
+	color: #f6f6f6;
+	padding: 4px;
 }
-.header-logo{
-	width:180px;
-	margin-left:50px;
-	margin-top: 20px;
+.header-navbar{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	position: sticky;
+	z-index: 1;
+
 }
-.navbar ul li{
-	display:inline;
-	margin:10px;
+.header-navbar a{
+	font-family: 'poppins', sans-serif;
 }
-.navbar ul li a{
-font-family:'Open Sans', sans-serif;
-text-decoration:none;
-padding:10px;
-font-size:15px;
-margin-top:10px;
-position:sticky;
-}
-.navbar ul li a:hover {
-	border-bottom:3px solid #ff5757;
-} 
-.active{
-    border-bottom: 3px solid #ff5757;
-}
-.header button{
-	text-align:center;
-	font-size:15px;	
-    background-color:#ff5757;
-	color:white;
-	border-radius:8px;
-	padding:15px;
-	border:none;
-	margin-right:80px;
-	cursor: pointer;
-}
-.header button a{
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  }
+.icons-info a{
 	text-decoration: none;
-    color:white;
+    padding: 5px;	
+
 }
-.background-color{
-	height: 2000px;
+.icons-info i{
+	color: #ff5757;
+	
+}
+
+.wrapper{
+	width: 1170px;
+	/* margin: 20px auto; */
+}
+nav > ul{
+	position: relative;
+	display: flex;
+	justify-content: center;
 	width: 1485px;
-	background-color: #eee;
+	margin: 0 auto;
+	padding: 0;
 }
-.store{
-    text-align: center;
-    font-family: 'league spartan', sans-serif;
-	margin-bottom: 50px;
-	padding: 40px;
-	font-size: 26px;
+nav{
+	position: absolute;
+	background: #eee;
+	font-size: 16px;
 }
-.store-things{
-	width: 97%;
-	height: 200vh;
-    padding: 15px;
+nav a{
+	display: block;
+	color: #ff5757;
+	text-decoration: none ;
+}
+nav ul li{
+	color: #ff5757;
+	list-style: none;
+	transition: 0.5s;
+}
+.bottom-color:hover{
+	border-bottom: 4px solid black;
+}
+
+nav > ul > li > a{
+	padding:30px;
+	font-family: 'league spartan', sans-serif;
+	font-size: 18px;
+}
+nav ul > li.dropdown > a:after{
+	position: relative;
+	float: right;
+	margin: 8px 10px 0px 0px;
+}
+nav > ul > li:hover{
+	background: white ;
+}
+nav ul.menu-area{
+	padding: 40px 40px 0px 40px;
+	background: white;
+	text-align: left;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+	z-index: 1;
+	position: absolute;
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-evenly;
+	width: 1405px;
+	top: -9999px;
+	left: 0;
+}
+nav ul li:hover ul.menu-area{
+	top: 100%;
+}
+nav ul.menu-area ul{
+	/* width: 15%; */
+	margin-bottom: 40px;
+	color: black;
 	
 }
-.t-shirts a{
-	text-decoration: none;
+nav ul.menu-area h4{
+	/* margin-bottom: 15px; */
+	font-family: 'poppins', sans-serif;
+	text-decoration: underline;
+}
+nav ul.menu-area ul li{
+	display: block;
+}
+nav ul.menu-area ul li a{
+	margin-top: 10px;
+	color: rgb(121, 113, 113);
+	font-family: 'open sans', sans-serif;
+	text-transform: none;
+}
+nav ul.menu-area ul li a:hover{
+	color: red;
+}
+/* completed dropdown */
+
+.image-for-shopping{
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+
+.circle{
+	display: flex;
+	justify-content: space-evenly
+}
+.circle-all{
+	border-radius: 120px;
+	background-color: antiquewhite;
+	padding: 80px;
+}
+.circle h2{
+	font-family: 'open sans', sans-serif;
+	font-size: 20px;
 	color: #121a21;
 }
-.store-things img:hover {
-	transition: 1s;
-	transform: scale(0.9);
-	
+.circle a{
+	color: #ff5757;
+	font-family: 'poppins', sans-serif;
+
 }
-.t-shirts h3{
+.trending{
+	text-align: center;
 	font-family: 'league spartan', sans-serif;
-	font-size: 25px;
-	text-align: center;
+	padding: 50px 0px 40px 0px ;
+	letter-spacing: 3px;
+	font-size: 20px;
 }
-.t-shirts p{
-	font-family: 'Poppins', sans-serif;
-	text-align: center;
-	color: #ffa51d;
+.images-of-persons{
+	display: flex;
+	justify-content: space-evenly;
 }
+.images-of-persons img{
+	width: 25%;
+}
+.images-of-persons img:hover{
+	transform: scale(1.1);
+	transition:1s;
+}
+
+
+.circle-2{
+	display: flex;
+	justify-content: space-evenly
+}
+.circle-all-2:hover{
+	transform: scale(1.1);
+	transition:1s;
+}
+.circle-all-2{
+	border-radius:80px ;
+	background-color: #ff5757;
+	padding: 60px;
+}
+.circle-2 h2{
+	font-family: 'open sans', sans-serif;
+	font-size: 20px;
+	color: white;
+}
+.circle-2 a{
+	color: black;
+	text-align: center;
+	font-family: 'poppins', sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .brands h1{
 	font-family: 'league spartan', sans-serif;
 	width: 500px;
