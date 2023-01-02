@@ -308,6 +308,7 @@ footer{
 	background-color: #FF0000;
 }
 /* footer-for-about-us-etc */
+
 .navbar-footer ul{
 	display: flex;
 	justify-content: center;
@@ -346,4 +347,129 @@ footer{
 	font-family: 'poppins', sans-serif;
 	color: #eee;
 	padding: 20px;
+}
+
+
+@media screen and (max-width:400px) {
+.visit-signin{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	font-size: 8px;
+
+}
+
+.header img{
+	width: 100px;
+}
+.backgroundglobal img{
+	width: 100%;
+	height: 160px;
+}
+.bg2{
+	margin-left: 0px;
+	height: 200px;
+	width: 350px;
+	position: relative;
+	bottom: 250px;
+
+
+}
+.sparkles{
+	margin-left: 0px;
+}
+.box img{
+	display: none;
+}
+.box h2{
+	color: #121a21;
+	font-size: medium;
+}
+.box h2, .box h1{
+	padding: 0;
+	top: 100px;
+}
+.updown{
+	padding: 0 5% ;
+}
+.recoil{
+	width: 100px;
+}
+.step h3{
+   margin-top: 120px;
+   font-size: 1.20em;
+}
+.messages{
+	padding: 8%;
+}
+.updown div h2, .updown div p{
+	margin-left: 1%;
+	padding: 5px 0px 5px 0px;
+}
+.updown div h2, .updown div p{
+	font-size: 15px;
+}
+.weare p{
+	padding: 5px 0px 0px 0px ;
+}
+.goodfood-goodday{
+	padding: 50px;
+}
+.biscuit1 img{
+	margin-left: 0;
+	width: 100px;
+}
+.biscuit1{
+	margin-left: 0%;
+}
+.goodday{
+	padding: 0%;
+	right: 0%;
+	position: relative;
+	font-size: 10px;
+	left: 5%;
+}
+.parktour{
+	width: 100%;
+	height: 100%;
+}
+video{
+	width: 90%;
+	height: 100%;
+}
+.tickets{
+	width: 100%;
+	height: 100%;
+	background-size: 190%;
+	filter: brightness(0.9);
+}
+.tickets h1{
+	font-size: 35px;
+}
+.location img{
+	width: 100%;
+	height: 100%;
+}
+.address-open-hours-contact{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.footer-logo{
+	width: 50%;
+}
+.address h3, .open-hours h3, .contact-for-more h3{
+	text-align: center;
+}
+.navbar-footer ul{
+	flex-direction: column;
+	padding: 0%;
+}
+.navbar-footer ul li, .other-navbar-footer ul li{
+	padding: 6px;
+}
+.other-navbar-footer ul{
+	flex-direction: column;
+	padding: 0%;
+}
 }
