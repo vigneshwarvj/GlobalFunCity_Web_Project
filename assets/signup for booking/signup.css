@@ -49,3 +49,17 @@
 .sign-up h4 a{
     text-decoration: none;
 }
+
+
+@media screen and (max-width:450px) {
+
+    .image{
+        display: none;
+    }
+
+    .sign-up{
+        width: 100%;
+        padding: 30px;
+    }
+    
+}
