@@ -351,20 +351,34 @@ footer{
 
 
 @media screen and (max-width:450px) {
-.visit-signin{
-	display: flex;
+.visit-signin, .navbar{
+	display: none;
+	/* display: flex;
 	justify-content: space-around;
 	width: 100%;
-	font-size: 8px;
+	font-size: 8px; */
 
 }
+.btn-book-now{
+	display: none;
+}
 
-.header img{
-	width: 100px;
+.header{
+	display: flex;
+	justify-content: center;
+	z-index: 3;
+	position: fixed;
+	background-color: #eee;
+	width: 100%;
+}
+.header-logo{
+	margin: 0px;
 }
 .backgroundglobal img{
 	width: 100%;
 	height: 160px;
+	position: relative;
+	top: 92px;
 }
 .bg2{
 	margin-left: 0px;
@@ -375,19 +389,28 @@ footer{
 
 
 }
+.welcome-global-funcity{
+	position: relative;
+	z-index: 0;
+	bottom: 0px;
+}
 .sparkles{
 	margin-left: 0px;
+}
+.box{
+	height: 0px;
+	
 }
 .box img{
 	display: none;
 }
 .box h2{
 	color: #121a21;
-	font-size: medium;
+	font-size: revert;
 }
 .box h2, .box h1{
 	padding: 0;
-	top: 100px;
+
 }
 .updown{
 	padding: 0 5% ;
@@ -396,8 +419,8 @@ footer{
 	width: 100px;
 }
 .step h3{
-   margin-top: 120px;
    font-size: 1.20em;
+   line-height: 24px;
 }
 .messages{
 	padding: 8%;
@@ -454,12 +477,20 @@ video{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 }
 .footer-logo{
 	width: 50%;
+	
 }
 .address h3, .open-hours h3, .contact-for-more h3{
 	text-align: center;
+}
+.navbar-footer{
+	display: none;
+}
+.other-navbar-footer{
+	display: none;
 }
 .navbar-footer ul{
 	flex-direction: column;
