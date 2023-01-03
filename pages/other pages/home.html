@@ -4,6 +4,10 @@
 <head>
 
 <meta charset='UTF-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
 
 <title> About - Global Fun City </title>
@@ -38,6 +42,27 @@
 	</div>
 
 <div class="header" >
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a class="navigation__link" href="../../index.html">HOME</a>
+	 	<a class="active" href="../../pages/other pages/home.html"> ABOUT</a>
+	 	<a class="navigation__link" href="../../pages/other pages/events.html"> EVENTS  </a> 
+		<a class="navigation__link" href="../../pages/other pages/offer.html"> OFFERS  </a> 
+	  	<a class="navigation__link" href="../../pages/other pages/ticketprices.html"> TICKET  PRICES </a> 
+		<a class="navigation__link" href="../../pages/shop/shop.html"> SHOP </a> 
+ 		<a class="navigation__link" href="../../pages/other pages/attractions.html"> ATTRACTIONS </a> 
+	 	<a class="navigation__link" href="../../pages/other pages/contact.html"> CONTACT </a>
+		<hr>
+		<a href="">BOOK TICKETS</a>
+		<hr>
+		<a href="">Safety of visitors</a>
+		<a href="">Rules & Regulations</a>
+		<a href="">Green Initiatives</a>
+		<a href="">CSR Initiatives</a> 
+	  </div>
+	<div class="icon-bar">
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	</div>
 <a href="../../index.html" >
 <img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo"/>
 </a>
@@ -55,7 +80,7 @@
 
 	 </nav>
 	 <div>
-	 	 <a href="../../pages/signup for booking/signup.html"><button> <b>BOOK NOW </b> </button> </a>
+	 	 <a href="../../pages/signup for booking/signup.html"><button class="btn-book-now"> <b>BOOK NOW </b> </button> </a>
 </div>
 </div>
 
@@ -64,7 +89,7 @@
 <div class="about">
     <p> About Our Amusement Park </p>
 </div>
-<br>
+
 <div class="para">
     <p>Welcome to GLOBAL FUN CITY, only one of its kind in this part of the region, promises you non-stop fun. Just like the waves.
          It’s a place where you can treat your family to an out of world experience. A chance to be a part of the magic, allure, and grandeur
@@ -200,7 +225,15 @@
 		</div>
 	</footer>
 
-
+	<script>
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "250px";
+		}
+		
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
+		}
+		</script>
 
 
 

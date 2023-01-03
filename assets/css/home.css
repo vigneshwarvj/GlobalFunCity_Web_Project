@@ -2,6 +2,42 @@ body{
 	margin:0;
 	padding: 0;
 }
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	
+  }
+  .sidenav, .icon-bar{
+	display: none;
+  }
+  .sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+	color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
 .visit-signin{
 	display: flex;
 	justify-content: space-around;
@@ -240,7 +276,113 @@ footer{
 
 
 
+@media screen and (max-width:450px) {
+	.sidenav, .icon-bar{
+		display: block;
+	}
+	.sidenav a{
+		color: white;
+		font-family: 'poppins', sans-serif;
+		font-size: medium;
+	}
+	.sidenav a:hover{
+		color: #ff5757;
+	}
+	.visit-signin, .navbar{
+		display: none;
+		/* display: flex;
+		justify-content: space-around;
+		width: 100%;
+		font-size: 8px; */
+	
+	}
+	.navbar ul li{
+		display: flex;
+		flex-direction: column;
+	}
+	.fa-bars:hover .navbar ul li {
+		display: block;
+	}
+	/* .icon-bar{
+		position: relative;
+		left: 5;
+	} */
+	.btn-book-now{
+		display: none;
+	}
+	
+	.header{
+		display: flex;
+		justify-content: space-around;
+		z-index: 3;
+		position: fixed;
+		background-color: #eee;
+		width: 100%;
+	}
+	.header-logo{
+		margin: 0px;
+	}
+	.about{
+		padding: 25px;
+	}
+	.about-our-amusement-park{
+		position: relative;
+		top: 98px;
+		height: 65vh;
+		background-color: white;
+	}
+	.about p{
+		font-size: 30px;
+	}
+	.para p{
+        padding: 30px;
+		font-size: 15px;
+	}
+	.facilities{
+		padding: 65px 0px 0px 0px ;
+		font-size: 35px;
+	}
+	.fac_photo{
+		height: 0%;
+		display: block;
+		text-align: center;
+	}
+	.best-celebration-for-you{
+		display: none;
+	}
+	.address-open-hours-contact{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 20px;
+	}
+	.footer-logo{
+		display: none;
+		
+	}
+	.address h3, .open-hours h3, .contact-for-more h3{
+		text-align: center;
+	}
+	.navbar-footer{
+		display: none;
+	}
+	.other-navbar-footer{
+		display: none;
+	}
+	.navbar-footer ul{
+		flex-direction: column;
+		padding: 0%;
+	}
+	.navbar-footer ul li, .other-navbar-footer ul li{
+		padding: 6px;
+	}
+	.other-navbar-footer ul{
+		flex-direction: column;
+		padding: 0%;
+	}
 
+}	
 
 
 
