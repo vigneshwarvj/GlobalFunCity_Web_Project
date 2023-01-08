@@ -32,17 +32,35 @@
     <img src="../../assets/images/global-account-logo.png" width="250" alt="global-account"/>
     <h3>Welcome Back!</h3>
     <form>
-        <input type="email" id="email" name="email" placeholder="Email Address" required> &nbsp;
-        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="email" id="email" name="email" placeholder="Email Address" required /> &nbsp;
+        <input type="password" id="password" name="password" placeholder="Password" required />
         
     </form>
     <a href="../../pages/signup for booking/forgot-password.html"> <h4>Forgot Password?</h4> </a>
-    <a href="../../pages/homepage/index-profile.html"><button>Sign In</button></a>
+    <button type="button" onclick="signin()">Sign In</button>
     <h4>New to Global Account?</h4>
-    <a href="../../pages/signup for booking/create-an-account.html"><button>Create an Account</button></a>
+    <a href="../../pages/signup for booking/create-an-account.html"><button >Create an Account</button></a>
 </div>
 </div>
-</body>
+
+<script>
+
+function signin(){
+    const email = document.getElementById("email") .value
+const password = document.getElementById("password") .value
+
+console.log(email)
+console.log(password)
+
+localStorage.setItem("email", email)
+localStorage.setItem("password", password)
+
+window.location.href ="../../pages/homepage/index-profile.html"
+
+}    
+
+</script>
+
 
 </body>
 </html> 

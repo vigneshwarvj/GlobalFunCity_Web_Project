@@ -30,13 +30,13 @@
     <h3>Create Your Account</h3>
     <div class="information-of-users">
     <form>
-            <input type="text" id="first-name" placeholder="First Name" required="true"> &nbsp;
-            <input type="text" id="middle-name" placeholder="Middle Name (optional)"> &nbsp;
-            <input type="text" id="last-name" placeholder="Last Name" required="true"> &nbsp;
-            <input type="email" id="email" placeholder="Email Address" required="true"> &nbsp;
-            <input type="password" id="password" placeholder="Password" required="true"> &nbsp;
-            <input type="password" id="password" placeholder="Re-Enter Password" required="true"> &nbsp;
-            <input onfocus="(this.type = 'date')" id="date" placeholder="Date of Birth">
+            <input type="text" id="first_name" placeholder="First Name" required="true" /> &nbsp;
+            <input type="text" id="middle_name" placeholder="Middle Name (optional)" /> &nbsp;
+            <input type="text" id="last_name" placeholder="Last Name" required="true" /> &nbsp;
+            <input type="email" id="email" placeholder="Email Address" required="true" /> &nbsp;
+            <input type="password" id="password" placeholder="Password" required="true" /> &nbsp;
+            <input type="password" id="re_enter_password" placeholder="Re-Enter Password" required="true"  /> &nbsp;
+            <input onfocus="(this.type = 'date')" id="date" placeholder="Date of Birth" required="true"/>
     </form> 
     </div> 
     &nbsp;     
@@ -53,12 +53,53 @@
        
     <p>By creating an account, I agree to the Terms of Use and acknowledge that I have read the <a href="../../pages/footer other pages/privacypolicy.html"> Privacy Policy. </a></p>
 
-    <a href="../../pages/homepage/index-profile.html"><button class="btn-create-account">Create Account</button></a>
+    <a href="../../pages/homepage/index-profile.html"><button class="btn-create-account" type="button" onclick="signup()">Create Account</button></a>
 
     <h5>Already have an account? <a href="../../pages/signup for booking/signup.html">Sign In</a></h5>
 </div>
 </div>
 
 
+
+
+
+
+<script>
+
+function  signup(){
+
+
+const first_name = document.getElementById("first_name") .value
+const middle_name = document.getElementById("middle_name") .value
+const last_name = document.getElementById("last_name") .value
+const email = document.getElementById("email") .value
+const password = document.getElementById("password") .value
+const re_enter_password = document.getElementById("re_enter_password") .value
+const date = document.getElementById("date") .value
+const right = document .getElementById("right") .value
+
+
+console.log(first_name)
+console.log(middle_name)
+console.log(last_name)
+console.log(email)
+console.log(password)
+console.log(re_enter_password)
+console.log(date)
+console.log(right)
+
+localStorage.setItem("first_name",first_name )
+localStorage.setItem("middle_name",middle_name )
+localStorage.setItem("last_name", last_name)
+localStorage.setItem("email", email)
+localStorage.setItem("password", password)
+localStorage.setItem("re_enter_password", re_enter_password)
+localStorage.setItem("date", date)
+localStorage.setItem("checkbox", checkbox)
+}   
+
+
+
+</script>
 </body>
 </html>    

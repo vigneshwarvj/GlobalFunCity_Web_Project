@@ -75,7 +75,7 @@
 <form>
     <label class="input-field">Email</label>
     <br>
-    <input class="input-field" type="email" value="yourname@gmail.com">
+    <input id="email" class="input-field" type="email" />
 </form>
 </div>
 
@@ -83,7 +83,7 @@
 <form>
     <label class="input-field">Mobile Phone (optional)</label>
     <br>
-    <input class="input-field" type="tel" placeholder="+1">
+    <input id="tel" class="input-field" type="tel" placeholder="+1">
 </form>
 </div>
 
@@ -91,7 +91,7 @@
     <form>
         <label class="input-field" >Date of Birth</label>
         <br>
-        <input class="input-field" onfocus="(this.type=date)" value="January 5, 2005">
+        <input  id="dob" class="input-field" onfocus="(this.type=date)"/>
     </form>
 </div>
 
@@ -99,7 +99,7 @@
     <form>
         <label class="input-field">Password</label>
         <br>
-        <input class="input-field" type=password value="********">
+        <input id="password" class="input-field" type="password" />
     </form>
 </div>
 
@@ -111,7 +111,7 @@
     <form>
         <label class="input-field">First Name</label>
         <br>
-        <input class="input-field" type="text" value="Tommy">
+        <input id="first_name" class="input-field" type="text" />
     </form>
 </div>
 
@@ -119,7 +119,7 @@
     <form>
         <label class="input-field">Middle Name (optional)</label>
         <br>
-        <input class="input-field" type="text">
+        <input id="middle_name" class="input-field" type="text">
     </form>
 </div>
 
@@ -127,7 +127,7 @@
     <form>
         <label class="input-field">Last Name</label>
         <br>
-        <input class="input-field" type="text" value="S">
+        <input id="last_name" class="input-field" type="text" />
     </form>
 </div>
 
@@ -164,7 +164,7 @@
     <form>
         <label class="input-field">Home Phone (optional)</label>
         <br>
-        <input class="input-field" type="tel">
+        <input id="tel_home" class="input-field" type="tel">
     </form>
 </div>
 
@@ -202,6 +202,42 @@
     <h1>Your Tickets & Resorts</h1>
     <h6>No Tickets & Resorts</h6>
 </div>
+
+
+
+
+<script>
+const email = document.getElementById("email") 
+const tel = document.getElementById("tel") 
+const date = document.getElementById("date") 
+const password = document.getElementById("password") 
+const first_name = document.getElementById("first_name") 
+const middle_name = document.getElementById("middle_name") 
+const last_name = document.getElementById("last_name") 
+const tel_home = document.getElementById("tel_home") 
+
+console.log(email)
+console.log(tel)
+console.log(dob)
+console.log(password)
+console.log(first_name)
+console.log(middle_name)
+console.log(last_name)
+console.log(tel_home)
+
+
+document.getElementById("email").value = email
+document.getElementById("date").value = date
+document.getElementById("password").value = password
+document.getElementById("first_name").value = first_name
+document.getElementById("last_name").value = last_name
+
+
+
+window.location.href =""
+
+
+</script>
 
 
 </body>

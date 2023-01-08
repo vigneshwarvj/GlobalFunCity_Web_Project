@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-
+<header>
 <div class="visit-signin">
 
 <div class="visit-global">
@@ -34,6 +34,30 @@
 </div>
 
 <div class="header" >
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a class="navigation__link" href="./index.html">HOME</a>
+	 	<a class="navigation__link" href="./pages/other pages/home.html"> ABOUT</a>
+	 	<a class="navigation__link" href="./pages/other pages/events.html"> EVENTS  </a> 
+		<a class="navigation__link" href="./pages/other pages/offer.html"> OFFERS  </a> 
+	  	<a class="navigation__link" href="./pages/other pages/ticketprices.html"> TICKET  PRICES </a> 
+		<a class="navigation__link" href="./pages/shop/shop.html"> SHOP </a> 
+ 		<a class="navigation__link" href="./pages/other pages/attractions.html"> ATTRACTIONS </a> 
+	 	<a class="navigation__link" href="./pages/other pages/contact.html"> CONTACT </a>
+		<hr>
+		<a href="./signup for booking/signup.html">BOOK TICKETS</a>
+		<hr>
+		<a href="./pages/footer other pages/safetyofvisitors.html">Safety of visitors</a>
+		<a href="./pages/footer other pages/rulesandregulations.html">Rules & Regulations</a>
+		<a href="./pages/footer other pages/greeninitiatives.html">Green Initiatives</a>
+		<a href="./pages/footer other pages/csrinitiatives.html">CSR Initiatives</a>
+		<hr>
+		<a href="./pages/signup for booking/signup.html">Sign In</a> 
+	  </div>
+	<div class="icon-bar">
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	</div>
+
 <a href="./index.html" >
 <img src="./assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo"/>
 </a>
@@ -58,8 +82,11 @@
 <div>
 <div class="backgroundglobal" >
 <img src="./assets/images/bg1.jpg" alt="background-image"/>
-</div> 
 
+
+
+
+</div>
 
 <div class="box">
 	<div class="welcome-global-funcity">
@@ -230,9 +257,23 @@ Enjoy scrumptious meals at Global Fun City.</p>
 	</div>
 	<hr>
 	<div class="copyright">
-	<p>Global Fun City &#169; 2022. All rights Reserved.
+	<p> &#169; Global Fun City , All rights Reserved.
         <br>Site designed by Vignesh.in</p>
 	</div>
 </footer>
+
+
+<script>
+	function openNav() {
+	  document.getElementById("mySidenav").style.width = "250px";
+	}
+	
+	function closeNav() {
+	  document.getElementById("mySidenav").style.width = "0";
+	}
+	</script>
+
+
+	
 </body>
 </html>

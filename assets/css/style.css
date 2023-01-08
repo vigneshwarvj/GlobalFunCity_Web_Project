@@ -1,6 +1,45 @@
 body{
 	margin:0;
+	padding: 0;
 }
+/* sidebar for mobile  */
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	
+  }
+  .sidenav, .icon-bar{
+	display: none;
+  }
+  .sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+	color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+/* sidebar mobile completed */
 .visit-signin{
 	display: flex;
 	justify-content: space-around;
@@ -63,6 +102,59 @@ padding:10px;
 	width:1485px;
 	z-index:-1;
 }
+.icons-of-menu-book-signup{
+	display: none;
+}
+
+/* Dropdown */
+
+.mobile-container {
+	max-width: 480px;
+	margin: auto;
+	background-color: #555;
+	height: 500px;
+	color: white;
+	border-radius: 10px;
+  }
+  
+  .topnav {
+	overflow: hidden;
+	background-color: #333;
+	position: relative;
+	display: none;
+  }
+  
+  .topnav #myLinks {
+	display: none;
+  }
+  
+  .topnav a {
+	color: white;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	display: block;
+  }
+  
+  .topnav a.icon {
+	background: black;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+  }
+  
+  .topnav a:hover {
+	background-color: #ddd;
+	color: black;
+  }
+  
+  .active {
+	background-color: #04AA6D;
+	color: white;
+  }
+
+  /* dropdown */
 .welcome-global-funcity{
 	position: relative;
 	z-index: 2;
@@ -351,6 +443,21 @@ footer{
 
 
 @media screen and (max-width:450px) {
+
+	/* sidenav mobile */
+	.sidenav, .icon-bar{
+		display: block;
+	}
+	.sidenav a{
+		color: white;
+		font-family: 'poppins', sans-serif;
+		font-size: medium;
+	}
+	.sidenav a:hover{
+		color: #ff5757;
+	}
+	/* sidenav complete */
+
 .visit-signin, .navbar{
 	display: none;
 	/* display: flex;
@@ -365,7 +472,7 @@ footer{
 
 .header{
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	z-index: 3;
 	position: fixed;
 	background-color: #eee;
@@ -389,6 +496,8 @@ footer{
 
 
 }
+
+
 .welcome-global-funcity{
 	position: relative;
 	z-index: 0;
@@ -428,10 +537,9 @@ footer{
 .updown div h2, .updown div p{
 	margin-left: 1%;
 	padding: 5px 0px 5px 0px;
-}
-.updown div h2, .updown div p{
 	font-size: 15px;
 }
+
 .weare p{
 	padding: 5px 0px 0px 0px ;
 }

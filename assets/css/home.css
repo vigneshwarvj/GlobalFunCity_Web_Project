@@ -342,6 +342,9 @@ footer{
 		padding: 65px 0px 0px 0px ;
 		font-size: 35px;
 	}
+	.lockerroom{
+		display: inline;
+	}
 	.fac_photo{
 		height: 0%;
 		display: block;
