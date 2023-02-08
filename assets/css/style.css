@@ -569,10 +569,12 @@ video{
 	height: 100%;
 }
 .tickets{
-	width: 100%;
+	/* width: 100%;
 	height: 100%;
 	background-size: 190%;
-	filter: brightness(0.9);
+	filter: brightness(0.9); */
+	display: none;
+	
 }
 .tickets h1{
 	font-size: 35px;

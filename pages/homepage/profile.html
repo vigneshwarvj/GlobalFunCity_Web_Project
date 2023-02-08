@@ -207,34 +207,48 @@
 
 
 <script>
-const email = document.getElementById("email") 
-const tel = document.getElementById("tel") 
-const date = document.getElementById("date") 
-const password = document.getElementById("password") 
-const first_name = document.getElementById("first_name") 
-const middle_name = document.getElementById("middle_name") 
-const last_name = document.getElementById("last_name") 
-const tel_home = document.getElementById("tel_home") 
+// const email = document.getElementById("email") 
+// const tel = document.getElementById("tel") 
+// const date = document.getElementById("date") 
+// const password = document.getElementById("password") 
+// const first_name = document.getElementById("first_name") 
+// const middle_name = document.getElementById("middle_name") 
+// const last_name = document.getElementById("last_name") 
+// const tel_home = document.getElementById("tel_home") 
 
-console.log(email)
-console.log(tel)
-console.log(dob)
-console.log(password)
-console.log(first_name)
-console.log(middle_name)
-console.log(last_name)
-console.log(tel_home)
-
-
-document.getElementById("email").value = email
-document.getElementById("date").value = date
-document.getElementById("password").value = password
-document.getElementById("first_name").value = first_name
-document.getElementById("last_name").value = last_name
+// console.log(email)
+// console.log(tel)
+// console.log(dob)
+// console.log(password)
+// console.log(first_name)
+// console.log(middle_name)
+// console.log(last_name)
+// console.log(tel_home)
 
 
+// document.getElementById("email").value = email
+// document.getElementById("date").value = date
+// document.getElementById("password").value = password
+// document.getElementById("first_name").value = first_name
+// document.getElementById("last_name").value = last_name
 
-window.location.href =""
+
+
+// window.location.href ="../../pages/homepage/profile.html"
+
+const first_name = localStorage.getItem("first_name");
+document.getElementById("first_name").value
+
+localStorage.setItem("first_name",first_name )
+localStorage.setItem("middle_name",middle_name )
+localStorage.setItem("last_name", last_name)
+localStorage.setItem("email", email)
+localStorage.setItem("password", password)
+localStorage.setItem("re_enter_password", re_enter_password)
+localStorage.setItem("date", date)
+localStorage.setItem("checkbox", checkbox)
+
+
 
 
 </script>

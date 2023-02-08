@@ -1,6 +1,44 @@
 body {
 	margin: 0;
 }
+/* sidebar for mobile  */
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	
+  }
+  .sidenav, .icon-bar{
+	display: none;
+  }
+  .sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+	color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+/* sidebar mobile completed */
 .visit-signin{
 	display: flex;
 	justify-content: space-around;
@@ -266,4 +304,89 @@ footer{
 	font-family: 'poppins', sans-serif;
 	color: #eee;
 	padding: 20px;
+}
+
+@media screen and (max-width: 450px){
+	/* sidenav mobile */
+	.sidenav, .icon-bar{
+		display: block;
+	}
+	.sidenav a{
+		color: white;
+		font-family: 'poppins', sans-serif;
+		font-size: medium;
+	}
+	.sidenav a:hover{
+		color: #ff5757;
+	}
+	/* sidenav complete */
+	
+	.visit-signin, .navbar{
+	display: none;
+	/* display: flex;
+	justify-content: space-around;
+	width: 100%;
+	font-size: 8px; */
+	
+	}
+	.btn-book-now{
+	display: none;
+	}
+	
+	.header{
+	top:0;
+	display: flex;
+	justify-content: space-around;
+	z-index: 3;
+	position: fixed;
+	background-color: #eee;
+	width: 100%;
+	}
+	.header-logo{
+	margin: 0px;
+	}
+    .card-container{
+		flex-direction: column;
+		height: auto;
+	}
+	.card-container-2{
+		flex-direction: column;
+		height: auto;
+	}
+	.card{
+		text-align: inherit;
+    margin: 0px 10px 20px 10px
+	}
+	.address-open-hours-contact{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 20px;
+	}
+
+	.footer-logo{
+		display: none;
+		
+	}
+	.address h3, .open-hours h3, .contact-for-more h3{
+		text-align: center;
+	}
+	.navbar-footer{
+		display: none;
+	}
+	.other-navbar-footer{
+		display: none;
+	}
+	.navbar-footer ul{
+		flex-direction: column;
+		padding: 0%;
+	}
+	.navbar-footer ul li, .other-navbar-footer ul li{
+		padding: 6px;
+	}
+	.other-navbar-footer ul{
+		flex-direction: column;
+		padding: 0%;
+	}
 }

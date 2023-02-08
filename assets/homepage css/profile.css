@@ -142,3 +142,7 @@ h3, h4{
     width: 300px;
     font-family: 'poppins', sans-serif;
 }
+
+.tickets{
+    text-align: center;
+}

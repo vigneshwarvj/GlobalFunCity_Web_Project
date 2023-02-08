@@ -10,7 +10,7 @@
 
 <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
 
-<title> Sign Up - Global Fun City</title>
+<title> Global Fun City - Sign In</title>
 <link rel="stylesheet" href="../../assets/signup for booking/signup.css"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,19 +31,22 @@
 <div class="sign-up">
     <img src="../../assets/images/global-account-logo.png" width="250" alt="global-account"/>
     <h3>Welcome Back!</h3>
-    <form>
+    <form role="form" onsubmit="signIn(event);">
         <input type="email" id="email" name="email" placeholder="Email Address" required /> &nbsp;
-        <input type="password" id="password" name="password" placeholder="Password" required />
+        <input type="password" id="password" name="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="8" 
+        title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum 10 characters" required="true" />
         
-    </form>
+    
     <a href="../../pages/signup for booking/forgot-password.html"> <h4>Forgot Password?</h4> </a>
-    <button type="button" onclick="signin()">Sign In</button>
+    <button type="submit">Sign In</button>
+</form>
     <h4>New to Global Account?</h4>
     <a href="../../pages/signup for booking/create-an-account.html"><button >Create an Account</button></a>
+
 </div>
 </div>
 
-<script>
+<!-- <script>
 
 function signin(){
     const email = document.getElementById("email") .value
@@ -55,12 +58,35 @@ console.log(password)
 localStorage.setItem("email", email)
 localStorage.setItem("password", password)
 
-window.location.href ="../../pages/homepage/index-profile.html"
+window.location.href =
 
 }    
 
-</script>
+</script> -->
 
+<script>
+const signIn = e => {
+    let email = document.getElementById("email") .value
+    let password = document.getElementById("password") .value
+
+    let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
+    let exist = user_list.length &&
+    JSON.parse(localStorage.getItem('user_list')).some(data =>
+    data.email.toLowerCase() == email.toLowerCase() &&
+    data.password.toLowerCase() == password.toLowerCase());
+
+    if(!exist){
+        alert("Incorrect email or password");
+    }
+    else{
+        alert("Welcome to the Global Fun City!");
+        location.href = "../homepage/index-profile.html";
+    }
+    e.preventDefault();
+}
+
+
+</script>
 
 </body>
 </html> 

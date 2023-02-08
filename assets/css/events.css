@@ -82,7 +82,7 @@ margin-top: 10px;
 .navbar ul li a.active{
     border-bottom: 3px solid #ff5757;
 }
-.header button{
+.btn-book-now{
 	font-size:15px;	
     background-color:#ff5757;
 	color:white;
