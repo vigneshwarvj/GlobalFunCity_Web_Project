@@ -13,7 +13,7 @@ List of features:
 *User sign up.
 *User login.
 *User profile.
-*User edit and update data in profile page.
+*User edit in profile page.
 *User Delete account.
 
 2. Product CRUD:
