@@ -11,14 +11,14 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 
 List of features:
 1. User CRUD:
-*User sign up.
-*User login.
-*User profile.
-*User edit in profile page.
-*User Delete account.
+* User sign up.
+* User login.
+* User profile.
+* User edit in profile page.
+* User Delete account.
 
 2. Product CRUD:
-*Product create
-*Productist showing
-*Edit product detail
-*Delete product
+* Product create
+* Productist showing
+* Edit product detail
+* Delete product
