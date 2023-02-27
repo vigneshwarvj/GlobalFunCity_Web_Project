@@ -9,14 +9,14 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 * Live Website: https://fssa-batch3.github.io/vigneshwar.vijayakumar__web_project/
 
 List of features:
-1. User CRUD
+1. User CRUD:
 *User sign up.
 *User login.
 *User profile.
 *User edit and update data in profile page.
 *User Delete account.
 
-2. Product CRUD
+2. Product CRUD:
 *Product create
 *Productist showing
 *Edit product detail
