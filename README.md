@@ -8,3 +8,6 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 * Wireframe: https://drive.google.com/drive/folders/1A8QuRF-pblAv8Uh_1rB3A5IKGqWMOm4y
 * Live Website: https://fssa-batch3.github.io/vigneshwar.vijayakumar__web_project/
 
+List of features:
+1. User CRUD.
+2. Product CRUD.
