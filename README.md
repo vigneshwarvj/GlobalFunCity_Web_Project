@@ -20,3 +20,4 @@ List of features:
 *Product create
 *Productist showing
 *Edit product detail
+*Delete product
