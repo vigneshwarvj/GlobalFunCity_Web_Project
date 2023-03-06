@@ -18,7 +18,5 @@ List of features:
 * User Delete account.
 
 2. Product CRUD:
-* Product create
-* Productist showing
-* Edit product detail
-* Delete product
+3. Offer CRUD:
+4. Events CRUD:
