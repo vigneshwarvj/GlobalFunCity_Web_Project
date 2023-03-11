@@ -19,39 +19,51 @@
 </head>
 <body>
 
-<div class="header" >
-<img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo"/>
+<!-- navbar starts -->
+<div class="shipping">
+	<p>Free Shipping on orders of $99 or more! Code: SHIPGLOBAL</p>
+</div>
 
-   	 <nav class="navbar">
-	 <ul>
-	<li>  <a class="navigation__link" href="../../index.html"><b>HOME</b></a></li>	
-	 <li> <a class="navigation__link" href="../../pages/other pages/home.html"> <b>ABOUT</b> </a> </li>
-	 <li> <a class="navigation__link" href="../../pages/other pages/events.html"> <b>EVENTS </b> </a> </li>
-	 <li> <a class="navigation__link" href="../../pages/other pages/ticketprices.html"> <b>TICKET  PRICES </b></a> </li>
-  	 <li> <a class="active" href="../../pages/shop/shop.html"> <b>SHOP</b></a> </li>
-	 <li> <a class="navigation__link" href="../../pages/other pages/attractions.html"> <b>ATTRACTIONS </b></a> </li>
-	 <li> <a class="navigation__link" href="../../pages/other pages/contact.html"> <b>CONTACT </b> </a> </li>
-     <li> <a class="navigation__link" href="../shop/cart.html"> <i class="fa-solid fa-bag-shopping"></i> <b> </b> </a> </li>
-	 
-	 </ul>
+<!-- div for shop logo & others -->
+<div class="header-navbar">
 
-	 </nav>
-	 <div>
-	 	 <button> <b> <a href="../../pages/other pages/booknow.html"> BOOK NOW </b> </button> </a>
+<div class="icons-info">
+	<a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i> &nbsp; Back to Home </a> &nbsp;
+	<a href=""><i class="fa-solid fa-phone"></i> &nbsp; Contact </a> 
+	<a href=""><i class="fa-brands fa-cc-visa"></i> &nbsp; Global Visa Card </a>
+</div>	
+
+<div class="logo-global">
+	<a href="../../pages/shop/shop.html"><img src="../../assets/images/global-shop-logo.png" width="210" alt="global-shop-logo"/></a>
+</div>
+
+<div class="icons-info">
+	<a href="../../pages/signup for shopping/signup_shop.html"> <i class="fa-solid fa-user"></i> &nbsp; Sign In | Sign Up </a> &nbsp;
+	<a href=""> <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (2)</a> &nbsp;
+	<a href="../../pages/shop/cart.html"> <i class="fa-solid fa-bag-shopping"></i> &nbsp; My Bag (2)</a>
 </div>
 </div>
+
+<!-- navbar ends -->
 
 <div class="background-color">
-<hr>
+
 
 <div class="photo-and-content">
-<div class="photo-of-store">
-    <img src="../../assets/images/t-shirt.jpg" width="500" height="600" alt="White-T-Shirt"/>
+<!-- <div class="photo-of-store">
+    <img src="../../assets/images/shopping/t-shirt.jpg" width="500" height="600" alt="White-T-Shirt"/>
 </div>
 <div class="content">    
     <h2>White T-Shirt With Logo</h2>
     <h3>$199.00</h3>
-    <p>White T-Shirt with logo is designed by Global Fun City. It is Best T-Shirt.<br>  It will gives more cuteness to you!. BUY NOW! </p>
+    <p class = "desc_about_product">White T-Shirt with logo is designed by Global Fun City. It is Best T-Shirt.<br>  It will gives more cuteness to you!. BUY NOW! </p>
+	<div class="sizes-of-dress">
+		<span class="size"><p class="s">S</p></span>
+		<span class="size"><p class="m">M</p></span>
+		<span class="size"><p class="x">X</p></span>
+		<span class="size"><p class="xl">XL</p></span>
+	</div>
+	<br>
 <button class="btn-sub"><i class="fa-solid fa-minus"></i></button>
 <input  type="text" id="number" name="number" placeholder="1" maxlength="1" size="1">
 <button class="btn-add"><i class="fa-solid fa-plus"></i></button> &nbsp;
@@ -60,7 +72,7 @@
     <h4>Product ID:0003</h4> 
 
 
-</div>
+</div> -->
 </div>
 
 <div class="relatable">
@@ -71,21 +83,21 @@
 	
 	<div class="product-img">
 	<a href="../../pages/shop/black-t-shirt-with-events.html">	
-	<img src="../../assets/images/thingsidoin-shirt.jpg" width="400px" height="400px" alt="black-t-shirt-image"/>
+	<img src="../../assets/images/shopping/thingsidoin-shirt.jpg" width="400px" height="400px" alt="black-t-shirt-image"/>
 	<h3>Black T-Shirt With Events</h3> </a>
 		<p>$299.00</p>
 	</div>
 
 	<div class="product-img">
 		<a href="../../pages/shop/black-collar-t-shirt-with-logo.html">
-	<img src="../../assets/images/black.jpg" width="400px" height="400px" alt="black-collar-t-shirt-image"/>
+	<img src="../../assets/images/shopping/black.jpg" width="400px" height="400px" alt="black-collar-t-shirt-image"/>
 	<h3>Black Collar T-Shirt With Logo</h3></a>
 		<p>$350.00</p>
 	</div>
 	
     <div class="product-img">
 		<a href="../../pages/shop/black-cap-with-logo.html">
-		<img src="../../assets/images/cap.jpg" width="400px" height="400px" alt="black-cap-image"/>
+		<img src="../../assets/images/shopping/cap.jpg" width="400px" height="400px" alt="black-cap-image"/>
 		<h3>Black Cap With Logo</h3></a>
 		<p>$99.00</p>
 	</div>
@@ -99,7 +111,7 @@
 </div>
 
 <div class="messages">
-	<input type="email" placeholder="Enter Your Email Address"> <br>
+	<input type="email" placeholder="Enter Your Email Address"  required/> <br>
 
 </div>
 
@@ -197,6 +209,158 @@
         <br>Site designed by Vignesh.in</p>
 	</div>
 </footer>
+
+<script>
+
+// * Data get from URL params------
+
+const productUniqueID = new URLSearchParams(window.location.search).get("clothing")
+// console.log(productUniqueID)
+let clothing_details = JSON.parse(localStorage.getItem('clothing_details'));
+
+const getProductData = clothing_details.find(data=>
+data.product_uuid === productUniqueID );
+
+// console.log(getProductData)
+
+// create div element for the photo of the store
+const photoDiv = document.createElement('div');
+photoDiv.setAttribute('class', 'photo-of-store');
+
+// create img element for the photo
+const photoImg = document.createElement('img');
+photoImg.setAttribute('src', getProductData["product_photo"]);
+photoImg.setAttribute('width', '500');
+photoImg.setAttribute('height', '600');
+photoImg.setAttribute('alt', getProductData["product_name"]);
+
+
+document.querySelector("div.photo-and-content").append(photoDiv);
+
+// append the img element to the photo div
+photoDiv.appendChild(photoImg);
+
+
+
+
+// create div element for the content
+const contentDiv = document.createElement('div');
+contentDiv.setAttribute('class', 'content');
+document.querySelector("div.photo-and-content").append(contentDiv);
+
+// create h2 element for the product name
+const productName = document.createElement('h2');
+productName.textContent = getProductData["product_name"];
+contentDiv.appendChild(productName);
+
+// create h3 element for the product price
+const productPrice = document.createElement('h3');
+productPrice.textContent = getProductData["product_price"];
+contentDiv.appendChild(productPrice);
+
+// create p element for the product description
+const productDesc = document.createElement('p');
+productDesc.setAttribute("class", "desc_about_product");
+productDesc.textContent = getProductData["product_desc"];
+contentDiv.appendChild(productDesc);
+
+
+// create div element for the sizes of dress
+const sizeDiv = document.createElement('div');
+sizeDiv.setAttribute('class', 'sizes-of-dress');
+contentDiv.appendChild(sizeDiv);
+
+// create span elements for the different sizes
+const smallSize = document.createElement('span');
+smallSize.setAttribute('class', 'size');
+const sSize = document.createElement('p');
+sSize.setAttribute('class', 's');
+sSize.textContent = 'S';
+smallSize.appendChild(sSize);
+
+const mediumSize = document.createElement('span');
+mediumSize.setAttribute('class', 'size');
+const mSize = document.createElement('p');
+mSize.setAttribute('class', 'm');
+mSize.textContent = 'M';
+mediumSize.appendChild(mSize);
+
+const extraSize = document.createElement('span');
+extraSize.setAttribute('class', 'size');
+const xSize = document.createElement('p');
+xSize.setAttribute('class', 'x');
+xSize.textContent = 'X';
+extraSize.appendChild(xSize);
+
+const extraLargeSize = document.createElement('span');
+extraLargeSize.setAttribute('class', 'size');
+const xlSize = document.createElement('p');
+xlSize.setAttribute('class', 'xl');
+xlSize.textContent = 'XL';
+extraLargeSize.appendChild(xlSize);
+
+// append the size elements to the size div
+sizeDiv.appendChild(smallSize);
+sizeDiv.appendChild(mediumSize);
+sizeDiv.appendChild(extraSize);
+sizeDiv.appendChild(extraLargeSize);
+
+const brtag = document.createElement("br");
+contentDiv.appendChild(brtag);
+
+// create button elements for the quantity selector
+const minusBtn = document.createElement('button');
+minusBtn.setAttribute('class', 'btn-sub');
+const minusIcon = document.createElement('i');
+minusIcon.setAttribute('class', 'fa-solid fa-minus');
+minusBtn.appendChild(minusIcon);
+
+contentDiv.appendChild(minusBtn);
+
+const quantityInput = document.createElement('input');
+quantityInput.setAttribute('type', 'text');
+quantityInput.setAttribute('id', 'number');
+quantityInput.setAttribute('name', 'number');
+quantityInput.setAttribute('placeholder', '1');
+quantityInput.setAttribute('maxlength', '1');
+quantityInput.setAttribute('size', '1');
+
+contentDiv.appendChild(quantityInput);
+
+const plusBtn = document.createElement('button');
+plusBtn.setAttribute('class', 'btn-add');
+const plusIcon = document.createElement('i');
+plusIcon.setAttribute('class', 'fa-solid fa-plus');
+plusBtn.appendChild(plusIcon);
+
+contentDiv.appendChild(plusBtn);
+
+// const space = document.createElement('&nbsp;');
+// contentDiv.appendChild(space);
+
+// create a element for the buy now button
+const buyNowLink = document.createElement('a');
+buyNowLink.setAttribute('href', '../shop/cart.html');
+
+contentDiv.appendChild(buyNowLink);
+
+const buyNowBtn = document.createElement('button');
+buyNowBtn.setAttribute('class', 'btn-buynow');
+buyNowBtn.textContent = 'Buy now';
+
+contentDiv.appendChild(buyNowBtn);
+
+const Category = document.createElement('h4');
+Category.textContent = "Category:Style";
+contentDiv.appendChild(Category);
+
+const product_id = document.createElement('h4');
+product_id.textContent = "Product ID:0003";
+contentDiv.appendChild(product_id);
+
+document.querySelector("div.photo-and-content").append()
+</script>
+
 </body>
 </html>
 

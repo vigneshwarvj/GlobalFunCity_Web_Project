@@ -75,19 +75,19 @@
 <div class="search-availablity-information-msg">
 <div class="search-availablity">
 <div class="search-information">
-    <p>Check in  &nbsp; <input type="date" value="08 Dec 2022" placeholder="08-12-2022"> </p> &nbsp;
-    <p>Check out  &nbsp;<input type="date" value="08 Dec 2022" placeholder="08-12-2022"></p>
+    <p>Check in  &nbsp; <input type="date" required/> </p> &nbsp;
+    <p>Check out  &nbsp;<input type="date" required /></p>
 </div>
 
 
 
 <div class="room-adult-children">
     <p>Adult  &nbsp; </p> <button class="btn-sub"><i class="fa-solid fa-minus"></i></button> 
-        <input  type="text" id="number" name="number" placeholder="1" maxlength="1" size="1"> 
+        <input  type="text" id="quantity" value="0" required/> 
         <button class="btn-add"><i class="fa-solid fa-plus"></i></button> &nbsp;
         
     <p>Children  &nbsp;</p> <button class="btn-sub"><i class="fa-solid fa-minus"></i></button> 
-    <input  type="text" id="number" name="number" placeholder="1" maxlength="1" size="1"> 
+    <input  type="text" id="number" value="0" required/> 
     <button class="btn-add"><i class="fa-solid fa-plus"></i></button> &nbsp;
 </div>
 
@@ -162,5 +162,57 @@
 
 </div>
 </footer>
+
+<script>
+    // settiing default attribute to disabled of minus button
+    document.querySelector(".btn-sub").setAttribute("disabled", "disabled");
+
+    // taking value to increment decrement input value
+    var valueCount
+
+    // plus button
+    document.querySelector(".btn-add").addEventListener("click", function (){
+        // getting value of input
+        valueCount = document.getElementById("quantity").value;
+
+        // input value increment by 1
+        valueCount++;
+
+        // setting increment input value
+        document.getElementById("quantity").value = valueCount;
+
+        if(valueCount > 1){
+            document.querySelector(".btn-sub").removeAttribute("disabled");
+            document.querySelector(".btn-sub").classList.remove("disabled");
+        }
+    }
+    )
+
+
+    // minus button
+    document.querySelector(".btn-sub").addEventListener("click", function (){
+        // getting value of input
+        valueCount = document.getElementById("quantity").value;
+
+        // input value increment by 1
+        valueCount--;
+
+        // setting increment input value
+        document.getElementById("quantity").value = valueCount;
+
+        if(valueCount == 1){
+            document.querySelector(".btn-sub").setAttribute("disabled", "disabled");
+        }
+    }
+    )
+</script>
+
+
+
+
+
+
+
+
 </body>
 </html>

@@ -98,7 +98,7 @@
 
 
 <div class="images-of-events">
-    <div class="circus">
+    <!-- <div class="circus">
     <img src="https://res.cloudinary.com/thrillophilia/image/upload/c_fill,dpr_2.0,f_auto,fl_progressive.strip_profile,g_center,h_230,q_auto,w_305/v1/filestore/6jwx5705ueqy3s6q2gvmuad1kno5_BANNER_1638431388.jpg"   height="300" width="400" alt="Water_fall"/>
 	<h2>Water Fall</h2>
 	</div>
@@ -110,7 +110,7 @@
 	
 	<div class="circus">	
 	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT068qwiNATm3wk_KD29qRoWiwww7BUR5_YOQ&usqp=CAU" class="circus" height="300" width="400" alt="3D_theatre"/>
-    <h2>3D Cinema</h2>	
+    <h2>3D Cinema</h2>	 -->
 </div>
     
 
@@ -122,7 +122,7 @@
 </div>
 
 <section class="upcoming-events">
-<div class="festivel">
+<!-- <div class="festivel">
 	<a href="../../pages/upcoming events/folklore_festivel.html">
 	<img src="https://festy.ancorathemes.com/wp-content/uploads/2020/05/image-143.jpg" width="400px" height="300px" alt="folkfore-festivel"/>
 	<h2>Folklore Festival</h2></a>
@@ -137,7 +137,7 @@
 <div class="festivel">
 	<a href="../../pages/upcoming events/festivel-of-colours.html">
 	<img src="https://festy.ancorathemes.com/wp-content/uploads/2020/05/image-142.jpg" width="400px" height="300px" alt="festivel-of-colours"/>
-    <h2>Festival of Colours</h2></a>
+    <h2>Festival of Colours</h2></a> -->
 </div>
 </section>
 </section>
@@ -259,13 +259,60 @@
 		</footer>	
 		
 		<script>
-			function openNav() {
-			  document.getElementById("mySidenav").style.width = "250px";
-			}
+        
+		let event_details = JSON.parse(localStorage.getItem('event_details'));
+
+		// Create a div for to include event
+        for(let i = 0; i<event_details.length; i++){
+        const circusDiv = document.createElement("div");
+		circusDiv.className = "circus";
+
+		const eventsImg = document.createElement("img");
+		eventsImg.src = event_details[i]["eventPhoto"];
+		eventsImg.alt = event_details[i]["eventName"];
+		eventsImg.height = "300";
+		eventsImg.width = "400";
+		circusDiv.appendChild(eventsImg);
+
+		const eventsName = document.createElement("h2");
+		eventsName.textContent = event_details[i]["eventName"];
+		circusDiv.appendChild(eventsName);
+
+		document.querySelector("div.images-of-events").append(circusDiv);
+		}
+
+        // Create a div for upcoming events:
+
+		for(let i = 0; i<3; i++){
+		const festivelDiv = document.createElement("div");
+		festivelDiv.className = "festivel";
+        
+		const festivalLink = document.createElement('a');
+        festivalLink.href = '../../pages/upcoming events/folklore_festivel.html';
+		festivelDiv.appendChild(festivalLink);
+
+		const festivelImg = document.createElement("img");
+		festivelImg.src = "../../assets/images/newyear.jpg";
+		festivelImg.width = "400";
+		festivelImg.height = "300";
+		festivelImg.alt = "";
+		festivalLink.appendChild(festivelImg);
+
+		const festivelName = document.createElement("h2");
+		festivelName.textContent = "jgfj";
+		festivalLink.appendChild(festivelName);
+
+		document.querySelector("section.upcoming-events").append(festivelDiv);
+
+		}
+        //Function for SideNav (Mobile)   
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "250px";
+		}
 			
-			function closeNav() {
-			  document.getElementById("mySidenav").style.width = "0";
-			}
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
+		}
 			</script>
 
 </body>

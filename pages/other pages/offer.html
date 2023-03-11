@@ -118,10 +118,9 @@
                 <button class="btn"> MORE INFO </button> </a>
             <h2> 3 Nights 4 Days Offer</h2>
             <p> Plan your visit 5 days in advance and get<br> a flat 10% off on park tickets.</p>
-        </div> -->
-</section>
-<section class="card-container-2">
-        <!-- <div class="card">
+        </div>
+
+        <div class="card">
             <a href="../../pages/offer packages/collegestudentoffer.html">
                 <img src="https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_1920,h_1080,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/wonderla-amusement-parks-resort/Wonderla_College_ID_20_off_esoep2"
                     width="350px" alt="collegestudent" />
@@ -252,157 +251,160 @@
 
 <script>
 
-// let div
-// let img
-// let button
-// let h2
-// let p
 
 
 
 
-    const offers =[
-    {
-        "name":"New Year Offer",
-        "image": { source: "https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_1500,h_844,r_0,c_crop/q_80,w_455,dpr_1,f_auto,fl_progressive,c_limit/wonderla-amusement-parks-resort/Wonderla_-_Bengaluru_Resort_New_Year_Banner_julmzb",
-                   alt: "new_year_offer"},
-        "content": "Celebrate this New Year at Global Fun City",
-        "link": "../../pages/offer packages/newyear.html",
+
+//     const offers =[
+//     {
+//         "name":"New Year Offer",
+//         "image": { source: "https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_1500,h_844,r_0,c_crop/q_80,w_455,dpr_1,f_auto,fl_progressive,c_limit/wonderla-amusement-parks-resort/Wonderla_-_Bengaluru_Resort_New_Year_Banner_julmzb",
+//                    alt: "new_year_offer"},
+//         "content": "Celebrate this New Year at Global Fun City",
+//         "link": "../../pages/offer packages/newyear.html",
         
-    },
+//     },
 
-    {
-        "name": "Summer Offer",
-        "image":  { source: "https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_1920,h_1080,r_0,c_crop/q_80,w_455,dpr_1,f_auto,fl_progressive,c_limit/wonderla-amusement-parks-resort/Wonderla_advance_booking_offer_10_off_ud9zqg",
-                    alt: "summer_offer"},
-        "content": "Hurry up! Buy Tickets Enjoy the Summer!",
-        "link": "../../pages/offer packages/summeroffer.html",
-    },
-    {
-        "name": "3 Nights 4 Days Offer ",
-        "image" : { source : "https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_1920,h_1080,r_0,c_crop/q_80,w_455,dpr_1,f_auto,fl_progressive,c_limit/wonderla-amusement-parks-resort/3_nights_4_days_package_banner_yh4fvt",
-                    alt: "3_nights_4days_offer" },
-        "content" : "Plan your visit 5 days in advance and get a flat 10% off on park tickets",
-        "link": "../../pages/offer packages/3nights4daysoffer.html"
-    }
+//     {
+//         "name": "Summer Offer",
+//         "image":  { source: "https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_1920,h_1080,r_0,c_crop/q_80,w_455,dpr_1,f_auto,fl_progressive,c_limit/wonderla-amusement-parks-resort/Wonderla_advance_booking_offer_10_off_ud9zqg",
+//                     alt: "summer_offer"},
+//         "content": "Hurry up! Buy Tickets Enjoy the Summer!",
+//         "link": "../../pages/offer packages/summeroffer.html",
+//     },
+//     {
+//         "name": "3 Nights 4 Days Offer ",
+//         "image" : { source : "https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_1920,h_1080,r_0,c_crop/q_80,w_455,dpr_1,f_auto,fl_progressive,c_limit/wonderla-amusement-parks-resort/3_nights_4_days_package_banner_yh4fvt",
+//                     alt: "3_nights_4days_offer" },
+//         "content" : "Plan your visit 5 days in advance and get a flat 10% off on park tickets",
+//         "link": "../../pages/offer packages/3nights4daysoffer.html"
+//     }
     
     
-]
+// ]
 
 
 
 
 
-for (i=0; i<3; i++){
+// for (i=0; i<3; i++){
 
 
 
 // 1st
 
+let offer_details = JSON.parse(localStorage.getItem('offer_details'));
+console.log(offer_details);
+
+for(let i=0; i<offer_details.length; i++){
 
 
-
-card_offer = document.createElement("div");
+let card_offer = document.createElement("div");
 card_offer.setAttribute("class", "card");
 console.log(card_offer);
 
-a = document.createElement("a");
-a.setAttribute("href", offers[i]["link"]);
+let a = document.createElement("a");
+a.setAttribute("href", "../../pages/offer packages/newyear.html");
 card_offer.append(a);
 
-img_of_newyear = document.createElement("img");
-img_of_newyear.setAttribute("src",  offers[i]["image"]["source"]);
+let img_of_newyear = document.createElement("img");
+img_of_newyear.setAttribute("src",  offer_details[i]["offer_image"]);
 img_of_newyear.setAttribute("width", "350px");
-img_of_newyear.setAttribute("alt" , offers[i]["image"]["alt"]);
+img_of_newyear.setAttribute("alt" , offer_details[i]["offer_name"]);
 a.append(img_of_newyear);
 
 
 
-
-button_for_moreinfo = document.createElement("button");
+let button_for_moreinfo = document.createElement("button");
 button_for_moreinfo.setAttribute("class", "btn");
 button_for_moreinfo.innerText = "MORE INFO";
 a.append(button_for_moreinfo);
 
-h2_for_offer_name = document.createElement("h2");
-h2_for_offer_name.innerText = (offers[i]["name"]);
+let h2_for_offer_name = document.createElement("h2");
+h2_for_offer_name.innerText = offer_details[i]["offer_name"];
 card_offer.append(h2_for_offer_name);
 
-p_for_desc = document.createElement("p");
-p_for_desc.innerText = (offers[i]["content"]);
+let p_for_desc = document.createElement("p");
+p_for_desc.innerText = offer_details[i]["offer_desc"];
 card_offer.append(p_for_desc);
 
 document.querySelector("section.card-container").append(card_offer)
 
-
-
 }
 
-for (i = 0; i<3; i++){
+// for(i=0; i < 3; i++){
 
-    const offers =[
-    {
-        "name":"College Student Offer",
-        "image": { source :"https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_1920,h_1080,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/wonderla-amusement-parks-resort/Wonderla_College_ID_20_off_esoep2",
-                   alt : "college_student_offer"},
-        "content": "Come wth Friends Enjoy the Vibe in Global Fun City",
-        "link": "../../pages/offer packages/collegestudentoffer.html",
+//     const offers =[
+//     {
+//         "name":"College Student Offer",
+//         "image": { source :"https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_1920,h_1080,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/wonderla-amusement-parks-resort/Wonderla_College_ID_20_off_esoep2",
+//                    alt : "college_student_offer"},
+//         "content": "Come wth Friends Enjoy the Vibe in Global Fun City",
+//         "link": "../../pages/offer packages/collegestudentoffer.html",
         
-    },
+//     },
 
-    {
-        "name": "Valentine's Offer",
-        "image": {source: "https://www.imagicaaworld.com/wp-content/uploads/valentines.png",
-                  alt: "valentine's_offer"},
-        "content": "Special Offer for Couples For Couples 15% Offer",
-        "link": "../../pages/offer packages/valentineoffer.html",
-    },
-    {
-        "name": "X-Mas Offer ",
-        "image" : { source: "../../assets/images/christmas.jpg",
-                    alt : "x_mas_offer"},
-        "content" : "Plan your visit for 4 days and X-Mas with your Family!",
-        "link": "../../pages/offer packages/xmasoffer.html"
-    }
+//     {
+//         "name": "Valentine's Offer",
+//         "image": {source: "https://www.imagicaaworld.com/wp-content/uploads/valentines.png",
+//                   alt: "valentine's_offer"},
+//         "content": "Special Offer for Couples For Couples 15% Offer",
+//         "link": "../../pages/offer packages/valentineoffer.html",
+//     },
+//     {
+//         "name": "X-Mas Offer ",
+//         "image" : { source: "../../assets/images/christmas.jpg",
+//                     alt : "x_mas_offer"},
+//         "content" : "Plan your visit for 4 days and X-Mas with your Family!",
+//         "link": "../../pages/offer packages/xmasoffer.html"
+//     }
     
     
-]
+// ]
 
-// 2nd
+// // 2nd
 
-card_offer = document.createElement("div");
-card_offer.setAttribute("class", "card");
-console.log(card_offer);
+// let card_offer = document.createElement("div");
+// card_offer.setAttribute("class", "card");
+// console.log(card_offer);
 
-a = document.createElement("a");
-a.setAttribute("href", offers[i]["link"]);
-card_offer.append(a);
+// let a = document.createElement("a");
+// a.setAttribute("href", offers[i]["link"]);
+// card_offer.append(a);
 
-img_of_newyear = document.createElement("img");
-img_of_newyear.setAttribute("src",  offers[i]["image"]["source"])
-img_of_newyear.setAttribute("width", "350px");
-img_of_newyear.setAttribute("alt", offers[i]["image"]["alt"]);
-a.append(img_of_newyear);
-
-
-button_for_moreinfo = document.createElement("button");
-button_for_moreinfo.setAttribute("class", "btn");
-button_for_moreinfo.innerText = "MORE INFO";
-a.append(button_for_moreinfo);
-
-h2_for_offer_name = document.createElement("h2");
-h2_for_offer_name.innerText = (offers[i]["name"]);
-card_offer.append(h2_for_offer_name);
-
-p_for_desc = document.createElement("p");
-p_for_desc.innerText = (offers[i]["content"]);
-card_offer.append(p_for_desc);
-
-document.querySelector("section.card-container-2").append(card_offer)
-
-}
+// let img_of_newyear = document.createElement("img");
+// img_of_newyear.setAttribute("src",  offers[i]["image"]["source"])
+// img_of_newyear.setAttribute("width", "350px");
+// img_of_newyear.setAttribute("alt", offers[i]["image"]["alt"]);
+// a.append(img_of_newyear);
 
 
+// let button_for_moreinfo = document.createElement("button");
+// button_for_moreinfo.setAttribute("class", "btn");
+// button_for_moreinfo.innerText = "MORE INFO";
+// a.append(button_for_moreinfo);
+
+// let h2_for_offer_name = document.createElement("h2");
+// h2_for_offer_name.innerText = (offers[i]["name"]);
+// card_offer.append(h2_for_offer_name);
+
+// let p_for_desc = document.createElement("p");
+// p_for_desc.innerText = (offers[i]["content"]);
+// card_offer.append(p_for_desc);
+
+// document.querySelector("section.card-container-2").append(card_offer)
+
+// }
+
+//Function for side navigation--
+function openNav() {
+			  document.getElementById("mySidenav").style.width = "250px";
+			}
+			
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			}
 
 </script>
 

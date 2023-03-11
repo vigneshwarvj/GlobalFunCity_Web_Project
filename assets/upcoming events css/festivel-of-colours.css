@@ -82,26 +82,36 @@ iframe{
     padding: 60px 0px 0px 0px;
     font-size: 25px;
 }
-.numbers{
-    display: flex;
-    justify-content: center;
-}
-.numbers h3{
-    padding: 0px 30px 0px 0px;
-    font-family: 'Poppins', sans-serif;
-    color: black;
-    font-size: 40px;
-}
-.days {
-    display: flex;
-    justify-content: center;
-    padding: 0px 0px 30px 0px;
-}
-.days p{
-    padding: 0px 20px 0px 20px;
-    font-family: 'poppins', sans-serif;
+.container{
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
 }
+/* countdowm */
+.timer-container{
+	border: 1px solid white;
+	width: 30%;
+	padding: 2rem;
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	overflow: hidden;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+	font-size: 19px;
+}
+.timer-container p {
+    margin: 0 0.9rem;
+}
+
+.columns {
+    font-size: 2rem;
+}
+/* countdown completed */
 .background-color-2{
     width: 1485px;
     height: 900px;

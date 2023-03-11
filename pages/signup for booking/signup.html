@@ -31,7 +31,7 @@
 <div class="sign-up">
     <img src="../../assets/images/global-account-logo.png" width="250" alt="global-account"/>
     <h3>Welcome Back!</h3>
-    <form role="form" onsubmit="signIn(event);">
+    <form role="form" class="signin-data" onsubmit="signIn(event);">
         <input type="email" id="email" name="email" placeholder="Email Address" required /> &nbsp;
         <input type="password" id="password" name="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="8" 
         title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum 10 characters" required="true" />
@@ -79,6 +79,7 @@ const signIn = e => {
         alert("Incorrect email or password");
     }
     else{
+        localStorage.setItem("unique_id", JSON.stringify(email));
         alert("Welcome to the Global Fun City!");
         location.href = "../homepage/index-profile.html";
     }

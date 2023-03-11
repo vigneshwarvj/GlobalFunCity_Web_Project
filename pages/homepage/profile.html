@@ -57,10 +57,7 @@
     </div>
     </div>
 
-<div class="image">
-    <img src="../../assets/images/global-account-logo.png" width="300px" alt="account-logo"/>
-</div>
-<br>
+
 
 
 <div class="all-content">
@@ -75,7 +72,7 @@
 <form>
     <label class="input-field">Email</label>
     <br>
-    <input id="email" class="input-field" type="email" />
+    <input id="email" class="input-field" type="email" disabled/>
 </form>
 </div>
 
@@ -83,7 +80,7 @@
 <form>
     <label class="input-field">Mobile Phone (optional)</label>
     <br>
-    <input id="tel" class="input-field" type="tel" placeholder="+1">
+    <input id="mobile_number" class="input-field" type="tel" placeholder="+1" readonly/>
 </form>
 </div>
 
@@ -91,7 +88,7 @@
     <form>
         <label class="input-field" >Date of Birth</label>
         <br>
-        <input  id="dob" class="input-field" onfocus="(this.type=date)"/>
+        <input  id="dob" class="input-field" type="text" onfocus="(this.type=date)" readonly/>
     </form>
 </div>
 
@@ -99,7 +96,7 @@
     <form>
         <label class="input-field">Password</label>
         <br>
-        <input id="password" class="input-field" type="password" />
+        <input id="password" class="input-field" type="password" readonly/>
     </form>
 </div>
 
@@ -111,7 +108,7 @@
     <form>
         <label class="input-field">First Name</label>
         <br>
-        <input id="first_name" class="input-field" type="text" />
+        <input id="first_name" class="input-field" type="text" readonly/>
     </form>
 </div>
 
@@ -119,7 +116,7 @@
     <form>
         <label class="input-field">Middle Name (optional)</label>
         <br>
-        <input id="middle_name" class="input-field" type="text">
+        <input id="middle_name" class="input-field" type="text" readonly/>
     </form>
 </div>
 
@@ -127,7 +124,7 @@
     <form>
         <label class="input-field">Last Name</label>
         <br>
-        <input id="last_name" class="input-field" type="text" />
+        <input id="last_name" class="input-field" type="text" readonly/>
     </form>
 </div>
 
@@ -164,89 +161,179 @@
     <form>
         <label class="input-field">Home Phone (optional)</label>
         <br>
-        <input id="tel_home" class="input-field" type="tel">
+        <input id="home_mobile_number" class="input-field" type="tel" readonly/>
     </form>
 </div>
 
 <br>
-
+<div class="btn-edit">
+    <button type="submit" class="btn-1" id="edit-button" >Edit</button> 
+</div>
+<br>
 <div class="btn-done">
-    <button>Done</button>
+    <button class="btn-2" id="done-button" style="display: none;">Done</button>
 </div>
 
 <div class="privacy">
     <p>Global treats this information with care and respect. For details, review our <a href="../../pages/footer other pages/privacypolicy.html"> Privacy Policy. </a></p>
 </div>
 
+<div class="btn-delete">
+    <button type="button" onclick="deleteAcc()"> Delete account </button>
+    <p>By deleting your account, you may be unable to access certain Global services.</p>
+</div>
 </div>
 
 
 <div class="profile-picture">
-    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <form action="" method="post" enctype="multipart/form-data">
         <label for="fileToUpload">
       <div class="profile-pic">
           <span class="glyphicon glyphicon-camera"></span>
           <span>Change Image</span>
+          <img src="https://htmlcolorcodes.com/assets/images/colors/wheat-color-solid-background-1920x1080.png" alt="image" id="output" width="200"/>
       </div>
       </label>
-      <input type="File" name="fileToUpload" id="fileToUpload">
+      <input type="File" name="fileToUpload" id="fileToUpload" onchange="loadFile(event)"  /> 
+      <!-- <img src="https://htmlcolorcodes.com/assets/images/colors/wheat-color-solid-background-1920x1080.png" alt="image" id="output" width="200"/> -->
     </form>
 
-    <h4>Tommy S </h4>
 </div>
 
 
 </div>
 
-<div class="tickets">
-    <h1>Your Tickets & Resorts</h1>
-    <h6>No Tickets & Resorts</h6>
-</div>
+
 
 
 
 
 <script>
-// const email = document.getElementById("email") 
-// const tel = document.getElementById("tel") 
-// const date = document.getElementById("date") 
-// const password = document.getElementById("password") 
-// const first_name = document.getElementById("first_name") 
-// const middle_name = document.getElementById("middle_name") 
-// const last_name = document.getElementById("last_name") 
-// const tel_home = document.getElementById("tel_home") 
 
-// console.log(email)
-// console.log(tel)
-// console.log(dob)
-// console.log(password)
-// console.log(first_name)
-// console.log(middle_name)
-// console.log(last_name)
-// console.log(tel_home)
+// js for change image
+var loadFile = function (event) {
+  var image = document.getElementById("output");
+  image.src = 
+  URL.createObjectURL(event.target.files[0]);
+};
+// chnge image complete
+
+//get value from local storage
+        let unique_id = JSON.parse(localStorage.getItem("unique_id"));
+        let user_list = JSON.parse(localStorage.getItem("user_list"));
+        // console.log(userData);
+        function profile_data(e){
+            return e.email == unique_id;
+        }
+        person_data = user_list.find(profile_data);
+
+        document.getElementById("first_name").value = person_data["first_name"];
+        document.getElementById("middle_name").value = person_data["middle_name"];
+        document.getElementById("last_name").value = person_data["last_name"];
+        document.getElementById("email").value = person_data["email"];
+        document.getElementById("password").value = person_data["password"];
+        document.getElementById("home_mobile_number").value = person_data["home_mobile_number"];
+        document.getElementById("mobile_number").value = person_data["mobile_number"];
+
+        // document.getElementById("date").value = person_data["date"];
 
 
-// document.getElementById("email").value = email
-// document.getElementById("date").value = date
-// document.getElementById("password").value = password
-// document.getElementById("first_name").value = first_name
-// document.getElementById("last_name").value = last_name
 
 
+// update_version        
+function update_version(e){
+    let user_firstname = document.getElementById("first_name").value;
+    let user_middlename = document.getElementById("middle_name").value;
+    let user_lastname = document.getElementById("last_name").value;
+    let user_password = document.getElementById("password").value;
+    // let user_date = document.getElementById("date").value;
+    let user_mobilenumber = document.getElementById("mobile_number").value;
+    let user_home_mobilenumber = document.getElementById("home_mobile_number").value;
 
-// window.location.href ="../../pages/homepage/profile.html"
+    person_data["first_name"] = user_firstname;
+    person_data["middle_name"] = user_middlename;
+    person_data["last_name"] = user_lastname;
+    person_data["password"] = user_password;
+    // person_data["date"] = user_date;
+    person_data["mobile_number"] = user_mobilenumber;
+    person_data["home_mobile_number"] = user_home_mobilenumber;
 
-const first_name = localStorage.getItem("first_name");
-document.getElementById("first_name").value
+    // let user = document.getElementById("mobile-number").value =  person_data["mobile_number"]
 
-localStorage.setItem("first_name",first_name )
-localStorage.setItem("middle_name",middle_name )
-localStorage.setItem("last_name", last_name)
-localStorage.setItem("email", email)
-localStorage.setItem("password", password)
-localStorage.setItem("re_enter_password", re_enter_password)
-localStorage.setItem("date", date)
-localStorage.setItem("checkbox", checkbox)
+    localStorage.setItem("user_list", JSON.stringify(user_list));
+    console.log(user_list);
+
+    // window.location.href = "../../pages/homepage/profile.html"
+
+}  
+
+    
+    // edit started
+        
+
+        const editThing = document.querySelector(".btn-1");
+        editThing.addEventListener("click",findReadonly);
+
+        const sumbit =document.querySelector(".btn-2");
+        sumbit.addEventListener("click",update_version);
+        sumbit.addEventListener("click",findReadonly1)
+
+    function findReadonly(e){
+        document.getElementById("first_name").removeAttribute("readonly");
+        document.getElementById("middle_name").removeAttribute("readonly");
+        document.getElementById("last_name").removeAttribute("readonly");
+        // document.getElementById("date").removeAttribute("readonly");
+        document.getElementById("password").removeAttribute("readonly");
+        document.getElementById("mobile_number").removeAttribute("readonly");
+        document.getElementById("home_mobile_number").removeAttribute("readonly");
+        document.querySelector(".btn-2").removeAttribute("style");
+        document.querySelector(".btn-1").setAttribute("style", "display:none");
+    }
+
+    function findReadonly1(e){
+        document.getElementById("first_name").setAttribute("readonly", "true");
+        document.getElementById("middle_name").setAttribute("readonly", "true");
+        document.getElementById("last_name").setAttribute("readonly", "true");
+        // document.getElementById("date").setAttribute("readonly", "true");
+        document.getElementById("password").setAttribute("readonly", "true");
+        document.getElementById("mobile_number").setAttribute("readonly", "true");
+        document.getElementById("home_mobile_number").setAttribute("readonly", "true");
+        document.querySelector(".btn-2").setAttribute("style", "display:none");
+        document.querySelector(".btn-1").removeAttribute("style");
+     }
+
+    
+    // edit completed
+
+
+    // delete account started
+    function deleteAcc(e)
+        {
+            if(confirm("Are you sure to delete your account?")){
+            //get value from local storage
+            let unique_id = JSON.parse(localStorage.getItem("unique_id"));
+            let user_list= JSON.parse(localStorage.getItem("user_list"));
+        function profile_data(e){
+            return e.mobile == unique_id  ;
+        }
+         // finding the userData which unique_id correctly matches
+        person_data = user_list.find(profile_data);
+            const indexOfUser = user_list.indexOf(person_data);
+            // console.log(result);
+            // user_list.splice(position(which means index 1,2,3,4), counting);
+            user_list.splice(indexOfUser, 1);
+            localStorage.setItem("user_list", JSON.stringify(user_list));
+            window.location.href="../../index.html";
+        };
+    }
+    // delete finish
+
+    //     // Process of button
+    //     const edit = document.querySelector(".edit-button");
+    //     edit.addEventListener("click", findReadonly);
+    //     const done = document.querySelector(".done-button");
+    //     done.addEventListener("click", update_version);
+    //     done.addEventListener("click", findReadonly);
 
 
 

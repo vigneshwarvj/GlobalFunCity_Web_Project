@@ -1,47 +1,41 @@
 body{
 	margin:0;
 }
-.header{ 
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
+.shipping{
+	text-align: center;
+	font-family: 'open sans', sans-serif;
+	background-color: #121a21;
+	color: #f6f6f6;
+	padding: 4px;
 }
-.header-logo{
-	width:180px;
-	margin-left:50px;
-	margin-top: 20px;
+.header-navbar{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	position: sticky;
+	box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+	z-index: 1;
+
 }
-.navbar ul li{
-	display:inline;
-	margin:10px;
+.header-navbar a{
+	font-family: 'poppins', sans-serif;
 }
-.navbar ul li a{
-font-family:'Open Sans', sans-serif;
-text-decoration:none;
-padding:10px;
-font-size:15px;
-margin-top:10px;
-}
-.navbar ul li a:hover {
-	border-bottom:3px solid #ff5757;
-} 
-.active{
-    border-bottom: 3px solid #ff5757;
-}
-.header button{
-	font-size:15px;	
-    background-color:#ff5757;
-	color:white;
-	border-radius:8px;
-	padding:15px;
-	border:none;
-	margin-right:80px;
-	cursor: pointer;
-}
-.header button a{
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  }
+.icons-info a{
 	text-decoration: none;
-    color:white;
+    padding: 5px;	
+
 }
+.icons-info i{
+	color: #ff5757;
+}
+
+
+
 .background-color{
 	height: 1430px;
 	width: 1485px;
@@ -74,6 +68,25 @@ input{
     /* border-radius: 50px; */
     border: none;
 }
+
+/* sizes */
+.size{
+	display: inline-block;
+	border: 1px solid rgb(150, 148, 148);
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	position: relative;
+	margin: 5px;
+}
+.s, .m, .x, .xl{
+	position: relative;
+	bottom: 10px;
+}
+.size:hover{
+	border: 2px solid #ffa51d;
+}
+/* sizes compl */
 .btn-sub, .btn-add{
 	padding: 14px 16px 14px 16px;
 	background-color: white;
@@ -90,6 +103,7 @@ input{
 	cursor: pointer;
 	font-size: 18px;
 	font-family: 'League Spartan', sans-serif;
+	margin: 0px 0px 0px 25px;
 }
 .content h4{
     font-family: 'poppins', sans-serif;
@@ -163,7 +177,9 @@ input{
 	padding: 50px 0px 0px 0px;
 	
 }
-
+.content .desc_about_product{
+	width:500px;
+}
 
 
 

@@ -71,7 +71,7 @@
         <h1>Festival Countdown</h1>
     </div>
     
-    <div class="numbers">
+    <!-- <div class="numbers">
         <h3>369 </h3>
         <h3>:</h3>
         <h3>21 </h3>
@@ -86,7 +86,31 @@
         <p>Hours</p>
         <p>Minutes </p>
         <p>Seconds</p>
-    </div>
+    </div> -->
+
+	<section class="container">
+		<div class="timer-container">
+			<p><span id="days"></span> <br>
+				<span><b>Days</b> </span>
+			</p>
+			<span class="columns"></span>
+		
+			<p><span id="hours"></span> <br>
+				<span><b>Hours</b></span>
+			</p>
+			<span class="columns"></span>
+		
+			<p><span id="minutes"></span> <br>
+				<span><b>Minutes</b></span>
+			</p>
+			<span class="columns"></span>
+		
+			<p><span id="seconds"></span> <br>
+				<span><b>Seconds</b></span>
+			</p>
+		
+		</div>
+		</section>
 
 <div class="background-color-2">
     <iframe title="vimeo-player" src="https://player.vimeo.com/video/267028861?h=301a10b95f" width="1485" height="400" frameborder="0" allowfullscreen></iframe>
@@ -216,6 +240,39 @@
 </footer>
 
 
+
+<script>
+		let upcomingDate = new Date("jan 02, 2024 12:00:00").getTime();
+
+setInterval(() => {
+
+let currentDate = new Date();
+
+let diff = upcomingDate - currentDate;
+
+let daysLeft = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+let hoursLeft = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+let minutesLeft = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+let secondsLeft = Math.floor((diff % (1000 * 60)) / 1000);
+
+// if (secondsLeft < 0) {
+//     stopInterval();
+// }
+
+let day = document.getElementById('days');
+let hour = document.getElementById('hours');
+let minute = document.getElementById('minutes');
+let second = document.getElementById('seconds');
+
+day.innerHTML = daysLeft;
+hour.innerHTML = hoursLeft;
+minute.innerHTML = minutesLeft;
+second.innerHTML = secondsLeft;
+}, 1000);
+</script>
 
 
 </body>

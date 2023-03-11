@@ -368,6 +368,9 @@ footer{
 	color: white;
 	width: 300px;
 }
+.contact-for-more a{
+	text-decoration: none;
+}
 .social-medias a{
 	display: inline-block;
 	width: 40px; 

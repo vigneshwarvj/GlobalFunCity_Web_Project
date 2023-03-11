@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset='UTF-8'>
-<link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
     <title> New Year Offer - Global Fun City </title>
 <link rel="stylesheet" href="../../assets/offer css/newyear.css" />
 
@@ -21,7 +21,44 @@
 </head>
 <body>
 
+	<header>
+		<div class="visit-signin">
+
+			<div class="visit-global">
+				<p>	Visit global1.com</p>
+			</div>	
+			
+			<div class="sign-in">
+				
+		<p><a href="../../pages/signup for booking/signup.html"> Sign In </a>| <a href="../signup for booking/create-an-account.html"> Create Account</a> | <i class="fa-solid fa-globe"></i> United states (English)</p>
+			</div>
+			
+		</div>
+
 <div class="header" >
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a class="navigation__link" href="../../index.html">HOME</a>
+		 <a class="active" href="../../pages/other pages/home.html"> ABOUT</a>
+		 <a class="navigation__link" href="../../pages/other pages/events.html"> EVENTS  </a> 
+		<a class="navigation__link" href="../../pages/other pages/offer.html"> OFFERS  </a> 
+		  <a class="navigation__link" href="../../pages/other pages/ticketprices.html"> TICKET  PRICES </a> 
+		<a class="navigation__link" href="../../pages/shop/shop.html"> SHOP </a> 
+		 <a class="navigation__link" href="../../pages/other pages/attractions.html"> ATTRACTIONS </a> 
+		 <a class="navigation__link" href="../../pages/other pages/contact.html"> CONTACT </a>
+		<hr>
+		<a href="../signup for booking/signup.html">BOOK TICKETS</a>
+		<hr>
+		<a href="../../pages/footer other pages/safetyofvisitors.html">Safety of visitors</a>
+		<a href="../../pages/footer other pages/rulesandregulations.html">Rules & Regulations</a>
+		<a href="../../pages/footer other pages/greeninitiatives.html">Green Initiatives</a>
+		<a href="../../pages/footer other pages/csrinitiatives.html">CSR Initiatives</a>
+		<hr>
+		<a href="../../pages/signup for booking/signup.html">Sign In</a> 
+	  </div>
+	<div class="icon-bar">
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	</div>
 <a href="../../index.html" >
 <img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo"/>
 </a>
@@ -43,9 +80,10 @@
 </div>
 </div>
 </header>
-<hr>
 
-<div class="book">
+<section class="offers">
+
+<!-- <div class="book">
     <p>New Year at Global Fun City</p>
 </div>
 
@@ -99,8 +137,8 @@
         <li>This offer cannot be clubbed with any other offer.</li>
     </ul>
 </div>
-</div>
-
+</div> -->
+</section>
 
 
 <footer>
@@ -190,6 +228,142 @@
         <br>Site designed by Vignesh.in</p>
 	</div>
 </footer>
+
+<script>
+
+// Create a div element with class name "book"
+const bookDiv = document.createElement("div");
+bookDiv.className = "book";
+
+// Create a paragraph element and add it to the bookDiv
+const bookPara = document.createElement("p");
+bookPara.textContent = "New Year at Global Fun City";
+bookDiv.appendChild(bookPara);
+
+// Create a div element with class name "newyear"
+const newYearDiv = document.createElement("div");
+newYearDiv.className = "newyear";
+
+// Create an image element and add it to the newYearDiv
+const newYearImg = document.createElement("img");
+newYearImg.src = "../../assets/images/newyear.jpg";
+newYearImg.alt = "new-year-image";
+newYearImg.className = "new-year-photo-offer";
+newYearDiv.appendChild(newYearImg);
+
+// Create a paragraph element and add it to the newYearDiv
+const newYearPara = document.createElement("p");
+newYearPara.textContent = "The new year party is one of the things that we all wait for every year, and one of the most sought-after venues for such parties is Global Fun City. This New Year’s Eve, head to Global Fun City Resort and be part of the most amazing New Year party in town. It will be a fun-filled night with an exclusive DJ performance by DJ Montez from California with a gala dinner, unlimited cocktails and stunning fireworks. You can also find a kid's zone here, making it a favourite place for people with children. The Package includes a night stay at the Resort with breakfast, a Fastrack ticket to the Amusement park, and entry to the New year Celebration. You could join the party all night, or stay back for the night";
+newYearDiv.appendChild(newYearPara);
+
+// Create a div element with class name "instructions-for-offer"
+const instructionsDiv = document.createElement("div");
+instructionsDiv.className = "instructions-for-offer";
+newYearDiv.appendChild(instructionsDiv);
+
+// Create a div element with class name "con" and add it to the instructionsDiv
+const conDiv = document.createElement("div");
+conDiv.className = "con";
+instructionsDiv.appendChild(conDiv);
+
+// Create a paragraph element and add it to the conDiv
+const conPara = document.createElement("p");
+conPara.textContent = "New Year Celebration with Stay and Park Tickets";
+conDiv.appendChild(conPara);
+
+// Create an unordered list and add it to the conDiv
+const conList = document.createElement("ul");
+conDiv.appendChild(conList);
+
+// Create list items and add them to the conList
+const conListItem1 = document.createElement("li");
+conListItem1.textContent = "Executive or Deluxe Room";
+conList.appendChild(conListItem1);
+
+const conListItem2 = document.createElement("li");
+conListItem2.textContent = "Price: $800 + Taxes per Couple";
+conList.appendChild(conListItem2);
+
+const conListItem3 = document.createElement("li");
+conListItem3.textContent = "Child between the ages of 5 and 11 years - $500";
+conList.appendChild(conListItem3);
+
+const conListItem4 = document.createElement("li");
+conListItem4.textContent = "Child 12 years & above and extra-person - $600 ";
+conList.appendChild(conListItem4);
+
+
+// Create a paragraph element and add it to the conDiv
+const conInclusionsPara = document.createElement("p");
+conInclusionsPara.textContent = "Inclusions";
+conDiv.appendChild(conInclusionsPara);
+
+// Create an unordered list and add it to the conDiv
+const conInclusionsList = document.createElement("ul");
+conDiv.appendChild(conInclusionsList);
+
+// Create list items and add them to the conInclusionsList
+const conInclusionsListItem1 = document.createElement("li");
+conInclusionsListItem1.textContent = "Stay for a couple in an Executive or Deluxe Room";
+conInclusionsList.appendChild(conInclusionsListItem1);
+
+const conInclusionsListItem2 = document.createElement("li");
+conInclusionsListItem2.textContent = "New Year's Eve Celebration - including DJ";
+conInclusionsList.appendChild(conInclusionsListItem2);
+
+const conInclusionsListItem3 = document.createElement("li");
+conInclusionsListItem3.textContent = "Gala Dinner and Unlimited Cock";
+conInclusionsList.appendChild(conInclusionsListItem3);
+
+const conInclusionsListItem4 = document.createElement("li");
+conInclusionsListItem4.textContent = "Breakfast the next day";
+conInclusionsList.appendChild(conInclusionsListItem4);
+
+const paraDetails = document.createElement("p");
+paraDetails.textContent = "For more details, reach out to us at +1 8608171080";
+conDiv.append(paraDetails);
+
+//A tag from link
+const anchor = document.createElement("a");
+anchor.href = "../../pages/other pages/booknow.html";
+newYearDiv.appendChild(anchor)
+
+
+//Button to book now
+const buttonBook = document.createElement("button");
+buttonBook.className = "btn";
+buttonBook.textContent = "BOOK NOW";
+anchor.append(buttonBook)
+
+//Div for terms and conditions
+const termsDiv = document.createElement("div");
+termsDiv.className = "termsandconditions";
+newYearDiv.appendChild(termsDiv);
+
+const h2_terms = document.createElement("h2");
+h2_terms.textContent = "Terms & Conditions";
+termsDiv.appendChild(h2_terms);
+
+const Termsul = document.createElement("ul");
+termsDiv.appendChild(Termsul);
+
+const Termsli1 = document.createElement("li");
+Termsli1.textContent = "New Year Resort packages are only for couples and families."
+Termsul.appendChild(Termsli1);
+
+const Termsli2 = document.createElement("li");
+Termsli2.textContent = "This offer is available only on tickets booked on offers.globalfuncity.com";
+Termsul.appendChild(Termsli2);
+
+const Termsli3 = document.createElement("li");
+Termsli3.textContent = "This offer cannot be clubbed with any other offer.";
+Termsul.appendChild(Termsli3);
+
+
+document.querySelector("section.offers").append(bookDiv, newYearDiv );
+
+
+</script>
 
 </body>
 </html>

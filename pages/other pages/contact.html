@@ -91,6 +91,65 @@ info@globalfuncity.com
 	<button class="get-in-touch"> <i class="fa-regular fa-paper-plane"></i> &nbsp;Get in touch </button> </a>
 	
 
+<!-- faq started -->
+<div class="background">
+<section class="main-faq">
+	<h2 class="title">FAQs</h2>
+	<div class="faq">
+		<div class="question">
+			<h3>How to get access to the park with e-tickets?</h3>
+			<i class="fa-solid fa-plus"></i>
+		</div>
+
+		<div class="answer">
+			<p>Please show your e-ticket at the entry gate to enter the park. 
+				Guests who have booked FasTrack tickets should collect the FasTrack bands from the helpdesk before entering the park.</p>
+		</div>
+	</div>
+<hr>
+	<!-- 2nd question -->
+	
+	<div class="faq">
+		<div class="question">
+			<h3>Where to sleep there?</h3>
+			<i class="fa-solid fa-plus"></i>
+		</div>
+
+		<div class="answer">
+			<p>You can stay at a hostel or resort. In addition, there are berths in the hotels. We also have camping sites for guests.</p>
+		</div>
+	</div>
+<hr>
+	<!-- 3rd question -->
+	<div class="faq">
+		<div class="question">
+			<h3> Are there any food and drink options available in the amusement park?</h3>
+			<i class="fa-solid fa-plus"></i>
+		</div>
+
+		<div class="answer">
+			<p>Yes, We have a variety of food and drink options available. 
+				Soft drinks, ice creams and bottled potable water are also available at all the food courts and scattered kiosks.</p>
+		</div>
+	</div>
+<hr>
+    <!-- 4th question -->
+    <div class="faq">
+	    <div class="question">
+		    <h3> Is there a dress code for the park?</h3>
+		    <i class="fa-solid fa-plus"></i>
+	    </div>
+
+	    <div class="answer">
+		    <p>We recommend wearing comfortable, weather-appropriate clothing and shoes.
+			 We do not allow clothing with offensive language or images.</p>
+	    </div>
+    </div>
+<hr>
+</section>
+</div>
+<!-- faq completed -->
+
 <div class="location">
 	<img src="../../assets/images/location.png" width="1485" height="550" alt="loaction_of_global_fun_city"/>
 </div>	
@@ -186,6 +245,18 @@ info@globalfuncity.com
 	</div>
 </footer>
 
+
+
+
+<script>
+	const faqs = document.querySelectorAll(".faq");
+
+	faqs.forEach(faq => {
+		faq.addEventListener("click", () => {
+			faq.classList.toggle("active");
+		});
+	});
+</script>
 
 
 

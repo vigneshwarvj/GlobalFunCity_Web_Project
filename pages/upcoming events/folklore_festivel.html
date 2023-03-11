@@ -44,12 +44,12 @@
 
 <div class="background-color">
 
-<div class="festivel">
+<!-- <div class="festivel">
     <h1>Folklore Festival</h1>
 </div>
 
 <div class="timing">
-    <p>Dec 2, 2024 @ 9.30 am - Dec 12, 2024 @ 4.30 pm </p>
+    <p>Dec 2, 2023 @ 9.30 am - Dec 12, 2023 @ 4.30 pm </p>
 </div>
 
 
@@ -75,14 +75,14 @@ In the festival folk dance groups from the five continents will reinforce, throu
 
 
     <a href="https://calendar.google.com/calendar/u/0/r/week/2022/12/9?tab=rc"><p><b>+ Add to Google Calender</b></p></a>
-    </div>
+    </div> -->
 
 
 <div class="count">
     <h1>Festival Countdown</h1>
 </div>
 
-<div class="numbers">
+<!-- <div class="numbers">
     <h3>455 </h3>
     <h3>:</h3>
     <h3>21 </h3>
@@ -97,12 +97,35 @@ In the festival folk dance groups from the five continents will reinforce, throu
     <p>Hours</p>
     <p>Minutes </p>
     <p>Seconds</p>
-</div>
+</div> -->
 
+<section class="container">
+<div class="timer-container">
+	<p><span id="days"></span> <br>
+		<span> <b>Days</b> </span>
+	</p>
+	<span class="columns"></span>
+
+	<p><span id="hours"></span> <br>
+		<span><b>Hours</b></span>
+	</p>
+	<span class="columns"></span>
+
+	<p><span id="minutes"></span> <br>
+		<span><b>Minutes</b></span>
+	</p>
+	<span class="columns"></span>
+
+	<p><span id="seconds"></span> <br>
+		<span><b>Seconds</b></span>
+	</p>
+
+</div>
+</section>
 <div class="background-color-2">
 
     
-<video class="video-of-attractions" width="1485" height="600" autoplay="true" loop controls>
+<video class="video-of-attractions" width="1485" height="600"  controls>
 <source src="../../assets/videos/SERBIA 🇷🇸- 2021 Fribourg International Folklore Festival🇨🇭.mp4" type="video/mp4"> 
 </video>
 
@@ -246,5 +269,92 @@ In the festival folk dance groups from the five continents will reinforce, throu
 
 
 </div>
+
+<script>
+	//create a DOM
+	// Create the main container div
+const mainDiv = document.createElement('div');
+mainDiv.className = "festivel";
+
+// Create the heading element
+const heading = document.createElement('h1');
+heading.textContent = 'Folklore Festival';
+mainDiv.appendChild(heading);
+
+// Create the timing div and its child element
+const timingDiv = document.createElement('div');
+timingDiv.classList.add('timing');
+const timingParagraph = document.createElement('p');
+timingParagraph.textContent = 'Dec 2, 2023 @ 9.30 am - Dec 12, 2023 @ 4.30 pm';
+timingDiv.appendChild(timingParagraph);
+mainDiv.appendChild(timingDiv);
+
+// Create the image div and its child element
+const imgDiv = document.createElement('div');
+imgDiv.classList.add('img-festivel');
+const image = document.createElement('img');
+image.src = 'https://festy.ancorathemes.com/wp-content/uploads/2020/05/image-143.jpg';
+image.width = '1200';
+image.height = '800';
+image.alt = 'folkfore-festivel';
+imgDiv.appendChild(image);
+mainDiv.appendChild(imgDiv);
+
+// Create the content div and its child elements
+const contentDiv = document.createElement('div');
+contentDiv.classList.add('content');
+const firstParagraph = document.createElement('p');
+firstParagraph.textContent = 'A folk festival celebrates traditional folk crafts and folk music. This list includes folk festivals worldwide, except those with only a partial focus on folk music or arts. Folk festivals may also feature folk dance or ethnic foods. The festival has promoted the message of peace, friendship and brotherhood among nations worldwide through its cultural and traditional folk forms in the art of music and dance. In the festival folk dance groups from the five continents will reinforce, through their performances, the message of friendship, communication and cooperation. A total of 800 dancers, choreographers, musicians, singers etc.';
+const secondParagraph = document.createElement('p');
+secondParagraph.textContent = 'The festival takes place during the last week of August, from one Sunday to the other, commencing with the great parade of peace and friendship, the evening’s ceremony marking the opening night (on that first Sunday night) with a very short appearance by all dance groups. During the week we have their full appearances and performances by each group and finally reaching the peak on the second Sunday with the majestic ending ceremony to include the exchange of gifts and the final dance of peace on stage by all groups. The participation of the folk groups in the Lefkas International Folklore Festival is the opportunity for thousands native and foreign visitors of the island to get acquainted with, to appreciate and enjoy the folk art and cultural heritage of other countries.';
+const googleCalendarLink = document.createElement('a');
+googleCalendarLink.href = 'https://calendar.google.com/calendar/u/0/r/week/2022/12/9?tab=rc';
+const googleCalendarParagraph = document.createElement('p');
+const googleCalendarBold = document.createElement('b');
+googleCalendarBold.textContent = '+ Add to Google Calendar';
+googleCalendarParagraph.appendChild(googleCalendarBold);
+googleCalendarLink.appendChild(googleCalendarParagraph);
+contentDiv.appendChild(firstParagraph);
+contentDiv.appendChild(secondParagraph);
+contentDiv.appendChild(googleCalendarLink);
+mainDiv.appendChild(contentDiv);
+
+// Add the main container div to the document body
+// document.body.appendChild(mainDiv);
+
+document.querySelector("div.background-colour").append(mainDiv);
+
+	//Timings for the upcoming events
+	let upcomingDate = new Date("dec 02, 2023 12:00:00").getTime();
+
+    setInterval(() => {
+
+    let currentDate = new Date();
+
+    let diff = upcomingDate - currentDate;
+
+    let daysLeft = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    let hoursLeft = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+    let minutesLeft = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+    let secondsLeft = Math.floor((diff % (1000 * 60)) / 1000);
+
+    // if (secondsLeft < 0) {
+    //     stopInterval();
+    // }
+
+    let day = document.getElementById('days');
+    let hour = document.getElementById('hours');
+    let minute = document.getElementById('minutes');
+    let second = document.getElementById('seconds');
+
+    day.innerHTML = daysLeft;
+    hour.innerHTML = hoursLeft;
+    minute.innerHTML = minutesLeft;
+    second.innerHTML = secondsLeft;
+}, 1000);
+</script>
 </body>
 </html>

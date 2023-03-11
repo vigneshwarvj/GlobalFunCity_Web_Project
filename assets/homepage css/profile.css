@@ -51,9 +51,10 @@ padding:10px;
 .all-content{
     display: flex;
     justify-content: space-evenly;
+    padding: 50px 0px 0px 0px;
 }
 .profile-pic{
-    background-image: url(https://ca.slack-edge.com/T032648LE-U041V7P984S-b1b403a99830-512);
+    /* background-image: url(https://htmlcolorcodes.com/assets/images/colors/wheat-color-solid-background-1920x1080.png); */
     border-radius: 50%;
     height: 300px;
     width: 300px;
@@ -93,13 +94,13 @@ h4{
 }
 .profile input{
     padding: 10px;
-    width: 276px;
+    width: 376px;
     border-radius: 3px;
     border: 2px solid #eee;
 }
 .profile select{
     padding: 10px;
-    width: 300px;
+    width: 400px;
     border-radius: 3px;
     border: 2px solid #eee;
 }
@@ -113,7 +114,27 @@ h4{
     background-color: #1c314d;
     border: none;
     border-radius: 3px;
-    width: 300px;
+    width: 400px;
+    font-family: 'poppins',sans-serif;
+    cursor: pointer;
+}
+.btn-edit button{
+    padding: 10px;
+    color: red;
+    background-color: #1c314d;
+    border: none;
+    border-radius: 3px;
+    width: 400px;
+    font-family: 'poppins',sans-serif;
+    cursor: pointer;
+}
+.btn-delete button{
+    padding: 10px;
+    color: white;
+    background-color: #1c314d;
+    border: none;
+    border-radius: 3px;
+    width: 400px;
     font-family: 'poppins',sans-serif;
     cursor: pointer;
 }
@@ -138,11 +159,8 @@ h4{
 h3, h4{
     font-family: 'open sans', sans-serif;
 }
-.privacy p{
-    width: 300px;
+.privacy p, .btn-delete p{
+    width: 400px;
     font-family: 'poppins', sans-serif;
 }
 
-.tickets{
-    text-align: center;
-}
