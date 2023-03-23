@@ -52,6 +52,7 @@
     </div>
 
 <table class="product-table">
+    <tbody class="tbody-for-products">
     <tr>
         <th>Product</th>
         <th>Price</th>
@@ -61,25 +62,23 @@
         <th>Remove</th>
     </tr>
     
-    <tr>
+    <!-- <tr>
         <td><img src="../../assets/images/shopping/t-shirt.jpg" width="150px" height="130px" alt="White-T-Shirt"/> <p>White-T-Shirt with Logo</p></td>
         <td>$199.00</td>
         <td>M</td>
-        <td><input type="number" id="quantity" name="quantity"
-            placeholder="1" min="0" max="100"></td>
         <td>$199.00</td>
         <td><a href="../../pages/shop/shop.html"><i class="fa-solid fa-xmark"></i></a></td>
-        </tr>
+        </tr> -->
        
-        <tr>
+        <!-- <tr>
             <td><img src="../../assets/images/shopping/black.jpg" width="150px" height="130px" alt="White-T-Shirt"/> <p>Black-T-Shirt with Events</p></td>
             <td>$299.00</td>
             <td>XL</td>
-            <td><input type="number" id="quantity" name="quantity"
-                placeholder="1" min="0" max="100"></td>
+            <td>1</td>
             <td>$299.00</td>
             <td><a href="../../pages/shop/shop.html"><i class="fa-solid fa-xmark"></i></a></td>
-            </tr>
+            </tr> -->
+    </tbody>        
 </table> 
 
 <button class="btn-shopping"><a href="../../pages/shop/shop.html"> Continue Shopping </a></button>
@@ -129,3 +128,86 @@
     </div>
     </div>
 
+</footer>
+
+<script>
+
+let addtoBag = JSON.parse(localStorage.getItem("add_to_cart_products"));
+console.log(addtoBag);
+
+for(let i=0; i<addtoBag.length; i++){
+// create the tr element
+const tr = document.createElement('tr');
+
+document.querySelector(".tbody-for-products").appendChild(tr);
+// create the td elements and their content
+const td1 = document.createElement('td');
+const img = document.createElement('img');
+img.src = addtoBag[i]["product_photo"];
+img.width = '150';
+img.height = '130';
+img.alt = addtoBag[i]["product_name"];
+const p = document.createElement('p');
+p.textContent = addtoBag[i]["product_name"];
+td1.appendChild(img);
+td1.appendChild(p);
+
+const td2 = document.createElement('td');
+td2.textContent = addtoBag[i]["product_price"];
+
+const td3 = document.createElement('td');
+td3.textContent = 'XL';
+
+const td4 = document.createElement('td');
+td4.textContent = '1';
+
+const td5 = document.createElement('td');
+td5.textContent = '$299.00';
+
+const td6 = document.createElement('td');
+const i_icon = document.createElement('i');
+i_icon.classList.add('fa-solid', 'fa-xmark');
+i_icon.setAttribute("data-remove", addtoBag[i]["product_uuid"]);
+i_icon.id = "remove_product_icon";
+td6.appendChild(i_icon);
+
+// append all the td elements to the tr element
+
+tr.appendChild(td1);
+tr.appendChild(td2);
+tr.appendChild(td3);
+tr.appendChild(td4);
+tr.appendChild(td5);
+tr.appendChild(td6);
+
+}
+
+//Remove Product from the cart
+let removeProduct_from_cart = document.querySelectorAll("#remove_product_icon");
+removeProduct_from_cart.forEach(function(remove){
+    remove.addEventListener("click", function(){
+        let customAttribute = this.dataset.remove;
+        localStorage.setItem("removeProducts_from_my_Bag" , JSON.stringify(customAttribute));
+console.log(customAttribute);
+
+let product_uuid_of_bag = JSON.parse(localStorage.getItem("removeProducts_from_my_Bag"));
+
+let toGet_the_products = JSON.parse(localStorage.getItem("add_to_cart_products"));
+
+let toCheck_product_uuid = toGet_the_products.find(e => e.product_uuid == product_uuid_of_bag)
+
+let indexOfProduct = toGet_the_products.indexOf(toCheck_product_uuid);
+
+toGet_the_products.splice(indexOfProduct, 1);
+
+localStorage.setItem("add_to_cart_products" , JSON.stringify(toGet_the_products));
+
+window.location.reload();
+
+        // let removeProduct = JSON.parse(localStorage.getItem("unique_id_of_products"));
+    })
+})
+</script>
+
+</body>
+</html>

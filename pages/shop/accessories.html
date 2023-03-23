@@ -120,7 +120,6 @@
 </div>
 </div>
 
-
 <script>
 	let accessories_details = JSON.parse(localStorage.getItem('accessories_details'));
 	console.log(accessories_details);
@@ -134,11 +133,11 @@
 		console.log(product_card);
 
 		let a = document.createElement("a");
-        a.setAttribute("href", "../../pages/shop/white-bag-with-logo.html");
+        a.setAttribute("href", "http://127.0.0.1:5500/pages/shop/accessories_product.html?accessories=" +accessories_details[i]["product_uuid"]);
         product_card.append(a);
 
 		let image_of_product = document.createElement("img");
-		image_of_product.setAttribute("src", accessories_details[i]["product_desc"] );
+		image_of_product.setAttribute("src", accessories_details[i]["product_photo"] );
 		image_of_product.setAttribute("width", "400px");
 		image_of_product.setAttribute("height", "400px");
 		a.append(image_of_product);

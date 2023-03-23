@@ -263,7 +263,7 @@
 		let event_details = JSON.parse(localStorage.getItem('event_details'));
 
 		// Create a div for to include event
-        for(let i = 0; i<event_details.length; i++){
+        for(let i = 0; i < event_details.length; i++){
         const circusDiv = document.createElement("div");
 		circusDiv.className = "circus";
 
@@ -282,24 +282,25 @@
 		}
 
         // Create a div for upcoming events:
+        let upcoming_event_details = JSON.parse(localStorage.getItem('upcoming_event_details'));
 
-		for(let i = 0; i<3; i++){
+		for(let i = 0; i<upcoming_event_details.length; i++){
 		const festivelDiv = document.createElement("div");
 		festivelDiv.className = "festivel";
         
 		const festivalLink = document.createElement('a');
-        festivalLink.href = '../../pages/upcoming events/folklore_festivel.html';
+        festivalLink.href = 'http://127.0.0.1:5500/pages/upcoming%20events/folklore_festivel.html?upcomingevents=' +upcoming_event_details[i]["upcoming_event_uuid"];
 		festivelDiv.appendChild(festivalLink);
 
 		const festivelImg = document.createElement("img");
-		festivelImg.src = "../../assets/images/newyear.jpg";
+		festivelImg.src = upcoming_event_details[i]["upcoming_event_img"];
 		festivelImg.width = "400";
 		festivelImg.height = "300";
-		festivelImg.alt = "";
+		festivelImg.alt = upcoming_event_details[i]["upcoming_event_name"];
 		festivalLink.appendChild(festivelImg);
 
 		const festivelName = document.createElement("h2");
-		festivelName.textContent = "jgfj";
+		festivelName.textContent = upcoming_event_details[i]["upcoming_event_name"];
 		festivalLink.appendChild(festivelName);
 
 		document.querySelector("section.upcoming-events").append(festivelDiv);

@@ -50,7 +50,7 @@ body{
 }
 .sign-in a{
 	text-decoration: none;
-	color: #ff5757;
+	/* color: #ff5757; */
 }
  /* .visit-signin p:hover{
 	color: #ff5757;
@@ -394,7 +394,8 @@ footer{
 	background-color:#1DA1F2;
 }
 .instagram a:hover{
-	background-image: linear-gradient(315deg, pink, purple);
+	background-image: #E1306C;
+	/* linear-gradient(315deg, pink, purple); */
 }
 .pinterest a:hover{
 	background-color: #E60023;

@@ -8,7 +8,7 @@
 
 <title> About - Global Fun City </title>
 
-<link rel="stylesheet" href="../../assets/nav_pages_for_user_profile_book/about_user_profile.css" />
+<link rel="stylesheet" href="../../assets/css/home.css" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -259,7 +259,20 @@
 			<br>Site designed by Vignesh.in</p>
 		</div>
 	</footer>
+<script>
+	// faq started
+	const faqs = document.querySelectorAll(".faq");
 
+faqs.forEach(faq => {
+	faq.addEventListener("click", () => {
+		faq.classList.toggle("active");
+	});
+});
+// faq closed
+</script>
+
+	</body>
+	</html>
 
 
 

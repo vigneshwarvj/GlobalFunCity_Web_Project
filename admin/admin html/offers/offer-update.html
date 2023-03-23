@@ -5,7 +5,7 @@
 	<meta charset='UTF-8'>
 	<link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
 
-<title>Product Update - Global Fun City</title>
+<title>Offer Update - Global Fun City</title>
 <link rel="stylesheet" href="../../../admin/admin css/product-update.css" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -182,6 +182,7 @@
         alert("Offer Updated");
         // Reset form
         document.querySelector('form').reset();
+        document.getElementById("btn_update").setAttribute("disabled",true)
         // document.getElementById("update_product").setAttribute("disabled", true);
       });
       break; 

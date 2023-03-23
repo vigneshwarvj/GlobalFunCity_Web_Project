@@ -22,7 +22,7 @@
 <body>
 
 <div class="logo">
-	<img src="../../assets/images/global-shop-logo.png" width="200" alt="logo"/>
+	<img src="../../../assets/images/global-shop-logo.png" width="200" alt="logo"/>
 </div>
 
 <section class="background">
@@ -49,6 +49,10 @@
         
     <input type="text" id="new_product_price" />
 <br>
+    <label class="input-field">Product Photo</label>
+
+    <input type="url" id="url_of_photo"/>
+
     <button type="submit" id="btn_update">Update Product</button>
 <br>
     <button type="button" id="btn_cancel">Cancel</button>
@@ -69,6 +73,7 @@ find_details_btn.addEventListener('click', (event) => {
   const uniqueId = document.getElementById('unique_id_of_product').value;
   const update_product_name = document.getElementById('rename_product_name');
   const update_product_price = document.getElementById('new_product_price');
+  const update_product_photo = document.getElementById('url_of_photo');
 
   // Check if product exists in localStorage for each company
   const companies = ['clothing_details', 'accessories_details', 'home_details'];
@@ -81,22 +86,25 @@ find_details_btn.addEventListener('click', (event) => {
       // Set product details if found
       update_product_name.value = product.product_name;
       update_product_price.value = product.product_price;
+      update_product_photo.value = product.product_photo;
 
       // Add event listener to update_product button
       document.getElementById("btn_update").addEventListener("click", (event) => {
         event.preventDefault();
         let productName = update_product_name.value 
         let productPrice =  update_product_price.value
+        let productPhoto = update_product_photo.value
       
         // Update product details in localStorage
         product.product_name = productName;
         product.product_price = productPrice;
-       
+        product.product_photo = productPhoto;
         localStorage.setItem(company, JSON.stringify(details));
         // Alert user that product details have been updated
         alert("Product Updated");
         // Reset form
         document.querySelector('form').reset();
+  
         // document.getElementById("update_product").setAttribute("disabled", true);
       });
       break; // Exit loop if product found in any company

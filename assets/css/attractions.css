@@ -49,7 +49,7 @@ body{
 }
 .sign-in a{
 	text-decoration: none;
-	color: #ff5757;
+	/* color: #ff5757; */
 }
 .header{ 
 	display:flex;

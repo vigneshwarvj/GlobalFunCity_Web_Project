@@ -11,7 +11,7 @@ body{
 }
 .sign-in a{
 	text-decoration: none;
-	color: #ff5757;
+	/* color: #ff5757; */
 }
 .header{ 
 	display:flex;
@@ -84,6 +84,9 @@ input {
 	padding: 7px;
 	align-content: space-around;
 	width: 350px;
+}
+.input-field-for-contact{
+	font-family: 'poppins', sans-serif;
 }
 .content-of-address-form{
 	display: flex;
@@ -276,4 +279,7 @@ footer{
 	font-family: 'poppins', sans-serif;
 	color: #eee;
 	padding: 20px;
+}
+.footer-hr{
+	width: 99.9%;
 }

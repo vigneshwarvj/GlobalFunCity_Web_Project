@@ -5,7 +5,7 @@
     <meta charset='UTF-8'>
     <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
 
-    <title>Event form - Global Fun City</title>
+    <title>Event Upload form - Global Fun City</title>
     <link rel="stylesheet" href="../../../admin/admin css/product-upload.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,23 +23,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-    <style>
-        table {
-          font-family: arial, sans-serif;
-          width: 100%;
-          padding-top: 200px;
-        }
-        
-        td, th {
-          border: 1px solid #dddddd;
-          text-align: left;
-          padding: 8px;
-        }
-        
-        tr:nth-child(even) {
-          background-color: #dddddd;
-        }
-        </style>
 
 </head>
 
@@ -139,6 +122,8 @@
         </div>
     </section>
 
+    <div class="event-show"> Events</div>
+
     <script>
 
 
@@ -217,7 +202,7 @@ else if(selectingCategory == upcoming_event){
     data.upcoming_event_details == upcoming_event_details
     );
     if(!exit){
-        if(upcoming_event_name !== "" ){
+        //if(upcoming_event_name !== "" ){
             upcoming_event_details.push({
                 upcoming_event_name,
                 upcoming_event_img,
@@ -236,7 +221,7 @@ else if(selectingCategory == upcoming_event){
 
         }
     }
-}
+
                 //Reset the form and and show a alert
                 document.querySelector('form').reset();
                 alert('Event Created!');
@@ -251,7 +236,7 @@ else if(selectingCategory == upcoming_event){
 
 
 
-        console.log("hello world");
+        //console.log("hello world");
     </script>
 <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 </body>

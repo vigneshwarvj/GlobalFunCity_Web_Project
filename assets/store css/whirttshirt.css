@@ -37,7 +37,8 @@ body{
 
 
 .background-color{
-	height: 1430px;
+	height: 650px; 
+	/* 1430 for related products too */
 	width: 1485px;
 	background-color: #eee;
 }

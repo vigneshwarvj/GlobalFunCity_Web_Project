@@ -53,7 +53,7 @@
     
          </nav>
          <div>
-              <button><a href="../../pages/other pages/booknow.html"> <b>BOOK NOW </b> </a></button>
+            <a href="../../pages/other pages/booknow.html"> <button class="btn-book-now"> <b>BOOK NOW </b> </button></a>
     </div>
     </div>
 
@@ -191,11 +191,9 @@
       <div class="profile-pic">
           <span class="glyphicon glyphicon-camera"></span>
           <span>Change Image</span>
-          <img src="https://htmlcolorcodes.com/assets/images/colors/wheat-color-solid-background-1920x1080.png" alt="image" id="output" width="200"/>
       </div>
       </label>
       <input type="File" name="fileToUpload" id="fileToUpload" onchange="loadFile(event)"  /> 
-      <!-- <img src="https://htmlcolorcodes.com/assets/images/colors/wheat-color-solid-background-1920x1080.png" alt="image" id="output" width="200"/> -->
     </form>
 
 </div>
@@ -269,7 +267,6 @@ function update_version(e){
 
     
     // edit started
-        
 
         const editThing = document.querySelector(".btn-1");
         editThing.addEventListener("click",findReadonly);

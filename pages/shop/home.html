@@ -128,25 +128,25 @@
 	for (let i=0; i<home_details.length; i++){
 
 
-		product_card = document.createElement("div");
+		let product_card = document.createElement("div");
 		product_card.setAttribute("class", "t-shirts");
 		console.log(product_card);
 
-		a = document.createElement("a");
-        a.setAttribute("href", "../../pages/shop/white-bag-with-logo.html");
+		let a = document.createElement("a");
+        a.setAttribute("href", "http://127.0.0.1:5500/pages/shop/home_product.html?home=" +home_details[i]["product_uuid"]);
         product_card.append(a);
 
-		image_of_product = document.createElement("img");
-		image_of_product.setAttribute("src", home_details[i]["product_desc"] );
+		let image_of_product = document.createElement("img");
+		image_of_product.setAttribute("src", home_details[i]["product_photo"] );
 		image_of_product.setAttribute("width", "400px");
 		image_of_product.setAttribute("height", "400px");
 		a.append(image_of_product);
 
-        h3_of_product_name = document.createElement("h3");
+        let h3_of_product_name = document.createElement("h3");
 		h3_of_product_name.innerText = home_details[i]["product_name"];
 		a.append(h3_of_product_name);
 
-		para = document.createElement("p");
+		let para = document.createElement("p");
 		para.innerText = home_details[i]["product_price"];
 		product_card.append(para);
 
