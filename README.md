@@ -20,3 +20,5 @@ List of features:
 2. Product CRUD:
 3. Offer CRUD:
 4. Events CRUD:
+5. Attractions CRUD:
+6. Cart CRUD:
