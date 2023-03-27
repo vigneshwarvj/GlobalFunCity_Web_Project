@@ -9,14 +9,19 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 * Problem Statement: https://docs.google.com/document/d/1fBwRgEQKGzXSXvccLUUL5ruBpaI0ZlGK/edit?usp=sharing&ouid=105997594239253407599&rtpof=true&sd=true
 * Live Website: https://fssa-batch3.github.io/vigneshwar.vijayakumar__web_project/
 
-List of features:
-1. User CRUD:
-* User sign up.
-* User login.
-* User profile.
-* User edit in profile page.
-* User Delete account.
+### Create an account
+- Scenario 1: Successfully create an account
+    - Steps:
+        1. Navigate to the registration page.
+        2. Enter the required information such as First name, last name, email, password, date of birth.
+        3. Click the "Create Account" button.
+    - Expected Result:
+        - The user is redirected to the signin page.
 
-2. Product CRUD:
-3. Offer CRUD:
-4. Events CRUD:
+### Sign in
+ - Scenario 2: Login with your registered email and password.
+    - Steps:
+        1. Use your registered email and password.
+        2. Click the "Sign in" button.
+    - Expected Result:
+        - The user is redirected to the main page of the website.             

@@ -299,7 +299,7 @@ add_products_to_bag.addEventListener("click", function() {
 	localStorage.setItem("unique_id_of_products", JSON.stringify(product_id));
 	console.log(product_id);
 
-	let products = JSON.parse(localStorage.getItem("home`_details"));
+	let products = JSON.parse(localStorage.getItem("home_details"));
 
 	let check_product = products.find(e => e.product_uuid == product_id);
 

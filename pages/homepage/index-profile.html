@@ -30,7 +30,7 @@
 
 <div class="sign-in">
     
-	<p><a href="../../pages/homepage/main.profile.html"> Welcome, Tommy! </a>&nbsp; | <a href="../../index.html"> Sign Out</a>  | <i class="fa-solid fa-globe"></i> United states (English)</p>
+	<p><a href="../../pages/homepage/main.profile.html"> Welcome, Tommy! </a>&nbsp; | <a href="#" onclick="logout()"> Sign Out</a>  | <i class="fa-solid fa-globe"></i> United states (English)</p>
 </div>
 
 </div>
@@ -236,5 +236,14 @@ Enjoy scrumptious meals at Global Fun City.</p>
         <br>Site designed by Vignesh.in</p>
 	</div>
 </footer>
+
+<script>
+	function logout() {
+        confirm("Are you sure to sign out?");
+        localStorage.removeItem("unique_id");
+        window.location.href = "../../index.html";
+    }
+</script>
+
 </body>
 </html>
