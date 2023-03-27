@@ -9,7 +9,9 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 * Problem Statement: https://docs.google.com/document/d/1fBwRgEQKGzXSXvccLUUL5ruBpaI0ZlGK/edit?usp=sharing&ouid=105997594239253407599&rtpof=true&sd=true
 * Live Website: https://fssa-batch3.github.io/vigneshwar.vijayakumar__web_project/
 
-### Create an account
+## User
+
+### Create an account [Completed]
 - Scenario 1: Successfully create an account
     - Steps:
         1. Navigate to the registration page.
@@ -18,10 +20,121 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
     - Expected Result:
         - The user is redirected to the signin page.
 
-### Sign in
- - Scenario 2: Login with your registered email and password.
+### Sign in [Completed]
+ - Scenario 1: Successfully sign in to account
     - Steps:
-        1. Use your registered email and password.
-        2. Click the "Sign in" button.
+        1. Navigate to the sign in page.
+        2. Use your registered email and password.
+        3. Click the "Sign in" button.
     - Expected Result:
-        - The user is redirected to the main page of the website.             
+        - The user is redirected to the main page of the website.
+
+
+### Book Tickets (no.of.persons)
+- Scenario 1: Successfully finished check - in.
+    - Steps: 
+        1. Log in as a user.
+        2. Navigate to the "Book now" button.
+        3. Enter the required information such as check - in, check - out, no.of.adults, no.of.children.
+        4. If User want rooms, Click "Yes".
+    - Expected Result: 
+        - The user is redirected to the hotels page.
+
+### Book Hotels 
+ - Scenario 1: Successfully Booked hotels (or) resorts.
+    - Steps: 
+        1. Log in as a user.
+        2. Navigate to the "Book now" button.
+        3. Enter the required information such as check - in, check - out, no.of.adults, no.of.children.
+        4. If User want rooms, Click "Yes".
+        5. Click the "Check availablity" button.
+        6. Navigate to the hotels page.
+        7. Choose hotels (or) resorts.
+        8. Click the "Book now" button.
+    - Expected Result:
+        - The user is redirected to the guest information.
+
+### Book Tickets
+ - Scenario 1: Successfully Booked hotels (or) resorts.
+    - Steps: 
+        1. Log in as a user.
+        2. Navigate to the "Book now" button.
+        3. Enter the required information such as check - in, check - out, no.of.adults, no.of.children.
+        4. If User want rooms, Click "Yes".
+        5. Click the "Check availablity" button.
+        6. Navigate to the hotels page.
+        7. Choose hotels (or) resorts.
+        8. Click the "Book now" button.
+        9. Enter the required information such as name, email, phone.
+        10. Click the "Book Now" bitton.
+    - Expected Result:
+        1. The user is redirected to the payment page.
+        2. The user can able to see check - in, check - out, etc..,
+        3. After payment, the ticket has been sent to the respective email address.
+
+###  View products
+- Scenario 1: Successfully view products.
+    - Steps:
+        1. Log in as a buyer.
+
+        2. Navigate to the product listing page.
+        3. View the list of available products.
+    - Expected Result:
+        - The user can view the list of available products.
+
+### View product details
+- Scenario 1: Successfully view product details
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the product listing page.
+        3. Select a product to view its details.
+    - Expected Result:
+        - The user can view the details of the selected product.
+
+
+### Add product to my bag [Completed]
+Scenario 1: Successfully add product to my bag
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the product listing page.
+        3. Select a product.
+        4. Click the "Buy Now" button.
+        5. Product will get it into "My bag".
+    - Expected Result:
+        - The product is added to the user's bag.
+
+### View product in user's bag
+- Scenario 1: Successfully view products in user's bag.
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the my bag page.
+        3. View the list of products in the user's bag.
+    - Expected Result:
+        - The user can view the list of products in the bag.
+
+### Remove item from cart
+- Scenario 1: Successfully remove item from user's bag.
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the my bag page.
+        3. Remove the selected product from user's bag.
+    - Expected Result:
+        - The product is removed from the user's bag.
+
+### Buy a product
+- Scenario 1: Successfully purchase a product
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the product listing page.
+        3. Select a product to view its details.
+        4. Click the "Buy Now" button.
+        5. Product will get it into "My bag".
+        6. User's can see the total amount of the product.
+        7. Click the "Proceed Checkout" button.
+        8. Enter the required information such as Name, phone, email, door-no, address, country, zip code, etc.., 
+        9. Select the payment method.
+        10. Click the "Proceed" button. 
+    - Expected Result:
+        - The user is redirected to the order confirmation page.
+        - An order confirmation email is sent to the user's email address.
+        - The product stock is reduced by the purchased quantity.
