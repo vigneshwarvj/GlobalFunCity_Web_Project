@@ -9,7 +9,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 * Problem Statement: https://docs.google.com/document/d/1fBwRgEQKGzXSXvccLUUL5ruBpaI0ZlGK/edit?usp=sharing&ouid=105997594239253407599&rtpof=true&sd=true
 * Live Website: https://fssa-batch3.github.io/vigneshwar.vijayakumar__web_project/
 
-# List of features:
+### List of features:
 - User CRUD: [Completed]
    - User sign up.
    - User login.
@@ -35,11 +35,11 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
    - Update event.
    - Delete event.
 
-- Attraction CRUD: [Yet to start]
+<!-- - Attraction CRUD: [Yet to start]
    - Create attraction.
    - Read attraction.
    - Update attraction.
-   - Delete attraction.
+   - Delete attraction. -->
 
 - Add to cart CRUD: [Completed]
    - Create cart.
@@ -47,7 +47,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
    - Update cart.
    - Delete cart.
 
-- Add to Wishlist CRUD: [Yet to Start]
+<!-- - Add to Wishlist CRUD: [Yet to Start]
    - Create wishlist.
    - Read wishlist.
    - Update wishlist.
@@ -64,7 +64,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
    - Create Hotels (or) resorts.
    - Read Hotels (or) resorts.
    - Update Hotels (or) resorts.
-   - Delete Hotels (or) resorts.
+   - Delete Hotels (or) resorts. -->
 
 ## User
 
@@ -97,7 +97,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
     - Expected Result: 
         - The user is redirected to the hotels page.
 
-### Book Hotels [Yet to start :x:]
+<!-- ### Book Hotels [Yet to start :x:]
  - Scenario 1: Successfully Booked hotels (or) resorts.
     - Steps: 
         1. Log in as a user.
@@ -109,9 +109,9 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
         7. Choose hotels (or) resorts.
         8. Click the "Book now" button.
     - Expected Result:
-        - The user is redirected to the guest information.
+        - The user is redirected to the guest information. -->
 
-### Book Tickets and hotels or resorts [Yet to start :x:]
+<!-- ### Book Tickets and hotels or resorts [Yet to start :x:]
  - Scenario 1: Successfully Booked hotels (or) resorts.
     - Steps: 
         1. Log in as a user.
@@ -127,7 +127,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
     - Expected Result:
         1. The user is redirected to the payment page.
         2. The user can able to see check - in, check - out, etc..,
-        3. After payment, the ticket has been sent to the respective email address.
+        3. After payment, the ticket has been sent to the respective email address. -->
 
 ### View products [Completed :white_check_mark:]
 - Scenario 1: Successfully view products.
@@ -177,7 +177,7 @@ Scenario 1: Successfully add product to my bag.
     - Expected Result:
         - The product is removed from the user's bag.
 
-### Buy a product [Yet to start :x:]
+<!-- ### Buy a product [Yet to start :x:]
 - Scenario 1: Successfully purchase a product
     - Steps:
         1. Log in as a buyer.
@@ -223,4 +223,4 @@ Scenario 1: Successfully add product to my bag.
         3. Click the wishlist page.
         4. Remove the selected product from the wishlist.
     - Expected Result:
-        - The product is removed from the user's wishlist.
+        - The product is removed from the user's wishlist. -->
