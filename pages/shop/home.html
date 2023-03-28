@@ -132,8 +132,12 @@
 		product_card.setAttribute("class", "t-shirts");
 		console.log(product_card);
 
+		const product_path_for_home = window.location.origin;
+		const product_id_for_home = accessories_details[i]["product_uuid"];
+		const file_path_for_home = `${product_path_for_home}/pages/shop/home_product.html?home=`+product_id_for_home;
+
 		let a = document.createElement("a");
-        a.setAttribute("href", "http://127.0.0.1:5500/pages/shop/home_product.html?home=" +home_details[i]["product_uuid"]);
+        a.setAttribute("href", file_path_for_home);
         product_card.append(a);
 
 		let image_of_product = document.createElement("img");

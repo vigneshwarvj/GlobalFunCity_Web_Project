@@ -9,10 +9,67 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 * Problem Statement: https://docs.google.com/document/d/1fBwRgEQKGzXSXvccLUUL5ruBpaI0ZlGK/edit?usp=sharing&ouid=105997594239253407599&rtpof=true&sd=true
 * Live Website: https://fssa-batch3.github.io/vigneshwar.vijayakumar__web_project/
 
+# List of features:
+- User CRUD: [Completed]
+   - User sign up.
+   - User login.
+   - User profile.
+   - User edit in profile page.
+   - User Delete account.
+
+- Product CRUD: [Completed]
+   - Create product.
+   - Read product.
+   - Update product.
+   - Delete product.
+
+- Offer CRUD: [Completed]
+   - Create offer.
+   - Read offer.
+   - Update offer.
+   - Delete offer.
+
+- Events CRUD: [Completed]
+   - Create event.
+   - Read event.
+   - Update event.
+   - Delete event.
+
+- Attraction CRUD: [Yet to start]
+   - Create attraction.
+   - Read attraction.
+   - Update attraction.
+   - Delete attraction.
+
+- Add to cart CRUD: [Completed]
+   - Create cart.
+   - Read cart.
+   - Update cart.
+   - Delete cart.
+
+- Add to Wishlist CRUD: [Yet to Start]
+   - Create wishlist.
+   - Read wishlist.
+   - Update wishlist.
+   - Delete wishlist.
+
+- Book tickets CRUD: [Yet to start]
+   - Create tickets.
+   - Read tickets.
+   - Delete tickets.
+
+- Book rooms: [Yet to start]
+
+- Hotels (or) resorts: [Yet to start]
+   - Create Hotels (or) resorts.
+   - Read Hotels (or) resorts.
+   - Update Hotels (or) resorts.
+   - Delete Hotels (or) resorts.
+
 ## User
 
 ### Create an account [Completed :white_check_mark:]
-- Scenario 1: Successfully create an account
+- Scenario 1: Successfully create an account.
     - Steps:
         1. Navigate to the create account page.
         2. Enter the required information such as First name, last name, email, password, date of birth.
@@ -30,7 +87,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
         - The user is redirected to the main page of the website.
 
 
-### Book Tickets (no.of.persons) [Yet to start :x:]
+### Book Tickets (no.of.persons) [In progress]
 - Scenario 1: Successfully finished check - in.
     - Steps: 
         1. Log in as a user.
@@ -92,7 +149,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 
 
 ### Add product to my bag [Completed :white_check_mark:]
-Scenario 1: Successfully add product to my bag
+Scenario 1: Successfully add product to my bag.
     - Steps:
         1. Log in as a buyer.
         2. Navigate to the product listing page.

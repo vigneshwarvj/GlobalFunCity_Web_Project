@@ -119,6 +119,7 @@
 	</div>-->
 </div>
 </div>
+
 <script>
 	let clothing_details = JSON.parse(localStorage.getItem('clothing_details'));
 	console.log(clothing_details);
@@ -131,8 +132,12 @@
 		product_card.setAttribute("class", "t-shirts");
 		console.log(product_card);
 
+		const product_path_for_clothing = window.location.origin;
+		const product_id_for_clothing = clothing_details[i]["product_uuid"];
+		const file_path_for_clothing = `${product_path_for_clothing}/pages/shop/whitetshirt.html?clothing=`+product_id_for_clothing;
+
 		let a = document.createElement("a");
-        a.setAttribute("href", "http://127.0.0.1:5500/pages/shop/whitetshirt.html?clothing=" +clothing_details[i]["product_uuid"]);
+        a.setAttribute("href", file_path_for_clothing);
         product_card.append(a);
 
 		let image_of_product = document.createElement("img");
