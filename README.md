@@ -11,16 +11,16 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 
 ## User
 
-### Create an account [Completed]
+### Create an account [Completed :white_check_mark:]
 - Scenario 1: Successfully create an account
     - Steps:
-        1. Navigate to the registration page.
+        1. Navigate to the create account page.
         2. Enter the required information such as First name, last name, email, password, date of birth.
         3. Click the "Create Account" button.
     - Expected Result:
         - The user is redirected to the signin page.
 
-### Sign in [Completed]
+### Sign in [Completed :white_check_mark:]
  - Scenario 1: Successfully sign in to account
     - Steps:
         1. Navigate to the sign in page.
@@ -30,7 +30,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
         - The user is redirected to the main page of the website.
 
 
-### Book Tickets (no.of.persons)
+### Book Tickets (no.of.persons) [Yet to start :x:]
 - Scenario 1: Successfully finished check - in.
     - Steps: 
         1. Log in as a user.
@@ -40,7 +40,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
     - Expected Result: 
         - The user is redirected to the hotels page.
 
-### Book Hotels 
+### Book Hotels [Yet to start :x:]
  - Scenario 1: Successfully Booked hotels (or) resorts.
     - Steps: 
         1. Log in as a user.
@@ -54,7 +54,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
     - Expected Result:
         - The user is redirected to the guest information.
 
-### Book Tickets
+### Book Tickets and hotels or resorts [Yet to start :x:]
  - Scenario 1: Successfully Booked hotels (or) resorts.
     - Steps: 
         1. Log in as a user.
@@ -72,17 +72,16 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
         2. The user can able to see check - in, check - out, etc..,
         3. After payment, the ticket has been sent to the respective email address.
 
-###  View products
+### View products [Completed :white_check_mark:]
 - Scenario 1: Successfully view products.
     - Steps:
         1. Log in as a buyer.
-
         2. Navigate to the product listing page.
         3. View the list of available products.
     - Expected Result:
         - The user can view the list of available products.
 
-### View product details
+### View product details [Completed :white_check_mark:]
 - Scenario 1: Successfully view product details
     - Steps:
         1. Log in as a buyer.
@@ -92,7 +91,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
         - The user can view the details of the selected product.
 
 
-### Add product to my bag [Completed]
+### Add product to my bag [Completed :white_check_mark:]
 Scenario 1: Successfully add product to my bag
     - Steps:
         1. Log in as a buyer.
@@ -103,7 +102,7 @@ Scenario 1: Successfully add product to my bag
     - Expected Result:
         - The product is added to the user's bag.
 
-### View product in user's bag
+### View product in user's bag [Completed :white_check_mark:]
 - Scenario 1: Successfully view products in user's bag.
     - Steps:
         1. Log in as a buyer.
@@ -112,7 +111,7 @@ Scenario 1: Successfully add product to my bag
     - Expected Result:
         - The user can view the list of products in the bag.
 
-### Remove item from cart
+### Remove product from bag [Completed :white_check_mark:]
 - Scenario 1: Successfully remove item from user's bag.
     - Steps:
         1. Log in as a buyer.
@@ -121,7 +120,7 @@ Scenario 1: Successfully add product to my bag
     - Expected Result:
         - The product is removed from the user's bag.
 
-### Buy a product
+### Buy a product [Yet to start :x:]
 - Scenario 1: Successfully purchase a product
     - Steps:
         1. Log in as a buyer.
@@ -138,3 +137,33 @@ Scenario 1: Successfully add product to my bag
         - The user is redirected to the order confirmation page.
         - An order confirmation email is sent to the user's email address.
         - The product stock is reduced by the purchased quantity.
+
+### Add products to wishlist [Yet to start :x:]
+- Scenario 1: Successfully add product to wishlist.
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the product listing page.
+        3. Select a product to wishlist.
+        4. Click the "heart" icon.
+    - Expected Result:
+        - The products is added to the user's wishlist.
+
+### View products in wishlist [Yet to start :x:]
+- Scenario 1: Successfully view products in wishlist.
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the shop page.
+        3. Click the wishlist page.
+        4. View the list of product in the wishlist.
+    - Expected Result:
+        - The user can view the list of products in the wishlist.
+
+### Remove products from wishlist [Yet to start :x:]
+- Scenario 1: Successfully remove item from wishlist
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the shop page.
+        3. Click the wishlist page.
+        4. Remove the selected product from the wishlist.
+    - Expected Result:
+        - The product is removed from the user's wishlist.
