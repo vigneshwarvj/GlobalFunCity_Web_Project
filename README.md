@@ -86,7 +86,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
     - Expected Result:
         - The user is redirected to the main page of the website.
 
-
+<!-- 
 ### Book Tickets (no.of.persons) [In progress]
 - Scenario 1: Successfully finished check - in.
     - Steps: 
@@ -95,7 +95,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
         3. Enter the required information such as check - in, check - out, no.of.adults, no.of.children.
         4. If User want rooms, Click "Yes".
     - Expected Result: 
-        - The user is redirected to the hotels page.
+        - The user is redirected to the hotels page. -->
 
 <!-- ### Book Hotels [Yet to start :x:]
  - Scenario 1: Successfully Booked hotels (or) resorts.
@@ -149,7 +149,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 
 
 ### Add product to my bag [Completed :white_check_mark:]
-Scenario 1: Successfully add product to my bag.
+- Scenario 1: Successfully add product to my bag.
     - Steps:
         1. Log in as a buyer.
         2. Navigate to the product listing page.

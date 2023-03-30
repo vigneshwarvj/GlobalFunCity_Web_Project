@@ -90,7 +90,7 @@ product_uuid:
 "7367de02-2212-4d09-9164-151b02b8e1a2",
 selecting: 
 "cloth"
-    }, {}]))
+    }, ]))
 }
 
 //Accessories Product Details

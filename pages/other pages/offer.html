@@ -303,9 +303,12 @@ for(let i=0; i<offer_details.length; i++){
 const card_offer = document.createElement("div");
 card_offer.setAttribute("class", "card");
 
+const offer_path = window.location.origin;
+const offer_id = offer_details[i]["offer_uuid"];
+const file_path_for_offer = `${offer_path}/pages/offer%20packages/newyear.html?offerslist=`+offer_id;
 
 const a = document.createElement("a");
-a.setAttribute("href", "http://127.0.0.1:5500/pages/offer%20packages/newyear.html?offerslist=" +offer_details[i]["offer_uuid"]);
+a.setAttribute("href", file_path_for_offer);
 card_offer.append(a);
 
 const img_of_newyear = document.createElement("img");

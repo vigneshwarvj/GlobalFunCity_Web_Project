@@ -288,8 +288,12 @@
 		const festivelDiv = document.createElement("div");
 		festivelDiv.className = "festivel";
         
+		const event_path = window.location.origin;
+		const event_id = upcoming_event_details[i]["upcoming_event__uuid"];
+		const file_path_for_event = `${event_path}/pages/upcoming%20events/folklore_festivel.html?upcomingevents=`+event_id;
+
 		const festivalLink = document.createElement('a');
-        festivalLink.href = 'http://127.0.0.1:5500/pages/upcoming%20events/folklore_festivel.html?upcomingevents=' +upcoming_event_details[i]["upcoming_event_uuid"];
+        festivalLink.href = file_path_for_event;
 		festivelDiv.appendChild(festivalLink);
 
 		const festivelImg = document.createElement("img");

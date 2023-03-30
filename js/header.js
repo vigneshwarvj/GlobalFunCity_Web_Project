@@ -53,3 +53,6 @@ if(loggedInUser) {
     localStorage.removeItem("unique_id");
 }
 
+// let sentence = "Nanda drinks coffee than tea.";
+// let newSentence = sentence.replace("cofee", "tea");
+// console.log(sentence);
