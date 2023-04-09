@@ -64,10 +64,9 @@ body{
 .content p{
     font-family: 'poppins', sans-serif;
 }
-input{
-    padding: 14px 13px 14px 13px;
-    /* border-radius: 50px; */
-    border: none;
+.total_clicks_span{
+	padding: 20px;
+	font-family: 'poppins', sans-serif;
 }
 
 /* sizes */

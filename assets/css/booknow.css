@@ -110,11 +110,11 @@ margin-top:10px;
  .room-adult-children{ 
 	display: flex;
 }
-.room-adult-children input{
-	text-align: center;
-	padding: 14px 10px 14px 10px;
-    border: none;
-	margin: auto;
+.total_of_adults, .total_of_childrens{
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	font-family: 'league spartan', sans-serif;
 }
 .another-room{
 	padding-top: 20px;

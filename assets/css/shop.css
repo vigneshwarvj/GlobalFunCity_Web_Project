@@ -209,16 +209,6 @@ nav ul.menu-area ul li a:hover{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 .brands h1{
 	font-family: 'league spartan', sans-serif;
 	width: 500px;
@@ -235,37 +225,80 @@ nav ul.menu-area ul li a:hover{
 	padding-top: 50px;
 
 }
-.contact-us{
-	text-align: center;
-}
-.contact-us h2{
-	font-family: 'Poppins', sans-serif;
-	color: #ff4612;
-}
-.contact-us h1{
-	font-family: 'league spartan', sans-serif;
-	font-size: 50px;
-}
-.contact-address{
-	display: flex;
-	justify-content: space-evenly; 
-}
-.contact-address h2{
-    font-family: 'poppins', sans-serif;
-	color: #ff4612;
-}
-.contact-address p{
-	font-family: 'open sans', sans-serif;
-}
-.address-info p{
-	width: 200px;
-}
-.background-for-contact{
-	width: 1485px;
-	height: 400px;
+
+
+
+/* faq css */
+.background{
 	background-color: #eee;
-	padding: 50px 0px 0px 0px ;
+	/* margin: 70px 0px 0px 0px; */
 }
+.main-faq{
+	min-height: 80vh;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.title{
+	padding: 40px 0px 0px 0px;
+	/* text-align: center; */
+	font-size: 3rem;
+	margin: 2rem 0rem;
+	font-family: 'league spartan', sans-serif;
+}
+hr{
+	width: 60%;
+}
+.faq{
+	max-width: 700px;
+	/* margin-top: 2rem; */
+	padding-bottom: 0.3rem;
+	cursor: pointer;
+}
+.question{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.question h3{
+	font-size: 1.5rem;
+	font-family: 'poppins', sans-serif;
+}
+.answer p{
+	color: #838485;
+	font-family: 'league spartan', sans-serif;
+	padding-top: 1rem;
+	line-height:1.6 ;
+	font-size: 1.3rem;
+}
+.answer{
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1.4s ease;
+}
+.faq.active .answer{
+	max-height: 300px;
+	animation: fade 1s ease-in-out;
+}
+.faq.active .i{
+	transform: rotate(90deg);
+}
+i{
+	transition: transform 0.5s ease;
+}
+@keyframes fade{
+	from{
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+/* faq completed */
 
 
 
@@ -363,6 +396,9 @@ footer{
 }
 .other-navbar-footer a:hover{
 	color: #ff5757;
+}
+.footer-hr{
+	width: 99.9%;
 }
 .copyright{
 	text-align: center;

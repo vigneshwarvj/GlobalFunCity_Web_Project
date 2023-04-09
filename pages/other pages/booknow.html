@@ -82,19 +82,19 @@
 
 
 <div class="room-adult-children">
-    <p>Adult  &nbsp; </p> <button class="btn-sub"><i class="fa-solid fa-minus"></i></button> 
-        <input  type="text" id="quantity" value="0" required/> 
-        <button class="btn-add"><i class="fa-solid fa-plus"></i></button> &nbsp;
+    <p>Adult  &nbsp; </p> <button class="btn-sub" onclick="totalClick_for_Adult(-1)"><i class="fa-solid fa-minus"></i></button> 
+    <span id="totalClicksAdult" class="total_of_adults">1</span> 
+        <button class="btn-add" onclick="totalClick_for_Adult(1)"><i class="fa-solid fa-plus"></i></button> &nbsp;
         
-    <p>Children  &nbsp;</p> <button class="btn-sub"><i class="fa-solid fa-minus"></i></button> 
-    <input  type="text" id="number" value="0" required/> 
-    <button class="btn-add"><i class="fa-solid fa-plus"></i></button> &nbsp;
+    <p>Children  &nbsp;</p> <button class="btn-sub" onclick="totalClick_for_Children(-1)"><i class="fa-solid fa-minus"></i></button> 
+    <span id="totalClicksChildren" class="total_of_childrens">0</span>
+    <button class="btn-add" onclick="totalClick_for_Children(1)"><i class="fa-solid fa-plus"></i></button> &nbsp;
 </div>
 
 <div class="room">
     <h3>Did you want room? (Hotel or Resorts)</h3>
-    <input type="radio" name="yes" id="yes">Yes
-    <input type="radio" name="yes" id="no">No
+    <input type="radio" name="yes" id="yes" required>Yes
+    <input type="radio" name="yes" id="no" required>No
 </div>
 
 
@@ -164,47 +164,29 @@
 </footer>
 
 <script>
-    // settiing default attribute to disabled of minus button
-    document.querySelector(".btn-sub").setAttribute("disabled", "disabled");
 
-    // taking value to increment decrement input value
-    var valueCount
+   //For Adults Increment 
+  let totalClicks_Adults = 1; // initial value
 
-    // plus button
-    document.querySelector(".btn-add").addEventListener("click", function (){
-        // getting value of input
-        valueCount = document.getElementById("quantity").value;
+function totalClick_for_Adult(value) {
+  totalClicks_Adults += value;
+  if (totalClicks_Adults < 1) { // check if totalClicks is less than 1
+    totalClicks_Adults = 1; // set totalClicks to 1 if it's less than 1
+  }
+  document.getElementById("totalClicksAdult").innerHTML = totalClicks_Adults;
+}
 
-        // input value increment by 1
-        valueCount++;
+//For Children Increment
+let totalClicks_Children = 0;
 
-        // setting increment input value
-        document.getElementById("quantity").value = valueCount;
-
-        if(valueCount > 1){
-            document.querySelector(".btn-sub").removeAttribute("disabled");
-            document.querySelector(".btn-sub").classList.remove("disabled");
-        }
+function totalClick_for_Children(value){
+    totalClicks_Children += value;
+    if(totalClicks_Children < 1){
+        totalClicks_Children = 0;
     }
-    )
+    document.getElementById("totalClicksChildren").innerHTML = totalClicks_Children;
+}
 
-
-    // minus button
-    document.querySelector(".btn-sub").addEventListener("click", function (){
-        // getting value of input
-        valueCount = document.getElementById("quantity").value;
-
-        // input value increment by 1
-        valueCount--;
-
-        // setting increment input value
-        document.getElementById("quantity").value = valueCount;
-
-        if(valueCount == 1){
-            document.querySelector(".btn-sub").setAttribute("disabled", "disabled");
-        }
-    }
-    )
 </script>
 
 

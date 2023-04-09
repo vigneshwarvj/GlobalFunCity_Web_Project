@@ -73,22 +73,21 @@ info@globalfuncity.com
 
 <div class="gape">
 	<div class="part1">
-	<i class="fa-solid fa-user"> <input class="input-field-for-contact" type="text" placeholder="Name" required/> </i> &nbsp;
-	<i class="fa-solid fa-phone"> <input class="input-field-for-contact" type="tel" placeholder="Phone" required/> </i>
+	<form role="form" class="contact-admin" onsubmit="contactFormData(event);">
+	<i class="fa-solid fa-user"> <input class="input-field-for-contact" id="name" type="text" placeholder="Name" required pattern="[a-zA-Z]+"/> </i> &nbsp;
+	<i class="fa-solid fa-phone"> <input class="input-field-for-contact" id="phone" type="tel" placeholder="Phone" required pattern="[0-9]{10}"/> </i>
 	</div>
 	<div class="part2">
-		<i class="fa-solid fa-envelope"><input class="input-field-for-contact" type="email" placeholder="Email Address" required/></i> &nbsp; &nbsp;
-		<i class="fa-solid fa-info"><input class="input-field-for-contact" type="text" placeholder="Subject" required/> </i>
+		<i class="fa-solid fa-envelope"><input class="input-field-for-contact" id="email" type="email" placeholder="Email Address" required/></i> &nbsp; &nbsp;
+		<i class="fa-solid fa-info"><input class="input-field-for-contact" id="subject" type="text" placeholder="Subject" required/> </i>
 	</div>
 	<div class="part3">
-		<i class="fa-solid fa-pen"><input class="input-field-for-contact" type="text" placeholder="How can I help you? Feel free to get in touch!" required/> </i>
+		<i class="fa-solid fa-pen"><input class="input-field-for-contact" id="message" type="text" placeholder="How can I help you? Feel free to get in touch!" required/> </i>
     </div>
 </div>
 </section>
 
-
-<a href="../../pages/other pages/getintouch.html">
-	<button class="get-in-touch"> <i class="fa-regular fa-paper-plane"></i> &nbsp;Get in touch </button> </a>
+<button class="get-in-touch" id="getInTouchBtn" type="submit"> <i class="fa-regular fa-paper-plane"></i> &nbsp;Get in touch </button>
 	
 
 <!-- faq started -->
@@ -249,6 +248,7 @@ info@globalfuncity.com
 
 
 <script>
+	//faq started
 	const faqs = document.querySelectorAll(".faq");
 
 	faqs.forEach(faq => {
@@ -256,6 +256,47 @@ info@globalfuncity.com
 			faq.classList.toggle("active");
 		});
 	});
+	//faq claosed
+
+	//contact form begins
+	function contactFormData(event) {
+  event.preventDefault();
+
+  const nameInput = document.getElementById("name");
+  const phoneInput = document.getElementById("phone");
+  const emailInput = document.getElementById("email");
+  const subjectInput = document.getElementById("subject");
+  const messageInput = document.getElementById("message");
+
+  // Validate form inputs
+  if (!nameInput.checkValidity() || !phoneInput.checkValidity() || !emailInput.checkValidity() || !subjectInput.checkValidity() || !messageInput.checkValidity()) {
+    // alert("Please fill out all required fields.");
+    return;
+  }
+
+  // Retrieve existing form data from localStorage
+  let formData = JSON.parse(localStorage.getItem("contactFormDataFromUsers")) || [];
+
+  // Add new form data to the array
+  formData.push({
+    name: nameInput.value,
+    phone: phoneInput.value,
+    email: emailInput.value,
+    subject: subjectInput.value,
+    message: messageInput.value
+  });
+
+  // Save the updated form data back to localStorage
+  localStorage.setItem("contactFormDataFromUsers", JSON.stringify(formData));
+
+  // Reset the form
+  document.querySelector('form').reset();
+
+  alert("Thank you for getting in touch!");
+}
+
+document.querySelector('.contact-admin').addEventListener('submit', contactFormData);
+
 </script>
 
 

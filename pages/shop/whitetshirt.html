@@ -39,7 +39,7 @@
 
 <div class="icons-info">
 	<a href="../../pages/signup for shopping/signup_shop.html"> <i class="fa-solid fa-user"></i> &nbsp; Sign In | Sign Up </a> &nbsp;
-	<a href=""> <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (2)</a> &nbsp;
+	<a href="../../pages/shop/wishlist.html"> <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (2)</a> &nbsp;
 	<a href="../../pages/shop/cart.html"> <i class="fa-solid fa-bag-shopping"></i> &nbsp; My Bag (2)</a>
 </div>
 </div>
@@ -271,28 +271,28 @@ sizeDiv.setAttribute('class', 'sizes-of-dress');
 contentDiv.appendChild(sizeDiv);
 
 // create span elements for the different sizes
-const smallSize = document.createElement('span');
+const smallSize = document.createElement('button');
 smallSize.setAttribute('class', 'size');
 const sSize = document.createElement('p');
 sSize.setAttribute('class', 's');
 sSize.textContent = 'S';
 smallSize.appendChild(sSize);
 
-const mediumSize = document.createElement('span');
+const mediumSize = document.createElement('button');
 mediumSize.setAttribute('class', 'size');
 const mSize = document.createElement('p');
 mSize.setAttribute('class', 'm');
 mSize.textContent = 'M';
 mediumSize.appendChild(mSize);
 
-const extraSize = document.createElement('span');
+const extraSize = document.createElement('button');
 extraSize.setAttribute('class', 'size');
 const xSize = document.createElement('p');
 xSize.setAttribute('class', 'x');
 xSize.textContent = 'X';
 extraSize.appendChild(xSize);
 
-const extraLargeSize = document.createElement('span');
+const extraLargeSize = document.createElement('button');
 extraLargeSize.setAttribute('class', 'size');
 const xlSize = document.createElement('p');
 xlSize.setAttribute('class', 'xl');
@@ -310,27 +310,27 @@ contentDiv.appendChild(brtag);
 
 // create button elements for the quantity selector
 const minusBtn = document.createElement('button');
-minusBtn.setAttribute('class', 'btn-sub');
+minusBtn.setAttribute('class', 'btn-add');
+minusBtn.setAttribute('onclick', 'totalClick(1)');
 const minusIcon = document.createElement('i');
-minusIcon.setAttribute('class', 'fa-solid fa-minus');
+minusIcon.setAttribute('class', 'fa-solid fa-plus');
 minusBtn.appendChild(minusIcon);
 
 contentDiv.appendChild(minusBtn);
 
-const quantityInput = document.createElement('input');
-quantityInput.setAttribute('type', 'text');
-quantityInput.setAttribute('id', 'number');
-quantityInput.setAttribute('name', 'number');
-quantityInput.setAttribute('placeholder', '1');
-quantityInput.setAttribute('maxlength', '1');
-quantityInput.setAttribute('size', '1');
+const quantityInput = document.createElement('span');
+quantityInput.setAttribute('class', 'total_clicks_span')
+quantityInput.setAttribute('id', 'totalClicks');
+quantityInput.textContent = "1";
+
 
 contentDiv.appendChild(quantityInput);
 
 const plusBtn = document.createElement('button');
-plusBtn.setAttribute('class', 'btn-add');
+plusBtn.setAttribute('class', 'btn-sub');
+plusBtn.setAttribute('onclick', 'totalClick(-1)')
 const plusIcon = document.createElement('i');
-plusIcon.setAttribute('class', 'fa-solid fa-plus');
+plusIcon.setAttribute('class', 'fa-solid fa-minus');
 plusBtn.appendChild(plusIcon);
 
 contentDiv.appendChild(plusBtn);
@@ -394,6 +394,16 @@ add_products_to_bag.addEventListener("click", function() {
 	}
 });
 
+//Increment and Decrement for products
+let totalClicks = 1; // initial value
+
+function totalClick(value) {
+  totalClicks += value;
+  if (totalClicks < 1) { // check if totalClicks is less than 1
+    totalClicks = 1; // set totalClicks to 1 if it's less than 1
+  }
+  document.getElementById("totalClicks").innerHTML = totalClicks;
+}
 </script>
 
 </body>

@@ -38,7 +38,7 @@
 
 <div class="icons-info">
 	<a href="../../pages/signup for booking/signup.html"> <i class="fa-solid fa-user"></i> &nbsp; Sign In | Sign Up </a> &nbsp;
-	<a href=""> <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (2)</a> &nbsp;
+	<a href="../../pages/shop/wishlist.html"> <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (2)</a> &nbsp;
 	<a href="../../pages/shop/cart.html"> <i class="fa-solid fa-bag-shopping"></i> &nbsp; My Bag (2)</a>
 </div>
 </div>
@@ -238,32 +238,64 @@
 </div>
 </div>
 
+<!-- faq started -->
+<div class="background">
+	<section class="main-faq">
+		<h2 class="title">FAQs</h2>
+		<div class="faq">
+			<div class="question">
+				<h3>What forms of payment do you accept?</h3>
+				<i class="fa-solid fa-plus"></i>
+			</div>
+	
+			<div class="answer">
+				<p>We accept ALL major credit cards, PayPal, and Apple Pay.
+					All payments are securely processed with 128-bit encryption</p>
+			</div>
+		</div>
+	<hr>
+		<!-- 2nd question -->
+		
+		<div class="faq">
+			<div class="question">
+				<h3>What if I receive a damaged or defective product?</h3>
+				<i class="fa-solid fa-plus"></i>
+			</div>
+	
+			<div class="answer">
+				<p>If you receive a damaged or defective product, please contact us immediately and we will arrange for a replacement.</p>
+			</div>
+		</div>
+	<hr>
+		<!-- 3rd question -->
+		<div class="faq">
+			<div class="question">
+				<h3>Can I change or cancel my order?</h3>
+				<i class="fa-solid fa-plus"></i>
+			</div>
+	
+			<div class="answer">
+				<p>Sure! You can cancel, or change your order within 24 hours of confirmation. Please contact us with your name and order number at:  info@globalshop.com.
+					After 24 hours, your order will have been processed and we won’t be able to make any changes or cancel it.</p>
+			</div>
+		</div>
+	<hr>
+		<!-- 4th question -->
+		<div class="faq">
+			<div class="question">
+				<h3>How do I know if my order has been processed?</h3>
+				<i class="fa-solid fa-plus"></i>
+			</div>
+	
+			<div class="answer">
+				<p>You will receive a confirmation email once your order has been processed. You can also check the status of your order on our website.</p>
+			</div>
+		</div>
+	<hr>
 
-
-<div class="background-for-contact" style="display: none;">
-<div class="contact-us">
-	<h2>C O N T A C T  U S  </h2>
-	<h1>Get in Touch </h1>
-</div>
-
-<div class="contact-address">
-<div class="address-info">
-	<h2><i class="fa-solid fa-location-dot"></i> &nbsp; Address</h2>
-	<p>11113 W Baldwin RD, Monrovia, MD 21770, United States of America.</p>
-</div>
-
-<div class="contact">
-	<h2><i class="fa-solid fa-mobile-screen-button"></i> &nbsp; Contact Details</h2>
-	<p>info@globalfuncity.in</p>
-	<p>+1 860 817 1080</p>
-</div>
-
-
-
-
-
-</div>
-</div>
+	</section>
+	</div>
+	<!-- faq completed -->
 
 <footer>
     <div class="logo">
@@ -346,13 +378,23 @@
 		
 	    
 	</div>
-	<hr>
+	<hr class="footer-hr">
 	<div class="copyright">
 	<p>Global Fun City &#169; 2022. All rights Reserved.
         <br>Site designed by Vignesh.in</p>
 	</div>
 </footer>
 
+<script>
+// faq started
+const faqs = document.querySelectorAll(".faq");
 
+faqs.forEach(faq => {
+	faq.addEventListener("click", () => {
+	faq.classList.toggle("active");
+	});
+});
+// faq closed
+</script>
 </body>
 </html>

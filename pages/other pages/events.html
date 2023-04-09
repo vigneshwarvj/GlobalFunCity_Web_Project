@@ -156,15 +156,13 @@
 		<div class="subscribe">
 			<h1>Subscribe for Exclusive Updates!</h1>
 		</div>
-		
 		<div class="messages">
-			<input type="email" placeholder="Enter Your Email Address"> <br>
-		
-		</div>
-		
-		<div class="btn-subscribe">
-			<a href="../../pages/other pages/getintouch.html"> <button><i class="fa-regular fa-paper-plane"></i> Subscribe</button> </a>
-		</div>
+			<input type="email" id="email" placeholder="Enter Your Email Address" required style="outline: 2px solid #eee;"> <br>		
+		  </div>
+		  <div class="btn-subscribe">
+			<button id="subscribeBtn"><i class="fa-regular fa-paper-plane"></i> Subscribe</button>
+		  </div>
+
 		</div>	
 
 
@@ -318,6 +316,20 @@
 		function closeNav() {
 		  document.getElementById("mySidenav").style.width = "0";
 		}
+
+//Save subscribe email id in local storage
+const emailInput = document.getElementById("email");
+const subscribeBtn = document.getElementById("subscribeBtn");
+
+subscribeBtn.addEventListener("click", function() {
+  if (emailInput.value !== "") {
+    localStorage.setItem("subscribeBtn_from_user_e.email", emailInput.value);
+    alert("Thank you for subscribing!");
+	document.querySelector('input').reset();
+  } else {
+    alert("Please enter a valid email address.");
+  }
+});
 			</script>
 
 </body>
