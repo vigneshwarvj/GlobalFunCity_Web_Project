@@ -36,6 +36,10 @@
             <input type="email" id="email" placeholder="Email Address" required="true" /> &nbsp;
             <input type="password" id="password" placeholder="Password"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="8" 
             title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters"  required="true" /> &nbsp;
+            <span class="pattern_for_password" id="patternPassword" style="display: inline-block; width: 300px; font-family: 'poppins', sans-serif; font-size: 0.8rem;">
+                Must contain at least one number, one uppercase, lowercase and one special character, and at least 8 - 10 characters.
+            </span>
+             &nbsp;
             <input type="password" id="re_enter_password" placeholder="Re-Enter Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="8" 
             title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters" required="true"  /> &nbsp;
             <input onfocus="(this.type = 'date')" id="date" placeholder="Date of Birth" required="true"/>
@@ -74,6 +78,11 @@
 
 <script>
 
+// const patternPassword = document.getElementById("password");
+// patternPassword.addEventListener("focus", function(){
+//     const passwordInstructions = document.getElementById("patternPassword");
+//     passwordInstructions.setAttribute("style", "display:block;")
+// }) 
 
 </script>
 <script src="../../js/create-an-account.js"></script>

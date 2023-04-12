@@ -157,10 +157,13 @@
 			<h1>Subscribe for Exclusive Updates!</h1>
 		</div>
 		<div class="messages">
+			<form class="emailInput" id="emailInputUser" onsubmit="userEmailSubscribe(event)"> 
 			<input type="email" id="email" placeholder="Enter Your Email Address" required style="outline: 2px solid #eee;"> <br>		
-		  </div>
+		  
+		</div>
 		  <div class="btn-subscribe">
-			<button id="subscribeBtn"><i class="fa-regular fa-paper-plane"></i> Subscribe</button>
+			<button id="subscribeBtn" type="submit"><i class="fa-regular fa-paper-plane"></i>&nbsp; Subscribe</button>
+		</form>
 		  </div>
 
 		</div>	
@@ -318,18 +321,30 @@
 		}
 
 //Save subscribe email id in local storage
-const emailInput = document.getElementById("email");
-const subscribeBtn = document.getElementById("subscribeBtn");
+function userEmailSubscribe(event){
+	event.preventDefault();
 
-subscribeBtn.addEventListener("click", function() {
-  if (emailInput.value !== "") {
-    localStorage.setItem("subscribeBtn_from_user_e.email", emailInput.value);
-    alert("Thank you for subscribing!");
-	document.querySelector('input').reset();
-  } else {
-    alert("Please enter a valid email address.");
-  }
-});
+	const emailInput = document.getElementById("email");
+
+	if(!emailInput.checkVisibility()){
+		return;
+	}
+	let emailFormData = JSON.parse(localStorage.getItem("emailSubscribeDataFromUsers")) || [];
+
+	emailFormData.push({
+		"email": emailInput.value
+	});
+
+// Save the updated form data back to localStorage
+	localStorage.setItem("emailSubscribeDataFromUsers", JSON.stringify(emailFormData));
+
+// Reset the form
+document.querySelector('form').reset();
+
+alert("Thank you for subscribing!");
+
+}
+// document.querySelector('.emailInput').addEventListener('submit', userEmailSubscribe);
 			</script>
 
 </body>
