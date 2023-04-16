@@ -159,7 +159,34 @@ const td3 = document.createElement('td');
 td3.textContent = 'XL';
 
 const td4 = document.createElement('td');
-td4.textContent = '1';
+td4.setAttribute('style', 'padding-left:44px;');
+
+const plusBtn = document.createElement('button');
+plusBtn.setAttribute('class', 'btn-sub');
+plusBtn.setAttribute('onclick', 'totalClick(-1)')
+const plusIcon = document.createElement('i');
+plusIcon.setAttribute('class', 'fa-solid fa-minus');
+plusIcon.setAttribute('style', 'font-size:large;');
+plusBtn.appendChild(plusIcon);
+td4.appendChild(plusBtn);
+
+const quantityInput = document.createElement('span');
+quantityInput.setAttribute('class', 'total_clicks_span')
+quantityInput.setAttribute('id', 'totalClicks');
+quantityInput.textContent = "1";
+td4.appendChild(quantityInput);
+
+const minusBtn = document.createElement('button');
+minusBtn.setAttribute('class', 'btn-add');
+minusBtn.setAttribute('onclick', 'totalClick(1)');
+const minusIcon = document.createElement('i');
+minusIcon.setAttribute('class', 'fa-solid fa-plus');
+minusIcon.setAttribute('style', 'font-size:large;');
+minusBtn.appendChild(minusIcon);
+
+td4.appendChild(minusBtn);
+
+
 
 const td5 = document.createElement('td');
 td5.textContent = '$299.00';
@@ -206,7 +233,18 @@ window.location.reload();
 
         // let removeProduct = JSON.parse(localStorage.getItem("unique_id_of_products"));
     })
-})
+});
+
+//Increment and Decrement for products
+let totalClicks = 1; // initial value
+
+function totalClick(value) {
+  totalClicks += value;
+  if (totalClicks < 1) { // check if totalClicks is less than 1
+    totalClicks = 1; // set totalClicks to 1 if it's less than 1
+  }
+  document.getElementById("totalClicks").innerHTML = totalClicks;
+}
 </script>
 
 </body>

@@ -73,10 +73,11 @@
 <hr>
 
 <div class="search-availablity-information-msg">
-<div class="search-availablity">
+    <form class="proceeding_ticket">
+<div class="search-availablity" >
 <div class="search-information">
-    <p>Check in  &nbsp; <input type="date" required/> </p> &nbsp;
-    <p>Check out  &nbsp;<input type="date" required /></p>
+    <p>Check in  &nbsp; <input type="date" id="checkIndate" name="date" min="" required/> </p> &nbsp;
+    <p>Check out  &nbsp;<input type="date" id="checkOutdate" name="date" min="" required /></p>
 </div>
 
 
@@ -96,7 +97,7 @@
     <input type="radio" name="yes" id="yes" required>Yes
     <input type="radio" name="yes" id="no" required>No
 </div>
-
+</form>
 
 <div class="another-room">
     <button>+Add Another Room</button>
@@ -186,6 +187,22 @@ function totalClick_for_Children(value){
     }
     document.getElementById("totalClicksChildren").innerHTML = totalClicks_Children;
 }
+// Increment and decrement closed.
+
+//Check In and CHeck out dates:
+//Check In
+// Get the current date
+ var currentDate = new Date().toISOString().split("T")[0];
+
+// Set the minimum date for the date input field
+document.getElementById("checkIndate").setAttribute("min", currentDate);
+
+//Check OUt
+// Get the current date
+var currentDate = new Date().toISOString().split("T")[0];
+
+// Set the minimum date for the date input field
+document.getElementById("checkOutdate").setAttribute("min", currentDate);
 
 </script>
 

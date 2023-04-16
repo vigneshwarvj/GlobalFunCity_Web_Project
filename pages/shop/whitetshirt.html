@@ -50,7 +50,7 @@
 
 
 <div class="photo-and-content">
-<!-- <div class="photo-of-store">
+ <!-- <div class="photo-of-store">
     <img src="../../assets/images/shopping/t-shirt.jpg" width="500" height="600" alt="White-T-Shirt"/>
 </div>
 <div class="content">    
@@ -68,6 +68,7 @@
 <input  type="text" id="number" name="number" placeholder="1" maxlength="1" size="1">
 <button class="btn-add"><i class="fa-solid fa-plus"></i></button> &nbsp;
     <a href="../shop/cart.html"><button class="btn-buynow">Buy now</button></a>
+	<button class="btn-wishlist"><i class="fa-regular fa-heart fa-beat-fade"></i></button>
     <h4>Category:Style</h4>
     <h4>Product ID:0003</h4> 
 
@@ -309,40 +310,37 @@ const brtag = document.createElement("br");
 contentDiv.appendChild(brtag);
 
 // create button elements for the quantity selector
-const minusBtn = document.createElement('button');
-minusBtn.setAttribute('class', 'btn-add');
-minusBtn.setAttribute('onclick', 'totalClick(1)');
-const minusIcon = document.createElement('i');
-minusIcon.setAttribute('class', 'fa-solid fa-plus');
-minusBtn.appendChild(minusIcon);
+// const minusBtn = document.createElement('button');
+// minusBtn.setAttribute('class', 'btn-add');
+// minusBtn.setAttribute('onclick', 'totalClick(1)');
+// const minusIcon = document.createElement('i');
+// minusIcon.setAttribute('class', 'fa-solid fa-plus');
+// minusBtn.appendChild(minusIcon);
 
-contentDiv.appendChild(minusBtn);
+// contentDiv.appendChild(minusBtn);
 
-const quantityInput = document.createElement('span');
-quantityInput.setAttribute('class', 'total_clicks_span')
-quantityInput.setAttribute('id', 'totalClicks');
-quantityInput.textContent = "1";
+// const quantityInput = document.createElement('span');
+// quantityInput.setAttribute('class', 'total_clicks_span')
+// quantityInput.setAttribute('id', 'totalClicks');
+// quantityInput.textContent = "1";
 
 
-contentDiv.appendChild(quantityInput);
+// contentDiv.appendChild(quantityInput);
 
-const plusBtn = document.createElement('button');
-plusBtn.setAttribute('class', 'btn-sub');
-plusBtn.setAttribute('onclick', 'totalClick(-1)')
-const plusIcon = document.createElement('i');
-plusIcon.setAttribute('class', 'fa-solid fa-minus');
-plusBtn.appendChild(plusIcon);
+// const plusBtn = document.createElement('button');
+// plusBtn.setAttribute('class', 'btn-sub');
+// plusBtn.setAttribute('onclick', 'totalClick(-1)')
+// const plusIcon = document.createElement('i');
+// plusIcon.setAttribute('class', 'fa-solid fa-minus');
+// plusBtn.appendChild(plusIcon);
 
-contentDiv.appendChild(plusBtn);
-
-// const space = document.createElement('&nbsp;');
-// contentDiv.appendChild(space);
+// contentDiv.appendChild(plusBtn);
 
 // create a element for the buy now button
 const buyNowLink = document.createElement('a');
 buyNowLink.setAttribute('href', '../shop/cart.html');
 
-contentDiv.appendChild(buyNowLink);
+contentDiv.appendChild(buyNowLink); 
 
 const buyNowBtn = document.createElement('button');
 buyNowBtn.setAttribute("data-id", getProductData["product_uuid"]);
@@ -351,8 +349,18 @@ buyNowBtn.textContent = 'Buy now';
 
 contentDiv.appendChild(buyNowBtn);
 
+const wishlistBtn = document.createElement('button');
+wishlistBtn.setAttribute('class', 'btn-wishlist');
+
+const iconHeart = document.createElement('i');
+iconHeart.setAttribute('class', 'fa-regular fa-heart fa-beat-fade');
+iconHeart.setAttribute('style', 'font-size:revert;');
+
+contentDiv.appendChild(wishlistBtn);
+wishlistBtn.appendChild(iconHeart);
+
 const Category = document.createElement('h4');
-Category.textContent = "Category:Style";
+Category.textContent = "Category:" + getProductData["selecting"];
 contentDiv.appendChild(Category);
 
 const product_id = document.createElement('h4');
@@ -394,16 +402,7 @@ add_products_to_bag.addEventListener("click", function() {
 	}
 });
 
-//Increment and Decrement for products
-let totalClicks = 1; // initial value
 
-function totalClick(value) {
-  totalClicks += value;
-  if (totalClicks < 1) { // check if totalClicks is less than 1
-    totalClicks = 1; // set totalClicks to 1 if it's less than 1
-  }
-  document.getElementById("totalClicks").innerHTML = totalClicks;
-}
 </script>
 
 </body>

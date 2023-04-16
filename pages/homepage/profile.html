@@ -80,23 +80,16 @@
 <form>
     <label class="input-field">Mobile Phone (optional)</label>
     <br>
-    <input id="mobile_number" class="input-field" type="tel" placeholder="+1" readonly/>
+    <input id="mobile_number" class="input-field" type="tel" placeholder="+1" pattern="[0-9]{10}" minlength="10" maxlength="10" readonly/>
 </form>
-</div>
-
-<div class="profile">
-    <form>
-        <label class="input-field" >Date of Birth</label>
-        <br>
-        <input  id="dob" class="input-field" type="text" onfocus="(this.type=date)" readonly/>
-    </form>
 </div>
 
 <div class="profile">
     <form>
         <label class="input-field">Password</label>
         <br>
-        <input id="password" class="input-field" type="password" readonly/>
+        <input id="password" class="input-field" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="8" 
+        title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters" readonly/>
     </form>
 </div>
 
@@ -108,7 +101,7 @@
     <form>
         <label class="input-field">First Name</label>
         <br>
-        <input id="first_name" class="input-field" type="text" readonly/>
+        <input id="first_name" class="input-field" type="text" pattern="[a-zA-Z]+" readonly/>
     </form>
 </div>
 
@@ -116,7 +109,7 @@
     <form>
         <label class="input-field">Middle Name (optional)</label>
         <br>
-        <input id="middle_name" class="input-field" type="text" readonly/>
+        <input id="middle_name" class="input-field" type="text" pattern="[a-zA-Z]+" readonly/>
     </form>
 </div>
 
@@ -124,36 +117,7 @@
     <form>
         <label class="input-field">Last Name</label>
         <br>
-        <input id="last_name" class="input-field" type="text" readonly/>
-    </form>
-</div>
-
-<div class="profile">
-    <form>
-        <label class="input-field">Country/Region of Residence</label>
-        <br>
-        <select>
-            <option value="india">India</option>
-            <option value="australia">Australia</option>
-            <option value="switzerland">Switzerland</option>
-            <option value="united-states-of-america">United States of America</option>
-            <option value="russia">Russia</option>
-            <option value="germany">Germany</option>
-            <option value="belgium">Belgium</option>
-            <option value="srilanka">Srilanka</option>
-            <option value="japan">Japan</option>
-            <option value="china">China</option>
-            <option value="norway">Norway</option>
-            <option value="poland">Poland</option>
-            <option value="pakisthan">Pakisthan</option>
-            <option value="ukrain">Ukrain</option>
-            <option value="netherland">Netherland</option>
-            <option value="africa">Africa</option>
-            <option value="britain">Britain</option>
-            <option value="england">England</option>
-            <option value="georgia">Gerogia</option>
-            <option value="france">France</option>
-        </select>        
+        <input id="last_name" class="input-field" type="text" pattern="[a-zA-Z]+" readonly/>
     </form>
 </div>
 
@@ -161,7 +125,7 @@
     <form>
         <label class="input-field">Home Phone (optional)</label>
         <br>
-        <input id="home_mobile_number" class="input-field" type="tel" readonly/>
+        <input id="home_mobile_number" class="input-field" type="tel" pattern="[0-9]{10}" minlength="10" maxlength="10" readonly/>
     </form>
 </div>
 

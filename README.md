@@ -72,7 +72,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 - Scenario 1: Successfully create an account.
     - Steps:
         1. Navigate to the create account page.
-        2. Enter the required information such as First name, last name, email, password, date of birth.
+        2. Enter the required information such as First name, last name, email, password.
         3. Click the "Create Account" button.
     - Expected Result:
         - The user is redirected to the signin page.
@@ -133,8 +133,9 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 - Scenario 1: Successfully view products.
     - Steps:
         1. Log in as a buyer.
-        2. Navigate to the product listing page.
-        3. View the list of available products.
+        2. Navigate to the Shop page.
+        3. Choose any one of the category.
+        4. View the list of available products.
     - Expected Result:
         - The user can view the list of available products.
 
@@ -142,8 +143,10 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 - Scenario 1: Successfully view product details
     - Steps:
         1. Log in as a buyer.
-        2. Navigate to the product listing page.
-        3. Select a product to view its details.
+        2. Navigate to the Shop page.
+        3. Choose any one of the category.
+        4. View the list of available products.
+        5. Select a product to view its details.
     - Expected Result:
         - The user can view the details of the selected product.
 
@@ -152,10 +155,12 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 - Scenario 1: Successfully add product to my bag.
     - Steps:
         1. Log in as a buyer.
-        2. Navigate to the product listing page.
-        3. Select a product.
-        4. Click the "Buy Now" button.
-        5. Product will get it into "My bag".
+        2. Navigate to the Shop page.
+        3. Choose any one of the category.
+        4. View the list of available products.
+        5. Select a product to view its details.
+        6. Click the "Buy Now" button.
+        7. Product will get it into "My bag".
     - Expected Result:
         - The product is added to the user's bag.
 
@@ -163,8 +168,9 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 - Scenario 1: Successfully view products in user's bag.
     - Steps:
         1. Log in as a buyer.
-        2. Navigate to the my bag page.
-        3. View the list of products in the user's bag.
+        2. Navigate to the Shop page.
+        3. Click the 'My bag' page.
+        4. View the list of products in the user's bag.
     - Expected Result:
         - The user can view the list of products in the bag.
 
@@ -172,8 +178,9 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 - Scenario 1: Successfully remove item from user's bag.
     - Steps:
         1. Log in as a buyer.
-        2. Navigate to the my bag page.
-        3. Remove the selected product from user's bag.
+        2. Navigate to the Shop page.
+        3. Click the 'My bag' page.
+        4. Remove the selected product from user's bag.
     - Expected Result:
         - The product is removed from the user's bag.
 

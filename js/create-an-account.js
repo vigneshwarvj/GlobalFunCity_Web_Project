@@ -5,7 +5,6 @@ const create = e => {
     let email = document.getElementById("email") .value
     let password = document.getElementById("password") .value
     let re_enter_password = document.getElementById("re_enter_password") .value
-    let date = document.getElementById("date") .value
     let user_uniqueId = uuidv4()
     let mobile_number= "";
     let home_mobile_number="";
@@ -24,7 +23,6 @@ const create = e => {
             "email": email,
             "password": password,
             "re_enter_password": re_enter_password,
-            "date": date,
             "mobile_number":mobile_number,
             "home_mobile_number":home_mobile_number,
             user_uniqueId

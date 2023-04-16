@@ -48,7 +48,7 @@
         &nbsp; &nbsp;
 <div class="last-name">        
         <p>Last name <g>*</g></p>
-        <input type="text" id="last_name " name="lastname" pattern="[a-zA-Z]+" required>
+        <input type="text" id="last_name" name="lastname" pattern="[a-zA-Z]+" required>
 </div>
 </div>
 
@@ -56,26 +56,33 @@
     <p>Country/Region <g>*</g></p>
         
         <select class="country_region" required>
-            <option id="india">India</option>
-            <option id="australia">Australia</option>
-            <option id="switzerland">Switzerland</option>
-            <option id="united-states-of-america">United States of America</option>
-            <option id="russia">Russia</option>
-            <option id="germany">Germany</option>
-            <option id="belgium">Belgium</option>
-            <option id="srilanka">Srilanka</option>
-            <option id="japan">Japan</option>
-            <option id="china">China</option>
-            <option id="norway">Norway</option>
-            <option id="poland">Poland</option>
-            <option id="pakisthan">Pakisthan</option>
-            <option id="ukrain">Ukrain</option>
-            <option id="netherland">Netherland</option>
             <option id="africa">Africa</option>
+            <option id="australia">Australia</option>
+            <option id="belgium">Belgium</option>
+            <option id="brazil">Brazil</option>
             <option id="britain">Britain</option>
+            <option id="canada">Canada</option>
+            <option id="china">China</option>
             <option id="england">England</option>
-            <option id="georgia">Gerogia</option>
             <option id="france">France</option>
+            <option id="georgia">Gerogia</option>
+            <option id="germany">Germany</option>
+            <option id="india">India</option>
+            <option id="italy">Italy</option>
+            <option id="japan">Japan</option>
+            <option id="mexico">Mexico</option>
+            <option id="netherland">Netherland</option>
+            <option id="norway">Norway</option>
+            <option id="pakisthan">Pakisthan</option>
+            <option id="poland">Poland</option>
+            <option id="russia">Russia</option>
+            <option id="south_korea">South Korea</option>
+            <option id="spain">Spain</option>
+            <option id="srilanka">Srilanka</option>
+            <option id="switzerland">Switzerland</option>
+            <option id="ukrain">Ukrain</option>
+            <option id="unitedkingdom">United Kingdom</option>
+            <option id="united-states-of-america">United States of America</option>
         </select>
 
         <p>Door.No <g>*</g></p>
@@ -91,10 +98,10 @@
         <input type="text" id="state" required>
 
         <p>ZIP Code <g>*</g></p>
-        <input type="text" id="zip_code" required>
+        <input type="text" id="zip_code" oninput="this.value = this.value.replace(/[^0-9]/g,'')" minlength="6" maxlength="6" required>
 
         <p>Phone <g>*</g></p>
-        <input type="tel" id="phone" pattern="[0-9]{10}" required>
+        <input type="tel" id="phone" pattern="[0-9]{10}" minlength="10" maxlength="10" required>
 
         <p>Email address <g>*</g></p>
         <input type="email" id="email" required>
@@ -135,11 +142,13 @@
 </div>
 
 <div class="tickets">
+    <div class="payment-methods">
     <ul>
-        <li><input type="radio" name="payment-method"> Credit Card/Debit Card </li>    
-        <li><input type="radio" name="payment-method">Paytm</li>
-        <li><input type="radio" name="payment-method"> Google pay </li>
+        <li><input type="radio" id="creditcard_debitcard" name="payment-method" required> Credit Card/Debit Card </li>    
+        <li><input type="radio" id="paytm" name="payment-method" required>Paytm</li>
+        <li><input type="radio" id="gpay" name="payment-method" required> Google pay </li>
     </ul>
+    </div>
     <button class="btn-proceed" style="cursor: pointer; " type="submit">Proceed</button>
     <a href="../../pages/shop/shop.html"><button class="btn-cancel">Cancel Order</button></a>
 </div>
@@ -168,57 +177,51 @@
 </footer>
 
 <script>
-    //Checkout form details function
-    // function checkoutFormDataFromUser(event){
-    //     event.preventDefault();
 
-    //     const firstName_CO = document.getElementById("first_name");
-    //     const lastName_CO = document.getElementById("last_name");
-    //     const countryRegion = document.querySelector(".country_region");
-    //     const doorNo = document.getElementById("door_no");
-    //     const streetAddress = document.getElementById("street_address");
-    //     const townCity = document.getElementById("town_city");
-    //     const state = document.getElementById("state");
-    //     const zipCode = document.getElementById("zip_code");
-    //     const phoneNumber = document.getElementById("phone");
-    //     const emailAddress = document.getElementById("email");
-    //     const orderNotes = document.getElementById("order_notes");
+//Checkout form details function
+function checkoutFormDataFromUser(event) {
+  event.preventDefault();
 
-    //     if (!firstName_CO.checkValidity() || !lastName_CO.checkValidity() ||
-    //         !countryRegion.checkValidity() || !doorNo.checkValidity() ||
-    //         !streetAddress.checkValidity() || !townCity.checkValidity() ||
-    //         !state.checkValidity() || !zipCode.checkValidity() ||
-    //         !phoneNumber.checkValidity() || !emailAddress.checkValidity() ||
-    //         !orderNotes.checkValidity()){
-    //     return;
-    //     }
+  const firstName = document.getElementById("first_name").value;
+  const lastName = document.getElementById("last_name").value;
+  const countryRegion = document.querySelector(".country_region").value;
+  const doorNo = document.getElementById("door_no").value;
+  const streetAddress = document.getElementById("street_address").value;
+  const townCity = document.getElementById("town_city").value;
+  const state = document.getElementById("state").value;
+  const zipCode = document.getElementById("zip_code").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const orderNotes = document.getElementById("order_notes").value;
+  const paymentMethod = document.querySelector(".payment-methods").value;
 
-    //     let checkOutData = JSON.parse(localStorage.getItem("checkOutDatafromUsers")) || [];
+const existingUsers = JSON.parse(localStorage.getItem("usersfromCheckoutData")) || [];
 
-    //     checkOutData.push({
-    //         first_name: firstName_CO.value,
-    //         last_name: lastName_CO,
-    //         country_region: countryRegion,
-    //         door_no: doorNo,
-    //         street_address: streetAddress,
-    //         town_city: townCity,
-    //         state: state,
-    //         zip_code: zipCode,
-    //         phone: phoneNumber,
-    //         email: emailAddress,
-    //         order_notes: orderNotes
-    //     });
+  const formDatainCheckout = {
+    firstName,
+    lastName,
+    countryRegion,
+    doorNo,
+    streetAddress,
+    townCity,
+    state,
+    zipCode,
+    phone,
+    email,
+    orderNotes,
+    paymentMethod,
+  };
 
-    // localStorage.setItem("checkOutDatafromUsers", JSON.stringify(checkOutData));
+existingUsers.push(formDatainCheckout);
 
-    // // Reset the form
-    // document.querySelector('form').reset();
-    // window.location.href="../../pages/shop/proceedcheckout.html"
-    // }
+localStorage.setItem("usersfromCheckoutData", JSON.stringify(existingUsers));
 
-    // const proceed = document.querySelector(".btn-proceed")
-    // proceed.addEventListener("click",checkoutFormDataFromUser)
 
+document.querySelector('form').reset();
+  // Redirect to the checkout confirmation page
+window.location.href = "../../pages/shop/proceedcheckout.html";
+
+};
 </script>
 
 

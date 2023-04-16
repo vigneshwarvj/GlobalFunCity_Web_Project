@@ -87,13 +87,13 @@ body{
 	border: 2px solid #ffa51d;
 }
 /* sizes compl */
-.btn-sub, .btn-add{
+/* .btn-sub, .btn-add{
 	padding: 14px 16px 14px 16px;
 	background-color: white;
 	border:white;
 	color: #ffa51d;
 	
-}
+} */
 .btn-buynow{
 	background-color: #ffa51d;
 	color: white;
@@ -103,7 +103,16 @@ body{
 	cursor: pointer;
 	font-size: 18px;
 	font-family: 'League Spartan', sans-serif;
-	margin: 0px 0px 0px 25px;
+}
+.btn-wishlist{
+	margin: 0px 0px 0px 15px;
+	background-color: #ffa51d;
+	color: white;
+	border: 3px solid #ffa51d;
+	padding: 13px 30px 14px 30px;
+	border-radius: 40px;
+	cursor: pointer;
+	font-size: 18px;
 }
 .content h4{
     font-family: 'poppins', sans-serif;

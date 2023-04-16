@@ -240,36 +240,6 @@ contentDiv.appendChild(productDesc);
 const brtag = document.createElement("br");
 contentDiv.appendChild(brtag);
 
-// create button elements for the quantity selector
-const minusBtn = document.createElement('button');
-minusBtn.setAttribute('class', 'btn-sub');
-const minusIcon = document.createElement('i');
-minusIcon.setAttribute('class', 'fa-solid fa-minus');
-minusBtn.appendChild(minusIcon);
-
-contentDiv.appendChild(minusBtn);
-
-const quantityInput = document.createElement('input');
-quantityInput.setAttribute('type', 'text');
-quantityInput.setAttribute('id', 'number');
-quantityInput.setAttribute('name', 'number');
-quantityInput.setAttribute('placeholder', '1');
-quantityInput.setAttribute('maxlength', '1');
-quantityInput.setAttribute('size', '1');
-
-contentDiv.appendChild(quantityInput);
-
-const plusBtn = document.createElement('button');
-plusBtn.setAttribute('class', 'btn-add');
-const plusIcon = document.createElement('i');
-plusIcon.setAttribute('class', 'fa-solid fa-plus');
-plusBtn.appendChild(plusIcon);
-
-contentDiv.appendChild(plusBtn);
-
-// const space = document.createElement('&nbsp;');
-// contentDiv.appendChild(space);
-
 // create a element for the buy now button
 const buyNowLink = document.createElement('a');
 buyNowLink.setAttribute('href', '../shop/cart.html');
@@ -283,13 +253,19 @@ buyNowBtn.textContent = 'Buy now';
 
 contentDiv.appendChild(buyNowBtn);
 
-const Category = document.createElement('h4');
-Category.textContent = "Category:Style";
-contentDiv.appendChild(Category);
+const wishlistBtn = document.createElement('button');
+wishlistBtn.setAttribute('class', 'btn-wishlist');
 
-// const product_id = document.createElement('h4');
-// product_id.textContent = "Product ID:0003";
-// contentDiv.appendChild(product_id);
+const iconHeart = document.createElement('i');
+iconHeart.setAttribute('class', 'fa-regular fa-heart fa-beat-fade');
+iconHeart.setAttribute('style', 'font-size:revert;');
+
+contentDiv.appendChild(wishlistBtn);
+wishlistBtn.appendChild(iconHeart);
+
+const Category = document.createElement('h4');
+Category.textContent = "Category:"  + getProductData_ofAccessories["selecting"];
+contentDiv.appendChild(Category);
 
 document.querySelector("div.photo-and-content").append();
 

@@ -322,15 +322,6 @@ footer{
 	text-align: left;
 	padding: 0px 0px 30px 0px;
 }
-.address h3, .open-hours h3, .contact-for-more h3{
-	font-family: 'league spartan', sans-serif;
-	color: #ffa51d;
-}
-.address p, .contact-for-more p, .open-hours p{
-	font-family: 'poppins', sans-serif;
-	color: white;
-	width: 300px;
-}
 .social-medias a{
 	display: inline-block;
 	width: 40px; 
@@ -363,13 +354,17 @@ footer{
 .youtube a:hover{
 	background-color: #FF0000;
 }
-/* footer-for-about-us-etc */
-.navbar-footer ul{
+/* shop footer main */
+.shop-footer-main{
 	display: flex;
-	justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    line-height: 20px;
 }
+/* footer-for-about-us-etc */
 .navbar-footer ul li a{
-	padding: 10px;
 	color: white;
 	text-decoration:none;
 }
@@ -381,12 +376,22 @@ footer{
 	color:#ff5757;
 }
 /* footer-for-privacy-etc */
-.other-navbar-footer ul{
+.shop-footer ul li{
+	list-style: none;
+	font-family: 'league spartan', sans-serif;
+}
+.shop-footer ul li a{
+	color: white;
+	text-decoration:none;	
+} 
+.shop-footer a:hover{
+	color:#ff5757;	
+}
+/* .other-navbar-footer ul{
     display: flex;
 	justify-content: center;
-}
+} */
 .other-navbar-footer ul li{
-	padding: 10px;
 	font-family: 'league spartan', sans-serif;
 	list-style: none;
 }
