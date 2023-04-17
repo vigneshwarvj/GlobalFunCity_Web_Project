@@ -82,10 +82,11 @@ body{
 }
 /* buttonplus&minus */
 .btn-sub, .btn-add{
-	padding: 14px 16px 14px 16px;
-	background-color: white;
-	border:white;
-	color: #ffa51d;
+	padding: 4px 6px 4px 6px;
+    background-color: white;
+    border: #646464 2px solid;
+    color: #ffa51d;
+    border-radius: 110px;
 	
 }
 .btn-shopping a{

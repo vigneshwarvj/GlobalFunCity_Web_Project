@@ -166,13 +166,14 @@ plusBtn.setAttribute('class', 'btn-sub');
 plusBtn.setAttribute('onclick', 'totalClick(-1)')
 const plusIcon = document.createElement('i');
 plusIcon.setAttribute('class', 'fa-solid fa-minus');
-plusIcon.setAttribute('style', 'font-size:large;');
+plusIcon.setAttribute('style', 'font-size:initial;');
 plusBtn.appendChild(plusIcon);
 td4.appendChild(plusBtn);
 
 const quantityInput = document.createElement('span');
 quantityInput.setAttribute('class', 'total_clicks_span')
 quantityInput.setAttribute('id', 'totalClicks');
+quantityInput.setAttribute('style', 'padding:10px;')
 quantityInput.textContent = "1";
 td4.appendChild(quantityInput);
 
@@ -181,7 +182,7 @@ minusBtn.setAttribute('class', 'btn-add');
 minusBtn.setAttribute('onclick', 'totalClick(1)');
 const minusIcon = document.createElement('i');
 minusIcon.setAttribute('class', 'fa-solid fa-plus');
-minusIcon.setAttribute('style', 'font-size:large;');
+minusIcon.setAttribute('style', 'font-size:initial;');
 minusBtn.appendChild(minusIcon);
 
 td4.appendChild(minusBtn);
@@ -236,7 +237,8 @@ window.location.reload();
 });
 
 //Increment and Decrement for products
-let totalClicks = 1; // initial value
+let totalClicks = 1; 
+// initial value
 
 function totalClick(value) {
   totalClicks += value;
