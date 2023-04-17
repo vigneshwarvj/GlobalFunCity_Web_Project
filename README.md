@@ -231,3 +231,164 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
         4. Remove the selected product from the wishlist.
     - Expected Result:
         - The product is removed from the user's wishlist. -->
+
+### Admin 
+- Scenario 1: Successfully entered into admin
+    - Steps:
+        1. Log in as a Admin.
+        2. Enter the details.
+    - Expected Result:
+        - The Admin entered into the Admin Portal.
+
+### Sell a Product [Completed]
+- Scenario 1: Successfully create a product.
+    - Steps: 
+        1. Log in as a Admin.
+        2. Enter the details.
+        3. Click the sidebar and click the 'Product Upload'.
+        4. Enter the details to create a product.
+        5. Click 'Save' Button.
+    - Expected Result:
+        - Successfully, Admin created a product.
+
+### Read a product [Completed]
+- Scenario 1: Successfully read a product.
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the Shop page.
+        3. Choose any one of the category.
+        4. View the list of available products.
+    - Expected Result:
+        - Successfully, Admin read a product.
+
+### Edit a product [Completed]
+- Scenerio 1: Successfully edit a product.
+    - Steps: 
+        1. Log in as a Admin.
+        2. Enter the details.
+        3. Click the sidebar and click the 'Product Update'.
+        4. Enter the Unique ID from Inspect.
+        5. Click the 'Find Details' Button.
+        6. The product details will show.
+        7. Edit the details you want.
+        8. Click 'Update Product' Button.
+    - Expected Result:
+        - Successfully, Admin edited a product. 
+
+### Delete a product [Completed]
+- Scenerio 1: Successfully delete a product.
+    - Steps: 
+        1. Log in as a Admin.
+        2. Enter the details.
+        3. Click the sidebar and click the 'Product Update'.
+        4. Enter the Unique ID from Inspect.
+        5. Click the 'Find Details' Button.
+        6. The product details will show.
+        7. Click 'Delete Product' Button.
+    - Expected Result:
+        - Successfully, Admin deleted a product.
+
+### Create a Offer [Completed]
+- Scenario 1: Successfully create a offer.
+    - Steps: 
+        1. Log in as a Admin.
+        2. Enter the details.
+        3. Click the sidebar and click the 'Offer Upload'.
+        4. Enter the details to create a offer.
+        5. Click 'Save' Button.
+    - Expected Result:
+        - Successfully, Admin created a offer.  
+
+### Read a product [Completed]
+- Scenario 1: Successfully read a offer.
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the Offer page.
+        3. View the list of available offers.
+    - Expected Result:
+        - Successfully, Admin read a offer.
+
+### Edit a offer [Completed]
+- Scenerio 1: Successfully edit a offer.
+    - Steps: 
+        1. Log in as a Admin.
+        2. Enter the details.
+        3. Click the sidebar and click the 'Offer Update'.
+        4. Enter the Unique ID from Inspect.
+        5. Click the 'Find Details' Button.
+        6. The offer details will show.
+        7. Edit the details you want.
+        8. Click 'Update offer' Button.
+    - Expected Result:
+        - Successfully, Admin edited a offer.
+
+### Delete a offer [Completed]
+- Scenerio 1: Successfully delete a offer.
+    - Steps: 
+        1. Log in as a Admin.
+        2. Enter the details.
+        3. Click the sidebar and click the 'Offer Update'.
+        4. Enter the Unique ID from Inspect.
+        5. Click the 'Find Details' Button.
+        6. The offer details will show.
+        7. Click 'Delete Offer' Button.
+    - Expected Result:
+        - Successfully, Admin deleted a offer. 
+
+### Create a Event [Completed]
+- Scenario 1: Successfully create a event.
+    - Steps: 
+        1. Log in as a Admin.
+        2. Enter the details.
+        3. Click the sidebar and click the 'Event Upload'.
+        4. Enter the details to create a Event or Upcoming event.
+        5. Click 'Save' Button.
+    - Expected Result:
+        - Successfully, Admin created a Event or Upcoming event.         
+
+### Read a Event [Completed]
+- Scenario 1: Successfully read a event.
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the event page.
+        3. View the list of available event or upcoming events.
+    - Expected Result:
+        - Successfully, Admin read a event or upcoming events.
+
+### Edit a event [Completed]
+- Scenerio 1: Successfully edit a event.
+    - Steps: 
+        1. Log in as a Admin.
+        2. Enter the details.
+        3. Click the sidebar and click the 'Event Update'.
+        4. Enter the Unique ID from Inspect.
+        5. Click the 'Find Details' Button.
+        6. The event (or) upcoming events details will show.
+        7. Edit the details you want.
+        8. Click 'Update event' Button.
+    - Expected Result:
+        - Successfully, Admin edited a event (or) upcoming event.
+
+### Delete a event [Completed]
+- Scenerio 1: Successfully delete a event.
+    - Steps: 
+        1. Log in as a Admin.
+        2. Enter the details.
+        3. Click the sidebar and click the 'Event Update'.
+        4. Enter the Unique ID from Inspect.
+        5. Click the 'Find Details' Button.
+        6. The event (or) upcoming event details will show.
+        7. Click 'Delete Event' Button.
+    - Expected Result:
+        - Successfully, Admin deleted a event.
+
+### Create a Attraction [Completed]
+- Scenario 1: Successfully create a attraction.
+    - Steps: 
+        1. Log in as a Admin.
+        2. Enter the details.
+        3. Click the sidebar and click the 'Attraction Upload'.
+        4. Enter the details to create a attraction.
+        5. Click 'Save' Button.
+    - Expected Result:
+        - Successfully, Admin created a attraction.             
