@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
+
+        <title>Rooms form - Global Fun City</title>
+        <link rel="stylesheet" href="../../../admin/admin css/product-upload.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="logo">
+            <img src="../../../assets/images/globalfuncitylogo.png" width="200" alt="logo">
+        </div>
+
+        <section class="background">
+            <div class="products">
+                <h2>Add Hotels</h2>
+            </div>
+
+            <div class="products-details-from-admin">
+                <form role="form" onsubmit="createRooms(event)" class="form-for-admin">
+                    <label class="input-field">Select Category</label>
+                    <br>
+                    <select class="category-for-shop" id="category" required>
+                        <option value="Hotel" id="hotel">Hotels</option>
+                        <option value="Resort" id="resort">Resorts</option>
+                    </select>
+                    <br>
+
+                    <label class="input-field">Image of room</label>
+                    <br>
+            
+                    <input type="url" id="image_of_room" required>
+                    <br>
+
+                    <label class="input-field">Hotel Name</label>
+                    <br>
+            
+                    <input type="text" id="hotel_name" pattern="[a-zA-Z]+" required>
+                    <br>
+
+                    <label class="input-field">Room name</label>
+                    <br>
+            
+                    <input type="text" id="room_name" required>
+                    <br>
+                    <label class="input-field">Room Price</label>
+                    <br>
+            
+                    <input type="tel" id="room_price" pattern="[0-9$.]+" required>
+                    <br>
+
+                    <label class="input-field">Room Strikeout Price</label>
+                    <br>
+            
+                    <input type="tel" id="room_strikeout_price" pattern="[0-9$.]+" required>
+                    <br>
+
+                    <label class="input-field">Adult</label>
+                    <br>
+            
+                    <input type="tel" id="no_of_adult" pattern="[0-9$.]+" required>
+                    <br>
+                    <label class="input-field">Children</label>
+                    <br>
+            
+                    <input type="tel" id="no_of_children" pattern="[0-9$.]+" required>
+                    <br>
+                    <label class="input-field">Room Size</label>
+                    <br>
+            
+                    <input type="tel" id="room_size" pattern="[0-9$.]+" required>
+                    <br>
+                    <label class="input-field">Room Discount</label>
+                    <br>
+            
+                    <input type="tel" id="offer_discount" pattern="[0-9$.]+" required>
+                    <br>
+                    <label class="input-field">Amenties 1</label>
+                    <br>
+                    <input type="tel" id="amenties_1" pattern="[a-zA-Z]+" required>
+                    <br>
+
+                    <label class="input-field">Amenties 2</label>
+                    <br>
+                    <input type="tel" id="amenties_2" pattern="[a-zA-Z]+" required>
+                    <br>
+                    &NonBreakingSpace;
+                    <!-- button started -->
+                    <button type="submit" id="save_details">Save</button>
+                    &nbsp;
+                    <button type="reset">Cancel</button>
+                </form>
+            </div>
+
+        </section>
+
+    </body>
+
+<script>
+//     document.getElementById("save_details").addEventListener("click", 
+//     function createRooms(e) {
+//         e.preventDefault()
+
+//         const selectingRooms =document.getElementById("category").value;
+
+//         const hotels = document.getElementById("hotel").value;
+
+//         const resorts = document.getElementById("resort").value;
+
+//         const roomImage = document.getElementById("image_of_room").value;
+//         const hotelResortName = document.getElementById("hotel_name").value;
+//         const roomName = document.getElementById("room_name").value;
+//         const roomPrice = document.getElementById("room_price").value;
+//         const roomStrikeoutPrice = document.getElementById("room_strikeout_price").value;
+//         const noOfAdultsInRoom = document.getElementById("no_of_adult").value;
+//         const noOfChildrenInRoom = document.getElementById("no_of_children").value;
+//         const roomSize = document.getElementById("room_size").value;
+//         const roomDiscount = document.getElementById("offer_discount").value;
+//         const roomAmenties1 =document.getElementById("amenties_1").value;
+//         const roomAmenties2 =document.getElementById("amenties_2").value;
+
+//         if(selectingRooms == hotels){
+//             const hotelDetails = JSON.parse(localStorage.getItem("hotelDetails")) || [];
+
+//             const exit = hotelDetails.some((data) => data.hotelDetails == hotelDetails);
+//             if(!exit){
+//                 if (roomImage !== "" && hotelResortName !== "" && roomName !== "" && roomPrice !== "" && roomStrikeoutPrice !== "" && noOfAdultsInRoom !== "" && noOfChildrenInRoom !== "" && roomSize !== "" &&
+//                 roomDiscount !== "" && roomAmenties1 !== "" && roomAmenties2 !== "") {
+//                 hotelDetails.push({
+//                     selectingRooms,
+//                     roomImage,
+//                     hotelResortName,
+//                     roomName,
+//                     roomPrice,
+//                     roomStrikeoutPrice,
+//                     noOfAdultsInRoom,
+//                     noOfChildrenInRoom,
+//                     roomSize,
+//                     roomDiscount,
+//                     roomAmenties1,
+//                     roomAmenties2
+//                 });
+//             }
+//             localStorage.setItem("hotelDetails",JSON.stringify(hotelDetails));
+//             };
+
+//         }
+//         else if(selectingRooms == resorts){
+//             const resortDetails = JSON.parse(localStorage.getItem("resortDetails")) || [];
+
+//             const exit = resortDetails.some((data) => data.resortDetails == resortDetails);
+//             if(!exit){
+//                 if (roomImage !== "" && hotelResortName !== "" && roomName !== "" && roomPrice !== "" && roomStrikeoutPrice !== "" && noOfAdultsInRoom !== "" && noOfChildrenInRoom !== "" && roomSize !== "" &&
+//                 roomDiscount !== "" && roomAmenties1 !== "" && roomAmenties2 !== "") {
+//                     resortDetails.push({
+//                     selectingRooms,
+//                     roomImage,
+//                     hotelResortName,
+//                     roomName,
+//                     roomPrice,
+//                     roomStrikeoutPrice,
+//                     noOfAdultsInRoom,
+//                     noOfChildrenInRoom,
+//                     roomSize,
+//                     roomDiscount,
+//                     roomAmenties1,
+//                     roomAmenties2
+//                 });
+//             }
+//             localStorage.setItem("resortDetails",JSON.stringify(resortDetails));
+//             };
+//         }
+// document.querySelector("form").reset();
+
+// alert("Room created successfully!");
+//     })
+
+document.getElementById("save_details").addEventListener("click", function createRooms(e) {
+    e.preventDefault();
+
+    const selectingRooms = document.getElementById("category").value;
+    const hotels = document.getElementById("hotel").value;
+    const resorts = document.getElementById("resort").value;
+    const roomImage = document.getElementById("image_of_room").value;
+    const hotelResortName = document.getElementById("hotel_name").value;
+    const roomName = document.getElementById("room_name").value;
+    const roomPrice = document.getElementById("room_price").value;
+    const roomStrikeoutPrice = document.getElementById("room_strikeout_price").value;
+    const noOfAdultsInRoom = document.getElementById("no_of_adult").value;
+    const noOfChildrenInRoom = document.getElementById("no_of_children").value;
+    const roomSize = document.getElementById("room_size").value;
+    const roomDiscount = document.getElementById("offer_discount").value;
+    const roomAmenties1 = document.getElementById("amenties_1").value;
+    const roomAmenties2 = document.getElementById("amenties_2").value;
+
+    if (roomImage !== "" && hotelResortName !== "" && roomName !== "" && roomPrice !== "" && roomStrikeoutPrice !== "" && noOfAdultsInRoom !== "" && noOfChildrenInRoom !== "" && roomSize !== "" &&
+        roomDiscount !== "" && roomAmenties1 !== "" && roomAmenties2 !== "") {
+        if (selectingRooms == hotels) {
+            const hotelDetails = JSON.parse(localStorage.getItem("hotelDetails")) || [];
+            const exit = hotelDetails.some((data) => data.hotelDetails == hotelDetails);
+            if (!exit) {
+                hotelDetails.push({
+                    selectingRooms,
+                    roomImage,
+                    hotelResortName,
+                    roomName,
+                    roomPrice,
+                    roomStrikeoutPrice,
+                    noOfAdultsInRoom,
+                    noOfChildrenInRoom,
+                    roomSize,
+                    roomDiscount,
+                    roomAmenties1,
+                    roomAmenties2
+                });
+            }
+            localStorage.setItem("hotelDetails", JSON.stringify(hotelDetails));
+        } else if (selectingRooms == resorts) {
+            const resortDetails = JSON.parse(localStorage.getItem("resortDetails")) || [];
+            const exit = resortDetails.some((data) => data.resortDetails == resortDetails);
+            if (!exit) {
+                resortDetails.push({
+                    selectingRooms,
+                    roomImage,
+                    hotelResortName,
+                    roomName,
+                    roomPrice,
+                    roomStrikeoutPrice,
+                    noOfAdultsInRoom,
+                    noOfChildrenInRoom,
+                    roomSize,
+                    roomDiscount,
+                    roomAmenties1,
+                    roomAmenties2
+                });
+            }
+            localStorage.setItem("resortDetails", JSON.stringify(resortDetails));
+        }
+        document.querySelector("form").reset();
+        alert("Room created successfully!");
+    } else {
+        alert("Please fill all the required fields!");
+    }
+});
+
+</script>
+</html>

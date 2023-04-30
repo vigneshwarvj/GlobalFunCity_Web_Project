@@ -1,177 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset='UTF-8'>
-<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
 
-<title>Book Now - Global Fun City</title>
-<link rel="stylesheet" href="../../assets/css/booknow.css" />
+        <title>Book Now - Global Fun City</title>
+        <link rel="stylesheet" href="../../assets/css/booknow.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-</head>
-<body>
+    </head>
+    <body>
 
-    <div class="visit-signin">
+        <div class="header">
+            <a href="../../index.html">
+                <img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <a class="navigation__link" href="../../index.html">
+                            <b>HOME</b>
+                        </a>
+                    </li>   
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/home.html">
+                            <b>ABOUT</b> 
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/events.html">
+                            <b>EVENTS </b> 
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/offer.html">
+                            <b>OFFERS </b> 
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/ticketprices.html">
+                            <b>TICKET  PRICES </b>
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/shop/shop.html">
+                            <b>SHOP</b>
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/attractions.html">
+                            <b>ATTRACTIONS </b>
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/contact.html">
+                            <b>CONTACT </b> 
+                        </a> 
+                    </li>
+                </ul>
 
-        <div class="visit-global">
-            <p>	Visit global1.com</p>
-        </div>	
-        
-        <div class="sign-in">
-            
-            <p><a href="../../pages/homepage/profile.html"> Welcome, Tommy! </a>&nbsp; | <a href="../../index.html"> Sign Out</a>  | <i class="fa-solid fa-globe"></i> United states (English)</p>
-        </div>
-        
-        </div>
-        
-
-<div class="header" >
-<a href="../../pages/homepage/index-profile.html" >
-<img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo"/>
-</a>
-<nav class="navbar">
-    <ul>
-    <li> <a class="navigation__link" href="../../pages/homepage/index-profile.html"><b>HOME</b></a></li>   
-    <li> <a class="navigation__link" href="../../pages/other pages/home.html"> <b>ABOUT</b> </a> </li>
-    <li> <a class="navigation__link" href="../../pages/other pages/events.html"> <b>EVENTS </b> </a> </li>
-    <li> <a class="navigation__link" href="../../pages/other pages/offer.html"> <b>OFFERS </b> </a> </li>
-    <li> <a class="navigation__link" href="../../pages/other pages/ticketprices.html"> <b>TICKET  PRICES </b></a> </li>
-    <li> <a class="navigation__link" href="../../pages/shop/shop.html"> <b>SHOP</b></a> </li>
-    <li> <a class="navigation__link" href="../../pages/other pages/attractions.html"> <b>ATTRACTIONS </b></a> </li>
-    <li> <a class="navigation__link" href="../../pages/other pages/contact.html"> <b>CONTACT </b> </a> </li>
-    </ul>
-
-    </nav>
-    <div>
-         <button> <b> <a href="../../pages/other pages/booknow.html"> BOOK NOW </b> </button> </a>
+            </nav>
+            <div>
+                <button id = "btn-booknow">
+                    <b>
+                        <a href="../../pages/other pages/booknow.html"> BOOK NOW </b> </button> </a>
 </div>
 </div>
 
 <div class="background-0">
-
 <div class="book-now">
-    <h1>Book Now</h1>
+<h1>Book Now</h1>
 </div>
 
-<div class="background-color">
-    <!--background color for search-->
-    
+     <div class="background-color">
+                                <!--background color for search-->
 
-<div class="search">
-    <h2>1. Search</h2>
-</div>
-<hr>
+                                <div class="search">
+                                    <h2> Search</h2>
+                                </div>
+                                <hr>
 
-<div class="search-availablity-information-msg">
-    <form class="proceeding_ticket">
-<div class="search-availablity" >
-<div class="search-information">
-    <p>Check in  &nbsp; <input type="date" id="checkIndate" name="date" min="" required/> </p> &nbsp;
-    <p>Check out  &nbsp;<input type="date" id="checkOutdate" name="date" min="" required /></p>
-</div>
+                                <div class="search-availablity-information-msg">
+                                    <form class="proceeding_ticket" id="proceedingTicketForm" role="form" onsubmit="reservationsDatas(event)">
+                                        <div class="display_for_checkin_and_info" style="display: flex;">
+                                            <div class="search-availablity">
+                                                <div class="search-information">
+                                                    <p>
+                                                        Check in  &nbsp; <input type="date" id="checkIndate" name="date" min="" required> 
+                                                    </p> &nbsp;
+                                                    <p>
+                                                        Check out  &nbsp;<input type="date" id="checkOutdate" name="date" min="" required>
+                                                    </p>
+                                                </div>
 
-
-
-<div class="room-adult-children">
-    <p>Adult  &nbsp; </p> <button class="btn-sub" onclick="totalClick_for_Adult(-1)"><i class="fa-solid fa-minus"></i></button> 
-    <span id="totalClicksAdult" class="total_of_adults">1</span> 
-        <button class="btn-add" onclick="totalClick_for_Adult(1)"><i class="fa-solid fa-plus"></i></button> &nbsp;
+                                                <div class="room-adult-children">
+                                                    <p>Adult &nbsp; </p>
+                                                    <button class="btn-sub" type="submit" onclick="totalClick_for_Adult(-1)">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </button> 
+                                                    <span id="totalClicksAdult" class="total_of_adults">1</span> 
+                                                    <button class="btn-add" type="submit" onclick="totalClick_for_Adult(1)">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </button> &nbsp;
         
-    <p>Children  &nbsp;</p> <button class="btn-sub" onclick="totalClick_for_Children(-1)"><i class="fa-solid fa-minus"></i></button> 
-    <span id="totalClicksChildren" class="total_of_childrens">0</span>
-    <button class="btn-add" onclick="totalClick_for_Children(1)"><i class="fa-solid fa-plus"></i></button> &nbsp;
-</div>
+                                                    <p>Children (3-10 years) &nbsp;</p>
+                                                    <button class="btn-sub" type="submit" onclick="totalClick_for_Children(-1)">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </button> 
+                                                    <span id="totalClicksChildren" class="total_of_childrens">0</span>
+                                                    <button class="btn-add" type="submit" onclick="totalClick_for_Children(1)">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </button> &nbsp;
+                                                </div>
 
-<div class="room">
-    <h3>Did you want room? (Hotel or Resorts)</h3>
-    <input type="radio" name="yes" id="yes" required>Yes
-    <input type="radio" name="yes" id="no" required>No
-</div>
-</form>
+                                                <!-- <div class="room">
+                                                    <h3>Do you want room? (Hotel or Resorts)</h3>
+                                                    <input type="radio" class= "check-availablity-yes" name="yes" id="yes" value="yes" required>Yes
+                                                    <input type="radio" class= "check-availablity-yes" name="yes" id="no" value="no" required>No
+                                                    </div> -->
 
-<div class="another-room">
-    <button>+Add Another Room</button>
-</div>
+                                                <!-- <div class="another-room">
+                                                    <button>+Add Another Room</button>
+                                                    </div> -->
 
-<div class="check-availablity">
-    <a href="../../pages/book now/selectrooms.html"> <button>  Check Availablity </button> </a>
-</div>
-</div>
+                                                <!-- <div class="check-availablity">
+                                                    <button id="checkAvailabilityBtn" type="submit">Check Availablity </button>
+                                                    </div> -->
+                                            </div>
 
+                                            <!--div for get & wifi-->
+                                            <div class="information-facilities">
+                                                <div class="information">
+                                                    <p>Get instant confirmation directly from the hotel!</p>
+                                                </div>
 
-<!--div for get & wifi-->
-<div class="information-facilities">
-<div class="information">
-    <p>Get instant confirmation directly from the hotel!</p>
-</div>
-
-<div class="facilities">
-    <ul>
-        <li><i class="fa-solid fa-wifi"></i>  Wi-Fi</li>
-        <li><i class="fa-solid fa-basketball"></i>  Indoor and Outdoor games</li>
-        <li><i class="fa-solid fa-person-hiking"></i>  Nature walk</li>
-    </ul>
-</div>
-</div>
-</div>
-
-<hr>
-
-<div class="search">
-    <h2>2. Select Rooms</h2>
-</div>
-
-<hr>
-
-<div class="search">
-    <h2>3. Guest Information</h2>
-</div>
-
-
+                                                <div class="facilities">
+                                                    <ul>
+                                                        <li>
+                                                            <i class="fa-solid fa-wifi"></i>  Wi-Fi
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-solid fa-basketball"></i>  Indoor and Outdoor games
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-solid fa-person-hiking"></i>  Nature walk
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
 
 </div>
+
+                                        <hr>
+
+                                        <!-- //
+                                            <div class="search">
+                                            <h2>2. Select Rooms</h2>
+                                            </div>
+
+                                            <div class="total-hotels-resorts-div">
+                                            <div class="hotels-resorts">
+                                            <input type="radio" id="hotels" name="hotels">  Hotels
+                                            <input type="radio" id="resorts" name="hotels" ><a href=""></a> Resorts 
+
+                                            </div>
+
+                                            <div class="photo-of-room-about"> <!--brief-of-room
+                                            <div class="photo-of-room">
+                                            <img src="../../assets/images/rooms/1st-room.jpg" width="250" height="170" alt="photo-of-room"/>
+                                            </div>
+
+                                            <div class="about-price">
+                                            <div class="about">
+                                            <h3>Park Villa</h3>
+                                            <h4>Deluxe Twin Rooms</h4>
+                                            <i class="fa-solid fa-user"></i>
+                                            <i class="fa-solid fa-user"></i>
+                                            <i class="fa-solid fa-child"></i>
+                                            <h5>Room Size: 350 sq.ft</h5>
+                                            </div>
+                                            </div>
+                                            <div class="hurry">
+                                            <p>In High demand! only 2 rooms left</p>
+
+                                            <span>$1000</span>/ night. <h5>Plus taxes</h5>
+                                            </div>
+                                            </div>
+
+                                            <div class="break-price-button"> 
+                                            <!-- div for break-price  
+                                            <div class="room-with-break">
+                                            <g><i class="fa-solid fa-tags"></i>10% Off on room price</g>
+                                            <p><i class="fa-solid fa-wifi"></i>&nbsp; Free Wifi  &nbsp; <i class="fa-solid fa-utensils"></i> &nbsp; Breakfast Included</p>
+                                            <p>Book your stay now at Global Fun City at best available rates!!</p>
+                                            </div>
+
+                                            <div class="price">
+                                            <span>$1000</span> &nbsp; / night
+                                            <br> &nbsp; <a href="../../pages/book now/guestinformation.html"> <button> Book Now </button></a>
+                                            </div>
+                                            </div>
+
+                                            <hr>
+
+                                            <div class="photo-of-room-about"> <!--brief-of-room
+                                            <div class="photo-of-room">
+                                            <img src="../../assets/images/rooms/3rd-room.png" width="250" height="170" alt="photo-of-room"/>
+                                            </div>
+
+                                            <div class="about-price">
+                                            <div class="about">
+                                            <h3>Happy Hotel</h3>
+                                            <h4>Suite Rooms</h4>
+                                            <i class="fa-solid fa-user"></i>
+                                            <i class="fa-solid fa-user"></i>
+                                            <h5>Room Size: 500 sq.ft</h5>
+                                            </div>
+                                            </div>
+
+                                            <div class="hurry">
+
+                                            <span>$1800</span> / night. <h5>Plus taxes</h5>
+                                            </div>
+                                            </div>   
+
+                                            <div class="break-price-button"> 
+                                            <!-- div for break-price  
+                                            <div class="room-with-break">
+                                            <g><i class="fa-solid fa-tags"></i>10% Off on room price</g>
+                                            <p><i class="fa-solid fa-wifi"></i>&nbsp; Free Wifi  &nbsp; <i class="fa-solid fa-utensils"></i> &nbsp; Breakfast Included</p>
+                                            <p>Book your stay now at Global Fun City at best available rates!!</p>
+                                            </div>
+
+                                            <div class="price">
+                                            <span>$1800</span> &nbsp; / night
+                                            <br> &nbsp; <a href="../../pages/book now/guestinformation.html"> <button>Book Now </button> </a>
+                                            </div>
+                                            </div>
+
+                                            <hr>
+
+                                            <div class="photo-of-room-about"> <!--brief-of-room
+                                            <div class="photo-of-room">
+                                            <img src="../../assets/images/rooms/3rd-room-happyinn.png" width="250" height="170" alt="photo-of-room"/>
+                                            </div>
+
+                                            <div class="about-price">
+                                            <div class="about">
+                                            <h3>Sleep Inn</h3>
+                                            <h4>Deluxe Room</h4>
+                                            <i class="fa-solid fa-user"></i>
+                                            <i class="fa-solid fa-user"></i>
+                                            <h5>Room Size: 300 sq.ft</h5>
+                                            </div>
+                                            </div>
+
+                                            <div class="hurry">
+
+                                            <span>$800</span> / night. <h5>Plus taxes</h5>
+                                            </div>
+                                            </div>   
+
+                                            <div class="break-price-button"> 
+                                            <!-- div for break-price  
+                                            <div class="room-with-break">
+    
+                                            <p><i class="fa-solid fa-wifi"></i>&nbsp; Free Wifi  &nbsp; <i class="fa-solid fa-utensils"></i> &nbsp; Breakfast Included</p>
+                                            <p>Book your stay now at Global Fun City at best available rates!!</p>
+                                            </div>
+
+                                            <div class="price">
+                                            <span>$800</span> &nbsp; / night
+                                            <br> &nbsp; <a href="../../pages/book now/guestinformation.html"> <button class="booking-hotels-btn">Book Now </button> </a>
+                                            </div>
+                                            </div>
+
+                                            <hr>
+
+                                            <div class="photo-of-room-about"> <!--brief-of-room
+                                            <div class="photo-of-room">
+                                            <img src="../../assets/images/rooms/4th-room-image.png" width="250" height="170" alt="photo-of-room"/>
+                                            </div>
+
+                                            <div class="about-price">
+                                            <div class="about">
+                                            <h3>Sun & Sand</h3>
+                                            <h4>Room</h4>
+                                            <i class="fa-solid fa-user"></i>
+                                            <i class="fa-solid fa-user"></i>
+                                            <h5>Room Size: 330 sq.ft</h5>
+                                            </div>
+                                            </div>
+
+                                            <div class="hurry">
+
+                                            <span>$830</span> / night. <h5>Plus taxes</h5>
+                                            </div>
+                                            </div>   
+
+                                            <div class="break-price-button"> 
+                                            <!-- div for break-price  
+                                            <div class="room-with-break">
+    
+                                            <p><i class="fa-solid fa-wifi"></i>&nbsp; Free Wifi  &nbsp; <i class="fa-solid fa-utensils"></i> &nbsp; Breakfast Included</p>
+                                            <p>Book your stay now at Global Fun City at best available rates!!</p>
+                                            </div>
+
+                                            <div class="price">
+                                            <span>$830</span> &nbsp; / night
+                                            <br> &nbsp; <a href="../../pages/book now/guestinformation.html"> <button> Book Now </button> </a>
+                                            </div>
+                                            </div>
+
+                                            </div> 
+                                            <!-- Ending for hotels and resots div -->
+
+                                        <div class="search">
+                                            <h2> Guest Information</h2>
+                                        </div>
+
+                                        <div class="overall">
+
+                                            <div class="over-1">
+                                                <div class="form">
+                                                    <label>
+                                                        <input type="text" id="firstname" name="name" placeholder="First name" pattern="[a-zA-Z]+" required="true"> &nbsp;
+                                                        <input type="text" id="lastname" name="lastName" placeholder="Last name" pattern="[A-Za-z]+" required>
+                                                    </label>
+                                                </div>
+    
+                                                <br>
+    
+                                                <div class="email">
+        
+                                                    <input type="email" id="email_address" name="email" placeholder="Email Address" required="true"> &nbsp;
+                                                    <input type="tel" id="phone_number" name="phone-number" oninput="this.value = this.value.replace(/[^0-9]/g,'')" minlength="10" maxlength="10" placeholder="Phone Number" required="true">
+                                                </div>
+    
+                                                <br>
+    
+                                                <div class="requests">
+                                                    <input type="text" id="special_requests" name="special-requests" placeholder="Special Requests">
+                                                </div>
+    
+                                                <div class="btn-book-now">
+                                                    <p>Last step remaining, book your ticket now!</p>
+                                                    <button id="book_now_btn" class="book-tickets" type="submit">Book Now</button></a>
+                                                </div>
+
+                                            </div>
+    
+                                            <div class="over-2"> 
+                                                <!-- over -->
+                                                <div class="in-out">
+                                                    <div class="check-in">
+
+                                                        <div class="room">
+                                                            <h3>Do you want room? (Hotel or Resorts)</h3>
+                                                            <input type="radio" class= "check-availablity-yes" name="yes" id="yes" value="yes" required>Yes
+                                                            <input type="radio" class= "check-availablity-yes" name="yes" id="no" value="no" required>No
+                                                        </div>
+
+    </form>
+                                                        <!-- <table>
+        
+                                                            <tr>
+                                                            <th></th>
+                                                            <th></th>
+                                                            </tr>
+        
+                                                            <tr>
+                                                            <td>Check In</td>
+                                                            <td>14 Dec 2022</td>
+                                                            </tr>
+    
+                                                            <tr>
+                                                            <td>Check Out</td>
+                                                            <td>15 Dec 2022</td>
+                                                            </tr>
+    
+                                                            <tr>
+                                                            <td>No.of.nights</td>
+                                                            <td>1 night</td>
+                                                            </tr>
+    
+                                                            <tr>
+                                                            <td>Room</td>
+                                                            <td>Deluxe room</td>
+                                                            </tr>
+        
+                                                            <tr>
+                                                            <td>Guests</td>
+                                                            <td>1 Adult  0 Children</td>
+                                                            </tr>
+    
+                                                            <tr>
+                                                            <td>Ticket</td>
+                                                            <td>$800</td>
+                                                            </tr>
+    
+                                                            <tr>
+                                                            <td>Room</td>
+                                                            <td>$800</td>
+                                                            </tr>
+    
+                                                            <tr>
+                                                            <td>Sub Total</td>
+                                                            <td>$1600</td>
+                                                            </tr>
+    
+                                                            <tr>
+                                                            <td>Grand Total</td>
+                                                            <td>$1600</td>
+                                                            </tr>
+                                                            </table> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+</div>
 </div>
 
-<footer>
-<div class="background-footer">
+                                        <!-- <footer>
+                                            <div class="background-footer">
 
-<div class="navbar-footer-logo">
-    <img src="../../assets/images/globalfuncitylogo.png" width="200" alt="logo"/>
-</div>
+                                            <div class="navbar-footer-logo">
+                                            <img src="../../assets/images/globalfuncitylogo.png" width="200" alt="logo"/>
+                                            </div>
 
-<div class="address">
-    <p>11113 W Baldwin RD, Monrovia, MD 21770, USA</p>
-    <h4><i class="fa-solid fa-phone"></i> +1 860 817 1080</h4>
-    <h4><i class="fa-solid fa-envelope"></i> info@globalfuncity.in</h4>
-</div>
+                                            <div class="address">
+                                            <p>11113 W Baldwin RD, Monrovia, MD 21770, USA</p>
+                                            <h4><i class="fa-solid fa-phone"></i> +1 860 817 1080</h4>
+                                            <h4><i class="fa-solid fa-envelope"></i> info@globalfuncity.in</h4>
+                                            </div>
 
-<div class="other-policies">
-    <a href="#" >Book now Policy</a>
-</div>
+                                            <div class="other-policies">
+                                            <a href="#" >Book now Policy</a>
+                                            </div>
 
+                                            </div>
+                                            </footer> -->
 
-
-</div>
-</footer>
-
-<script>
-
-   //For Adults Increment 
-  let totalClicks_Adults = 1; // initial value
-
+                                        <script>//For Adults Increment
+let totalClicks_Adults = 1; // initial value
 function totalClick_for_Adult(value) {
   totalClicks_Adults += value;
-  if (totalClicks_Adults < 1) { // check if totalClicks is less than 1
+  if (totalClicks_Adults < 1) {
+    // check if totalClicks is less than 1
     totalClicks_Adults = 1; // set totalClicks to 1 if it's less than 1
   }
   document.getElementById("totalClicksAdult").innerHTML = totalClicks_Adults;
@@ -180,19 +467,20 @@ function totalClick_for_Adult(value) {
 //For Children Increment
 let totalClicks_Children = 0;
 
-function totalClick_for_Children(value){
-    totalClicks_Children += value;
-    if(totalClicks_Children < 1){
-        totalClicks_Children = 0;
-    }
-    document.getElementById("totalClicksChildren").innerHTML = totalClicks_Children;
+function totalClick_for_Children(value) {
+  totalClicks_Children += value;
+  if (totalClicks_Children < 1) {
+    totalClicks_Children = 0;
+  }
+  document.getElementById("totalClicksChildren").innerHTML =
+    totalClicks_Children;
 }
 // Increment and decrement closed.
 
 //Check In and CHeck out dates:
 //Check In
 // Get the current date
- var currentDate = new Date().toISOString().split("T")[0];
+var currentDate = new Date().toISOString().split("T")[0];
 
 // Set the minimum date for the date input field
 document.getElementById("checkIndate").setAttribute("min", currentDate);
@@ -204,14 +492,69 @@ var currentDate = new Date().toISOString().split("T")[0];
 // Set the minimum date for the date input field
 document.getElementById("checkOutdate").setAttribute("min", currentDate);
 
+//To store loacalstorage again:
+function reservationsDatas(event) {
+  event.preventDefault(); // prevent form submission
+
+  // get input field values
+  const checkInDate = document.getElementById("checkIndate").value;
+  const checkOutDate = document.getElementById("checkOutdate").value;
+  const adultCount = document.getElementById("totalClicksAdult").textContent;
+  const childrenCount = document.getElementById("totalClicksChildren").textContent;
+  const fullName = document.getElementById("firstname").value;
+  const lastName = document.getElementById("lastname").value;
+  const emailAddress = document.getElementById("email_address").value;
+  const phoneNumber = document.getElementById("phone_number").value;
+  const specialRequests = document.getElementById("special_requests").value;
+  const needRoomYes = document.getElementById("yes").value;
+  const needRoomNo = document.getElementById("no").value;
+
+  // create an object to store the user data
+  const reservationDetails = {
+    checkInDate,
+    checkOutDate,
+    adultCount,
+    childrenCount,
+    fullName,
+    lastName,
+    emailAddress,
+    phoneNumber,
+    specialRequests,
+    needRoomYes,
+    needRoomNo,
+  };
+
+  // get existing data from local storage
+  const userDataArray =
+    JSON.parse(localStorage.getItem("reservationDetails")) || [];
+
+  // add the new user data to the array
+  userDataArray.push(reservationDetails)
+  // store the updated array in the local storage
+  localStorage.setItem("reservationDetails", JSON.stringify(userDataArray));
+
+  // reset form fields
+  document.getElementById("checkIndate").value = "";
+  document.getElementById("checkOutdate").value = "";
+  document.getElementById("totalClicksAdult").textContent = "1";
+  document.getElementById("totalClicksChildren").textContent = "0";
+  document.getElementById("firstname").value = "";
+  document.getElementById("lastname").value = "";
+  document.getElementById("email_address").value = "";
+  document.getElementById("phone_number").value = "";
+  document.getElementById("special_requests").value = "";
+  document.getElementById("yes").value = "";
+  document.getElementById("no").value = "";
+  if (needRoomYes) {
+    window.location.href = "../../pages/book now/selectrooms.html";
+  } else if (needRoomNo) {
+    window.location.href = "../../pages/book now/guestinformation.html";
+  }
+}
+
+
 </script>
 
-
-
-
-
-
-
-
+<script src="../../js/header.js"></script>
 </body>
 </html>

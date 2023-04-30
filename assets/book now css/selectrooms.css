@@ -208,3 +208,9 @@ margin-top:10px;
 .other-policies a:hover{
 	color: #ff5757;
 }
+.strick_out_price{
+	text-decoration: line-through;
+}
+.paddingFortotalAssign{
+	padding: 0px 100px 100px 100px ;
+}

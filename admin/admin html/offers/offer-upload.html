@@ -1,177 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset='UTF-8'>
-	<link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
 
-<title>Offer form - Global Fun City</title>
-<link rel="stylesheet" href="../../../admin/admin css/product-upload.css" />
+        <title>Offer form - Global Fun City</title>
+        <link rel="stylesheet" href="../../../admin/admin css/product-upload.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
-<body>
+        <div class="logo">
+            <img src="../../../assets/images/globalfuncitylogo.png" width="200" alt="logo">
+        </div>
 
-<div class="logo">
-	<img src="../../../assets/images/globalfuncitylogo.png" width="200" alt="logo"/>
-</div>
+        <section class="background">
+            <div class="products">
+                <h2>Add Offers</h2>
+            </div>
 
-<section class="background">
-<div class="products">
-    <h2>Add Offers</h2>
-</div>
-
-<div class="products-details-from-admin">
-    <form role="form" onsubmit="createOffer(event)" class="form-for-admin">
-        <label class="input-field">Offer Name</label>
-        
+            <div class="products-details-from-admin">
+                <form role="form" onsubmit="createOffer(event)" class="form-for-admin">
+                    <label class="input-field">Offer Name</label>
             
-        <input type="text" id="text-for-offer-name" required/>
-        <!--  -->
-        <label class="input-field">Image of Offer</label>
-        
+                    <input type="text" id="text-for-offer-name" required>
+                    <!--  -->
+                    <label class="input-field">Image of Offer</label>
             
-        <input type="text" id="photo-of-offer" required />
-        <!--  -->
-        <label class="input-field">Offer Description</label>
-        
+                    <input type="text" id="photo-of-offer" required>
+                    <!--  -->
+                    <label class="input-field">Offer Description</label>
             
-        <input type="text" id="text-for-offer-description" required/>
-        <!--  -->
-        <label class="input-field">About Offer</label>
+                    <input type="text" id="text-for-offer-description" required>
+                    <!--  -->
+                    <label class="input-field">About Offer</label>
 
-        <textarea class="about_offer" id="about_offer"></textarea>
-        <!--  -->
-        <label class="input-field">Room for Offer</label>
-      
+                    <textarea class="about_offer" id="about_offer"></textarea>
+                    <!--  -->
+                    <label class="input-field">Room for Offer</label>
             
-        <input type="text" id="text-for-room-offer" required/>
-        <!--  -->
-        <label class="input-field">Offer: Children price</label>
-      
+                    <input type="text" id="text-for-room-offer" required>
+                    <!--  -->
+                    <label class="input-field">Offer: Children price</label>
             
-        <input type="text" id="children-price-for-offer" required/>
-        <!--  -->
-        <label class="input-field">Offer: Adult price</label>
-      
+                    <input type="text" id="children-price-for-offer" required>
+                    <!--  -->
+                    <label class="input-field">Offer: Adult price</label>
             
-        <input type="text" id="adult-price-for-offer" required/>
-        <!--  -->
-        <label class="input-field">Inclusion 1</label>
-      
+                    <input type="text" id="adult-price-for-offer" required>
+                    <!--  -->
+                    <label class="input-field">Inclusion 1</label>
             
-        <input type="text" id="offer-inclusion-1" required/>
-        <!--  -->
-        <label class="input-field">Inclusion 2</label>
-      
+                    <input type="text" id="offer-inclusion-1" required>
+                    <!--  -->
+                    <label class="input-field">Inclusion 2</label>
             
-        <input type="text" id="offer-inclusion-2" required/>
-        <!--  -->
-        <label class="input-field">Terms & conditions: 1</label>
-      
+                    <input type="text" id="offer-inclusion-2" required>
+                    <!--  -->
+                    <label class="input-field">Terms & conditions: 1</label>
             
-        <input type="text" id="terms-and-condition-1" required/>
-        <!--  -->
-        <label class="input-field">Terms & conditions: 2</label>
-      
+                    <input type="text" id="terms-and-condition-1" required>
+                    <!--  -->
+                    <label class="input-field">Terms & conditions: 2</label>
             
-        <input type="text" id="terms-and-condition-2"/>
-        <!--  -->
+                    <input type="text" id="terms-and-condition-2">
+                    <!--  -->
 
-        <!-- button started -->
-        <button type="submit" id="save_details">Save</button>
-&nbsp;
-        <button type="reset">Cancel</button>
-    </form>
-</div>
+                    <!-- button started -->
+                    <button type="submit" id="save_details">Save</button>
+                    &nbsp;
+                    <button type="reset">Cancel</button>
+                </form>
+            </div>
 
-</section>
+        </section>
 
-<script>
+        <script>// Attach the createOffer function to the form submission event
+    document.getElementById("save_details").addEventListener(
+  "click",
 
-    // Attach the createOffer function to the form submission event
-    document.getElementById("save_details").addEventListener("click",
-
-    // Define the function to handle the form submission
-    function createOffer(e) {
-      e.preventDefault();
+      // Define the function to handle the form submission
+      function createOffer(e) {
+        e.preventDefault();
     
-    // Retrieve input values from the form
-      let offer_name = document.getElementById("text-for-offer-name").value;
-      let offer_image = document.getElementById("photo-of-offer").value;  
-      let offer_desc = document.getElementById("text-for-offer-description").value;
-      let offer_about = document.getElementById("about_offer").value;
-      let offer_room = document.getElementById("text-for-room-offer").value;
-      let offer_price_for_children = document.getElementById("children-price-for-offer").value;
-      let offer_price_for_adult = document.getElementById("adult-price-for-offer").value;
-      let offer_inclusion1 = document.getElementById("offer-inclusion-1").value;
-      let offer_inclusion2 = document.getElementById("offer-inclusion-2").value;
-      let terms_and_condition1 = document.getElementById("terms-and-condition-1").value;
-      let terms_and_conditions2 = document.getElementById("terms-and-condition-2").value;
-      let offer_uuid = uuidv4();
-
+        // Retrieve input values from the form
+        const offer_name = document.getElementById("text-for-offer-name").value;
+        const offer_image = document.getElementById("photo-of-offer").value;
+    const offer_desc = document.getElementById(
+          "text-for-offer-description"
+    ).value;
+        const offer_about = document.getElementById("about_offer").value;
+        const offer_room = document.getElementById("text-for-room-offer").value;
+        const offer_price_for_children = document.getElementById(
+          "children-price-for-offer"
+    ).value;
+        const offer_price_for_adult = document.getElementById(
+          "adult-price-for-offer"
+    ).value;
+        const offer_inclusion1 = document.getElementById("offer-inclusion-1").value;
+        const offer_inclusion2 = document.getElementById("offer-inclusion-2").value;
+        const terms_and_condition1 = document.getElementById(
+          "terms-and-condition-1"
+    ).value;
+        const terms_and_conditions2 = document.getElementById(
+          "terms-and-condition-2"
+    ).value;
+        const offer_uuid = uuidv4();
 
     // Retrieve existing offer details from localStorage or create an empty array
-      let offer_details = JSON.parse(localStorage.getItem('offer_details')) || [];
+        const offer_details =
+          JSON.parse(localStorage.getItem("offer_details")) || [];
     
-    // Check if the offer details already exist in the array
-      let exit = offer_details.some(data =>
-        data.offer_name == offer_name &&
-        data.offer_image == offer_image &&
-        data.offer_desc == offer_desc &&
-        data.offer_about == offer_about &&
-        data.offer_room == offer_room &&
-        data.offer_price_for_children == offer_price_for_children &&
-        data.offer_price_for_adult == offer_price_for_adult &&
-        data.offer_inclusion1 == offer_inclusion1 &&
-        data.offer_inclusion2 == offer_inclusion2 &&
-        data.terms_and_condition1 == terms_and_condition1 &&
-        data.terms_and_conditions2 == terms_and_conditions2 &&
-        data.offer_uuid == offer_uuid
-      );
-      if (!exit) {
-        // Add the new offer details to the array
-        offer_details.push({
-          offer_name,
-          offer_image,
-          offer_desc,
-          offer_about,
-          offer_room,
-          offer_price_for_children,
-          offer_price_for_adult,
-          offer_inclusion1,
-          offer_inclusion2,
-          terms_and_condition1,
-          terms_and_conditions2,
-          offer_uuid
-        });
-    
-        // Store the updated offer details in localStorage
-        localStorage.setItem('offer_details', JSON.stringify(offer_details));
-    
-        // Reset the form and show a success message
-        document.querySelector('form').reset();
-        alert('Offer created!');
-        window.location.href = "#";
-    } 
-    //else {
-    //     // If the offer details already exist, show an error message
-    //     alert('Offer already exists!');
-    //   }
-    }
+        // Check if the offer details already exist in the array
+        const exit = offer_details.some(
+          (data) =>
+            data.offer_name == offer_name &&
+            data.offer_image == offer_image &&
+            data.offer_desc == offer_desc &&
+            data.offer_about == offer_about &&
+            data.offer_room == offer_room &&
+            data.offer_price_for_children == offer_price_for_children &&
+            data.offer_price_for_adult == offer_price_for_adult &&
+            data.offer_inclusion1 == offer_inclusion1 &&
+            data.offer_inclusion2 == offer_inclusion2 &&
+            data.terms_and_condition1 == terms_and_condition1 &&
+            data.terms_and_conditions2 == terms_and_conditions2 &&
+            data.offer_uuid == offer_uuid
     );
+        if (!exit) {
+          // Add the new offer details to the array
+          offer_details.push({
+            offer_name,
+            offer_image,
+            offer_desc,
+            offer_about,
+            offer_room,
+            offer_price_for_children,
+            offer_price_for_adult,
+            offer_inclusion1,
+            offer_inclusion2,
+            terms_and_condition1,
+            terms_and_conditions2,
+            offer_uuid,
+          });
     
+          // Store the updated offer details in localStorage
+          localStorage.setItem("offer_details", JSON.stringify(offer_details));
     
+          // Reset the form and show a success message
+          document.querySelector("form").reset();
+          alert("Offer created!");
+          window.location.href = "#";
+        }
+    //else {
+        //     // If the offer details already exist, show an error message
+        //     alert('Offer already exists!');
+        //   }
+      }
+    );
     </script>
-<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    </body>
 </html>
