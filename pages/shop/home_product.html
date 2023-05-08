@@ -259,7 +259,7 @@ contentDiv.appendChild(productName);
 
 // create h3 element for the product price
 const productPrice = document.createElement("h3");
-productPrice.textContent = getProductData_ofHome.product_price;
+productPrice.textContent = "$" + getProductData_ofHome.product_price;
 contentDiv.appendChild(productPrice);
 
 // create p element for the product description
@@ -336,9 +336,9 @@ add_products_to_bag.addEventListener("click", function () {
     const products = JSON.parse(localStorage.getItem("home_details"));
 
     const check_product = products.find((e) => e.product_uuid == product_id);
+    check_product["product_qty"] = 1;
 
-    const array_for_products =
-      JSON.parse(localStorage.getItem("add_to_cart_products")) || [];
+    const array_for_products =JSON.parse(localStorage.getItem("add_to_cart_products")) || [];
 
     const exist = array_for_products.find((e) => e.product_uuid == product_id);
 
@@ -347,13 +347,10 @@ add_products_to_bag.addEventListener("click", function () {
     } else {
       array_for_products.push(check_product);
 
-      localStorage.setItem(
-        "add_to_cart_products",
-        JSON.stringify(array_for_products)
-      );
+      localStorage.setItem("add_to_cart_products",JSON.stringify(array_for_products));
 
       console.log(array_for_products);
-
+      alert("This Product was added to your's bag.");
       window.location.href = "../../pages/shop/cart.html";
     }
   }

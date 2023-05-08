@@ -223,9 +223,7 @@
         <script>
 // * Data get from URL params------
 
-const productUniqueID = new URLSearchParams(window.location.search).get(
-  "accessories"
-);
+const productUniqueID = new URLSearchParams(window.location.search).get("accessories");
 
 const accessories_details = JSON.parse(localStorage.getItem('accessories_details'));
 
@@ -262,7 +260,7 @@ contentDiv.appendChild(productName);
 
 // create h3 element for the product price
 const productPrice = document.createElement("h3");
-productPrice.textContent = getProductData_ofAccessories.product_price;
+productPrice.textContent = "$" + getProductData_ofAccessories.product_price;
 contentDiv.appendChild(productPrice);
 
 // create p element for the product description
@@ -298,20 +296,18 @@ contentDiv.appendChild(wishlistBtn);
 wishlistBtn.appendChild(iconHeart);
 
 const Category = document.createElement("h4");
-Category.textContent =
-  "Category : " + getProductData_ofAccessories["selecting"];
+Category.textContent = "Category : " + getProductData_ofAccessories["selecting"];
 contentDiv.appendChild(Category);
 
 const product_id = document.createElement("h4");
-product_id.textContent =
-  "Product ID : " + getProductData_ofAccessories["product_uuid"];
+product_id.textContent = "Product ID : " + getProductData_ofAccessories["product_uuid"];
 contentDiv.appendChild(product_id);
+
 
 document.querySelector("div.photo-and-content").append();
 
 //Add to Buy
 const add_products_to_bag = document.querySelector("button.btn-buynow");
-
 add_products_to_bag.addEventListener("click", function () {
   let user_id = JSON.parse(localStorage.getItem("unique_id"));
 
@@ -319,11 +315,7 @@ add_products_to_bag.addEventListener("click", function () {
 
   let user_list = JSON.parse(localStorage.getItem("user_list"));
 
-  let existing =
-    user_list.length &&
-    JSON.parse(localStorage.getItem("user_list")).some(
-      (data) => data.email === existing_user
-    );
+  let existing = user_list.length && JSON.parse(localStorage.getItem("user_list")).some((data) => data.email === existing_user);
 
   if (!existing) {
     alert("You are not logged in. Please login to continue!");
@@ -335,28 +327,26 @@ add_products_to_bag.addEventListener("click", function () {
     let products = JSON.parse(localStorage.getItem("accessories_details"));
 
     let check_product = products.find((e) => e.product_uuid == product_id);
+    check_product["product_qty"] = 1;
 
-    let array_for_products =
-      JSON.parse(localStorage.getItem("add_to_cart_products")) || [];
+    let array_for_products = JSON.parse(localStorage.getItem("add_to_cart_products")) || [];
 
     let exist = array_for_products.find((e) => e.product_uuid == product_id);
 
     if (exist) {
       alert("This product has been chosen. Add any other product!");
     } else {
-      array_for_products.push(check_product);
+      array_for_products.push(check_product);  
 
-      localStorage.setItem(
-        "add_to_cart_products",
-        JSON.stringify(array_for_products)
-      );
+      localStorage.setItem("add_to_cart_products", JSON.stringify(array_for_products));
 
       console.log(array_for_products);
-
+      alert("This Product was added to your's bag.");
       window.location.href = "../../pages/shop/cart.html";
     }
-
+  }
 });
+
     </script>
         <script src="../../js/shop.js"></script>
         <script src="../../js/alert_and_allow.js"></script>    

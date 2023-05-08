@@ -129,9 +129,7 @@
         </div>
 
         <script>
-	const accessories_details = JSON.parse(
-  localStorage.getItem("accessories_details")
-);
+	const accessories_details = JSON.parse(localStorage.getItem("accessories_details"));
 	console.log(accessories_details);
 
 	for (let i = 0; i < accessories_details.length; i++) {
@@ -158,7 +156,7 @@
 	  a.append(h3_of_product_name);
 
 	  const para = document.createElement("p");
-	  para.innerText = accessories_details[i].product_price;
+	  para.innerText = "$" + accessories_details[i].product_price;
 	  product_card.append(para);
 
 	  document.querySelector("div.store-things").append(product_card);

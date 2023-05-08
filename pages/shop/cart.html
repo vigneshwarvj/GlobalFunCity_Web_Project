@@ -101,7 +101,7 @@
             </button>
 
             <div class="order-of-summary">
-                <div class="cart-details">
+                <!-- <div class="cart-details">
                     <h2>Order of Summary</h2>
                 </div>
 
@@ -115,7 +115,7 @@
                         <th id="total">Total</th>
                         <th id="price">$498.00</th>
                     </tr>
-                </table>
+                </table> -->
 
                 <button class="btn-checkout">
                     <a href="../../pages/shop/checkout.html">Proceed to Checkout </a>
@@ -150,7 +150,8 @@
 
         </footer>
 
-        <script>const addtoBag = JSON.parse(localStorage.getItem("add_to_cart_products"));
+        <script>
+        const addtoBag = JSON.parse(localStorage.getItem("add_to_cart_products"));
         console.log(addtoBag);
 
         for (let i = 0; i < addtoBag.length; i++) {
@@ -195,7 +196,7 @@
           quantityInput.setAttribute("class", "total_clicks_span");
           quantityInput.setAttribute("id", "totalClicks");
           quantityInput.setAttribute("style", "padding:10px;");
-          quantityInput.textContent = "1";
+          quantityInput.textContent = addtoBag[i]["product_qty"];
           td4.appendChild(quantityInput);
 
           const minusBtn = document.createElement("button");
@@ -208,8 +209,8 @@
 
           td4.appendChild(minusBtn);
 
-  const td5 = document.createElement("td");
-          td5.textContent = "$ ";
+         const td5 = document.createElement("td");
+          td5.textContent = "$" + addtoBag[i]["product_qty"] * addtoBag[i]["product_price"] + ".00";
 
           const td6 = document.createElement("td");
           const i_icon = document.createElement("i");
@@ -229,38 +230,24 @@
         }
 
         //Remove Product from the cart
-        const removeProduct_from_cart = document.querySelectorAll(
-  "#remove_product_icon"
-);
+        const removeProduct_from_cart = document.querySelectorAll("#remove_product_icon");
         removeProduct_from_cart.forEach(function (remove) {
-          remove.addEventListener("click", function () {
-            const customAttribute = this.dataset.remove;
-            localStorage.setItem(
-      "removeProducts_from_my_Bag",
-      JSON.stringify(customAttribute)
-            );
+        remove.addEventListener("click", function () {
+        const customAttribute = this.dataset.remove;
+        localStorage.setItem("removeProducts_from_my_Bag",JSON.stringify(customAttribute));
     console.log(customAttribute);
 
-            const product_uuid_of_bag = JSON.parse(
-      localStorage.getItem("removeProducts_from_my_Bag")
-    );
+    const product_uuid_of_bag = JSON.parse(localStorage.getItem("removeProducts_from_my_Bag"));
 
-    const toGet_the_products = JSON.parse(
-      localStorage.getItem("add_to_cart_products")
-    );
+    const toGet_the_products = JSON.parse(localStorage.getItem("add_to_cart_products"));
 
-    const toCheck_product_uuid = toGet_the_products.find(
-      (e) => e.product_uuid == product_uuid_of_bag
-    );
+    const toCheck_product_uuid = toGet_the_products.find((e) => e.product_uuid == product_uuid_of_bag);
 
     const indexOfProduct = toGet_the_products.indexOf(toCheck_product_uuid);
 
-            toGet_the_products.splice(indexOfProduct, 1);
+    toGet_the_products.splice(indexOfProduct, 1);
 
-            localStorage.setItem(
-      "add_to_cart_products",
-      JSON.stringify(toGet_the_products)
-            );
+    localStorage.setItem("add_to_cart_products",JSON.stringify(toGet_the_products));
 
     window.location.reload();
   });
@@ -274,13 +261,33 @@
         product_quantity_add.forEach(function (add) {
           add.addEventListener("click", function () {
             const parent = this.closest(".productsInBag");
-            console.log(parent);
+            // console.log(parent);
             const count = parent.querySelector(".total_clicks_span").innerText;
             // console.log(count)
             const get = parseInt(count) + 1;
             console.log(get);
 
             parent.querySelector(".total_clicks_span").innerText = get;
+
+            //To Multiple products
+            const pro_id = parent.querySelector("#remove_product_icon").dataset.remove;
+            // console.log(pro_id);
+
+            const add_to_cart_products = JSON.parse(localStorage.getItem("add_to_cart_products"))
+            // console.log(add_to_cart_products[0]["product_uuid"])
+
+            const findData = add_to_cart_products.filter(data => data.product_uuid == pro_id);
+            // console.log(findData)
+
+            findData[0]["product_qty"] = get
+
+            localStorage.setItem("add_to_cart_products", JSON.stringify(add_to_cart_products))
+
+            window.location.reload()
+
+
+
+
           });
         });
         // Decreasing the value quantity (Decrement)
@@ -302,11 +309,98 @@
             // console.log(get)
 
     parent.querySelector(".total_clicks_span").innerText = get;
+
+    const pro_id = parent.querySelector("#remove_product_icon").dataset.remove;
+    // console.log(pro_id);
+
+    const add_to_cart_products = JSON.parse(localStorage.getItem("add_to_cart_products"))
+    // console.log(add_to_cart_products[0]["product_uuid"])
+
+    const findData = add_to_cart_products.filter(data => data.product_uuid == pro_id);
+    // console.log(findData)
+
+    findData[0]["product_qty"] = get
+
+    localStorage.setItem("add_to_cart_products", JSON.stringify(add_to_cart_products))
+
+    window.location.reload();
+
+
           });
         });
+
+
+// const productIncreasingValue = document.querySelectorAll(".btn-add");
+// productIncreasingValue.forEach(function (addingValue){
+// addingValue.addEventListener("change", function () {
+//     const parent = this.closest(".productsInBag");
+//     console.log(parent);
+//     const pro_id = parent.querySelector("#remove_product_icon").data.remove;
+//     console.log(pro_id);
+
+//     const addingValue = parent.getElementById("totalClicks");
+//     console.log(addingValue);
+    
+// })
+// })
+
+//To create the Order summary DOM:
+// create container div with class 'cart-details'
+const container = document.createElement('div');
+container.classList.add('cart-details');
+
+// create h2 element
+const summaryHeading = document.createElement('h2');
+summaryHeading.textContent = 'Order of Summary';
+
+// append h2 element to container div
+container.appendChild(summaryHeading);
+
+// create table element with class 'card-totals'
+const table = document.createElement('table');
+table.classList.add('card-totals');
+
+// create first row of table with subtotal information
+const subtotalRow = document.createElement('tr');
+
+const subtotalTitle = document.createElement('th');
+subtotalTitle.setAttribute('id', 'sub_total');
+subtotalTitle.textContent = 'Subtotal';
+
+const subtotalPrice = document.createElement('th');
+subtotalPrice.setAttribute('id', 'sub_price');
+subtotalPrice.textContent = '$498.00';
+
+subtotalRow.appendChild(subtotalTitle);
+subtotalRow.appendChild(subtotalPrice);
+
+// create second row of table with total information
+const totalRow = document.createElement('tr');
+
+const totalTitle = document.createElement('th');
+totalTitle.setAttribute('id', 'total');
+totalTitle.textContent = 'Total';
+
+const totalPrice = document.createElement('th');
+totalPrice.setAttribute('id', 'total_price');
+totalPrice.textContent = '$498.00';
+
+totalRow.appendChild(totalTitle);
+totalRow.appendChild(totalPrice);
+
+// append both rows to the table
+table.appendChild(subtotalRow);
+table.appendChild(totalRow);
+
+// append table element to container div
+container.appendChild(table);
+
+document.querySelector(".order-of-summary").prepend(container);
+
+
+
     </script>
         <script src="../../js/shop.js"></script>
-        <script src="../../js/alert_and_allow.js"></script>
 
     </body>
 

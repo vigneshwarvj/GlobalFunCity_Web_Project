@@ -33,7 +33,8 @@
         </div>
 
         <div class="congrats-image">
-            <div class="congrats-delivery">
+            <div class="details-from-user-script">
+            <!-- <div class="congrats-delivery">
                 <div class="congrats">
                     <h2>Congratulations! &#129395;</h2>
                     <p>Your Order will be delivered soon...</p>
@@ -58,8 +59,8 @@
                         <button class="btn-cancel">Cancel Order</button>
                     </a>
                 </div>
-            </div>
-
+            </div> -->
+</div>
             <div class="photo">
                 <img src="../../assets/images/delivery.png" width="500px" height="500px" alt="image-of-delivery">
             </div>
@@ -177,6 +178,99 @@
                 </p>
             </div>
         </footer>
+
+<script>
+
+    const checkOutDetailfromUser = JSON.parse(sessionStorage.getItem("checkOutDetail"));
+    // Create the main container element
+const congratsDeliveryContainer = document.createElement('div');
+congratsDeliveryContainer.classList.add('congrats-delivery');
+
+// Create the congrats section
+const congratsSection = document.createElement('div');
+congratsSection.classList.add('congrats');
+
+const congratsHeading = document.createElement('h2');
+congratsHeading.innerText = 'Congratulations! \uD83C\uDF89';
+
+const congratsParagraph1 = document.createElement('p');
+congratsParagraph1.innerText = 'Your Order will be delivered soon...';
+
+const congratsParagraph2 = document.createElement('p');
+congratsParagraph2.innerText = 'Check your orders in your Profile';
+
+congratsSection.appendChild(congratsHeading);
+congratsSection.appendChild(congratsParagraph1);
+congratsSection.appendChild(congratsParagraph2);
+
+// Create the delivery section
+const deliverySection = document.createElement('div');
+deliverySection.classList.add('delivery');
+
+const deliveryHeading = document.createElement('h3');
+deliveryHeading.innerText = 'Delivery address';
+
+const deliveryName = document.createElement('p');
+deliveryName.innerText = checkOutDetailfromUser["firstName"];
+
+const deliveryAddress = document.createElement('p');
+deliveryAddress.innerText =   checkOutDetailfromUser["doorNo"] + "," + " " + checkOutDetailfromUser["streetAddress"] + "," + " " + checkOutDetailfromUser["townCity"] +  "," + " " + checkOutDetailfromUser["state"] + "," + " " + checkOutDetailfromUser["countryRegion"] + ".";
+
+const deliveryZipcode = document.createElement('p');
+deliveryZipcode.innerText = ' ZIP Code: ' + checkOutDetailfromUser["zipCode"]
+
+const deliveryPhoneNumber = document.createElement('p');
+deliveryPhoneNumber.innerText = 'Phone number: ' + checkOutDetailfromUser["phone"];
+
+deliverySection.appendChild(deliveryHeading);
+deliverySection.appendChild(deliveryName);
+deliverySection.appendChild(deliveryAddress);
+deliverySection.appendChild(deliveryZipcode);
+deliverySection.appendChild(deliveryPhoneNumber);
+
+// Create the status section
+const statusSection = document.createElement('div');
+statusSection.classList.add('status');
+
+const statusHeading = document.createElement('h3');
+statusHeading.innerText = 'Status';
+
+const statusParagraph = document.createElement('p');
+statusParagraph.innerText = 'Delivery expected by Jan 01 2023';
+
+const checkOrdersLink = document.createElement('a');
+checkOrdersLink.href = '../../pages/homepage/main.profile.html';
+
+const checkOrdersButton = document.createElement('button');
+checkOrdersButton.classList.add('btn-cancel');
+checkOrdersButton.innerText = 'Check Your Orders';
+
+checkOrdersLink.appendChild(checkOrdersButton);
+
+const cancelOrderLink = document.createElement('a');
+cancelOrderLink.href = '../../pages/shop/shop.html';
+
+const cancelOrderButton = document.createElement('button');
+cancelOrderButton.classList.add('btn-cancel');
+cancelOrderButton.innerText = 'Cancel Order';
+
+cancelOrderLink.appendChild(cancelOrderButton);
+
+statusSection.appendChild(statusHeading);
+statusSection.appendChild(statusParagraph);
+statusSection.appendChild(checkOrdersLink);
+statusSection.appendChild(cancelOrderLink);
+
+// Add all the sections to the main container element
+congratsDeliveryContainer.appendChild(congratsSection);
+congratsDeliveryContainer.appendChild(document.createTextNode('\u00A0')); // Add a non-breaking space
+congratsDeliveryContainer.appendChild(deliverySection);
+congratsDeliveryContainer.appendChild(document.createTextNode('\u00A0')); // Add a non-breaking space
+congratsDeliveryContainer.appendChild(statusSection);
+
+document.querySelector(".details-from-user-script").append(congratsDeliveryContainer);
+</script>
+
 
     </body>
 </html>

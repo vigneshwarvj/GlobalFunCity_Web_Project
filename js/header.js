@@ -17,13 +17,13 @@ const defaultHeader = `<div class="visit-signin">
 const loggedInUser = JSON.parse(localStorage.getItem("unique_id"));
 const user_list = JSON.parse(localStorage.getItem("user_list"));
 const person_data = user_list.find((details) => details.email === loggedInUser);
-console.log(person_data);
+//console.log(person_data);
 
 // Header for the user (logged in)
 const registeredHeader = `<div class="visit-signin">
 
 <div class="visit-global">
-	<p>	Visit global1.com</p>
+	<p>	Visit globalfuncity.com</p>
 </div>	
 
 <div class="sign-in">

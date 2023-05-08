@@ -17,6 +17,7 @@ body{
 	justify-content:space-between;
 	align-items:center;
     box-shadow:0 3px 6px 0 rgb(0 0 0 / 20%) ;
+    position: sticky;
 }
 .header-logo{
 	width:180px;
@@ -53,7 +54,7 @@ padding:10px;
     display: flex;
 }
 .homepages a {
-	font-family: 'poppins', sans-serif;
+    font-family: 'poppins', sans-serif;
     text-decoration: none;
     color: #838285;
 }
@@ -61,29 +62,40 @@ padding:10px;
     color: #ff5757;
 }
 /* completed */
-
-.image{
-    display: flex;
-    justify-content: space-around;
-    padding: 30px;
+.delivery-address-h3, .more-actions-h3, .download-icon{
+	font-family: 'open sans', sans-serif;
 }
 
-.settings{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.name-of-the-user, .delivery-address-of-the-user, .zip-code, .phone-number, .name-of-the-product, 
+.size-of-the-product, .price-of-the-product, .qty-of-the-product, .total-price-of-the-product, .shipping-details-of-the-product,
+.order-id, .need-help{
+	font-family: 'poppins', sans-serif;
 }
-.account a{
-    text-decoration: none;
+
+.box{
+	display: flex; 
+	justify-content: space-around; 
+	margin: 35px 0px 0px 0px; 
+	background-color: white;
 }
-.account h1{
-    font-family: "poppins", sans-serif;
-	font-size: 1.5rem;
+
+.download-invoice-div-flex{
+	display: flex; 
+	align-items: center;
 }
-.manage h3{
-    font-family: "league spartan", sans-serif;
-    font-size: 15px;
+
+.background-color-for-product-detail{
+	display: flex; 
+	justify-content: space-evenly; 
+	align-items: center; 
+	background-color: white;
 }
-hr{
-    width: 60%;
+
+.flex-of-product{
+	display: flex; 
+	align-items: center;
+}
+
+.product-name{
+	padding: 0px 0px 0px 25px;
 }

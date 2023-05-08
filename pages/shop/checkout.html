@@ -144,20 +144,20 @@
                         </div>
 
                         <table class="orders">
-                            <tr>
+                            <!-- <tr>
                                 <th id="t-shirt">White T-shirt With Logo x 1</th>
                                 <th id="price">$199.00</th>
-                            </tr>
+                            </tr> -->
 
-                            <tr>
+                            <!-- <tr>
                                 <th id="t-shirt">Black T-Shirt with Events x 1</th>
                                 <th id="price">$299.00</th>
-                            </tr>
+                            </tr> -->
 
                             <tr>
                                 <th id="total">Total</th>
                                 <th id="price">$498.00</th>
-                            </tr>
+                            </tr> 
                         </table>
 
                         <div class="payto-shirts">
@@ -227,9 +227,9 @@ function checkoutFormDataFromUser(event) {
   const email = document.getElementById("email").value;
   const orderNotes = document.getElementById("order_notes").value;
   const paymentMethod = document.querySelector(".payment-methods").value;
+  const orderId = crypto.randomUUID();
 
-  const existingUsers =
-    JSON.parse(localStorage.getItem("usersfromCheckoutData")) || [];
+  const existingUsers = JSON.parse(localStorage.getItem("usersfromCheckoutData")) || [];
 
   const formDatainCheckout = {
     firstName,
@@ -244,8 +244,11 @@ function checkoutFormDataFromUser(event) {
     email,
     orderNotes,
     paymentMethod,
+    orderId
   };
 
+  sessionStorage.setItem("checkOutDetail", JSON.stringify(formDatainCheckout));
+  
   existingUsers.push(formDatainCheckout);
 
   localStorage.setItem("usersfromCheckoutData", JSON.stringify(existingUsers));
@@ -254,6 +257,38 @@ function checkoutFormDataFromUser(event) {
   // Redirect to the checkout confirmation page
   window.location.href = "../../pages/shop/proceedcheckout.html";
 }
+
+// create table element
+// const table = document.createElement('table');
+// table.classList.add('card-totals');
+
+// create first row for T-Shirt item
+const row1 = document.createElement('tr');
+const tShirt = document.createElement('th');
+tShirt.setAttribute('id', 'products-in-orders');
+tShirt.textContent = 'Black T-Shirt with Events x 1';
+const tShirtPrice = document.createElement('th');
+tShirtPrice.setAttribute('id', 'price');
+tShirtPrice.textContent = '$299.00';
+row1.appendChild(tShirt);
+row1.appendChild(tShirtPrice);
+
+// create second row for Total
+// const row2 = document.createElement('tr');
+// const total = document.createElement('th');
+// total.setAttribute('id', 'total');
+// total.textContent = 'Total';
+// const totalPrice = document.createElement('th');
+// totalPrice.setAttribute('id', 'price');
+// totalPrice.textContent = '$498.00';
+// row2.appendChild(total);
+// row2.appendChild(totalPrice);
+
+// add rows to table
+// table.appendChild(row1);
+// table.appendChild(row2);
+
+document.querySelector(".orders").prepend(row1);
 </script>
 
 </body>
