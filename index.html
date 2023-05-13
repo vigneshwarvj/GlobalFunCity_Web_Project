@@ -19,6 +19,9 @@
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     </head>
 <body>
@@ -187,11 +190,106 @@
 <button id="btn-buytickets"> Buy Tickets</button>
 </div>
 
+
+<!-- review page started -->
+<div class="container">
+    <div class="board">
+        <h2 class="text-light" id="guestloveus">Guests Love Us</h2>
+        <p class="text-light-" style="display: none;">Some of the fullfilled customers reviews</p>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+<!-- revathi -->
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+"I had an amazing time at the Global Fun City park! The roller coasters were exhilarating, the food was delicious, and the staff was friendly and helpful. I would like to thank the Managing Director of Global Fun City. Totally, Brillant!"
+                    </div>
+                    <div class="profile">
+                        <img src="https://ca.slack-edge.com/T032648LE-UUH4J270U-g77bd888f56c-512" alt="">
+                        <a href="#">Revathi Iyer</a>
+<!--                             <span>Founder & CEO</span> -->
+                    </div>
+                </div>
+            </div>
+<!-- surya -->
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        "The water park section was especially enjoyable on a hot day. The only downside was the long lines, but the staff did their best to keep things moving quickly. Overall, it was a great experience!"
+                     </div>
+                    <div class="profile">
+                        <img src="https://ca.slack-edge.com/T032648LE-U02M6DXMG5N-64261edc50e8-512" alt="">
+                        <a href="#">Surya Umapathy</a>
+<!--                             <span>Founder & CEO</span> -->
+                    </div>
+                </div>
+            </div>
+<!-- shyam -->
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        "I booked tickets for my family to the amusement park and it was such a great experience. The website was easy to navigate and we were able to find the perfect tickets for our needs. We're counting down the days until we can visit the park and make some unforgettable memories."
+                    </div>
+                    <div class="profile">
+                        <img src="https://ca.slack-edge.com/T032648LE-UNJ715CK0-53e3dc63a07b-512" alt="">
+                        <a href="#">Shyam</a>
+<!--                             <span>Founder & CEO</span> -->
+                    </div>
+                </div>
+            </div>
+<!-- bharath -->
+<div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+    "Just booked our tickets to the amusement park and we can't wait to go! The online booking process was quick and easy, and we got a great deal on our tickets. We're looking forward to a day full of thrills and excitement!"
+                    </div>
+                    <div class="profile">
+                        <img src="https://ca.slack-edge.com/T032648LE-U03P5LA64E7-1acf61ffb14d-512" alt="">
+                        <a href="#">Bharathwaj Soundararajan</a>
+<!--                             <span>Founder & CEO</span> -->
+                    </div>
+                </div>
+            </div>
+<!-- vinit -->
+<div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+"I'm so excited to be heading to the amusement park this weekend! I booked my tickets online and it was super simple. The park has so many amazing rides and attractions, I know it's going to be an unforgettable day."
+                    </div>
+                    <div class="profile">
+                        <img src="https://ca.slack-edge.com/T032648LE-U03S2G19E2Z-2925e58a5dd9-512" alt="">
+                        <a href="#">Vinit Gore</a>
+<!--                             <span>Founder & CEO</span> -->
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+    </div>
+</div>
+<!-- review page completed -->
+
+
 <div class="customer">
 <h2>Our Partner</h2>
 
-<img src="./assets/images/main-logo.png" class="srcatering" width="200px" alt="sr-catering-logo">
+<a href=""> <img src="./assets/images/main-logo.png" class="srcatering" width="200px" alt="sr-catering-logo"> </a>
 </div>
+
 
 <div class="location">
 <img src="./assets/images/location.png" alt="location-of-global-fun-city" width="1485" height="550">
@@ -343,9 +441,30 @@ btnBuyTickets.addEventListener("click", function () {
 	      window.location.href = "./pages/signup for booking/signup.html";
 	  }
 });
+
+//review script start
+const swiper = new Swiper('.swiper', {
+    loop: true,
+
+     // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+
+});
+//review script end
 	</script>
+
 	
             <script src="./js/header.js"></script>
+            
 
 </body>
 </html>

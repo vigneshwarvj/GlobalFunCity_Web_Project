@@ -52,10 +52,10 @@
             <div class="icons-info" id="sign-in">
 
                 <a href="#" id="wishlist_anchor">
-                    <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (0)
+                    <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist 
                 </a> &nbsp;
                 <a href="#" id="mybag_anchor">
-                    <i class="fa-solid fa-bag-shopping"></i> &nbsp; My Bag (0)
+                    <i class="fa-solid fa-bag-shopping"></i> &nbsp; <p class="mybag" style="display: inline;"></p>
                 </a>
             </div>
         </div>
@@ -65,7 +65,7 @@
             <div class="cart">
                 <h1>My Bag</h1>
             </div>
-
+<div class="toshow-error-div">
             <table class="product-table">
                 <tbody class="tbody-for-products">
                     <tr>
@@ -125,6 +125,8 @@
     </div>
 
     </div>
+</div>
+
 
         <footer>
             <div class="background-footer">
@@ -152,7 +154,23 @@
 
         <script>
         const addtoBag = JSON.parse(localStorage.getItem("add_to_cart_products"));
-        console.log(addtoBag);
+        let total_amount = [];
+
+//To Increasing the value in the my bag in the header:
+let myBagPara = document.querySelector(".mybag")
+
+let cartArray = JSON.parse(localStorage.getItem("add_to_cart_products"))
+if(localStorage.getItem("add_to_cart_products")){
+
+ function bag(){
+   return myBagPara.innerHTML = "My Bag"+" "+"("+cartArray.length+")";
+
+}
+bag()
+}
+else{
+myBag.innerHTML = "My Bag"+" "+"("+0+")"
+}
 
         for (let i = 0; i < addtoBag.length; i++) {
           // create the tr element
@@ -210,7 +228,10 @@
           td4.appendChild(minusBtn);
 
          const td5 = document.createElement("td");
-          td5.textContent = "$" + addtoBag[i]["product_qty"] * addtoBag[i]["product_price"] + ".00";
+         td5.textContent = "$" + addtoBag[i]["product_qty"] * addtoBag[i]["product_price"] + ".00";
+
+         let amount = parseInt(td5.textContent.replace("$",""));
+         total_amount.push(amount);
 
           const td6 = document.createElement("td");
           const i_icon = document.createElement("i");
@@ -227,6 +248,11 @@
           tr.appendChild(td4);
           tr.appendChild(td5);
           tr.appendChild(td6);
+        }
+
+        let totalAmount = 0;
+        for (let i = 0; i < total_amount.length; i++){
+            totalAmount += total_amount[i];
         }
 
         //Remove Product from the cart
@@ -248,6 +274,8 @@
     toGet_the_products.splice(indexOfProduct, 1);
 
     localStorage.setItem("add_to_cart_products",JSON.stringify(toGet_the_products));
+
+alert("Are you sure to remove this product from your's bag?")
 
     window.location.reload();
   });
@@ -369,7 +397,7 @@ subtotalTitle.textContent = 'Subtotal';
 
 const subtotalPrice = document.createElement('th');
 subtotalPrice.setAttribute('id', 'sub_price');
-subtotalPrice.textContent = '$498.00';
+subtotalPrice.textContent = '$' + totalAmount + ".00";
 
 subtotalRow.appendChild(subtotalTitle);
 subtotalRow.appendChild(subtotalPrice);
@@ -383,7 +411,7 @@ totalTitle.textContent = 'Total';
 
 const totalPrice = document.createElement('th');
 totalPrice.setAttribute('id', 'total_price');
-totalPrice.textContent = '$498.00';
+totalPrice.textContent = '$' + totalAmount + ".00";
 
 totalRow.appendChild(totalTitle);
 totalRow.appendChild(totalPrice);
