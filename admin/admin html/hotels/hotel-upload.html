@@ -26,7 +26,7 @@
 
         <section class="background">
             <div class="products">
-                <h2>Add Hotels</h2>
+                <h2>Add Rooms</h2>
             </div>
 
             <div class="products-details-from-admin">
@@ -205,9 +205,10 @@ document.getElementById("save_details").addEventListener("click", function creat
     const roomDiscount = document.getElementById("offer_discount").value;
     const roomAmenties1 = document.getElementById("amenties_1").value;
     const roomAmenties2 = document.getElementById("amenties_2").value;
+    const uniqueIdForRooms = crypto.randomUUID();
 
     if (roomImage !== "" && hotelResortName !== "" && roomName !== "" && roomPrice !== "" && roomStrikeoutPrice !== "" && noOfAdultsInRoom !== "" && noOfChildrenInRoom !== "" && roomSize !== "" &&
-        roomDiscount !== "" && roomAmenties1 !== "" && roomAmenties2 !== "") {
+        roomDiscount !== "" && roomAmenties1 !== "" && roomAmenties2 !== "" && uniqueIdForRooms !== "") {
         if (selectingRooms == hotels) {
             const hotelDetails = JSON.parse(localStorage.getItem("hotelDetails")) || [];
             const exit = hotelDetails.some((data) => data.hotelDetails == hotelDetails);
@@ -224,10 +225,12 @@ document.getElementById("save_details").addEventListener("click", function creat
                     roomSize,
                     roomDiscount,
                     roomAmenties1,
-                    roomAmenties2
+                    roomAmenties2,
+                    uniqueIdForRooms,
                 });
             }
             localStorage.setItem("hotelDetails", JSON.stringify(hotelDetails));
+            
         } else if (selectingRooms == resorts) {
             const resortDetails = JSON.parse(localStorage.getItem("resortDetails")) || [];
             const exit = resortDetails.some((data) => data.resortDetails == resortDetails);
@@ -244,7 +247,8 @@ document.getElementById("save_details").addEventListener("click", function creat
                     roomSize,
                     roomDiscount,
                     roomAmenties1,
-                    roomAmenties2
+                    roomAmenties2,
+                    uniqueIdForRooms,
                 });
             }
             localStorage.setItem("resortDetails", JSON.stringify(resortDetails));
