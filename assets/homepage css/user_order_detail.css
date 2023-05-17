@@ -67,7 +67,7 @@ padding:10px;
 }
 
 .name-of-the-user, .delivery-address-of-the-user, .zip-code, .phone-number, .name-of-the-product, 
-.size-of-the-product, .price-of-the-product, .qty-of-the-product, .total-price-of-the-product, .shipping-details-of-the-product,
+.size-of-the-product, .price-of-the-product, .qty-of-the-product, .total-price-of-the-product, .order-date, .shipping-details-of-the-product,
 .order-id, .need-help{
 	font-family: 'poppins', sans-serif;
 }

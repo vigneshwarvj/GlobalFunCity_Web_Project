@@ -46,12 +46,12 @@
             </div>
 
             <div class="icons-info" id="sign-in">
-                <!-- <a href="../../pages/signup for shopping/signup_shop.html"> <i class="fa-solid fa-user"></i> &nbsp; Sign In | Sign Up </a> &nbsp; -->
+
                 <a href="#" id="wishlist_anchor">
-                    <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (0)
+                    <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (0) 
                 </a> &nbsp;
                 <a href="#" id="mybag_anchor">
-                    <i class="fa-solid fa-bag-shopping"></i> &nbsp; My Bag (0)
+                    <i class="fa-solid fa-bag-shopping"></i> &nbsp; <p class="mybag" style="display: inline;"></p>
                 </a>
             </div>
         </div>
@@ -309,7 +309,7 @@ document.querySelector("div.photo-and-content").append();
 //Add to Buy
 const add_products_to_bag = document.querySelector("button.btn-buynow");
 add_products_to_bag.addEventListener("click", function () {
-  let user_id = JSON.parse(localStorage.getItem("unique_id"));
+  //let user_id = JSON.parse(localStorage.getItem("unique_id"));
 
   let existing_user = JSON.parse(localStorage.getItem("unique_id"));
 
@@ -318,7 +318,7 @@ add_products_to_bag.addEventListener("click", function () {
   let existing = user_list.length && JSON.parse(localStorage.getItem("user_list")).some((data) => data.email === existing_user);
 
   if (!existing) {
-    alert("You are not logged in. Please login to continue!");
+    alert("You are not logged in. Please login to buy the products you love!");
   } else {
     let product_id = this.dataset.id;
     localStorage.setItem("unique_id_of_products", JSON.stringify(product_id));
@@ -328,6 +328,7 @@ add_products_to_bag.addEventListener("click", function () {
 
     let check_product = products.find((e) => e.product_uuid == product_id);
     check_product["product_qty"] = 1;
+    check_product["userUniqueToGetBag"] = existing_user;    
 
     let array_for_products = JSON.parse(localStorage.getItem("add_to_cart_products")) || [];
 
@@ -349,6 +350,7 @@ add_products_to_bag.addEventListener("click", function () {
 
     </script>
         <script src="../../js/shop.js"></script>
-        <script src="../../js/alert_and_allow.js"></script>    
+        <script src="../../js/shop_alert_and_allow.js"></script> 
+        <script src="../../js/mybag_numbers.js"></script>   
     </body>
 </html>

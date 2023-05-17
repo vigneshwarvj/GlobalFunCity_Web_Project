@@ -100,6 +100,9 @@
 <h2>Your Tickets</h2>
 </div>
 
+
+
+
 <div class="background-image-fun-fair">
 
 <!-- <div class="total-div-for-ticket-detail">
@@ -162,9 +165,17 @@
 <script src="../../js/header.js"></script>
 <script>
     let unique = JSON.parse(localStorage.getItem("unique_id"));
-    let ticketArray = JSON.parse(localStorage.getItem("reservationDetails"));
+    let ticketArray = JSON.parse(localStorage.getItem("bookingsConfirmFromTheUser"));
 
     let eachTicket = ticketArray.filter((t) => t.userUnique === unique)
+
+    if(eachTicket == 0){
+    const errorMessage  = ` <div class="error" style="text-align: center;">
+    <p>No tickets yet</p>
+</div>`
+
+document.querySelector(".background-image-fun-fair").insertAdjacentHTML("afterbegin",errorMessage)
+    }
 
     eachTicket.forEach(function (userDatafromtheReservationDetails){
 //To crete the ticket:
@@ -200,8 +211,16 @@ emailTitle.classList.add('name-of-the-title');
 emailTitle.textContent = 'Email';
 
 const emailDetail = document.createElement('p');
-emailDetail.classList.add('name-of-the-title');
-emailDetail.textContent = userDatafromtheReservationDetails[""]
+emailDetail.classList.add('detail-from-user-to-buy');
+emailDetail.textContent = userDatafromtheReservationDetails["emailAddress"];
+
+const ticketBookedTitle = document.createElement('h2');
+ticketBookedTitle.classList.add('name-of-the-title');
+ticketBookedTitle.textContent = 'Ticket Booked Date';
+
+const ticketBookedDate = document.createElement('p');
+ticketBookedDate.classList.add('detail-from-user-to-buy');
+ticketBookedDate.textContent = userDatafromtheReservationDetails["fullDate"];
 
 ticketDetail0.appendChild(nameTitle);
 ticketDetail0.appendChild(nameDetail);
@@ -209,6 +228,8 @@ ticketDetail0.appendChild(phoneNumberTitle);
 ticketDetail0.appendChild(phoneNumberDetail);
 ticketDetail0.appendChild(emailTitle);
 ticketDetail0.appendChild(emailDetail);
+ticketDetail0.appendChild(ticketBookedTitle);
+ticketDetail0.appendChild(ticketBookedDate);
 
 // create second ticket detail element
 const ticketDetail1 = document.createElement('div');
@@ -220,7 +241,7 @@ idTitle.textContent = 'Ticket ID';
 
 const idDetail = document.createElement('p');
 idDetail.classList.add('detail-from-user-to-buy');
-idDetail.textContent = '1234567890';
+idDetail.textContent = userDatafromtheReservationDetails["reservationUniqueId"];
 
 const fromTitle = document.createElement('h2');
 fromTitle.classList.add('name-of-the-title');
@@ -228,7 +249,7 @@ fromTitle.textContent = 'From';
 
 const fromDetail = document.createElement('p');
 fromDetail.classList.add('detail-from-user-to-buy');
-fromDetail.textContent = '12-11-2032';
+fromDetail.textContent = userDatafromtheReservationDetails["checkInDate"];
 
 const toTitle = document.createElement('h2');
 toTitle.classList.add('name-of-the-title');
@@ -236,7 +257,15 @@ toTitle.textContent = 'To';
 
 const toDetail = document.createElement('p');
 toDetail.classList.add('detail-from-user-to-buy');
-toDetail.textContent = '13-11-2023';
+toDetail.textContent = userDatafromtheReservationDetails["checkOutDate"];
+
+const statusTitle = document.createElement('h2');
+statusTitle.classList.add('name-of-the-title');
+statusTitle.textContent = 'Status';
+
+const statusBooked = document.createElement('p');
+statusBooked.classList.add('status-booked');
+statusBooked.textContent = 'Booked';
 
 ticketDetail1.appendChild(idTitle);
 ticketDetail1.appendChild(idDetail);
@@ -244,6 +273,8 @@ ticketDetail1.appendChild(fromTitle);
 ticketDetail1.appendChild(fromDetail);
 ticketDetail1.appendChild(toTitle);
 ticketDetail1.appendChild(toDetail);
+ticketDetail1.appendChild(statusTitle);
+ticketDetail1.appendChild(statusBooked);
 
 // create third ticket detail element
 const ticketDetail2 = document.createElement('div');
@@ -255,7 +286,7 @@ adultTitle.textContent = 'Adult';
 
 const adultDetail = document.createElement('p');
 adultDetail.classList.add('detail-from-user-to-buy');
-adultDetail.textContent = '1';
+adultDetail.textContent = userDatafromtheReservationDetails["adultCount"];
 
 const childrenTitle = document.createElement('h2');
 childrenTitle.classList.add('name-of-the-title');
@@ -263,7 +294,7 @@ childrenTitle.textContent = 'Children';
 
 const childrenDetail = document.createElement('p');
 childrenDetail.classList.add('detail-from-user-to-buy');
-childrenDetail.textContent = '1';
+childrenDetail.textContent = userDatafromtheReservationDetails["childrenCount"];
 
 const priceTitle = document.createElement('h2');
 priceTitle.classList.add('name-of-the-title');
@@ -271,7 +302,7 @@ priceTitle.textContent = 'Total Price';
 
 const priceDetail = document.createElement('p');
 priceDetail.classList.add('detail-from-user-to-buy');
-priceDetail.textContent = '$100';
+priceDetail.textContent = userDatafromtheReservationDetails["totalPriceFromtheUserInBooking"];
 
 ticketDetail2.appendChild(adultTitle);
 ticketDetail2.appendChild(adultDetail);
@@ -285,9 +316,13 @@ ticketShow.appendChild(ticketDetail0);
 ticketShow.appendChild(ticketDetail1);
 ticketShow.appendChild(ticketDetail2);
 
+const br1 = document.createElement('br');
+const br2 = document.createElement('br');
+const br3 = document.createElement('br');
+
 ticketMainDiv.appendChild(ticketShow);
 
-document.querySelector(".background-image-fun-fair").append(ticketMainDiv);
+document.querySelector(".background-image-fun-fair").append(ticketMainDiv, br1, br2, br3);
 
 })
 
