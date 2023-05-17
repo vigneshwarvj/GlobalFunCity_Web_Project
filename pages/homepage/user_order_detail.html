@@ -101,7 +101,7 @@
 
 <!-- Starting ticket detail -->
 <div class="background-color-for-detail">
-    <div class="box">
+    <!-- <div class="box">
         <div class="delivery-address">
             <h3 class="delivery-address-h3">Delivery Address</h3>
             <h5 class="name-of-the-user">Hello</h5>
@@ -115,7 +115,7 @@
         <div class="more-actions">
             <h3 class="more-actions-h3">More Actions</h3>
             <!-- Div for download and display -->
-            <div class="download-invoice-div-flex">
+            <!-- <div class="download-invoice-div-flex">
             <div class="download-invoice-div">
                 <p class="download-icon"><i class="fa-sharp fa-solid fa-file"></i> Download Invoice</p>
             </div>
@@ -123,17 +123,17 @@
             <div class="btn-download">
                 <button class="btn-download-invoice">Download</button>
             </div>
-</div>   
+</div>    -->
 <!-- Closed div for flex -->
-        </div>
+        <!-- </div>
     </div>
 </div>
 <!-- 
 Starting Product detail -->
-<br> <br> <br>
+<!-- <br> <br> <br>
 <div class="background-color-for-product-detail">
     <!-- Flex for Product -->
-    <div class="flex-of-product">
+    <!-- <div class="flex-of-product">
     <div class="product-image">
         <img src="https://iili.io/HX7ia1I.jpg" class="product-chosen-by-user" width="180px" height="180px" alt="shirt">
     </div>
@@ -154,11 +154,205 @@ Starting Product detail -->
         <h5 class="order-id">Order ID : 1234567890</h5>
         <h5 class="need-help"><i class="fa-solid fa-square-question"></i> <a href="">Need Help</a></h5>
     </div>
-</div>
+</div> --> 
 
 
 
 </div>
         <script src="../../js/header.js"></script>
+<script>
+
+const productIdForUrl = new URLSearchParams(window.location.search).get("orderId");
+
+const proId = JSON.parse(localStorage.getItem("orderDataFromUser")); 
+
+const getOrderData = proId.find((data => data.orderId === productIdForUrl));
+console.log(getOrderData);
+
+//Creating DOM:
+
+// Create delivery address elements
+const deliveryAddressTotalDiv = document.createElement("div");
+deliveryAddressTotalDiv.classList.add("box");
+
+const deliveryAddressDiv = document.createElement('div');
+deliveryAddressDiv.classList.add('delivery-address');
+
+const deliveryAddressHeader = document.createElement("h3");
+deliveryAddressHeader.classList.add("delivery-address-h3");
+deliveryAddressHeader.innerText = "Delivery Address";
+
+const nameOfTheUser = document.createElement("h5");
+nameOfTheUser.classList.add("name-of-the-user");
+nameOfTheUser.innerText = "Hello";
+
+const deliveryAddressOfTheUser = document.createElement("p");
+deliveryAddressOfTheUser.classList.add("delivery-address-of-the-user");
+deliveryAddressOfTheUser.innerHTML = "2/47 Keela Krishnan Kovil St, Keelapudur road, Palakarai, Trichy-1. <br> Trichy, Tiruchirappalli - 620001, Tamil Nadu";
+
+const zipCode = document.createElement("p");
+zipCode.classList.add("zip-code");
+zipCode.innerText = "ZIP Code: 000001";
+
+const phoneNumber = document.createElement("p");
+phoneNumber.classList.add("phone-number");
+phoneNumber.innerHTML = "Phone Number  &nbsp; 1234567890";
+
+deliveryAddressDiv.appendChild(deliveryAddressHeader);
+deliveryAddressDiv.appendChild(nameOfTheUser);
+deliveryAddressDiv.appendChild(deliveryAddressOfTheUser);
+deliveryAddressDiv.appendChild(zipCode);
+deliveryAddressDiv.appendChild(phoneNumber);
+
+// Create more actions elements
+const moreActionsDiv = document.createElement("div");
+moreActionsDiv.classList.add("more-actions");
+
+const moreActionsHeader = document.createElement("h3");
+moreActionsHeader.classList.add("more-actions-h3");
+moreActionsHeader.innerText = "More Actions";
+
+const downloadInvoiceDivFlex = document.createElement("div");
+downloadInvoiceDivFlex.classList.add("download-invoice-div-flex");
+
+const downloadInvoiceDiv = document.createElement("div");
+downloadInvoiceDiv.classList.add("download-invoice-div");
+
+const downloadIcon = document.createElement("p");
+downloadIcon.classList.add("download-icon");
+downloadIcon.innerHTML = '<i class="fa-sharp fa-solid fa-file"></i> Download Invoice';
+
+const downloadButton = document.createElement("button");
+downloadButton.classList.add("btn-download-invoice");
+downloadButton.innerText = "Download";
+
+downloadInvoiceDiv.appendChild(downloadIcon);
+downloadInvoiceDivFlex.appendChild(downloadInvoiceDiv);
+
+downloadInvoiceDivFlex.appendChild(document.createTextNode("\u00A0"));
+downloadInvoiceDivFlex.appendChild(downloadButton);
+
+moreActionsDiv.appendChild(moreActionsHeader);
+moreActionsDiv.appendChild(downloadInvoiceDivFlex);
+
+const br1 = document.createElement("br");
+const br2 = document.createElement("br");
+const br3 = document.createElement("br");
+
+
+// Create the outermost div element
+const outerDiv = document.createElement('div');
+outerDiv.classList.add('background-color-for-product-detail');
+
+// Create the flex container div element
+const flexContainerDiv = document.createElement('div');
+flexContainerDiv.classList.add('flex-of-product');
+
+// Create the product image div element and add the image element inside it
+const productImageDiv = document.createElement('div');
+productImageDiv.classList.add('product-image');
+
+const productImage = document.createElement('img');
+productImage.src = 'https://iili.io/HX7ia1I.jpg';
+productImage.classList.add('product-chosen-by-user');
+productImage.width = '180';
+productImage.height = '180';
+productImage.alt = 'shirt';
+productImageDiv.appendChild(productImage);
+
+// Create the product name div element and add the product name, size, and price elements inside it
+const productNameDiv = document.createElement('div');
+productNameDiv.classList.add('product-name');
+
+const productName = document.createElement('h4');
+productName.classList.add('name-of-the-product');
+
+productName.textContent = 'White T-Shirt With Logo';
+
+const productSize = document.createElement('h5');
+productSize.classList.add('size-of-the-product');
+productSize.textContent = 'Size : M';
+
+const productPrice = document.createElement('h5');
+productPrice.classList.add('price-of-the-product');
+productPrice.textContent = 'Price : $100.00';
+
+productNameDiv.appendChild(productName);
+productNameDiv.appendChild(productSize);
+productNameDiv.appendChild(productPrice);
+
+// Add the product image and name divs inside the flex container div
+flexContainerDiv.appendChild(productImageDiv);
+flexContainerDiv.appendChild(productNameDiv);
+
+// Create the quantity, total price, and shipping details div element and add those elements inside it
+const quantityTotalPriceDiv = document.createElement('div');
+quantityTotalPriceDiv.classList.add('quantity-total-price');
+
+const productQty = document.createElement('h5');
+productQty.classList.add('qty-of-the-product');
+productQty.textContent = 'Qty : ' + getOrderData.productQty;
+
+const totalProductPrice = document.createElement('h5');
+totalProductPrice.classList.add('total-price-of-the-product');
+totalProductPrice.textContent = 'Total Price : $100.00';
+
+const orderDate = document.createElement('h5');
+orderDate.classList.add('order-date');
+orderDate.textContent = 'Order Date : ' + getOrderData.nowDate;
+
+quantityTotalPriceDiv.appendChild(productQty);
+quantityTotalPriceDiv.appendChild(totalProductPrice);
+quantityTotalPriceDiv.appendChild(orderDate);
+
+// Create the order ID and need help div element and add those elements inside it
+const orderIdNeedHelpDiv = document.createElement('div');
+orderIdNeedHelpDiv.classList.add('order-id-needhelp');
+
+const shippingDetails = document.createElement('h5');
+shippingDetails.classList.add('shipping-details-of-the-product');
+shippingDetails.textContent = 'Delivery Status : ' + getOrderData.deliveryStatus;
+
+const orderId = document.createElement('h5');
+orderId.classList.add('order-id');
+orderId.textContent = 'Order ID : ' + getOrderData.orderId;
+
+const needHelp = document.createElement('h5');
+needHelp.classList.add('need-help');
+
+const needHelpIcon = document.createElement('i');
+needHelpIcon.classList.add('fa-solid', 'fa-square-question');
+
+const needHelpLink = document.createElement('a');
+needHelpLink.href = '#';
+needHelpLink.textContent = 'Need Help';
+
+needHelp.appendChild(needHelpIcon);
+needHelp.appendChild(needHelpLink);
+
+orderIdNeedHelpDiv.appendChild(shippingDetails);
+orderIdNeedHelpDiv.appendChild(orderId);
+orderIdNeedHelpDiv.appendChild(needHelp);
+
+// Add the flex container, quantity/total price, and order ID/need help divs inside the outermost div
+//outerDiv.appendChild(br1);
+outerDiv.appendChild(flexContainerDiv);
+outerDiv.appendChild(quantityTotalPriceDiv);
+outerDiv.appendChild(orderIdNeedHelpDiv);
+
+
+
+//total append the first div
+deliveryAddressTotalDiv.appendChild(deliveryAddressDiv);
+deliveryAddressTotalDiv.appendChild(moreActionsDiv)
+
+document.querySelector(".background-color-for-detail").append(deliveryAddressTotalDiv, br1, br2 , br3, outerDiv);
+
+
+
+
+
+</script>
+
         </body>
         </html>

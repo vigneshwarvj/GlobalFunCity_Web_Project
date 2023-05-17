@@ -18,9 +18,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
         <script>
-const addtoBag = JSON.parse(localStorage.getItem("add_to_cart_products"));
-const addtoBagCount = addtoBag.length;
-console.log(addtoBagCount);
+// const addtoBag = JSON.parse(localStorage.getItem("add_to_cart_products"));
+// const addtoBagCount = addtoBag.length;
+// console.log(addtoBagCount);
 </script>
     </head>
     <body>
@@ -53,11 +53,11 @@ console.log(addtoBagCount);
             <div class="icons-info" id="sign-in">
 
                 <a href="#" id="wishlist_anchor">
-                    <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist 
+                    <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (0) 
                 </a> &nbsp;
                 <a href="#" id="mybag_anchor">
-                    <i class="fa-solid fa-bag-shopping"></i> &nbsp; My Bag (0)
-                </a>
+                    <i class="fa-solid fa-bag-shopping"></i> &nbsp; <p class="mybag" style="display: inline;"></p>
+                </a> 
             </div>
         </div>
 
@@ -520,28 +520,8 @@ faqs.forEach((faq) => {
 // faq closed
 
 
-
-const bookingUser = JSON.parse(localStorage.getItem("unique_id"));
-// Alert in the wishlist page:
-
-const btnWishlist = document.getElementById("wishlist_anchor");
-btnWishlist.addEventListener("click", () => {
-  if (bookingUser) {
-    window.location.href = "../../pages/shop/wishlist.html";
-  } else {
-    alert("A reminder to make sure you are not logged in");
-  }
-});
-
-// Alert in the mybag page:
-const btnMybag = document.getElementById("mybag_anchor");
-btnMybag.addEventListener("click", () => {
-  if (bookingUser) {
-    window.location.href = "../../pages/shop/cart.html";
-  } else {
-    alert("A reminder to make sure you are not logged in");
-  }
-});
         </script>
+        <script src="../../js/shop_alert_and_allow.js"></script>
+        <script src="../../js/mybag_numbers.js"></script>
     </body>
 </html>

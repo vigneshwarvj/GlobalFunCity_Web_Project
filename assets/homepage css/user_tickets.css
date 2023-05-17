@@ -69,8 +69,8 @@ padding:10px;
     font-size: 2rem;
 }
 
-.background-image-fun-fair{
-    background-image: url(../../Screenshot\ \(376\).png);
+.total-div-for-ticket-detail{
+    /* background-image: url(../../Untitled\ design.jpg); */
 }
 
 
@@ -88,9 +88,14 @@ padding:10px;
 }
 
 .ticket-show{
-	border-bottom: 1px solid gray;
+	background-color: #eee;
     width: 100%;
+	padding: 25px 0px 25px 0px;
     display: flex;
     /* flex-wrap: nowrap; */
     justify-content: space-evenly;
+}
+.status-booked{
+	font-family: 'open sans', sans-serif;
+	color: green;
 }
