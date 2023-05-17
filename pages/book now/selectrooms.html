@@ -332,6 +332,46 @@
 </footer>
 
 <script>
+// const bedPrice = 12;
+
+// const bedRadios = document.querySelectorAll('input[name="number_of_bed"]');
+// bedRadios.forEach(radio => {
+//   radio.addEventListener('click', () => {
+//     if (radio.checked) {
+//       const selectedBeds = parseInt(radio.value);
+//       const updatedPrice = selectedBeds * 12; // Assuming the base price per bed is $12
+//       roomPrice.textContent = room.roomPrice;
+//     }
+//   });
+// });
+
+
+
+//Get the radio buttons and section where room details will be displayed
+const hotelsRadio = document.getElementById('hotels');
+const resortsRadio = document.getElementById('resorts');
+const roomSection = document.querySelector('.total_section_to_rooms');
+
+// Event listener for radio buttons
+hotelsRadio.addEventListener('change', showRoomDetails);
+resortsRadio.addEventListener('change', showRoomDetails);
+
+function showRoomDetails() {
+  // Clear existing room details
+  roomSection.innerHTML = '';
+
+  // Get the selected value from localStorage based on the radio button
+  const selectedValue = hotelsRadio.checked ? 'hotelDetails' : 'resortDetails';
+  const roomData = JSON.parse(localStorage.getItem(selectedValue));
+  console.log(roomData);
+
+
+  if (roomData) {
+    roomData.forEach(room => {
+
+        
+// Check the room type
+const isHotel = room.type === 'hotel';
 
 
 // Create the main container element
@@ -342,10 +382,10 @@ photoOfRoomAbout.classList.add('photo-of-room-about');
 const photoOfRoom = document.createElement('div');
 photoOfRoom.classList.add('photo-of-room');
 const roomImage = document.createElement('img');
-roomImage.src = '../../assets/images/rooms/1st-room.jpg';
+roomImage.src = room.roomImage;
 roomImage.width = '250';
 roomImage.height = '170';
-roomImage.alt = 'photo-of-room';
+roomImage.alt = room.hotelResortName;
 photoOfRoom.appendChild(roomImage);
 photoOfRoomAbout.appendChild(photoOfRoom);
 
@@ -355,11 +395,11 @@ aboutPrice.classList.add('about-price');
 const about = document.createElement('div');
 about.classList.add('about');
 const roomTitle = document.createElement('h3');
-roomTitle.textContent = 'Park Villa';
+roomTitle.textContent = room.hotelResortName;
 const roomType = document.createElement('h4');
-roomType.textContent = 'Deluxe Twin Rooms';
+roomType.textContent = room.roomName;
 const bedSelection = document.createElement('h5');
-bedSelection.textContent = 'How many Beds did you want:';
+bedSelection.textContent = hotelsRadio.checked ? 'How many Beds did you want:' : 'How many room did you want:';
 
 const br1 = document.createElement("br");
 const br2 = document.createElement("br");
@@ -369,19 +409,57 @@ bedSelection.appendChild(br1);
 bedSelection.appendChild(br2);
 
 const bedOptions = document.createElement('div');
-const bedLabels = ['2', '4', '6', '8'];
+const bedLabels = hotelsRadio.checked ? ['1 Bed', '2 Beds', '3 Beds', '4 Beds', '5 Beds', '6 Beds'] : ['1 room', '2 rooms', '3 rooms'];
 bedLabels.forEach(label => {
   const bedRadio = document.createElement('input');
   bedRadio.type = 'radio';
   bedRadio.id = 'number' + label;
   bedRadio.name = 'number_of_bed';
   bedRadio.required = true;
+  bedRadio.value = label;
   const bedLabel = document.createElement('label');
   bedLabel.htmlFor = 'number' + label;
   bedLabel.textContent = label;
   bedOptions.appendChild(bedRadio);
   bedOptions.appendChild(bedLabel);
+
+  bedRadio.addEventListener('change', () => {
+    if (bedRadio.checked) {
+            const selectedBeds = parseInt(bedRadio.value);
+            const staticRoomPrice = label === '2 Beds' ? room.roomPrice : 10; // Set static room price as the original room price for 2 Beds, 0 for others
+            const updatedPrice = staticRoomPrice * selectedBeds; // Multiply the static price by the selected number of beds
+            roomPrice.textContent = '$' + updatedPrice;
+            console.log(updatedPrice);
+          }
+        });
+    // if (label === '1 Bed') {
+    //       bedRadio.checked = true; // Set the default selection to 2 beds
+    //     }
+
+    if (hotelsRadio.checked && label === '1 Bed') {
+          bedRadio.checked = true;
+        }
+
+
+
+// Event listener for bed radio buttons
+// bedRadio.addEventListener('change', () => {
+//     if (bedRadio.checked) {
+//       const selectedBeds = parseInt(bedRadio.value);
+//       //const staticRoomPrice = 10;
+//       const updatedPrice = room.roomPrice * selectedBeds; // Multiply the room price by the selected number of beds
+//       roomPrice.textContent = '$' + updatedPrice;
+//       console.log(updatedPrice);
+//     }
+//   });
+// //   if (label === '2 Beds') {
+// //           bedRadio.checked = true; // Set the default selection to 2 beds
+// // }
+
+
+
 });
+
 bedSelection.appendChild(bedOptions);
 
 about.appendChild(roomTitle);
@@ -393,335 +471,102 @@ photoOfRoomAbout.appendChild(aboutPrice);
 
 // Create the break, price, and button elements
 const breakPriceButton = document.createElement('div');
-breakPriceButton.classList.add('break-price-button');
-const roomWithBreak = document.createElement('div');
-roomWithBreak.classList.add('room-with-break');
-const discountTag = document.createElement('g');
-const discountIcon = document.createElement('i');
-discountIcon.classList.add('fa-solid', 'fa-tags');
-discountTag.appendChild(discountIcon);
-discountTag.textContent = '10% Off on room price';
-const amenitiesTitle = document.createElement('h4');
-amenitiesTitle.textContent = 'Amenities';
-const amenitiesList = document.createElement('ul');
-const amenities = ['Free wifi', 'Breakfast included'];
-amenities.forEach(amenity => {
-  const amenityItem = document.createElement('li');
-  amenityItem.textContent = amenity;
-  amenitiesList.appendChild(amenityItem);
+      breakPriceButton.classList.add('break-price-button');
+      const roomWithBreak = document.createElement('div');
+      roomWithBreak.classList.add('room-with-break');
+      const discountTag = document.createElement('g');
+      const discountIcon = document.createElement('i');
+      discountIcon.classList.add('fa-solid', 'fa-tags');
+      discountTag.appendChild(discountIcon);
+
+      discountTag.textContent = room.roomDiscount + '% Off on room price';
+      const amenitiesTitle = document.createElement('h4');
+      amenitiesTitle.textContent = 'Amenities';
+      const amenitiesList = document.createElement('ul');
+      const amenities = [room.roomAmenties1, room.roomAmenties2];
+      amenities.forEach(amenity => {
+        const amenityItem = document.createElement('li');
+        amenityItem.textContent = amenity;
+        amenitiesList.appendChild(amenityItem);
+      });
+      const bookingMessage = document.createElement('p');
+      bookingMessage.textContent = 'Book your stay now at Global Fun City at best available rates!!';
+      roomWithBreak.appendChild(discountTag);
+      roomWithBreak.appendChild(amenitiesTitle);
+      roomWithBreak.appendChild(amenitiesList);
+      roomWithBreak.appendChild(bookingMessage);
+
+      const price = document.createElement('div');
+      price.classList.add('price');
+      const strickOutPrice = document.createElement('h5');
+      strickOutPrice.classList.add('strick_out_price');
+      strickOutPrice.textContent = '$15';
+      const roomPrice = document.createElement('span');
+      roomPrice.textContent = '$' + (isHotel ? room.roomPrice : room.roomPrice);
+      const bookNowLink = document.createElement('a');
+      bookNowLink.href = '../../pages/book now/guestinformation.html';
+      const bookNowButton = document.createElement('button');
+      bookNowButton.textContent = 'Book Now';
+      bookNowLink.appendChild(bookNowButton);
+
+      price.appendChild(strickOutPrice);
+      price.appendChild(roomPrice);
+      price.appendChild(document.createElement('br'));
+      price.appendChild(bookNowLink);
+
+      breakPriceButton.appendChild(roomWithBreak);
+      breakPriceButton.appendChild(price);
+
+      document.body.appendChild(photoOfRoomAbout);
+      document.body.appendChild(breakPriceButton);
+      const hr = document.createElement('hr');
+
+      document.querySelector("section.total_section_to_rooms").prepend(photoOfRoomAbout, breakPriceButton, hr);
+    });
+  }
+}
+   
+
+  function showButton() {
+  roomSection.innerHTML = '';
+
+  const buttonContainer = document.createElement('div');
+  buttonContainer.className = 'button-container';
+
+  const button = document.createElement('button');
+  button.textContent = 'Show Room Details';
+  button.addEventListener('click', function () {
+    showRoomDetails();
+  });
+
+  buttonContainer.appendChild(button);
+  roomSection.appendChild(buttonContainer);
+}
+
+// Event listener for hotel radio button
+hotelsRadio.addEventListener('change', function () {
+  if (this.checked) {
+    localStorage.setItem('selectedRoomType', 'hotelDetails');
+    showRoomDetails();
+  }
 });
-const bookingMessage = document.createElement('p');
-bookingMessage.textContent = 'Book your stay now at Global Fun City at best available rates!!';
-roomWithBreak.appendChild(discountTag);
-roomWithBreak.appendChild(amenitiesTitle);
-roomWithBreak.appendChild(amenitiesList);
-roomWithBreak.appendChild(bookingMessage);
 
+// Event listener for resort radio button
+resortsRadio.addEventListener('change', function () {
+  if (this.checked) {
+    localStorage.setItem('selectedRoomType', 'resortDetails');
+    showRoomDetails();
+  }
+});
 
-const price = document.createElement('div');
-price.classList.add('price');
-const strickOutPrice = document.createElement('h5');
-strickOutPrice.classList.add('strick_out_price');
-strickOutPrice.textContent = '$400';
-const roomPrice = document.createElement('span');
-roomPrice.textContent = '$1000';
-const bookNowLink = document.createElement('a');
-bookNowLink.href = '../../pages/book now/guestinformation.html';
-const bookNowButton = document.createElement('button');
-bookNowButton.textContent = 'Book Now';
-bookNowLink.appendChild(bookNowButton);
+// hotel radio button as checked by default
+hotelsRadio.checked = true;
 
-price.appendChild(strickOutPrice);
-price.appendChild(roomPrice);
-price.appendChild(document.createElement('br'));
-price.appendChild(bookNowLink);
-
-breakPriceButton.appendChild(roomWithBreak);
-breakPriceButton.appendChild(price);
-
-// Append the elements to the document body or any other desired container
-document.body.appendChild(photoOfRoomAbout);
-document.body.appendChild(breakPriceButton);
-const hr = document.createElement('hr');
-
-
-document.querySelector("section.total_section_to_rooms").prepend(photoOfRoomAbout, breakPriceButton, hr);
-
-
-// // Create the main container element
-// const photoOfRoomAbout = document.createElement('div');
-// photoOfRoomAbout.classList.add('photo-of-room-about');
-
-// // Create the photo of room element
-// const photoOfRoom = document.createElement('div');
-// photoOfRoom.classList.add('photo-of-room');
-// const roomImage = document.createElement('img');
-// roomImage.src = '../../assets/images/rooms/1st-room.jpg';
-// roomImage.width = '250';
-// roomImage.height = '170';
-// roomImage.alt = 'photo-of-room';
-// photoOfRoom.appendChild(roomImage);
-// photoOfRoomAbout.appendChild(photoOfRoom);
-
-// // Create the about and price elements
-// const aboutPrice = document.createElement('div');
-// aboutPrice.classList.add('about-price');
-// const about = document.createElement('div');
-// about.classList.add('about');
-// const roomTitle = document.createElement('h3');
-// roomTitle.textContent = 'Park Villa';
-// const roomType = document.createElement('h4');
-// roomType.textContent = 'Deluxe Twin Rooms';
-// const bedSelection = document.createElement('h5');
-// bedSelection.textContent = 'How many Beds did you want:';
-// const bedOptions = document.createElement('div');
-// const bedLabels = ['2', '4', '6', '8'];
-// bedLabels.forEach(label => {
-//   const bedRadio = document.createElement('input');
-//   bedRadio.type = 'radio';
-//   bedRadio.name = 'number_of_bed';
-//   bedRadio.required = true;
-//   bedRadio.value = label;
-//   const bedLabel = document.createElement('label');
-//   bedLabel.textContent = label;
-//   bedOptions.appendChild(bedRadio);
-//   bedOptions.appendChild(bedLabel);
-// });
-// bedSelection.appendChild(bedOptions);
-// about.appendChild(roomTitle);
-// about.appendChild(roomType);
-// about.appendChild(bedSelection);
-// aboutPrice.appendChild(about);
-// photoOfRoomAbout.appendChild(aboutPrice);
-
-// // Create the break, price, and button elements
-// const breakPriceButton = document.createElement('div');
-// breakPriceButton.classList.add('break-price-button');
-// const roomWithBreak = document.createElement('div');
-// roomWithBreak.classList.add('room-with-break');
-// const discountTag = document.createElement('g');
-// const discountIcon = document.createElement('i');
-// discountIcon.classList.add('fa-solid', 'fa-tags');
-// discountTag.appendChild(discountIcon);
-// discountTag.textContent = '10% Off on room price';
-// const amenitiesTitle = document.createElement('h4');
-// amenitiesTitle.textContent = 'Amenties';
-// const amenitiesList = document.createElement('ul');
-// const amenities = ['Free wifi', 'Breakfast included'];
-// amenities.forEach(amenity => {
-//   const amenityItem = document.createElement('li');
-//   amenityItem.textContent = amenity;
-//   amenitiesList.appendChild(amenityItem);
-// });
-// const bookingMessage = document.createElement('p');
-// bookingMessage.textContent = 'Book your stay now at Global Fun City at best available rates!!';
-// roomWithBreak.appendChild(discountTag);
-// roomWithBreak.appendChild(amenitiesTitle);
-// roomWithBreak.appendChild(amenitiesList);
-// roomWithBreak.appendChild(bookingMessage);
-// breakPriceButton.appendChild(roomWithBreak);
-
-// const price = document.createElement('div');
-// price.classList.add('price');
-// const strickOutPrice = document.createElement('h5');
-// strickOutPrice.classList.add('strick_out_price');
-// strickOutPrice.textContent = '$400';
-// const roomPrice = document.createElement('span');
-// roomPrice.textContent = '$1000';
-// const bookNowLink = document.createElement('a');
-// bookNowLink.href = '../../pages/book now/guestinformation.html';
-// const bookNowButton = document.createElement('button');
-// bookNowButton.textContent = 'Book Now';
-// bookNowLink.appendChild(bookNowButton);
-// price.appendChild(strickOutPrice);
-// price.appendChild(roomPrice);
-// price.appendChild(document.createElement('hr'));
-// // price.appendChild()
-
-// document.querySelector("section.total_section_to_rooms").prepend(photoOfRoomAbout, breakPriceButton, price);
-
-
-
-
-
-// //Get the radio buttons and section where room details will be displayed
-// const hotelsRadio = document.getElementById('hotels');
-// const resortsRadio = document.getElementById('resorts');
-// const roomSection = document.querySelector('.total_section_to_rooms');
-
-// // Event listener for radio buttons
-// hotelsRadio.addEventListener('change', showRoomDetails);
-// resortsRadio.addEventListener('change', showRoomDetails);
-
-// function showRoomDetails() {
-//   // Clear existing room details
-//   roomSection.innerHTML = '';
-
-//   // Get the selected value from localStorage based on the radio button
-//   const selectedValue = hotelsRadio.checked ? 'hotelDetails' : 'resortDetails';
-//   const roomData = JSON.parse(localStorage.getItem(selectedValue));
-//   console.log(roomData);
-
-//   if (roomData) {
-//     roomData.forEach(room => {
-
-
-// // create photo-of-room-about div
-// const photoOfRoomAbout = document.createElement('div');
-// photoOfRoomAbout.className = 'photo-of-room-about';
-
-// // create photo-of-room div and add image
-// const photoOfRoom = document.createElement('div');
-// photoOfRoom.className = 'photo-of-room';
-// const img = document.createElement('img');
-// img.src = room.roomImage;
-// img.width = '250';
-// img.height = '170';
-// img.alt =  room.roomName;
-// photoOfRoom.appendChild(img);
-
-// // create about-price div and add details
-// const aboutPrice = document.createElement('div');
-// aboutPrice.className = 'about-price';
-// const about = document.createElement('div');
-// about.className = 'about';
-// const h3 = document.createElement('h3');
-// h3.innerText = room.hotelResortName;
-// const h4 = document.createElement('h4');
-// h4.innerText = room.roomName;
-// const h5a = document.createElement('h5');
-
-// const radioForBed = document.createElement('')
-
-// // const h5b = document.createElement('h5');
-// // h5b.innerText = 'Room Size: ' + room.roomSize + 'sq.ft';
-// about.appendChild(h3);
-// about.appendChild(h4);
-// about.appendChild(h5a);
-// about.appendChild(h5b);
-// aboutPrice.appendChild(about);
-
-// // append photo-of-room and about-price to photo-of-room-about
-// photoOfRoomAbout.appendChild(photoOfRoom);
-// photoOfRoomAbout.appendChild(aboutPrice);
-
-// // create break-price-button div
-// const breakPriceButton = document.createElement('div');
-// breakPriceButton.className = 'break-price-button';
-
-// // create room-with-break div and add details
-// const roomWithBreak = document.createElement('div');
-// roomWithBreak.className = 'room-with-break';
-// const g = document.createElement('g');
-// const i = document.createElement('i');
-// i.className = 'fa-solid fa-tags';
-// g.appendChild(i);
-// g.id = 'discount';
-// g.innerText = room.roomDiscount + '% Off on room price';
-// const h4b = document.createElement('h4');
-// h4b.innerText = 'Amenties';
-// const ul = document.createElement('ul');
-// const li1 = document.createElement('li');
-// li1.innerText = room.roomAmenties1;
-// const li2 = document.createElement('li');
-// li2.innerText = room.roomAmenties2;
-// ul.appendChild(li1);
-// ul.appendChild(li2);
-// const p = document.createElement('p');
-// p.innerText = 'For the lowest rates, reserve your stay at Global Fun City right now!';
-// roomWithBreak.appendChild(g);
-// roomWithBreak.appendChild(h4b);
-// roomWithBreak.appendChild(ul);
-// roomWithBreak.appendChild(p);
-
-// // create price div and add details
-// const price = document.createElement('div');
-// price.className = 'price';
-// const h5c = document.createElement('h5');
-// h5c.className = 'strick_out_price';
-// h5c.id = 'strick-out-price';
-// h5c.innerText = '$' + room.roomStrikeoutPrice;
-
-// // if (room.roomDiscount) {
-// //         discountPrice = room.roomPrice - (room.roomPrice * room.roomDiscount) / 100;
-// //         discountPrice = Math.round(discountPrice);
-// // } else {
-// //     discountPrice = room.roomPrice - room.roomDiscount;
-// // }
-// // console.log(discountPrice);
-
-// const span = document.createElement('span');
-// span.innerText = '$' + Math.round(room.roomStrikeoutPrice - (room.roomStrikeoutPrice * room.roomDiscount) / 100);
-// const br = document.createElement('br');
-// const a = document.createElement('a');
-// a.href = '../../pages/book now/guestinformation.html';
-// const button = document.createElement('button');
-// button.innerText = 'Book Now';
-// a.appendChild(button);
-// price.appendChild(h5c);
-// price.appendChild(span);
-// price.appendChild(br);
-// price.appendChild(a);
-
-// // append room-with-break and price to break-price-button
-// breakPriceButton.appendChild(roomWithBreak);
-// breakPriceButton.appendChild(price);
-
-// // create hr element
-// const hr = document.createElement('hr');
-
-// // append all elements to the body
-// // const body = document.getElementsByTagName('body')[0];
-// // body.appendChild(photoOfRoomAbout);
-// // body.appendChild(breakPriceButton);
-// // body.appendChild(hr);
-
-
-// document.querySelector("section.total_section_to_rooms").prepend(photoOfRoomAbout, breakPriceButton, hr );
-//     });
-// }
-//   }
-
-//   function showButton() {
-//   roomSection.innerHTML = '';
-
-//   const buttonContainer = document.createElement('div');
-//   buttonContainer.className = 'button-container';
-
-//   const button = document.createElement('button');
-//   button.textContent = 'Show Room Details';
-//   button.addEventListener('click', function () {
-//     showRoomDetails();
-//   });
-
-//   buttonContainer.appendChild(button);
-//   roomSection.appendChild(buttonContainer);
-// }
-
-// // Event listener for hotel radio button
-// hotelsRadio.addEventListener('change', function () {
-//   if (this.checked) {
-//     localStorage.setItem('selectedRoomType', 'hotelDetails');
-//     showRoomDetails();
-//   }
-// });
-
-// // Event listener for resort radio button
-// resortsRadio.addEventListener('change', function () {
-//   if (this.checked) {
-//     localStorage.setItem('selectedRoomType', 'resortDetails');
-//     showRoomDetails();
-//   }
-// });
-
-// // hotel radio button as checked by default
-// hotelsRadio.checked = true;
-
-// // Show room details if hotel radio button is initially checked
-// if (hotelsRadio.checked) {
-//   localStorage.setItem('selectedRoomType', 'hotelDetails');
-//   showRoomDetails();
-// }
+// Show room details if hotel radio button is initially checked
+if (hotelsRadio.checked) {
+  localStorage.setItem('selectedRoomType', 'hotelDetails');
+  showRoomDetails();
+}
 
 </script>
 
