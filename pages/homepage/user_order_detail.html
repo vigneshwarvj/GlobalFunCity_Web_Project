@@ -298,7 +298,7 @@ productName.textContent = findOrdersDetails[0].product_name;
 
 const productSize = document.createElement('h5');
 productSize.classList.add('size-of-the-product');
-productSize.textContent = 'Size : M';
+productSize.textContent = 'Size : ' + findOrdersDetails[0].productSize;
 
 const productPrice = document.createElement('h5');
 productPrice.classList.add('price-of-the-product');
@@ -320,9 +320,12 @@ const productQty = document.createElement('h5');
 productQty.classList.add('qty-of-the-product');
 productQty.textContent = 'Qty : ' + gettingOrderData[0].productQty;
 
+const totalAmount = parseInt(findOrdersDetails[0].product_price * gettingOrderData[0].productQty);
+
+
 const totalProductPrice = document.createElement('h5');
 totalProductPrice.classList.add('total-price-of-the-product');
-totalProductPrice.textContent = 'Total Price : $100.00';
+totalProductPrice.textContent = 'Total Price : $' + totalAmount + ".00";
 
 const orderDate = document.createElement('h5');
 orderDate.classList.add('order-date');

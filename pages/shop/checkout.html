@@ -266,6 +266,8 @@ for(let i=0; i<productFromTheUserBag.length; i++){
     const productQty = productFromTheUserBag[i]["product_qty"];
     //console.log(productQty);
 
+    const productSize = productFromTheUserBag[i]["productSize"];
+
     const nowDate = new Date();
 console.log(nowDate.toISOString()); 
 
@@ -274,6 +276,7 @@ const deliveryStatus = "notdelivered";
     const orderData = {
     productIdFromTheUserBag,
     productQty,
+    productSize,
     nowDate,
     deliveryStatus,
     orderId,
