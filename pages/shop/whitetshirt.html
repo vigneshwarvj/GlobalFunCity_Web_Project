@@ -315,6 +315,12 @@ productDesc.setAttribute("class", "desc_about_product");
 productDesc.textContent = getProductData.product_desc;
 contentDiv.appendChild(productDesc);
 
+function handleSizeClick(event) {
+  const selectedSize = event.target.textContent;
+  localStorage.setItem("selectedSize", selectedSize);
+}
+
+
 // create div element for the sizes of dress
 const sizeDiv = document.createElement("div");
 sizeDiv.setAttribute("class", "sizes-of-dress");
@@ -327,6 +333,7 @@ const sSize = document.createElement("p");
 sSize.setAttribute("class", "s");
 sSize.textContent = "S";
 smallSize.appendChild(sSize);
+smallSize.addEventListener("click", handleSizeClick);
 
 const mediumSize = document.createElement("button");
 mediumSize.setAttribute("class", "size");
@@ -334,6 +341,7 @@ const mSize = document.createElement("p");
 mSize.setAttribute("class", "m");
 mSize.textContent = "M";
 mediumSize.appendChild(mSize);
+mediumSize.addEventListener("click", handleSizeClick);
 
 const extraSize = document.createElement("button");
 extraSize.setAttribute("class", "size");
@@ -341,6 +349,7 @@ const xSize = document.createElement("p");
 xSize.setAttribute("class", "x");
 xSize.textContent = "X";
 extraSize.appendChild(xSize);
+extraSize.addEventListener("click", handleSizeClick);
 
 const extraLargeSize = document.createElement("button");
 extraLargeSize.setAttribute("class", "size");
@@ -348,6 +357,7 @@ const xlSize = document.createElement("p");
 xlSize.setAttribute("class", "xl");
 xlSize.textContent = "XL";
 extraLargeSize.appendChild(xlSize);
+extraLargeSize.addEventListener("click", handleSizeClick);
 
 // append the size elements to the size div
 sizeDiv.appendChild(smallSize);
@@ -422,6 +432,7 @@ const add_products_to_bag = document.querySelector("#btn-buynow-to-add-in-bag");
 
 add_products_to_bag.addEventListener("click", function () {
   //const user_id = JSON.parse(localStorage.getItem("unique_id"));
+const productSize = JSON.stringify(localStorage.getItem("selectedSize"));
 
   const existing_user = JSON.parse(localStorage.getItem("unique_id"));
 
@@ -444,6 +455,7 @@ add_products_to_bag.addEventListener("click", function () {
     const check_product = products.find((e) => e.product_uuid == product_id);
     check_product["product_qty"] = 1;
     check_product["userUniqueToGetBag"] = existing_user;
+    check_product["productSize"] = productSize;
 
     const array_for_products = JSON.parse(localStorage.getItem("add_to_cart_products")) || [];
 

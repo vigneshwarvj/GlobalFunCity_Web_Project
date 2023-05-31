@@ -167,6 +167,8 @@ const productIdForUrl = new URLSearchParams(window.location.search).get("orderId
 const gettingOrderData = JSON.parse(localStorage.getItem("orderDataFromUser")); 
 console.log(gettingOrderData);
 
+const user_id = JSON.parse(localStorage.getItem("unique_id")); 
+
 const clothingDetails = JSON.parse(localStorage.getItem("clothing_details"));
 
 const accessoriesDetails = JSON.parse(localStorage.getItem("accessories_details"));
@@ -194,6 +196,8 @@ console.log(findOrdersDetails);
 //Creating DOM:
 
 orderIdfromTheUser.forEach((orderUser) => {
+
+    if(orderUser.productUserUniqueId === user_id){
 
 // Create delivery address elements
 const deliveryAddressTotalDiv = document.createElement("div");
@@ -340,18 +344,31 @@ const orderId = document.createElement('h5');
 orderId.classList.add('order-id');
 orderId.textContent = 'Order ID : ' + gettingOrderData[0].orderId;
 
-const needHelp = document.createElement('h5');
+const needHelp = document.createElement('button');
 needHelp.classList.add('need-help');
 
 const needHelpIcon = document.createElement('i');
 needHelpIcon.classList.add('fa-solid', 'fa-square-question');
+needHelpIcon.textContent = "Cancel Order";
 
 const needHelpLink = document.createElement('a');
 needHelpLink.href = '#';
 needHelpLink.textContent = 'Need Help';
+needHelp.addEventListener("click", function() {
+  // Delete data from localStorage
+  localStorage.removeItem("orderDataFromUser");
+  localStorage.removeItem("usersfromCheckoutData");
+  
+  // Show alert
+  alert("Order cancelled successfully!");
+  
+  // Redirect to the home page
+  window.location.href = "../../index.html";
+});
+
 
 needHelp.appendChild(needHelpIcon);
-needHelp.appendChild(needHelpLink);
+//needHelp.appendChild(needHelpLink);
 
 orderIdNeedHelpDiv.appendChild(shippingDetails);
 orderIdNeedHelpDiv.appendChild(orderId);
@@ -370,7 +387,7 @@ deliveryAddressTotalDiv.appendChild(deliveryAddressDiv);
 deliveryAddressTotalDiv.appendChild(moreActionsDiv)
 
 document.querySelector(".background-color-for-detail").append(deliveryAddressTotalDiv, br1, br2 , br3, outerDiv);
-
+    }
 })
 
 

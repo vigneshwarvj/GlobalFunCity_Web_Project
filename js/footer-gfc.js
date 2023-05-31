@@ -6,7 +6,7 @@ const logoDiv = document.createElement('div');
 logoDiv.classList.add('logo');
 
 const logoImg = document.createElement('img');
-logoImg.src = './assets/images/globalfuncitylogo.png';
+logoImg.src = 'https://iili.io/Hg4SOmB.png';
 logoImg.classList.add('footer-logo');
 logoImg.alt = 'logo';
 

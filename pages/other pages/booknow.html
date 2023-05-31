@@ -96,10 +96,10 @@
 <div class="search-availablity">
 <div class="search-information">
 <p>
-Check in  &nbsp; <input type="date" id="checkIndate" name="date" min="" required> 
+Check in  &nbsp; <input type="date" id="checkIndate" name="date"  required> 
 </p> &nbsp;
 <p>
-Check out  &nbsp;<input type="date" id="checkOutdate" name="date" min="" required>
+Check out  &nbsp;<input type="date" id="checkOutdate" name="date"  required>
 </p>
 </div>
 
@@ -479,6 +479,11 @@ document.getElementById("checkOutdate").setAttribute("min", currentDate);
 
 
 
+
+
+
+
+
 //To create the DOM for the adult and children price
 const priceDiv = document.createElement("div");
 priceDiv.classList.add("price-for-adult-children");
@@ -581,7 +586,89 @@ function reservationsDatas(event) {
   const needRoom = document.getElementById('yes').checked;
   const reservationUniqueId = crypto.randomUUID();
 
+//
 
+// Add event listener to the check-out date input to calculate nights and dates on change
+//checkOutDate.addEventListener("change", () => {
+// Get the check-in and check-out dates
+const checkInDateInput = new Date(checkInDate);
+const checkOutDateInput = new Date(checkOutDate);
+
+// Calculate the time difference in milliseconds
+const timeDiff = checkOutDateInput.getTime() - checkInDateInput.getTime();
+
+// Calculate the number of nights
+const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+// Calculate the number of days
+const days = nights + 1;
+
+// Save nights and days in localStorage
+localStorage.setItem("numberOfNights", nights);
+localStorage.setItem("numberOfDays", days);
+
+
+// localStorage.setItem('daysInBetween', daysInBetween);
+// localStorage.setItem('daysInBetween', daysInBetween);
+//});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//To get thre inbetween dates
+// Get the input elements
+// const checkInInput = document.getElementById('checkInDate');
+// const checkOutInput = document.getElementById('checkOutDate');
+
+// Add event listener to the "Check out" input
+// if (checkOutInput) {
+//   checkOutInput.addEventListener('change', () => {
+//     const checkInDates = new Date(checkInDate);
+//     const checkOutDates = new Date(checkOutDate);
+// console.log(checkInDates);
+
+// const timeDiff = checkOutDate.getTime() - checkInDate.getTime();
+
+// // Calculate the number of nights
+// const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+//   // Create an array to store the dates in between
+//   const datesInBetween = [];
+
+//   // Iterate over the dates and add them to the array
+//   for (let i = 0; i < nights; i++) {
+//     const date = new Date(checkInDate.getTime() + (i * 24 * 60 * 60 * 1000));
+//     datesInBetween.push(date.toLocaleDateString());
+//   }
+
+//   // Display the number of nights and dates in between
+//   console.log("Number of nights:", nights);
+//   console.log("Dates in between:", datesInBetween);
+
+
+    // // Save the number of days in local storage
+    // localStorage.setItem('daysInBetween', daysInBetween);
+
+    // // Output the result
+    // console.log(`Number of days in between: ${daysInBetween}`);
+
+    // // Retrieve the number of days from local storage (for demonstration)
+    // const storedDays = localStorage.getItem('daysInBetween');
+    // console.log(`Retrieved days in between: ${storedDays}`);
+//   });
+// }
 
 //console.log(fullDate); // output: "2023-05-13"
 
@@ -608,7 +695,9 @@ function reservationsDatas(event) {
     userUnique:user,
     fullDate,
     adultTotalPrice:document.getElementById("add_adultPrice").innerText.replace("Adult Price: $",""),
-    childrenTotalPrice:document.getElementById("add_childrenPrice").innerText.replace("Children Price: $", "")
+    childrenTotalPrice:document.getElementById("add_childrenPrice").innerText.replace("Children Price: $", ""),
+    nights,
+    days
   };
 
   sessionStorage.setItem("formDetail", JSON.stringify(reservationDetails));
@@ -643,6 +732,63 @@ function reservationsDatas(event) {
 
 
 }
+// //To get thre inbetween dates
+// // Get the input elements
+// const checkInInput = document.getElementById('checkInDate');
+// const checkOutInput = document.getElementById('checkOutDate');
+
+// // Add event listener to the "Check out" input
+// if (checkOutInput) {
+//   checkOutInput.addEventListener('change', () => {
+//     const checkInDate = new Date(checkInInput.value);
+//     const checkOutDate = new Date(checkOutInput.value);
+
+//     // Calculate the number of days in between
+//     const timeDifference = checkOutDate.getTime() - checkInDate.getTime();
+//     const daysInBetween = Math.ceil(timeDifference / (1000 * 3600 * 24));
+
+//     // Save the number of days in local storage
+//     localStorage.setItem('daysInBetween', daysInBetween);
+
+//     // Output the result
+//     console.log(`Number of days in between: ${daysInBetween}`);
+
+//     // Retrieve the number of days from local storage (for demonstration)
+//     const storedDays = localStorage.getItem('daysInBetween');
+//     console.log(`Retrieved days in between: ${storedDays}`);
+//   });
+// }
+
+// const checkInDateInput = document.getElementById("checkIndate");
+// const checkOutDateInput = document.getElementById("checkOutdate");
+
+// // Add event listener to the check-out date input to calculate nights and dates on change
+// checkOutDateInput.addEventListener("change", () => {
+//   // Get the selected check-in and check-out dates
+//   const checkInDate = new Date(checkInDateInput.value);
+//   const checkOutDate = new Date(checkOutDateInput.value);
+
+  // Calculate the time difference in milliseconds
+//   const timeDiff = checkOutDate.getTime() - checkInDate.getTime();
+
+//   // Calculate the number of nights
+//   const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+//   // Create an array to store the dates in between
+//   const datesInBetween = [];
+
+//   // Iterate over the dates and add them to the array
+//   for (let i = 0; i < nights; i++) {
+//     const date = new Date(checkInDate.getTime() + (i * 24 * 60 * 60 * 1000));
+//     datesInBetween.push(date.toLocaleDateString());
+//   }
+
+//   // Display the number of nights and dates in between
+//   console.log("Number of nights:", nights);
+//   console.log("Dates in between:", datesInBetween);
+// });
+
+
 
 </script>
 

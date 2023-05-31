@@ -44,7 +44,7 @@
             </div>
 
             <div class="logo-global">
-                <a href="">
+                <a href="../../pages/shop/shop.html">
                     <img src="../../assets/images/global-shop-logo.png" width="210" alt="global-shop-logo">
                 </a>
             </div>
@@ -153,13 +153,14 @@
         </footer>
 
         <script>
-        const addtoBag = JSON.parse(localStorage.getItem("add_to_cart_products"));
-        let total_amount = [];
+const addtoBag = JSON.parse(localStorage.getItem("add_to_cart_products"));
+let total_amount = [];
 
 //To Increasing the value in the my bag in the header:
 let myBagPara = document.querySelector(".mybag")
 
 let cartArray = JSON.parse(localStorage.getItem("add_to_cart_products"))
+
 if(localStorage.getItem("add_to_cart_products")){
 
  function bag(){
@@ -194,7 +195,7 @@ myBag.innerHTML = "My Bag"+" "+"("+0+")"
           td2.textContent = `$${addtoBag[i].product_price}`;
 
           const td3 = document.createElement("td");
-          td3.textContent = "XL";
+          td3.textContent = addtoBag[i]["productSize"];
 
           const td4 = document.createElement("td");
           td4.setAttribute("style", "padding-left:44px;");
@@ -312,9 +313,6 @@ alert("Are you sure to remove this product from your's bag?")
             localStorage.setItem("add_to_cart_products", JSON.stringify(add_to_cart_products))
 
             window.location.reload()
-
-
-
 
           });
         });

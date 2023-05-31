@@ -299,7 +299,7 @@ const td11 = document.createElement("td");
 td11.className = "important_datas";
 td11.textContent = "Sub Total";
 const td12 = document.createElement("td");
-td12.textContent = "$" + bookedDetail["adultTotalPrice"] + " + " + bookedDetail["childrenTotalPrice"];
+td12.textContent = "$" + bookedDetail["adultTotalPrice"] + " + " + bookedDetail["childrenTotalPrice"] + " x " + bookedDetail["days"] + " Days ";
 tr6.appendChild(td11);
 tr6.appendChild(td12);
 table.appendChild(tr6);
@@ -310,8 +310,8 @@ td13.className = "important_datas";
 td13.textContent = "Grand Total";
 const td14 = document.createElement("td");
 //To give to variable name to subtotal
-const total_amount = parseInt(bookedDetail["adultTotalPrice"]) + parseInt(bookedDetail["childrenTotalPrice"]);
-
+const total_amount = parseInt(bookedDetail["adultTotalPrice"]) + parseInt(bookedDetail["childrenTotalPrice"] * parseInt(bookedDetail["days"]));
+console.log(total_amount);
 td14.textContent = "$" + total_amount;
 tr7.appendChild(td13);
 tr7.appendChild(td14);
@@ -345,7 +345,7 @@ function CancelDetail() {
       gettingArrayLocal.splice(i, 1);
       sessionStorage.removeItem("formDetail");
       localStorage.setItem("reservationDetails", JSON.stringify(gettingArrayLocal));
-      alert("Are you sure you want to cancel your ticket");
+      alert("Are you sure you want to cancel your ticket?");
       break;
     }
   }

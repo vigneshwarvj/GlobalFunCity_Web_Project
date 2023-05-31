@@ -4,7 +4,7 @@ const root = window.location.origin;
 const defaultHeader = `<div class="visit-signin">
 
 <div class="visit-global">
-	<p>	Visit globalfuncity.com</p>
+	<p>	Visit globalfuncity</p>
 </div>	
 
 <div class="sign-in">
@@ -23,7 +23,7 @@ const person_data = user_list.find((details) => details.email === loggedInUser);
 const registeredHeader = `<div class="visit-signin">
 
 <div class="visit-global">
-	<p>	Visit globalfuncity.com</p>
+	<p>	Visit globalfuncity</p>
 </div>	
 
 <div class="sign-in">

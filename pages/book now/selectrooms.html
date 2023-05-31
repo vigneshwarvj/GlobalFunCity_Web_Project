@@ -380,7 +380,7 @@ roomTitle.textContent = hotelDetailsForm[i]._hotelName;
 const roomType = document.createElement('h4');
 roomType.textContent = hotelDetailsForm[i]._hotelroomName;
 const bedSelection = document.createElement('h5');
-bedSelection.textContent = 'How many Beds did you want:';
+bedSelection.textContent = 'How many Beds did you want: (Type: Twin Bed)';
 
 const br1 = document.createElement("br");
 const br2 = document.createElement("br");
@@ -408,7 +408,7 @@ bedLabels.forEach((label, index) => {
     const updatedPrice = originalPrice * selectedBeds;
     
     // Update the room price in the DOM
-    roomPriceTot.textContent = '$' + updatedPrice;
+    roomPriceTot.textContent = '$' + updatedPrice + "/per day";
 
 //     console.log(updatedPrice);
 // // Store the total room price and number of beds in localStorage
@@ -484,7 +484,7 @@ strickOutPrice.classList.add('strick_out_price');
 strickOutPrice.textContent = '$' + hotelDetailsForm[i]._hotelStrikeoutPrice;
 const roomPriceTot = document.createElement('span');
 roomPriceTot.id = "total-price-of-hotel";
-roomPriceTot.textContent = `${hotelDetailsForm[i]._hotelPrice}`;
+roomPriceTot.textContent = `$${hotelDetailsForm[i]._hotelPrice}` + "/ per day";
 const bookNowLink = document.createElement('a');
 bookNowLink.href = '../../pages/book now/guestinformation-hotel.html';
 const bookNowButton = document.createElement('button');
@@ -517,7 +517,7 @@ console.log(selectedTypeRoom);
   });
 
 bookNowLink.appendChild(bookNowButton);
-price.appendChild(strickOutPrice);
+//price.appendChild(strickOutPrice);
 price.appendChild(roomPriceTot);
 price.appendChild(document.createElement('br'));
 price.appendChild(document.createTextNode('\u00A0'));

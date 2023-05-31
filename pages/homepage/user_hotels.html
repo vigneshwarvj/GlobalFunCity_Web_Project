@@ -9,6 +9,7 @@
 
         <title> Your Tickets | Global Fun City </title>
         <link rel="stylesheet" href="../../assets/homepage css/user_tickets.css">
+        
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,10 @@
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+       
     </head>
+
     <body>
 
 <div class="header">
@@ -175,6 +179,13 @@
 
 </div>
 
+<footer class="footer_for_gfc">
+
+</footer>
+
+
+<script src="../../js/header.js"></script>
+
 <script>
 
 
@@ -186,7 +197,7 @@ let roomDetails = JSON.parse(localStorage.getItem("dataFromroomsUser"));
 
 let eachTicketRoom = ticketRoomArray.filter((t) => t.userUnique === unique)
 
-if(eachTicketRoom === 0){
+if(eachTicketRoom == 0){
     const errorMessage  = ` <div class="error" style="text-align: center; font-family: 'open sans', sans serif ">
     <p>No Rooms yet</p>
 </div>`
@@ -209,13 +220,13 @@ ticketShow.classList.add('ticket-show');
 const ticketDetail0 = document.createElement('div');
 ticketDetail0.classList.add('ticket-show-detail-0');
 
-const emailTitle = document.createElement('h2');
-emailTitle.classList.add('name-of-the-title');
-emailTitle.textContent = 'Email';
+const nameTitle = document.createElement('h2');
+nameTitle.classList.add('name-of-the-title');
+nameTitle.textContent = 'Name';
 
-const emailDetail = document.createElement('p');
-emailDetail.classList.add('detail-from-user-to-buy');
-emailDetail.textContent = userDatafromtheReservDetRoom["fullName"] + " " + userDatafromtheReservDetRoom["lastName"];
+const nameDetail = document.createElement('p');
+nameDetail.classList.add('detail-from-user-to-buy');
+nameDetail.textContent = userDatafromtheReservDetRoom["fullName"] + " " + userDatafromtheReservDetRoom["lastName"];
 
 const roomNameTitle = document.createElement('h2');
   roomNameTitle.classList.add('name-of-the-title');
@@ -243,8 +254,8 @@ const roomNameDetail = document.createElement('p');
   bedsDetail.classList.add('detail-from-user-to-buy');
   bedsDetail.textContent = room ? room.beds : '';
 
-  ticketDetail0.appendChild(emailTitle);
-  ticketDetail0.appendChild(emailDetail);
+  ticketDetail0.appendChild(nameTitle);
+  ticketDetail0.appendChild(nameDetail);
   ticketDetail0.appendChild(roomNameTitle);
   ticketDetail0.appendChild(roomNameDetail);
   ticketDetail0.appendChild(roomTypeTitle);
@@ -280,13 +291,13 @@ const childrenDetail = document.createElement('p');
 childrenDetail.classList.add('detail-from-user-to-buy');
 childrenDetail.textContent = 'Children: ' + userDatafromtheReservDetRoom["childrenCount"];
 
-const roomBookedDateTitle = document.createElement('h2');
-roomBookedDateTitle.classList.add('name-of-the-title');
-roomBookedDateTitle.textContent = 'Room Booked Date';
+const emailTitle = document.createElement('h2');
+emailTitle.classList.add('name-of-the-title');
+emailTitle.textContent = 'Email';
 
-const roomBookedDateDetail = document.createElement('p');
-roomBookedDateDetail.classList.add('detail-from-user-to-buy');
-roomBookedDateDetail.textContent = userDatafromtheReservDetRoom["fullDate"];
+const emailDetail = document.createElement('p');
+emailDetail.classList.add('detail-from-user-to-buy');
+emailDetail.textContent = userDatafromtheReservDetRoom["emailAddress"];
 
 ticketDetail1.appendChild(ticketDetailsTitle);
 ticketDetail1.appendChild(ticketIDDetail);
@@ -294,12 +305,20 @@ ticketDetail1.appendChild(fromDetail);
 ticketDetail1.appendChild(toDetail);
 ticketDetail1.appendChild(adultDetail);
 ticketDetail1.appendChild(childrenDetail);
-ticketDetail1.appendChild(roomBookedDateTitle);
-ticketDetail1.appendChild(roomBookedDateDetail);
+ticketDetail1.appendChild(emailTitle);
+ticketDetail1.appendChild(emailDetail);
 
 // Create the third ticket detail section
 const ticketDetail2 = document.createElement('div');
 ticketDetail2.classList.add('ticket-show-detail-2');
+
+const roomBookedDateTitle = document.createElement('h2');
+roomBookedDateTitle.classList.add('name-of-the-title');
+roomBookedDateTitle.textContent = 'Room Booked Date';
+
+const roomBookedDateDetail = document.createElement('p');
+roomBookedDateDetail.classList.add('detail-from-user-to-buy');
+roomBookedDateDetail.textContent = userDatafromtheReservDetRoom["fullDate"];
 
 const statusTitle = document.createElement('h2');
 statusTitle.classList.add('name-of-the-title');
@@ -317,6 +336,9 @@ const totalPriceDetail = document.createElement('p');
 totalPriceDetail.classList.add('detail-from-user-to-buy');
 totalPriceDetail.textContent = '$' + userDatafromtheReservDetRoom["totalPriceFromtheUserInBooking"];
 
+
+ticketDetail2.appendChild(roomBookedDateTitle);
+ticketDetail2.appendChild(roomBookedDateDetail);
 ticketDetail2.appendChild(statusTitle);
 ticketDetail2.appendChild(statusDetail);
 ticketDetail2.appendChild(totalPriceTitle);
@@ -339,5 +361,8 @@ document.querySelector(".background-image-fun-fair").append(totalDiv, br1, br2, 
 
 
 </script>
+
+
+
 </body>
 </html>

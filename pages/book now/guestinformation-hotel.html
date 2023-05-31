@@ -98,7 +98,7 @@
 <h4>Check the details that you entered</h4>
 </div>
 
-<div class="background-color">
+<div class="background-color" style="height: 727px;">
 <!--background color for search-->
 
 
@@ -177,7 +177,7 @@
 
 <div class="instructions-ol">
     <ol>
-        <li>Tickets once purchased cannot be cancelled, exchanged, or refunded.</li>
+        <li>Tickets & room once purchased cannot be cancelled, exchanged, or refunded.</li>
         <li>Outside food and beverages are not allowed inside the park.</li>
         <li>Smoking is strictly prohibited inside the park premises.</li>
         <li>If a customer consumes alcohol, they will not be allowed inside the premises and the tickets will not be refunded.</li>
@@ -305,7 +305,7 @@ const tr81 = document.createElement("td");
 tr81.className = "important_datas";
 tr81.textContent = "Room";
 const td4181 = document.createElement("td");
-td4181.textContent = option.roomName + " " + option.beds + " Beds : " + "$" + option.totalPriceofHotel;
+td4181.textContent = option.roomName + "(Room Name) " + option.beds + " Beds : " + "$" + option.totalPriceofHotel;
 tr41.appendChild(tr81);
 tr41.appendChild(td4181);
 table.appendChild(tr41);
@@ -315,7 +315,7 @@ const td9 = document.createElement("td");
 td9.className = "important_datas";
 td9.textContent = "Ticket";
 const td10 = document.createElement("td");
-td10.textContent = "Adult: $80 | Children: $65 (Per head)";
+td10.textContent = "Adult: $80 | Children: $65 (Per head) / Per Day";
 tr5.appendChild(td9);
 tr5.appendChild(td10);
 table.appendChild(tr5);
@@ -325,7 +325,7 @@ const td11 = document.createElement("td");
 td11.className = "important_datas";
 td11.textContent = "Sub Total";
 const td12 = document.createElement("td");
-td12.textContent = bookedDetail["adultTotalPrice"] + " + " + bookedDetail["childrenTotalPrice"] + " + " + option.totalPriceofHotel;
+td12.textContent = '$ ' + bookedDetail["adultTotalPrice"] + "(Adult Price) + " + bookedDetail["childrenTotalPrice"] + "(Children Price) x " + parseInt(bookedDetail["days"])  + " Days " + " + " + parseInt(bookedDetail["nights"]) + " Nights " + " x " + option.totalPriceofHotel + " (Bed Price) " ;
 tr6.appendChild(td11);
 tr6.appendChild(td12);
 table.appendChild(tr6);
@@ -336,10 +336,16 @@ td13.className = "important_datas";
 td13.textContent = "Grand Total";
 const td14 = document.createElement("td");
 //To give to variable name to subtotal
-const total_amount = parseInt(bookedDetail["adultTotalPrice"])+parseInt(bookedDetail["childrenTotalPrice"])+ parseInt(option.totalPriceofHotel);
-console.log(total_amount);
-value = total_amount;
-td14.textContent = "$" + total_amount;
+// const first_amount = parseInt(bookedDetail["adultTotalPrice"])+ parseInt(bookedDetail["childrenTotalPrice"]) * parseInt(bookedDetail["nights"]);
+// const second_amount = option.totalPriceofHotel * parseInt(bookedDetail["days"]);
+
+const first_amount = parseInt(bookedDetail["adultTotalPrice"])+ parseInt(bookedDetail["childrenTotalPrice"]) * parseInt(bookedDetail["days"]);
+const second_amount = option.totalPriceofHotel * parseInt(bookedDetail["nights"]);
+
+console.log(first_amount);
+console.log(second_amount);
+td14.textContent = "$ " + (first_amount+second_amount);
+value = (first_amount+second_amount);
 tr7.appendChild(td13);
 tr7.appendChild(td14);
 table.appendChild(tr7);
