@@ -50,37 +50,94 @@ if (!offer_details) {
 
 // Clothing Product Details
 const clothing_details = JSON.parse(localStorage.getItem("clothing_details"));
-// if(!clothing_details) {
+if(!clothing_details) {
 
-//     localStorage.setItem("clothing_details" , JSON.stringify([{
-// product_desc:
-// "White T-Shirt with logo is designed by Global Fun City. It is Best T-Shirt. It will gives more cuteness to you!. BUY NOW! ",
-// product_name:
-// "White T-Shirt with Logo",
-// product_photo:
-// "https://iili.io/HX7ia1I.jpg",
-// product_price:
-// "$199.00",
-// product_uuid:
-// "9919bab5-813a-431b-96b6-2e224fd45cd6",
-// selecting:
-// "cloth"
-//     },
-//     {
-// product_desc:
-// "Black T-Shirt with logo is designed by Global Fun City. It is Best T-Shirt. It will gives more cuteness to you!. BUY NOW! ",
-// product_name:
-// "Black T-Shirt with logo",
-// product_photo:
-// "https://iili.io/HXGQfkv.jpg",
-// product_price:
-// "$169.00",
-// product_uuid:
-// "7367de02-2212-4d09-9164-151b02b8e1a2",
-// selecting:
-// "cloth"
-//     }, ]))
-// }
+    localStorage.setItem("clothing_details" , JSON.stringify([{
+      product_desc: 
+      "This is a white t-shirt with a unique logo on the front. It is made from 100% cotton and is a great staple to add to your wardrobe.",
+      product_name: 
+      "White T - Shirt with logo",
+      product_photo: 
+      "https://iili.io/HX7ia1I.jpg",
+      product_price: 
+      "15.00",
+      product_uuid: 
+      "3b5b4d63-51dd-4592-a5c2-cda01e550e05",
+      selecting: 
+      "Clothing",
+    },
+    {
+      product_desc: 
+      "The black t-shirt is a simple design, with a logo that's too flashy. It is available in sizes from small to extra-large.",
+      product_name: 
+      "Black T- Shirt with logo",
+      product_photo: 
+      "https://iili.io/HXGQfkv.jpg",
+      product_price: 
+      "17.00",
+      product_uuid: 
+      "81edbc8f-31e0-4239-a30e-198ea9749668",
+      selecting: 
+      "Clothing",
+    }, 
+    {
+      product_desc: 
+      "If you love roller coasters, go-karts, and amusement parks, then you'll love this shirt! It's a playful design that will keep you entertained while wearing it.",
+      product_name: 
+      "Things I do in my spare time",
+      product_photo: 
+      "https://iili.io/HgvgW6Q.jpg",
+      product_price: 
+      "21.00",
+      product_uuid: 
+      "7d0340a5-7db7-415d-9d61-b59b548b640d",
+      selecting: 
+      "Clothing",
+    },
+  {
+    product_desc: 
+    "The water t-shirt with roller coaster is a stylish and comfy way to stay cool and look good while doing it. This shirt will keep you cool in the hot summer sun, and it also has a comfortable neckline.",
+    product_name: 
+    "Water T- Shirt",
+    product_photo: 
+    "https://iili.io/Hgvgw8P.webp",
+    product_price: 
+    "22.00",
+    product_uuid: 
+    "7178ca06-90f5-4cf8-8dcf-b3590552e273",
+    selecting: 
+    "Clothing",
+  },
+  {
+    product_desc: 
+"Everyone has been on a roller coaster ride in their life. Sometimes it's exciting and thrilling, sometimes it's scary and anxiety-inducing, and sometimes it's just plain boring. Eat Sleep roller coaster Repeat T-Shirt is a shirt that you can wear to remind yourself that you're going to be okay.",
+product_name: 
+"Eat Sleep Repeat T-Shirt",
+product_photo: 
+"https://iili.io/HgvgVMx.jpg",
+product_price: 
+"19.00",
+product_uuid: 
+"414c4638-1ab8-4a43-a6f0-75e97edbb318",
+selecting: 
+"Clothing",
+  },
+  {
+    product_desc: 
+    "This Gaint Wheel T-Shirt will get your wheels spinning. Whether you're cruising around the block, or driving on the highway, this shirt is a fun way to show your pride for all the things you love about wheels. What's better than a wheel? A big wheel! Now you can show your love for big wheels. A giant wheel T-shirt for a giant day. BUY NOW!",
+    product_name: 
+    "Gaint wheel T-Shirt ",
+    product_photo: 
+    "https://iili.io/HgvgMnj.jpg",
+    product_price: 
+    "22.00",
+    product_uuid: 
+    "7c5c7851-bb47-4822-89a5-ebe3e9997e2f",
+    selecting: 
+    "Clothing",
+  }
+  ]))
+}
 
 // Accessories Product Details
 const accessories_details = JSON.parse(
@@ -91,14 +148,47 @@ if (!accessories_details) {
     "accessories_details",
     JSON.stringify([
       {
-        product_desc:
-          "Black Cap with logo is designed by Global Fun City. It will gives more cuteness to you!. BUY NOW!",
-        product_name: "Black Cap With Logo",
-        product_photo: "https://iili.io/HhUYQTJ.jpg",
-        product_price: "66.00",
-        product_uuid: "96ad0e93-f3a3-48cf-b600-95c6ed427926",
-        selecting: "access",
+        product_desc: 
+        "Black Cap with logo is designed by Global Fun City. It will gives more cuteness to you!. BUY NOW!",
+        product_name: 
+        "Black Cap With Logo",
+        product_photo: 
+        "https://iili.io/HhUYQTJ.jpg",
+        product_price: 
+        "66.00",
+        product_uuid: 
+        "96ad0e93-f3a3-48cf-b600-95c6ed427926",
+        selecting: 
+        "access",
       },
+      {
+        product_desc: 
+        "This Global white bag is perfect for the minimalist. With its clean and crisp design, this bag is perfect for carrying everything from your morning coffee to your lunch. The soft feel and the wide handles make this bag the perfect travel companion.",
+        product_name: 
+        "White Bag with logo",
+        product_photo: 
+        "https://iili.io/HgvgjcB.jpg",
+        product_price: 
+        "9.00",
+        product_uuid: 
+        "d26a9191-da2c-4c85-8b4c-8827b1b31f48",
+        selecting: 
+        "Accessories",
+      },
+      {
+        product_desc: 
+"This Global black bag is perfect for the minimalist. With its clean and crisp design, this bag is perfect for carrying everything from your morning coffee to your lunch. The soft feel and the wide handles make this bag the perfect travel companion.",
+product_name: 
+"Black Bag with logo",
+product_photo: 
+"https://iili.io/HgvgEZb.jpg",
+product_price: 
+"10.00",
+product_uuid: 
+"2cb800fc-0867-4350-aa0c-cf228b93ab3c",
+selecting: 
+"Accessories",
+      }
     ])
   );
 }
@@ -110,13 +200,18 @@ if (!home_details) {
     "home_details",
     JSON.stringify([
       {
-        product_desc:
-          "This fresh cotton/recycled polyester blend towel is lightweight, fast-drying, and easy to bring along if you’re on the go. If you stay at home, match it with a BJRSEN shower curtain and a FINTSEN bath mat.",
-        product_name: "White Towel",
-        product_photo: "https://iili.io/Hjs2RUB.jpg",
-        product_price: "33.00",
-        product_uuid: "66fb067d-092c-4688-8efc-9e5eb88479e2",
-        selecting: "home",
+        product_desc: 
+        "When you need to wash off the grime and sweat from your morning workout, you can use the White Towel to dry off your skin. The towel is made of soft and absorbent microfiber material and is perfect for drying off your skin and hair",
+        product_name: 
+        "White Towel",
+        product_photo: 
+        "https://iili.io/Hjs2RUB.jpg",
+        product_price: 
+        "15.00",
+        product_uuid: 
+        "4d293f24-6f7b-4b4e-a8da-8bfcacb37a40",
+        selecting: 
+        "Home",
       },
     ])
   );
