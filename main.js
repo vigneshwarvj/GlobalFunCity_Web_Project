@@ -140,13 +140,10 @@ selecting:
 }
 
 // Accessories Product Details
-const accessories_details = JSON.parse(
-  localStorage.getItem("accessories_details")
+const accessories_details = JSON.parse(localStorage.getItem("accessories_details")
 );
 if (!accessories_details) {
-  localStorage.setItem(
-    "accessories_details",
-    JSON.stringify([
+  localStorage.setItem("accessories_details",JSON.stringify([
       {
         product_desc: 
         "Black Cap with logo is designed by Global Fun City. It will gives more cuteness to you!. BUY NOW!",
@@ -188,7 +185,7 @@ product_uuid:
 "2cb800fc-0867-4350-aa0c-cf228b93ab3c",
 selecting: 
 "Accessories",
-      }
+      },
     ])
   );
 }
@@ -253,13 +250,9 @@ if (!event_details) {
 }
 
 // Upcoming event details
-const upcoming_event_details = JSON.parse(
-  localStorage.getItem("upcoming_event_details")
-);
+const upcoming_event_details = JSON.parse(localStorage.getItem("upcoming_event_details"));
 if (!upcoming_event_details) {
-  localStorage.setItem(
-    "upcoming_event_details",
-    JSON.stringify([
+  localStorage.setItem("upcoming_event_details", JSON.stringify([
       {
         upcoming_event_category: "Festivel",
         upcoming_event_desc:
@@ -278,3 +271,71 @@ if (!upcoming_event_details) {
     ])
   );
 }
+
+//Hotel Details
+const hotelDetails = JSON.parse(localStorage.getItem("hotelDetails"));
+
+if(!hotelDetails) {localStorage.setItem("hotelDetails", JSON.stringify([
+  {
+    _hotelAmenties1: 
+"Free Wifi",
+_hotelAmenties2: 
+"Geyser",
+_hotelDiscount: 
+"10",
+_hotelImage: 
+"https://iili.io/HUUEUNf.jpg",
+_hotelName: 
+"Park Villa",
+_hotelPrice: 
+"10",
+_hotelStrikeoutPrice: 
+"15",
+_hotelroomName: 
+"Twin Rooms",
+  },
+  {
+    _hotelAmenties1: 
+"Free Wifi",
+_hotelAmenties2: 
+"Complimentary Breakfast",
+_hotelDiscount: 
+"5",
+_hotelImage: 
+"https://iili.io/HUpOgdx.jpg",
+_hotelName: 
+"Sleep Inn",
+_hotelPrice: 
+"17",
+_hotelStrikeoutPrice: 
+"10",
+_hotelroomName: 
+"Deluxe Room",
+  },
+])
+);
+}
+
+//Resort Details
+const resortDetails = JSON.parse(localStorage.getItem("resortDetails"));
+
+if(!resortDetails) {localStorage.setItem("resortDetails", JSON.stringify([
+  {
+    _resortAmenties1: 
+    "Free Wifi and one Extra bed",
+    _resortAmenties2: 
+    "Shettle service",
+    _resortDiscount: 
+    "5",
+    _resortImage: 
+    "https://images.unsplash.com/photo-1606402179428-a57976d71fa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHJlc29ydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    _resortName: 
+    "Sun and Sand",
+    _resortPrice: 
+    "25",
+    _resortStrikeoutPrice: 
+    "20",
+    _resortroomName: 
+    "Resort",
+  },
+]))}

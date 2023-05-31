@@ -2,7 +2,7 @@ function profile() {
   // Create a new anchor element
   const unique_id = JSON.parse(localStorage.getItem("unique_id"));
   const user_list = JSON.parse(localStorage.getItem("user_list"));
-  // console.log(userData);
+
   function profile_data(e) {
     return e.email == unique_id;
   }

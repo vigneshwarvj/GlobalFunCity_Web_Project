@@ -8,6 +8,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
 * Wireframe: https://drive.google.com/drive/folders/1A8QuRF-pblAv8Uh_1rB3A5IKGqWMOm4y
 * Problem Statement: https://docs.google.com/document/d/1fBwRgEQKGzXSXvccLUUL5ruBpaI0ZlGK/edit?usp=sharing&ouid=105997594239253407599&rtpof=true&sd=true
 * User Survey: https://docs.google.com/presentation/d/1XbeUI2W2k8097J8nrg7LNEuHBnLGe9tFS15lbzTR98Q/edit?usp=sharing
+* Deploy Website: https://deploy-preview-1--global-fun-city.netlify.app
 * Live Website: https://fssa-batch3.github.io/vigneshwar.vijayakumar__web_project/
 
 ### List of features:
@@ -233,7 +234,7 @@ Global Fun City is the biggest entertainment industry in USA. It’s a place whe
     - Expected Result:
         - The product is removed from the user's wishlist. -->
 
-### Admin 
+## Admin 
 - Scenario 1: Successfully entered into admin
     - Steps:
         1. Log in as a Admin.

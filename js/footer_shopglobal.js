@@ -30,13 +30,22 @@ navbarFooterDiv.classList.add('navbar-footer');
 const navbarList = document.createElement('ul');
 
 // Create and append list items for each navigation link
-const navigationLinks = ['ABOUT US', 'EVENTS', 'OFFERS', 'TICKET PRICES', 'SHOP', 'ATTRACTIONS', 'CONTACT'];
+const navigationLinks = [
+{ text: 'ABOUT US', href: '../../pages/other pages/home.html' },
+{ text: 'EVENTS', href: '../../pages/other pages/events.html' },
+{ text: 'OFFERS', href: '../../pages/other pages/offer.html' },
+{ text: 'TICKET PRICES', href: '../../pages/other pages/ticketprices.html' },
+{ text: 'SHOP', href: '../../pages/shop/shop.html' },
+{ text: 'ATTRACTIONS', href: '../../pages/other pages/attractions.html' },
+{ text: 'CONTACT', href: '../../pages/other pages/contact.html' },
+];
+
 navigationLinks.forEach(linkText => {
     const listItem = document.createElement('li');
     const link = document.createElement('a');
     link.classList.add('navigation__link');
-    link.href = `../../pages/other pages/${linkText.toLowerCase().replace(' ', '')}.html`;
-    link.textContent = linkText;
+    link.href = linkText.href ;
+    link.textContent = linkText.text;
 
     listItem.appendChild(link);
     navbarList.appendChild(listItem);
@@ -82,19 +91,19 @@ const otherNavbarList = document.createElement('ul');
 
 // Create and append list items for each other navigation link
 const otherNavigationLinks = [
-    'PRIVACY POLICY',
-    'CAREERS',
-    'SAFETY AND HYGIENE',
-    'RULES & REGULATIONS',
-    'GREEN INITIATIVES',
-    'CSR INITIATIVES'
+    { text: 'PRIVACY POLICY', href: '../../pages/footer other pages/privacypolicy.html' },
+    { text: 'CAREERS', href: '#top'},
+    { text: 'SAFETY AND HYGIENE', href: '../../pages/footer other pages/safetyofvisitors.html' },
+    { text: 'RULES & REGULATIONS', href: '../../pages/footer other pages/rulesandregulations.html' },
+    { text: 'GREEN INITIATIVES', href: '../../pages/footer other pages/greeninitiatives.html' },
+    { text: 'CSR INITIATIVES', href: '../../pages/footer other pages/csrinitiatives.html' },
 ];
-otherNavigationLinks.forEach(linkText => {
+otherNavigationLinks.forEach(otherlinkText => {
     const listItem = document.createElement('li');
     const link = document.createElement('a');
     link.classList.add('other-navigation-link');
-    link.href = `../../pages/footer other pages/${linkText.toLowerCase().replace(' ', '')}.html`;
-    link.textContent = linkText;
+    link.href = otherlinkText.href ;
+    link.textContent = otherlinkText.text;
 
     listItem.appendChild(link);
     otherNavbarList.appendChild(listItem);
