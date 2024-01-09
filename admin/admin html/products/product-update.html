@@ -1,117 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset='UTF-8'>
-	<link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
 
-<title>Product Update - Global Fun City</title>
-<link rel="stylesheet" href="../../../admin/admin css/product-update.css" />
+        <title>Product Update - Global Fun City</title>
+        <link rel="stylesheet" href="../../../admin/admin css/product-update.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
-<body>
+        <div class="logo">
+            <img src="../../../assets/images/global-shop-logo.png" width="200" alt="logo">
+        </div>
 
-<div class="logo">
-	<img src="../../assets/images/global-shop-logo.png" width="200" alt="logo"/>
-</div>
+        <section class="background">
+            <div class="products">
+                <h2>Update Products</h2>
+            </div>
 
-<section class="background">
-<div class="products">
-    <h2>Update Products</h2>
-</div>
-
-<div class="products-updates-from-admin">
-    <form role="form" class="form-for-update-products" onsubmit="" >
-    <label class="input-field">Unique ID</label>
-    <br>
+            <div class="products-updates-from-admin">
+                <form role="form" class="form-for-update-products" onsubmit="">
+                    <label class="input-field">Unique ID</label>
+                    <br>
         
-    <input type="text" id="unique_id_of_product" required/>
-<br>
-    <button type="submit" id="find-details">Find Details</button>
-<br>
-    <label class="input-field">Product Name</label>
-    <br>
+                    <input type="text" id="unique_id_of_product" required>
+                    <br>
+                    <button type="submit" id="find-details">Find Details</button>
+                    <br>
+                    <label class="input-field">Product Name</label>
+                    <br>
         
-    <input type="text" id="rename_product_name" />
-<br>
-    <label class="input-field">Product Price</label>
-    <br>
+                    <input type="text" id="rename_product_name">
+                    <br>
+                    <label class="input-field">Product Price</label>
+                    <br>
         
-    <input type="text" id="new_product_price" />
-<br>
-    <button type="submit" id="btn_update">Update Product</button>
-<br>
-    <button type="button" id="btn_cancel">Cancel</button>
-<br>
-    <button type="submit" id="btn_delete">Delete Product</button>
+                    <input type="text" id="new_product_price">
+                    <br>
+                    <label class="input-field">Product Photo</label>
 
-    </form>
-</div>
-</section>
+                    <input type="url" id="url_of_photo">
 
-<script>
+ 
+
+                </form>
+            </div>
+        </section>
+
+        <script>
 // Get form elements
-const find_details_btn = document.getElementById('find-details')
+const find_details_btn = document.getElementById("find-details");
 
-find_details_btn.addEventListener('click', (event) => {
+find_details_btn.addEventListener("click", (event) => {
   event.preventDefault();
 
-  const uniqueId = document.getElementById('unique_id_of_product').value;
-  const update_product_name = document.getElementById('rename_product_name');
-  const update_product_price = document.getElementById('new_product_price');
+  const uniqueId = document.getElementById("unique_id_of_product").value;
+  const update_product_name = document.getElementById("rename_product_name");
+  const update_product_price = document.getElementById("new_product_price");
+  const update_product_photo = document.getElementById("url_of_photo");
 
   // Check if product exists in localStorage for each company
-  const companies = ['clothing_details', 'accessories_details', 'home_details'];
+  const companies = ["clothing_details", "accessories_details", "home_details"];
   for (const company of companies) {
     const details = JSON.parse(localStorage.getItem(company));
     if (!details) continue; // Skip iteration if details is null or undefined
-    const product = details.find(item =>
-       item.product_uuid === uniqueId);
+    const product = details.find((item) => item.product_uuid === uniqueId);
     if (product) {
       // Set product details if found
       update_product_name.value = product.product_name;
       update_product_price.value = product.product_price;
+      update_product_photo.value = product.product_photo;
 
       // Add event listener to update_product button
-      document.getElementById("btn_update").addEventListener("click", (event) => {
-        event.preventDefault();
-        let productName = update_product_name.value 
-        let productPrice =  update_product_price.value
-      
-        // Update product details in localStorage
-        product.product_name = productName;
-        product.product_price = productPrice;
-       
-        localStorage.setItem(company, JSON.stringify(details));
-        // Alert user that product details have been updated
-        alert("Product Updated");
-        // Reset form
-        document.querySelector('form').reset();
-        // document.getElementById("update_product").setAttribute("disabled", true);
-      });
+      document
+        .getElementById("btn_update")
+        .addEventListener("click", function () {
+          event.preventDefault();
+          const productName = update_product_name.value;
+          const productPrice = update_product_price.value;
+          const productPhoto = update_product_photo.value;
+
+          // Update product details in localStorage
+          product.product_name = productName;
+          product.product_price = productPrice;
+          product.product_photo = productPhoto;
+          localStorage.setItem(company, JSON.stringify(details));
+          // Alert user that product details have been updated
+          alert("Product Updated");
+          // Reset form
+          document.querySelector("form").reset();
+
+          // document.getElementById("update_product").setAttribute("disabled", true);
+        });
       break; // Exit loop if product found in any company
     }
   }
 });
-const delete_btn = document.getElementById('btn_delete');
-delete_btn.addEventListener('click', (event) => {
+const delete_btn = document.getElementById("btn_delete");
+delete_btn.addEventListener("click", (event) => {
   event.preventDefault();
-  const uniqueId = document.getElementById('unique_id_of_product').value;
-  const companies = ['clothing_details', 'accessories_details', 'home_details'];
+  const uniqueId = document.getElementById("unique_id_of_product").value;
+  const companies = ["clothing_details", "accessories_details", "home_details"];
   for (const company of companies) {
     const details = JSON.parse(localStorage.getItem(company));
     if (!details) continue; // Skip iteration if details is null or undefined
-    const index = details.findIndex(item => item.product_uuid === uniqueId);
+    const index = details.findIndex((item) => item.product_uuid === uniqueId);
     if (index !== -1) {
       // Remove product from details array and update localStorage
       details.splice(index, 1);
@@ -119,15 +123,12 @@ delete_btn.addEventListener('click', (event) => {
       // Alert user that product has been deleted
       alert("Product Deleted");
       // Reset form
-      document.querySelector('form').reset();
+      document.querySelector("form").reset();
       break; // Exit loop if product found in any company
     }
   }
 });
-
-
-
 </script>
 
-</body>
+    </body>
 </html>

@@ -50,7 +50,7 @@ body{
 }
 .sign-in a{
 	text-decoration: none;
-	color: #ff5757;
+	/* color: #ff5757; */
 }
 .header{ 
 	display:flex;
@@ -151,7 +151,7 @@ font-size: 40px;
 	position: relative;
 }
 .adult-ticket button{
-	padding-right: 422px;
+	/* padding-right: 422px;
 	padding-top:20px;
 	padding-bottom: 20px;
 	margin-top: 90px;
@@ -159,7 +159,21 @@ font-size: 40px;
 	border:10px;
 	border-radius: none;
     font-family:'league spartan', sans-serif;
-	font-size: 14px;
+	font-size: 14px; */
+
+	padding-right: 422px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* margin-top: 72px; */
+    margin: auto;
+    margin-top: 4.5rem;
+    background-color: #C1DEDE;
+    width: 100%;
+    border: 10px;
+    border-radius: 10px;
+    border-radius: none;
+    font-family: 'league spartan', sans-serif;
+    font-size: 14px;
 
 }
 .content-gif{

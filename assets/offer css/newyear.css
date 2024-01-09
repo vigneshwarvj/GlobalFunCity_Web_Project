@@ -49,7 +49,7 @@ body{
 }
 .sign-in a{
 	text-decoration: none;
-	color: #ff5757;
+	/* color: #ff5757; */
 }
 .header{ 
 	display:flex;
@@ -105,7 +105,7 @@ margin-top:10px;
 }
 .newyear{
 	width: 1200px;
-	height: 2100px;
+	height: 2000px;
 	margin-left: 150px;
 	padding-top: 100px;
 	background-color:#2A3E60;
@@ -138,7 +138,7 @@ margin-top:10px;
 	margin-left: 200px;
 	padding-bottom:80px;
 	top:60px;
-height: 600px;
+/* height: 600px; */
 }
 .con p{
 	font-family: 'League Spartan', sans-serif;

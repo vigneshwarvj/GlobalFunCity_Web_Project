@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
+
+        <title>Rooms form - Global Fun City</title>
+        <link rel="stylesheet" href="../../../admin/admin css/product-upload.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="logo">
+            <img src="../../../assets/images/globalfuncitylogo.png" width="200" alt="logo">
+        </div>
+<section class="main-section" style="display: flex; justify-content: space-evenly;">
+        <section class="background" style="left: 0px;">
+            <div class="products">
+                <h2>Add Hotel</h2>
+            </div>
+
+            <div class="products-details-from-admin">
+                <form role="form" aria-label="" onsubmit="createHotel(event)" class="form-for-admin">
+
+
+                    <label class="input-field">Image of room</label>
+                    <br>
+            
+                    <input type="url" id="image_of_room" required>
+                    <br>
+
+                    <label class="input-field">Hotel Name</label>
+                    <br>
+            
+                    <input type="text" id="hotel_name" pattern="[a-z A-Z]+" required>
+                    <br>
+
+                    <label class="input-field">Room name</label>
+                    <br>
+            
+                    <input type="text" id="room_name" required>
+                    <br>
+                    <label class="input-field">Room Price</label>
+                    <br>
+            
+                    <input type="tel" id="room_price" pattern="[0-9$.]+" required>
+                    <br>
+
+                    <label class="input-field">Room Strikeout Price</label>
+                    <br>
+            
+                    <input type="tel" id="room_strikeout_price" pattern="[0-9$.]+" required>
+
+                    <br>
+                    <label class="input-field">Room Discount</label>
+                    <br>
+            
+                    <input type="tel" id="offer_discount" pattern="[0-9$.]+" required>
+                    <br>
+                    <label class="input-field">Amenties 1</label>
+                    <br>
+                    <input type="tel" id="amenties_1" pattern="[a-z A-Z]+" required>
+                    <br>
+
+                    <label class="input-field">Amenties 2</label>
+                    <br>
+                    <input type="tel" id="amenties_2" pattern="[a-z A-Z]+" required>
+                    <br>
+                    &NonBreakingSpace;
+                    <!-- button started -->
+                    <button type="submit" id="save_details_hotel">Save</button>
+                    &nbsp;
+                    <button type="reset">Cancel</button>
+                </form>
+            </div>
+
+        </section>
+
+<!-- starting for resortDetails -->
+
+<section class="background" style="left: 0px;">
+    <div class="products">
+        <h2>Add Resort</h2>
+    </div>
+
+    <div class="products-details-from-admin">
+        <form role="form" aria-label="" onsubmit="createResort(event)" class="form-for-admin">
+
+            <label class="input-field">Image of resort</label>
+            <br>
+    
+            <input type="url" id="image_of_resort" required>
+            <br>
+
+            <label class="input-field">Resort Name</label>
+            <br>
+    
+            <input type="text" id="resort_name" pattern="[a-z A-Z]+" required>
+            <br>
+
+            <label class="input-field">Room name</label>
+            <br>
+    
+            <input type="text" id="resort_room_name" required>
+            <br>
+            <label class="input-field">Resort Price</label>
+            <br>
+    
+            <input type="tel" id="resort_price" pattern="[0-9$.]+" required>
+            <br>
+
+            <label class="input-field">Resort Strikeout Price</label>
+            <br>
+    
+            <input type="tel" id="resort_strikeout_price" pattern="[0-9$.]+" required>
+            
+            <br>
+            <label class="input-field">Resort Discount</label>
+            <br>
+    
+            <input type="tel" id="resort_offer_discount" pattern="[0-9$.]+" required>
+            <br>
+            <label class="input-field">Amenties 1</label>
+            <br>
+            <input type="tel" id="amenties_1_resort" pattern="[a-z A-Z]+" required>
+            <br>
+
+            <label class="input-field">Amenties 2</label>
+            <br>
+            <input type="tel" id="amenties_2_resort" pattern="[a-z A-Z]+" required>
+            <br>
+            &NonBreakingSpace;
+            <!-- button started -->
+            <button type="submit" id="save_details">Save</button>
+            &nbsp;
+            <button type="reset">Cancel</button>
+        </form>
+    </div>
+
+</section>
+
+
+    </section>
+    </body>
+
+<script>
+
+//Create hotel
+function createHotel(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get the form values
+  const imageOfHotel = document.getElementById('image_of_room').value;
+  const hotelName = document.getElementById('hotel_name').value;
+  const hotelroomName = document.getElementById('room_name').value;
+  const hotelPrice = document.getElementById('room_price').value;
+  const hotelStrikeoutPrice = document.getElementById('room_strikeout_price').value;
+  const hotelofferDiscount = document.getElementById('offer_discount').value;
+  const hotelAmenities1 = document.getElementById('amenties_1').value;
+  const hotelAmenities2 = document.getElementById('amenties_2').value;
+
+  // Create an object with the form values
+  const hotelDetails = {
+    _hotelImage: imageOfHotel,
+    _hotelName: hotelName,
+    _hotelroomName: hotelroomName,
+    _hotelPrice: hotelPrice,
+    _hotelStrikeoutPrice: hotelStrikeoutPrice,
+    _hotelDiscount: hotelofferDiscount,
+    _hotelAmenties1: hotelAmenities1,
+    _hotelAmenties2: hotelAmenities2
+  };
+
+  // Check if hotelDetails already exists in localStorage
+  let existingData = localStorage.getItem('hotelDetails');
+  if (existingData) {
+    existingData = JSON.parse(existingData);
+    existingData.push(hotelDetails);
+    localStorage.setItem('hotelDetails', JSON.stringify(existingData));
+  } else {
+    localStorage.setItem('hotelDetails', JSON.stringify([hotelDetails]));
+  }
+
+  // Clear the form fields
+  document.getElementById('image_of_room').value = '';
+  document.getElementById('hotel_name').value = '';
+  document.getElementById('room_name').value = '';
+  document.getElementById('room_price').value = '';
+  document.getElementById('room_strikeout_price').value = '';
+  document.getElementById('offer_discount').value = '';
+  document.getElementById('amenties_1').value = '';
+  document.getElementById('amenties_2').value = '';
+
+  // Display a success message or perform any other action
+ alert("Hotel created successfully!");
+  return false; // Prevent form submission
+}
+
+//Create Resort
+function createResort(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get the form values
+  const imageOfResort = document.getElementById('image_of_resort').value;
+  const resortName = document.getElementById('resort_name').value;
+  const resortroomName = document.getElementById('resort_room_name').value;
+  const resortPrice = document.getElementById('resort_price').value;
+  const resortStrikeoutPrice = document.getElementById('resort_strikeout_price').value;
+  const resortofferDiscount = document.getElementById('resort_offer_discount').value;
+  const resortAmenities1 = document.getElementById('amenties_1_resort').value;
+  const resortAmenities2 = document.getElementById('amenties_2_resort').value;
+
+  // Create an object with the form values
+  const resortDetails = {
+    _resortImage: imageOfResort,
+    _resortName: resortName,
+    _resortroomName: resortroomName,
+    _resortPrice: resortPrice,
+    _resortStrikeoutPrice: resortStrikeoutPrice,
+    _resortDiscount: resortofferDiscount,
+    _resortAmenties1: resortAmenities1,
+    _resortAmenties2: resortAmenities2
+  };
+
+  // Check if hotelDetails already exists in localStorage
+  let existingResortData = localStorage.getItem('resortDetails');
+  if (existingResortData) {
+    existingResortData = JSON.parse(existingResortData);
+    existingResortData.push(resortDetails);
+    localStorage.setItem('resortDetails', JSON.stringify(existingData));
+  } else {
+    localStorage.setItem('resortDetails', JSON.stringify([resortDetails]));
+  }
+
+  // Clear the form fields
+  document.getElementById('image_of_resort').value = '';
+  document.getElementById('resort_name').value = '';
+  document.getElementById('resort_room_name').value = '';
+  document.getElementById('resort_price').value = '';
+  document.getElementById('resort_strikeout_price').value = '';
+  document.getElementById('resort_offer_discount').value = '';
+  document.getElementById('amenties_1_resort').value = '';
+  document.getElementById('amenties_2_resort').value = '';
+
+  // Display a success message or perform any other action
+ alert("Resort created successfully!");
+  return false; // Prevent form submission
+}
+
+
+</script>
+</html>

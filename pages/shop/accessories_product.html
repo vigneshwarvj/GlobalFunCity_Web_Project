@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+        <title> Shop - Accessories - Global Fun City</title>
+        <link rel="stylesheet" href="../../assets/store css/whirttshirt.css">
+        <link rel="stylesheet" href="../../assets/homepage_css/footer_shopglobal.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
+
+        <!-- navbar starts -->
+        <div class="shipping">
+            <p>Free Shipping on orders of $99 or more! Code: SHIPGLOBAL</p>
+        </div>
+
+        <!-- div for shop logo & others -->
+        <div class="header-navbar">
+
+            <div class="icons-info">
+                <a href="../../index.html">
+                    <i class="fa-sharp fa-solid fa-house"></i> &nbsp; Back to Home 
+                </a> &nbsp;
+                <a href="../../pages/other pages/contact.html">
+                    <i class="fa-solid fa-phone"></i> &nbsp; Contact 
+                </a> 
+                <a href="">
+                    <i class="fa-brands fa-cc-visa"></i> &nbsp; Global Visa Card 
+                </a>
+            </div>	
+
+            <div class="logo-global">
+                <a href="../../pages/shop/shop.html">
+                    <img src="../../assets/images/global-shop-logo.png" width="210" alt="global-shop-logo">
+                </a>
+            </div>
+
+            <div class="icons-info" id="sign-in">
+
+                <a href="#" id="wishlist_anchor">
+                    <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (0) 
+                </a> &nbsp;
+                <a href="#" id="mybag_anchor">
+                    <i class="fa-solid fa-bag-shopping"></i> &nbsp; <p class="mybag" style="display: inline;"></p>
+                </a>
+            </div>
+        </div>
+
+        <!-- navbar ends -->
+
+        <div class="background-color">
+
+            <div class="photo-and-content">
+                <!-- <div class="photo-of-store">
+                    <img src="../../assets/images/shopping/t-shirt.jpg" width="500" height="600" alt="White-T-Shirt"/>
+                    </div>
+                    <div class="content">    
+                    <h2>White T-Shirt With Logo</h2>
+                    <h3>$199.00</h3>
+                    <p class = "desc_about_product">White T-Shirt with logo is designed by Global Fun City. It is Best T-Shirt.<br>  It will gives more cuteness to you!. BUY NOW! </p>
+                    <div class="sizes-of-dress">
+                    <span class="size"><p class="s">S</p></span>
+                    <span class="size"><p class="m">M</p></span>
+                    <span class="size"><p class="x">X</p></span>
+                    <span class="size"><p class="xl">XL</p></span>
+                    </div>
+                    <br>
+                    <button class="btn-sub"><i class="fa-solid fa-minus"></i></button>
+                    <input  type="text" id="number" name="number" placeholder="1" maxlength="1" size="1">
+                    <button class="btn-add"><i class="fa-solid fa-plus"></i></button> &nbsp;
+                    <a href="../shop/cart.html"><button class="btn-buynow">Buy now</button></a>
+                    <h4>Category:Style</h4>
+                    <h4>Product ID:0003</h4> 
+
+                    </div> -->
+            </div>
+
+        </div>
+
+        <div class="full-subscribe-products">
+            <div class="subscribe">
+                <h1>Subscribe to the Exclusive Products!</h1>
+            </div>
+    
+            <div class="messages">
+                <input type="email" placeholder="Enter Your Email Address" required>
+                <br>
+    
+            </div>
+    
+            <div class="btn-subscribe">
+                <a href="../../pages/other pages/getintouch.html">
+                    <button>
+                        <i class="fa-regular fa-paper-plane"></i> Subscribe
+                    </button> 
+                </a>
+            </div>
+        </div>
+    
+        <footer class="footer_for_shopglobal">
+
+        </footer>
+
+        <script>
+// * Data get from URL params------
+
+const productUniqueID = new URLSearchParams(window.location.search).get("accessories");
+
+const accessories_details = JSON.parse(localStorage.getItem('accessories_details'));
+
+const getProductData_ofAccessories = accessories_details.find(
+  (data) => data.product_uuid === productUniqueID
+);
+
+// create div element for the photo of the store
+     
+const photoDiv = document.createElement("div");
+photoDiv.setAttribute("class", "photo-of-store");
+
+// create img element for the photo
+const photoImg = document.createElement("img");
+photoImg.setAttribute("src", getProductData_ofAccessories["product_photo"]);
+photoImg.setAttribute("width", "500px");
+photoImg.setAttribute("height", "500px");
+photoImg.setAttribute("alt", getProductData_ofAccessories["product_name"]);
+
+document.querySelector("div.photo-and-content").append(photoDiv);
+
+// append the img element to the photo div
+photoDiv.appendChild(photoImg);
+
+// create div element for the content
+const contentDiv = document.createElement("div");
+contentDiv.setAttribute("class", "content");
+document.querySelector("div.photo-and-content").append(contentDiv);
+
+// create h2 element for the product name
+const productName = document.createElement("h2");
+productName.textContent = getProductData_ofAccessories.product_name;
+contentDiv.appendChild(productName);
+
+// create h3 element for the product price
+const productPrice = document.createElement("h3");
+productPrice.textContent = "$" + getProductData_ofAccessories.product_price;
+contentDiv.appendChild(productPrice);
+
+// create p element for the product description
+const productDesc = document.createElement("p");
+productDesc.setAttribute("class", "desc_about_product");
+productDesc.textContent = getProductData_ofAccessories.product_desc;
+contentDiv.appendChild(productDesc);
+
+const brtag = document.createElement("br");
+contentDiv.appendChild(brtag);
+
+// create a element for the buy now button
+const buyNowLink = document.createElement("a");
+buyNowLink.setAttribute("href", "../shop/cart.html");
+
+contentDiv.appendChild(buyNowLink);
+
+const buyNowBtn = document.createElement("button");
+buyNowBtn.setAttribute("data-id", getProductData_ofAccessories.product_uuid);
+buyNowBtn.setAttribute("class", "btn-buynow");
+buyNowBtn.textContent = "Buy now";
+
+contentDiv.appendChild(buyNowBtn);
+
+const wishlistBtn = document.createElement("button");
+wishlistBtn.setAttribute("class", "btn-wishlist");
+
+const iconHeart = document.createElement("i");
+iconHeart.setAttribute("class", "fa-regular fa-heart fa-beat-fade");
+iconHeart.setAttribute("style", "font-size:revert;");
+
+contentDiv.appendChild(wishlistBtn);
+wishlistBtn.appendChild(iconHeart);
+
+const Category = document.createElement("h4");
+Category.textContent = "Category : " + getProductData_ofAccessories["selecting"];
+contentDiv.appendChild(Category);
+
+const product_id = document.createElement("h4");
+product_id.textContent = "Product ID : " + getProductData_ofAccessories["product_uuid"];
+contentDiv.appendChild(product_id);
+
+
+document.querySelector("div.photo-and-content").append();
+
+//Add to Buy
+const add_products_to_bag = document.querySelector("button.btn-buynow");
+add_products_to_bag.addEventListener("click", function () {
+  //let user_id = JSON.parse(localStorage.getItem("unique_id"));
+
+  let existing_user = JSON.parse(localStorage.getItem("unique_id"));
+
+  let user_list = JSON.parse(localStorage.getItem("user_list"));
+
+  let existing = user_list.length && JSON.parse(localStorage.getItem("user_list")).some((data) => data.email === existing_user);
+
+  if (!existing) {
+    alert("You are not logged in. Please login to buy the products you love!");
+  } else {
+    let product_id = this.dataset.id;
+    localStorage.setItem("unique_id_of_products", JSON.stringify(product_id));
+    console.log(product_id);
+
+    let products = JSON.parse(localStorage.getItem("accessories_details"));
+
+    let check_product = products.find((e) => e.product_uuid == product_id);
+    check_product["product_qty"] = 1;
+    check_product["userUniqueToGetBag"] = existing_user;    
+
+    let array_for_products = JSON.parse(localStorage.getItem("add_to_cart_products")) || [];
+
+    let exist = array_for_products.find((e) => e.product_uuid == product_id);
+
+    if (exist) {
+      alert("This product has been chosen. Add any other product!");
+    } else {
+      array_for_products.push(check_product);  
+
+      localStorage.setItem("add_to_cart_products", JSON.stringify(array_for_products));
+
+      console.log(array_for_products);
+      alert("This Product was added to your's bag.");
+      window.location.href = "../../pages/shop/cart.html";
+    }
+  }
+});
+
+    </script>
+        <script src="../../js/shop.js"></script>
+        <script src="../../js/shop_alert_and_allow.js"></script> 
+        <script src="../../js/mybag_numbers.js"></script>
+        <script src="../../js/footer_shopglobal.js"></script>   
+    </body>
+</html>

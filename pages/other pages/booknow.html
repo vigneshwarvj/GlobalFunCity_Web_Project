@@ -1,218 +1,798 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset='UTF-8'>
-<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
 
-<title>Book Now - Global Fun City</title>
-<link rel="stylesheet" href="../../assets/css/booknow.css" />
+        <title>Book Now - Global Fun City</title>
+        <link rel="stylesheet" href="../../assets/css/booknow.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-</head>
-<body>
+    </head>
+    <body>
 
-    <div class="visit-signin">
+        <div class="header">
+            <a href="../../index.html">
+                <img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <a class="navigation__link" href="../../index.html">
+                            <b>HOME</b>
+                        </a>
+                    </li>   
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/home.html">
+                            <b>ABOUT</b> 
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/events.html">
+                            <b>EVENTS </b> 
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/offer.html">
+                            <b>OFFERS </b> 
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/ticketprices.html">
+                            <b>TICKET  PRICES </b>
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/shop/shop.html">
+                            <b>SHOP</b>
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/attractions.html">
+                            <b>ATTRACTIONS </b>
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/contact.html">
+                            <b>CONTACT </b> 
+                        </a> 
+                    </li>
+                </ul>
 
-        <div class="visit-global">
-            <p>	Visit global1.com</p>
-        </div>	
-        
-        <div class="sign-in">
-            
-            <p><a href="../../pages/homepage/profile.html"> Welcome, Tommy! </a>&nbsp; | <a href="../../index.html"> Sign Out</a>  | <i class="fa-solid fa-globe"></i> United states (English)</p>
-        </div>
-        
-        </div>
-        
-
-<div class="header" >
-<a href="../../pages/homepage/index-profile.html" >
-<img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo"/>
-</a>
-<nav class="navbar">
-    <ul>
-    <li> <a class="navigation__link" href="../../pages/homepage/index-profile.html"><b>HOME</b></a></li>   
-    <li> <a class="navigation__link" href="../../pages/other pages/home.html"> <b>ABOUT</b> </a> </li>
-    <li> <a class="navigation__link" href="../../pages/other pages/events.html"> <b>EVENTS </b> </a> </li>
-    <li> <a class="navigation__link" href="../../pages/other pages/offer.html"> <b>OFFERS </b> </a> </li>
-    <li> <a class="navigation__link" href="../../pages/other pages/ticketprices.html"> <b>TICKET  PRICES </b></a> </li>
-    <li> <a class="navigation__link" href="../../pages/shop/shop.html"> <b>SHOP</b></a> </li>
-    <li> <a class="navigation__link" href="../../pages/other pages/attractions.html"> <b>ATTRACTIONS </b></a> </li>
-    <li> <a class="navigation__link" href="../../pages/other pages/contact.html"> <b>CONTACT </b> </a> </li>
-    </ul>
-
-    </nav>
-    <div>
-         <button> <b> <a href="../../pages/other pages/booknow.html"> BOOK NOW </b> </button> </a>
+            </nav>
+            <div>
+                <button id = "btn-booknow">
+                    <b>
+                        <a href="../../pages/other pages/booknow.html"> BOOK NOW </b> </button> </a>
 </div>
 </div>
 
 <div class="background-0">
-
 <div class="book-now">
-    <h1>Book Now</h1>
+<h1>Book Now</h1>
 </div>
 
 <div class="background-color">
-    <!--background color for search-->
-    
+<!--background color for search-->
 
 <div class="search">
-    <h2>1. Search</h2>
+<h2> Search</h2>
 </div>
 <hr>
 
 <div class="search-availablity-information-msg">
+<form class="proceeding_ticket" id="proceedingTicketForm" role="form" onsubmit="reservationsDatas(event)">
+<div class="display_for_checkin_and_info" style="display: flex;">
 <div class="search-availablity">
 <div class="search-information">
-    <p>Check in  &nbsp; <input type="date" required/> </p> &nbsp;
-    <p>Check out  &nbsp;<input type="date" required /></p>
+<p>
+Check in  &nbsp; <input type="date" id="checkIndate" name="date"  required> 
+</p> &nbsp;
+<p>
+Check out  &nbsp;<input type="date" id="checkOutdate" name="date"  required>
+</p>
 </div>
-
-
 
 <div class="room-adult-children">
-    <p>Adult  &nbsp; </p> <button class="btn-sub"><i class="fa-solid fa-minus"></i></button> 
-        <input  type="text" id="quantity" value="0" required/> 
-        <button class="btn-add"><i class="fa-solid fa-plus"></i></button> &nbsp;
-        
-    <p>Children  &nbsp;</p> <button class="btn-sub"><i class="fa-solid fa-minus"></i></button> 
-    <input  type="text" id="number" value="0" required/> 
-    <button class="btn-add"><i class="fa-solid fa-plus"></i></button> &nbsp;
-</div>
-
-<div class="room">
-    <h3>Did you want room? (Hotel or Resorts)</h3>
-    <input type="radio" name="yes" id="yes">Yes
-    <input type="radio" name="yes" id="no">No
-</div>
+    
+<p>Adult &nbsp; </p>
+<button class="btn-sub" type="submit" id = "sub_adult"> <i class="fa-solid fa-minus"></i> </button> 
+<span id="totalClicksAdult" class="total_of_adults">1</span> 
+<button class="btn-add" type="submit" id="add_adult"> <i class="fa-solid fa-plus"></i> </button> &nbsp;
 
 
-<div class="another-room">
-    <button>+Add Another Room</button>
+<p>Children (5-17 years) &nbsp;</p>
+<button class="btn-sub" type="submit" id="sub_children" > <i class="fa-solid fa-minus"></i> </button> 
+<span id="totalClicksChildren" class="total_of_childrens">0</span>
+<button class="btn-add" type="submit" id="add_children" > <i class="fa-solid fa-plus"></i> </button> &nbsp;
 </div>
 
-<div class="check-availablity">
-    <a href="../../pages/book now/selectrooms.html"> <button>  Check Availablity </button> </a>
-</div>
+<div class="price-to-display-script"> 
+<!-- <div class="price-for-adult-children" style="display: flex; justify-content: space-around; font-family: 'poppins', sans-serif;">
+    <div class = "price-for-adult">
+        <p>Adult Price: $80</p>
+    </div>
+    <div class="price-for-children">
+        <p>Children Price: $65</p>
+    </div>
+</div>  -->
+
 </div>
 
+<!-- <div class="room">
+<h3>Do you want room? (Hotel or Resorts)</h3>
+<input type="radio" class= "check-availablity-yes" name="yes" id="yes" value="yes" required>Yes
+<input type="radio" class= "check-availablity-yes" name="yes" id="no" value="no" required>No
+</div> -->
+
+<!-- <div class="another-room">
+<button>+Add Another Room</button>
+</div> -->
+
+<!-- <div class="check-availablity">
+<button id="checkAvailabilityBtn" type="submit">Check Availablity </button>
+</div> -->
+</div>
 
 <!--div for get & wifi-->
 <div class="information-facilities">
 <div class="information">
-    <p>Get instant confirmation directly from the hotel!</p>
+<p>Get instant confirmation directly from the hotel!</p>
 </div>
 
 <div class="facilities">
-    <ul>
-        <li><i class="fa-solid fa-wifi"></i>  Wi-Fi</li>
-        <li><i class="fa-solid fa-basketball"></i>  Indoor and Outdoor games</li>
-        <li><i class="fa-solid fa-person-hiking"></i>  Nature walk</li>
-    </ul>
+<ul>
+<li>
+    <i class="fa-solid fa-wifi"></i>  Wi-Fi
+</li>
+<li>
+    <i class="fa-solid fa-basketball"></i>  Indoor and Outdoor games
+</li>
+<li>
+    <i class="fa-solid fa-person-hiking"></i>  Nature walk
+</li>
+</ul>
 </div>
+</div>
+</div>
+
+</div>
+
+<hr>
+
+<!-- //
+<div class="search">
+<h2>2. Select Rooms</h2>
+</div>
+
+<div class="total-hotels-resorts-div">
+<div class="hotels-resorts">
+<input type="radio" id="hotels" name="hotels">  Hotels
+<input type="radio" id="resorts" name="hotels" ><a href=""></a> Resorts 
+
+</div>
+
+<div class="photo-of-room-about"> <!--brief-of-room
+<div class="photo-of-room">
+<img src="../../assets/images/rooms/1st-room.jpg" width="250" height="170" alt="photo-of-room"/>
+</div>
+
+<div class="about-price">
+<div class="about">
+<h3>Park Villa</h3>
+<h4>Deluxe Twin Rooms</h4>
+<i class="fa-solid fa-user"></i>
+<i class="fa-solid fa-user"></i>
+<i class="fa-solid fa-child"></i>
+<h5>Room Size: 350 sq.ft</h5>
+</div>
+</div>
+<div class="hurry">
+<p>In High demand! only 2 rooms left</p>
+
+<span>$1000</span>/ night. <h5>Plus taxes</h5>
+</div>
+</div>
+
+<div class="break-price-button"> 
+<!-- div for break-price  
+<div class="room-with-break">
+<g><i class="fa-solid fa-tags"></i>10% Off on room price</g>
+<p><i class="fa-solid fa-wifi"></i>&nbsp; Free Wifi  &nbsp; <i class="fa-solid fa-utensils"></i> &nbsp; Breakfast Included</p>
+<p>Book your stay now at Global Fun City at best available rates!!</p>
+</div>
+
+<div class="price">
+<span>$1000</span> &nbsp; / night
+<br> &nbsp; <a href="../../pages/book now/guestinformation.html"> <button> Book Now </button></a>
 </div>
 </div>
 
 <hr>
 
-<div class="search">
-    <h2>2. Select Rooms</h2>
+<div class="photo-of-room-about"> <!--brief-of-room
+<div class="photo-of-room">
+<img src="../../assets/images/rooms/3rd-room.png" width="250" height="170" alt="photo-of-room"/>
+</div>
+
+<div class="about-price">
+<div class="about">
+<h3>Happy Hotel</h3>
+<h4>Suite Rooms</h4>
+<i class="fa-solid fa-user"></i>
+<i class="fa-solid fa-user"></i>
+<h5>Room Size: 500 sq.ft</h5>
+</div>
+</div>
+
+<div class="hurry">
+
+<span>$1800</span> / night. <h5>Plus taxes</h5>
+</div>
+</div>   
+
+<div class="break-price-button"> 
+<!-- div for break-price  
+<div class="room-with-break">
+<g><i class="fa-solid fa-tags"></i>10% Off on room price</g>
+<p><i class="fa-solid fa-wifi"></i>&nbsp; Free Wifi  &nbsp; <i class="fa-solid fa-utensils"></i> &nbsp; Breakfast Included</p>
+<p>Book your stay now at Global Fun City at best available rates!!</p>
+</div>
+
+<div class="price">
+<span>$1800</span> &nbsp; / night
+<br> &nbsp; <a href="../../pages/book now/guestinformation.html"> <button>Book Now </button> </a>
+</div>
 </div>
 
 <hr>
 
+<div class="photo-of-room-about"> <!--brief-of-room
+<div class="photo-of-room">
+<img src="../../assets/images/rooms/3rd-room-happyinn.png" width="250" height="170" alt="photo-of-room"/>
+</div>
+
+<div class="about-price">
+<div class="about">
+<h3>Sleep Inn</h3>
+<h4>Deluxe Room</h4>
+<i class="fa-solid fa-user"></i>
+<i class="fa-solid fa-user"></i>
+<h5>Room Size: 300 sq.ft</h5>
+</div>
+</div>
+
+<div class="hurry">
+
+<span>$800</span> / night. <h5>Plus taxes</h5>
+</div>
+</div>   
+
+<div class="break-price-button"> 
+<!-- div for break-price  
+<div class="room-with-break">
+
+<p><i class="fa-solid fa-wifi"></i>&nbsp; Free Wifi  &nbsp; <i class="fa-solid fa-utensils"></i> &nbsp; Breakfast Included</p>
+<p>Book your stay now at Global Fun City at best available rates!!</p>
+</div>
+
+<div class="price">
+<span>$800</span> &nbsp; / night
+<br> &nbsp; <a href="../../pages/book now/guestinformation.html"> <button class="booking-hotels-btn">Book Now </button> </a>
+</div>
+</div>
+
+<hr>
+
+<div class="photo-of-room-about"> <!--brief-of-room
+<div class="photo-of-room">
+<img src="../../assets/images/rooms/4th-room-image.png" width="250" height="170" alt="photo-of-room"/>
+</div>
+
+<div class="about-price">
+<div class="about">
+<h3>Sun & Sand</h3>
+<h4>Room</h4>
+<i class="fa-solid fa-user"></i>
+<i class="fa-solid fa-user"></i>
+<h5>Room Size: 330 sq.ft</h5>
+</div>
+</div>
+
+<div class="hurry">
+
+<span>$830</span> / night. <h5>Plus taxes</h5>
+</div>
+</div>   
+
+<div class="break-price-button"> 
+<!-- div for break-price  
+<div class="room-with-break">
+
+<p><i class="fa-solid fa-wifi"></i>&nbsp; Free Wifi  &nbsp; <i class="fa-solid fa-utensils"></i> &nbsp; Breakfast Included</p>
+<p>Book your stay now at Global Fun City at best available rates!!</p>
+</div>
+
+<div class="price">
+<span>$830</span> &nbsp; / night
+<br> &nbsp; <a href="../../pages/book now/guestinformation.html"> <button> Book Now </button> </a>
+</div>
+</div>
+
+</div> 
+<!-- Ending for hotels and resots div -->
+
 <div class="search">
-    <h2>3. Guest Information</h2>
+<h2> Guest Information</h2>
 </div>
 
+<div class="overall">
 
+<div class="over-1">
+<div class="form">
+<label>
+<input type="text" id="firstname" name="name" placeholder="First name" pattern="[A-Za-z]+" required="true"> &nbsp;
+<input type="text" id="lastname" name="lastName" placeholder="Last name" pattern="[A-Za-z]+" required>
+</label>
+</div>
+
+<br>
+
+<div class="email">
+
+<input type="email" id="email_address" name="email" placeholder="Email Address" required="true"> &nbsp;
+<input type="tel" id="phone_number" name="phone-number" oninput="this.value = this.value.replace(/[^0-9]/g,'')" minlength="10" maxlength="10" placeholder="Phone Number" required="true">
+</div>
+
+<br>
+
+<div class="requests">
+<input type="text" id="special_requests" name="special-requests" placeholder="Special Requests">
+</div>
+
+<div class="btn-book-now">
+<p>Last step remaining, book your ticket now!</p>
+<button id="book_now_btn" class="book-tickets" type="submit">Book Now</button></a>
+</div>
+
+</div>
+
+<div class="over-2"> 
+<!-- over -->
+<div class="in-out">
+<div class="check-in">
+
+<div class="room">
+    <h3>Do you want room? (Hotel or Resorts)</h3>
+    <input type="radio" class= "check-availablity-yes" name="yes" id="yes" value="yes" required>Yes
+    <input type="radio" class= "check-availablity-yes" name="yes" id="no" value="no" required>No
+</div>
+
+</form>
+<!-- <table>
+
+    <tr>
+    <th></th>
+    <th></th>
+    </tr>
+
+    <tr>
+    <td>Check In</td>
+    <td>14 Dec 2022</td>
+    </tr>
+
+    <tr>
+    <td>Check Out</td>
+    <td>15 Dec 2022</td>
+    </tr>
+
+    <tr>
+    <td>No.of.nights</td>
+    <td>1 night</td>
+    </tr>
+
+    <tr>
+    <td>Room</td>
+    <td>Deluxe room</td>
+    </tr>
+
+    <tr>
+    <td>Guests</td>
+    <td>1 Adult  0 Children</td>
+    </tr>
+
+    <tr>
+    <td>Ticket</td>
+    <td>$800</td>
+    </tr>
+
+    <tr>
+    <td>Room</td>
+    <td>$800</td>
+    </tr>
+
+    <tr>
+    <td>Sub Total</td>
+    <td>$1600</td>
+    </tr>
+
+    <tr>
+    <td>Grand Total</td>
+    <td>$1600</td>
+    </tr>
+    </table> -->
+</div>
+</div>
+</div>
+</div>
 
 </div>
 </div>
 
-<footer>
+<!-- <footer>
 <div class="background-footer">
 
 <div class="navbar-footer-logo">
-    <img src="../../assets/images/globalfuncitylogo.png" width="200" alt="logo"/>
+<img src="../../assets/images/globalfuncitylogo.png" width="200" alt="logo"/>
 </div>
 
 <div class="address">
-    <p>11113 W Baldwin RD, Monrovia, MD 21770, USA</p>
-    <h4><i class="fa-solid fa-phone"></i> +1 860 817 1080</h4>
-    <h4><i class="fa-solid fa-envelope"></i> info@globalfuncity.in</h4>
+<p>11113 W Baldwin RD, Monrovia, MD 21770, USA</p>
+<h4><i class="fa-solid fa-phone"></i> +1 860 817 1080</h4>
+<h4><i class="fa-solid fa-envelope"></i> info@globalfuncity.in</h4>
 </div>
 
 <div class="other-policies">
-    <a href="#" >Book now Policy</a>
+<a href="#" >Book now Policy</a>
 </div>
 
-
-
 </div>
-</footer>
+</footer> -->
 
 <script>
-    // settiing default attribute to disabled of minus button
-    document.querySelector(".btn-sub").setAttribute("disabled", "disabled");
 
-    // taking value to increment decrement input value
-    var valueCount
 
-    // plus button
-    document.querySelector(".btn-add").addEventListener("click", function (){
-        // getting value of input
-        valueCount = document.getElementById("quantity").value;
+//Check In and CHeck out dates:
+//Check In
+// Get the current date
+var currentDate = new Date().toISOString().split("T")[0];
 
-        // input value increment by 1
-        valueCount++;
+// Set the minimum date for the date input field
+document.getElementById("checkIndate").setAttribute("min", currentDate);
 
-        // setting increment input value
-        document.getElementById("quantity").value = valueCount;
+//Check OUt
+// Get the current date
+var currentDate = new Date().toISOString().split("T")[0];
 
-        if(valueCount > 1){
-            document.querySelector(".btn-sub").removeAttribute("disabled");
-            document.querySelector(".btn-sub").classList.remove("disabled");
-        }
+// Set the minimum date for the date input field
+document.getElementById("checkOutdate").setAttribute("min", currentDate);
+
+
+
+
+
+
+
+
+//To create the DOM for the adult and children price
+const priceDiv = document.createElement("div");
+priceDiv.classList.add("price-for-adult-children");
+
+const adultPriceDiv = document.createElement("div");
+adultPriceDiv.classList.add("price-for-adult");
+
+//To give the price for the adult price:
+let adultPrice = 80;
+
+const adultPricePara = document.createElement("p");
+adultPricePara.setAttribute("id","add_adultPrice")
+adultPricePara.textContent =  "Adult Price: $" + adultPrice;
+adultPriceDiv.appendChild(adultPricePara);
+
+const childrenPriceDiv = document.createElement("div");
+childrenPriceDiv.classList.add("price-for-children");
+
+let childrenPrice = 65;
+
+const childrenPricePara = document.createElement("p");
+childrenPricePara.setAttribute("id", "add_childrenPrice")
+childrenPricePara.textContent = "Children Price: $" + childrenPrice;
+childrenPriceDiv.appendChild(childrenPricePara);
+
+priceDiv.appendChild(adultPriceDiv);
+priceDiv.appendChild(childrenPriceDiv);
+
+document.querySelector(".price-to-display-script").append(priceDiv);
+
+//Counting Increment for Adult:
+let count = 1;
+document.getElementById("add_adult").addEventListener("click",function(event){
+    count++;
+    document.getElementById("totalClicksAdult").innerText = count;
+    //Increasing the total price in the price space:
+    let newAdultPrice = count * adultPrice;
+    document.getElementById("add_adultPrice").innerText = "Adult Price: $" + newAdultPrice;
+})
+
+//Counting Decrement for Adult:
+document.getElementById("sub_adult").addEventListener("click",function(event){
+    if(count > 1){
+        count--;
+        document.getElementById("totalClicksAdult").innerText = count;
+        //Decreasing the total price in the price space:
+        let newAdultPrice = count * adultPrice;
+        document.getElementById("add_adultPrice").innerText = "Adult Price: $" + newAdultPrice;
     }
-    )
-
-
-    // minus button
-    document.querySelector(".btn-sub").addEventListener("click", function (){
-        // getting value of input
-        valueCount = document.getElementById("quantity").value;
-
-        // input value increment by 1
-        valueCount--;
-
-        // setting increment input value
-        document.getElementById("quantity").value = valueCount;
-
-        if(valueCount == 1){
-            document.querySelector(".btn-sub").setAttribute("disabled", "disabled");
-        }
+    else{ //Goes down to 1: Alert
+        alert("Oops! Give a valid number")
     }
-    )
+})
+
+//Counting Increment for Children:
+let countChildren = 0;
+document.getElementById("add_children").addEventListener("click", function (event) {
+    countChildren ++;
+    document.getElementById("totalClicksChildren").innerText = countChildren;
+    //Increasing the total price in the price space:
+    let newChildrenPrice = countChildren * childrenPrice;
+    document.getElementById("add_childrenPrice").innerText = "Children Price: $" + newChildrenPrice;
+})
+
+//Counting Decrement for Children:
+document.getElementById("sub_children").addEventListener("click", function (event) {
+    if(countChildren > 0){
+        countChildren --;
+        document.getElementById("totalClicksChildren").innerText = countChildren;
+        //Decreasing the total price in the price space:
+        let newChildrenPrice = countChildren * childrenPrice;
+        document.getElementById("add_childrenPrice").innerText = "Children Price: $" + newChildrenPrice;
+    }
+})
+
+
+const date = new Date();
+const year = date.getFullYear();
+const month = (date.getMonth() + 1).toString().padStart(2, "0");
+const day = date.getDate().toString().padStart(2, "0");
+const fullDate = `${year}-${month}-${day}`;
+
+
+//To store loacalstorage again:
+function reservationsDatas(event) {
+  event.preventDefault(); // prevent form submission
+
+  let user = JSON.parse(localStorage.getItem("unique_id"));
+
+  // get input field values
+  const checkInDate = document.getElementById("checkIndate").value;
+  const checkOutDate = document.getElementById("checkOutdate").value;
+  const adultCount = document.getElementById("totalClicksAdult").textContent;
+  const childrenCount = document.getElementById("totalClicksChildren").textContent;
+  const fullName = document.getElementById("firstname").value;
+  const lastName = document.getElementById("lastname").value;
+  const emailAddress = document.getElementById("email_address").value;
+  const phoneNumber = document.getElementById("phone_number").value;
+  const specialRequests = document.getElementById("special_requests").value;
+  const needRoom = document.getElementById('yes').checked;
+  const reservationUniqueId = crypto.randomUUID();
+
+//
+
+// Add event listener to the check-out date input to calculate nights and dates on change
+//checkOutDate.addEventListener("change", () => {
+// Get the check-in and check-out dates
+const checkInDateInput = new Date(checkInDate);
+const checkOutDateInput = new Date(checkOutDate);
+
+// Calculate the time difference in milliseconds
+const timeDiff = checkOutDateInput.getTime() - checkInDateInput.getTime();
+
+// Calculate the number of nights
+const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+// Calculate the number of days
+const days = nights + 1;
+
+// Save nights and days in localStorage
+localStorage.setItem("numberOfNights", nights);
+localStorage.setItem("numberOfDays", days);
+
+
+// localStorage.setItem('daysInBetween', daysInBetween);
+// localStorage.setItem('daysInBetween', daysInBetween);
+//});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//To get thre inbetween dates
+// Get the input elements
+// const checkInInput = document.getElementById('checkInDate');
+// const checkOutInput = document.getElementById('checkOutDate');
+
+// Add event listener to the "Check out" input
+// if (checkOutInput) {
+//   checkOutInput.addEventListener('change', () => {
+//     const checkInDates = new Date(checkInDate);
+//     const checkOutDates = new Date(checkOutDate);
+// console.log(checkInDates);
+
+// const timeDiff = checkOutDate.getTime() - checkInDate.getTime();
+
+// // Calculate the number of nights
+// const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+//   // Create an array to store the dates in between
+//   const datesInBetween = [];
+
+//   // Iterate over the dates and add them to the array
+//   for (let i = 0; i < nights; i++) {
+//     const date = new Date(checkInDate.getTime() + (i * 24 * 60 * 60 * 1000));
+//     datesInBetween.push(date.toLocaleDateString());
+//   }
+
+//   // Display the number of nights and dates in between
+//   console.log("Number of nights:", nights);
+//   console.log("Dates in between:", datesInBetween);
+
+
+    // // Save the number of days in local storage
+    // localStorage.setItem('daysInBetween', daysInBetween);
+
+    // // Output the result
+    // console.log(`Number of days in between: ${daysInBetween}`);
+
+    // // Retrieve the number of days from local storage (for demonstration)
+    // const storedDays = localStorage.getItem('daysInBetween');
+    // console.log(`Retrieved days in between: ${storedDays}`);
+//   });
+// }
+
+//console.log(fullDate); // output: "2023-05-13"
+
+// calculate total price
+
+
+//   const childrenPrice = 65;
+//   const adultTotalPrice = adultPrice * adultCount;
+//   const childrenTotalPrice = childrenPrice * childrenCount;
+
+  // create an object to store the user data
+  const reservationDetails = {
+    checkInDate,
+    checkOutDate,
+    adultCount,
+    childrenCount,
+    fullName,
+    lastName,
+    emailAddress,
+    phoneNumber,
+    specialRequests,
+    needRoom,
+    reservationUniqueId,
+    userUnique:user,
+    fullDate,
+    adultTotalPrice:document.getElementById("add_adultPrice").innerText.replace("Adult Price: $",""),
+    childrenTotalPrice:document.getElementById("add_childrenPrice").innerText.replace("Children Price: $", ""),
+    nights,
+    days
+  };
+
+  sessionStorage.setItem("formDetail", JSON.stringify(reservationDetails));
+
+  // get existing data from local storage
+  const userDataArray = JSON.parse(localStorage.getItem("reservationDetails")) || [];
+//   userDataArray["adultTotalPrice"] = 80 ;
+//   userDataArray["childrenTotalPrice"] = 65 ; 
+
+  // add the new user data to the array
+  userDataArray.push(reservationDetails);
+  // store the updated array in the local storage
+  localStorage.setItem("reservationDetails", JSON.stringify(userDataArray));
+
+  // reset form fields
+  document.getElementById("checkIndate").value = "";
+  document.getElementById("checkOutdate").value = "";
+  document.getElementById("totalClicksAdult").textContent = "1";
+  document.getElementById("totalClicksChildren").textContent = "0";
+  document.getElementById("firstname").value = "";
+  document.getElementById("lastname").value = "";
+  document.getElementById("email_address").value = "";
+  document.getElementById("phone_number").value = "";
+  document.getElementById("special_requests").value = "";
+  document.getElementById('yes').checked = "";
+
+  if (needRoom) {
+    window.location.href = "../../pages/book now/selectrooms.html";
+  } else {
+    window.location.href = "../../pages/book now/guestinformation.html";
+  }
+
+
+}
+// //To get thre inbetween dates
+// // Get the input elements
+// const checkInInput = document.getElementById('checkInDate');
+// const checkOutInput = document.getElementById('checkOutDate');
+
+// // Add event listener to the "Check out" input
+// if (checkOutInput) {
+//   checkOutInput.addEventListener('change', () => {
+//     const checkInDate = new Date(checkInInput.value);
+//     const checkOutDate = new Date(checkOutInput.value);
+
+//     // Calculate the number of days in between
+//     const timeDifference = checkOutDate.getTime() - checkInDate.getTime();
+//     const daysInBetween = Math.ceil(timeDifference / (1000 * 3600 * 24));
+
+//     // Save the number of days in local storage
+//     localStorage.setItem('daysInBetween', daysInBetween);
+
+//     // Output the result
+//     console.log(`Number of days in between: ${daysInBetween}`);
+
+//     // Retrieve the number of days from local storage (for demonstration)
+//     const storedDays = localStorage.getItem('daysInBetween');
+//     console.log(`Retrieved days in between: ${storedDays}`);
+//   });
+// }
+
+// const checkInDateInput = document.getElementById("checkIndate");
+// const checkOutDateInput = document.getElementById("checkOutdate");
+
+// // Add event listener to the check-out date input to calculate nights and dates on change
+// checkOutDateInput.addEventListener("change", () => {
+//   // Get the selected check-in and check-out dates
+//   const checkInDate = new Date(checkInDateInput.value);
+//   const checkOutDate = new Date(checkOutDateInput.value);
+
+  // Calculate the time difference in milliseconds
+//   const timeDiff = checkOutDate.getTime() - checkInDate.getTime();
+
+//   // Calculate the number of nights
+//   const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+//   // Create an array to store the dates in between
+//   const datesInBetween = [];
+
+//   // Iterate over the dates and add them to the array
+//   for (let i = 0; i < nights; i++) {
+//     const date = new Date(checkInDate.getTime() + (i * 24 * 60 * 60 * 1000));
+//     datesInBetween.push(date.toLocaleDateString());
+//   }
+
+//   // Display the number of nights and dates in between
+//   console.log("Number of nights:", nights);
+//   console.log("Dates in between:", datesInBetween);
+// });
+
+
+
 </script>
 
 
-
-
-
-
-
-
+<script src="../../js/header.js"></script>
 </body>
 </html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+
+        <title> Your Tickets | Global Fun City </title>
+        <link rel="stylesheet" href="../../assets/homepage css/user_tickets.css">
+        <link rel="stylesheet" href="../../assets/homepage_css/footer_gfc.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
+
+<div class="header">
+<a href="../../index.html">
+<img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo">
+</a>
+<nav class="navbar">
+<ul>
+<li>
+    <a class="navigation__link" href="../../index.html">
+        <b>HOME</b>
+    </a>
+</li>
+<li>
+    <a class="navigation__link" href="../../pages/other pages/home.html">
+        <b>ABOUT</b> 
+    </a> 
+</li>
+<li>
+    <a class="navigation__link" href="../../pages/other pages/events.html">
+        <b>EVENTS </b> 
+    </a> 
+</li>
+<li>
+    <a class="navigation__link" href="../../pages/other pages/offer.html">
+        <b>OFFERS </b> 
+    </a> 
+</li>
+<li>
+    <a class="navigation__link" href="../../pages/other pages/ticketprices.html">
+        <b>TICKET  PRICES </b>
+    </a> 
+</li>
+<li>
+    <a class="navigation__link" href="../../pages/shop/shop.html">
+        <b>SHOP</b>
+    </a> 
+</li>
+<li>
+    <a class="navigation__link" href="../../pages/other pages/attractions.html">
+        <b>ATTRACTIONS </b>
+    </a> 
+</li>
+<li>
+    <a class="navigation__link" href="../../pages/other pages/contact.html">
+        <b>CONTACT </b> 
+    </a> 
+</li>
+
+</ul>
+
+</nav>
+<div>
+<button>
+<a href="../../pages/other pages/booknow.html">
+    <b>BOOK NOW </b> 
+</a>
+</button>
+</div>
+</div>
+
+<div class="total-homepages-div"> 
+    <!-- Total Homepage div -->
+<div class="homepages">
+    <a href="../../index.html">Home <i class="fa-light fa-greater-than" style="color: #655b5b;"></i></a>
+</div> &nbsp;
+<div class="homepages">
+    <a href="../../pages/homepage/main.profile.html">Account <i class="fa-light fa-greater-than" style="color: #655b5b;"></i></a>
+</div> &nbsp;
+<div class="homepages">
+    <a href="../../pages/homepage/user_tickets.html">Your Tickets </a>
+</div>
+
+</div>
+<!-- Completing Div -->
+
+<div class="font-your-tickets">
+<h2>Your Tickets</h2>
+</div>
+
+
+
+
+<div class="background-image-fun-fair">
+
+<!-- <div class="total-div-for-ticket-detail">
+
+<div class="ticket-show-detail-0">
+<h2 class="name-of-the-title">Name </h2> 
+
+<p class="detail-from-user-to-buy"> hello</p>
+
+<h2 class="name-of-the-title">Phone number </h2> 
+
+<p class="detail-from-user-to-buy"> 1234567890</p>
+
+<h2 class="name-of-the-title">Email </h2> 
+
+<p class="detail-from-user-to-buy">abcd@gmail.com</p>
+</div>
+
+<div class="ticket-show-detail-1">
+
+<h2 class="name-of-the-title">Ticket ID </h2>
+
+<p class="detail-from-user-to-buy">1234567890</p>
+
+<h2 class="name-of-the-title">From </h2> 
+
+<p class="detail-from-user-to-buy">12-11-2032</p>
+
+<h2 class="name-of-the-title">To </h2> 
+
+<p class="detail-from-user-to-buy">13-11-2023</p>
+
+</div>
+
+<div class="ticket-show-detail-2">
+
+<h2 class="name-of-the-title">Adult </h2> 
+<p class="detail-from-user-to-buy">
+    1
+</p>
+
+<h2 class="name-of-the-title">Children</h2>
+
+<p class="detail-from-user-to-buy">
+    1 </p>
+
+<h2 class="name-of-the-title">Total Price </h2>
+
+<p class="detail-from-user-to-buy">$100</p>
+
+
+</div> 
+
+</div> -->
+
+</div>
+
+<footer class="footer_for_gfc">
+
+</footer>
+
+
+<script src="../../js/header.js"></script>
+<script src="../../js/footer-gfc.js"></script>
+<script>
+    let unique = JSON.parse(localStorage.getItem("unique_id"));
+    let ticketArray = JSON.parse(localStorage.getItem("bookingsConfirmFromTheUser"));
+
+    let eachTicket = ticketArray.filter((t) => t.userUnique === unique)
+
+    if(eachTicket == 0){
+    const errorMessage  = ` <div class="error" style="text-align: center; font-family: 'open sans', sans serif ">
+    <p>No tickets yet</p>
+</div>`
+
+document.querySelector(".background-image-fun-fair").insertAdjacentHTML("afterbegin",errorMessage)
+    }
+
+    eachTicket.forEach(function (userDatafromtheReservationDetails){
+//To crete the ticket:
+// create div element with class 'ticket-show'
+const ticketMainDiv = document.createElement('div');
+ticketMainDiv.classList.add('total-div-for-ticket-detail'); 
+
+const ticketShow = document.createElement('div');
+ticketShow.classList.add('ticket-show');
+
+// create first ticket detail element
+const ticketDetail0 = document.createElement('div');
+ticketDetail0.classList.add('ticket-show-detail-0');
+
+const nameTitle = document.createElement('h2');
+nameTitle.classList.add('name-of-the-title');
+nameTitle.textContent = 'Name';
+
+const nameDetail = document.createElement('p');
+nameDetail.classList.add('detail-from-user-to-buy');
+nameDetail.textContent = userDatafromtheReservationDetails["fullName"] + userDatafromtheReservationDetails["lastName"];
+
+const phoneNumberTitle = document.createElement('h2');
+phoneNumberTitle.classList.add('name-of-the-title');
+phoneNumberTitle.textContent = 'Phone Number';
+
+const phoneNumberDetail = document.createElement('p');
+phoneNumberDetail.classList.add('detail-from-user-to-buy');
+phoneNumberDetail.textContent = userDatafromtheReservationDetails["phoneNumber"];
+
+const emailTitle = document.createElement('h2');
+emailTitle.classList.add('name-of-the-title');
+emailTitle.textContent = 'Email';
+
+const emailDetail = document.createElement('p');
+emailDetail.classList.add('detail-from-user-to-buy');
+emailDetail.textContent = userDatafromtheReservationDetails["emailAddress"];
+
+const ticketBookedTitle = document.createElement('h2');
+ticketBookedTitle.classList.add('name-of-the-title');
+ticketBookedTitle.textContent = 'Ticket Booked Date';
+
+const ticketBookedDate = document.createElement('p');
+ticketBookedDate.classList.add('detail-from-user-to-buy');
+ticketBookedDate.textContent = userDatafromtheReservationDetails["fullDate"];
+
+ticketDetail0.appendChild(nameTitle);
+ticketDetail0.appendChild(nameDetail);
+ticketDetail0.appendChild(phoneNumberTitle);
+ticketDetail0.appendChild(phoneNumberDetail);
+ticketDetail0.appendChild(emailTitle);
+ticketDetail0.appendChild(emailDetail);
+ticketDetail0.appendChild(ticketBookedTitle);
+ticketDetail0.appendChild(ticketBookedDate);
+
+// create second ticket detail element
+const ticketDetail1 = document.createElement('div');
+ticketDetail1.classList.add('ticket-show-detail-1');
+
+const idTitle = document.createElement('h2');
+idTitle.classList.add('name-of-the-title');
+idTitle.textContent = 'Ticket ID';
+
+const idDetail = document.createElement('p');
+idDetail.classList.add('detail-from-user-to-buy');
+idDetail.textContent = userDatafromtheReservationDetails["reservationUniqueId"];
+
+const fromTitle = document.createElement('h2');
+fromTitle.classList.add('name-of-the-title');
+fromTitle.textContent = 'From';
+
+const fromDetail = document.createElement('p');
+fromDetail.classList.add('detail-from-user-to-buy');
+fromDetail.textContent = userDatafromtheReservationDetails["checkInDate"];
+
+const toTitle = document.createElement('h2');
+toTitle.classList.add('name-of-the-title');
+toTitle.textContent = 'To';
+
+const toDetail = document.createElement('p');
+toDetail.classList.add('detail-from-user-to-buy');
+toDetail.textContent = userDatafromtheReservationDetails["checkOutDate"];
+
+const statusTitle = document.createElement('h2');
+statusTitle.classList.add('name-of-the-title');
+statusTitle.textContent = 'Status';
+
+const statusBooked = document.createElement('p');
+statusBooked.classList.add('status-booked');
+statusBooked.textContent = 'Booked';
+
+ticketDetail1.appendChild(idTitle);
+ticketDetail1.appendChild(idDetail);
+ticketDetail1.appendChild(fromTitle);
+ticketDetail1.appendChild(fromDetail);
+ticketDetail1.appendChild(toTitle);
+ticketDetail1.appendChild(toDetail);
+ticketDetail1.appendChild(statusTitle);
+ticketDetail1.appendChild(statusBooked);
+
+// create third ticket detail element
+const ticketDetail2 = document.createElement('div');
+ticketDetail2.classList.add('ticket-show-detail-2');
+
+const adultTitle = document.createElement('h2');
+adultTitle.classList.add('name-of-the-title');
+adultTitle.textContent = 'Adult';
+
+const adultDetail = document.createElement('p');
+adultDetail.classList.add('detail-from-user-to-buy');
+adultDetail.textContent = userDatafromtheReservationDetails["adultCount"];
+
+const childrenTitle = document.createElement('h2');
+childrenTitle.classList.add('name-of-the-title');
+childrenTitle.textContent = 'Children';
+
+const childrenDetail = document.createElement('p');
+childrenDetail.classList.add('detail-from-user-to-buy');
+childrenDetail.textContent = userDatafromtheReservationDetails["childrenCount"];
+
+const priceTitle = document.createElement('h2');
+priceTitle.classList.add('name-of-the-title');
+priceTitle.textContent = 'Total Price';
+
+const priceDetail = document.createElement('p');
+priceDetail.classList.add('detail-from-user-to-buy');
+priceDetail.textContent = "$" + userDatafromtheReservationDetails["totalPriceFromtheUserInBooking"];
+
+ticketDetail2.appendChild(adultTitle);
+ticketDetail2.appendChild(adultDetail);
+ticketDetail2.appendChild(childrenTitle);
+ticketDetail2.appendChild(childrenDetail);
+ticketDetail2.appendChild(priceTitle);
+ticketDetail2.appendChild(priceDetail);
+
+// append all ticket detail elements to ticketShow element
+ticketShow.appendChild(ticketDetail0);
+ticketShow.appendChild(ticketDetail1);
+ticketShow.appendChild(ticketDetail2);
+
+const br1 = document.createElement('br');
+const br2 = document.createElement('br');
+const br3 = document.createElement('br');
+
+ticketMainDiv.appendChild(ticketShow);
+
+document.querySelector(".background-image-fun-fair").append(ticketMainDiv, br1, br2, br3);
+
+})
+
+
+
+</script>
+    </body>
+</html>

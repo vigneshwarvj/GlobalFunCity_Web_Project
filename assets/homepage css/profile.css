@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 .visit-signin{
 	display: flex;
 	justify-content: space-around;
@@ -38,11 +41,28 @@ padding:10px;
 	padding:15px;
 	border:none;
 	margin-right:80px;
+    cursor: pointer;
 }
-.header button a{
+.header a button{
 	text-decoration: none;
 	color: #f6f6f6;
 }
+
+/* To back css like home, etc.., */
+.total-homepages-div{
+    padding: 35px 0px 0px 50px;
+    display: flex;
+}
+.homepages a {
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    color: #838285;
+}
+.homepages a:hover{
+    color: #ff5757;
+}
+/* completed */
+
 .image{
     display: flex;
     justify-content: space-around;

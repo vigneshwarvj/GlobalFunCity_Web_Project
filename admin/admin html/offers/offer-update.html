@@ -1,208 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset='UTF-8'>
-	<link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
 
-<title>Product Update - Global Fun City</title>
-<link rel="stylesheet" href="../../../admin/admin css/product-update.css" />
+        <title>Offer Update - Global Fun City</title>
+        <link rel="stylesheet" href="../../../admin/admin css/product-update.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
-<body>
+        <div class="logo">
+            <img src="../../../assets/images/globalfuncitylogo.png" width="200" alt="logo">
+        </div>
 
-<div class="logo">
-	<img src="../../../assets/images/globalfuncitylogo.png" width="200" alt="logo"/>
-</div>
+        <section class="background">
+            <div class="products">
+                <h2>Update Offers</h2>
+            </div>
 
-<section class="background">
-<div class="products">
-    <h2>Update Offers</h2>
-</div>
-
-<div class="products-updates-from-admin">
-    <form role="form" class="form-for-update-offer" onsubmit="" >
-    <label class="input-field">Unique ID</label>
-    <br>
+            <div class="products-updates-from-admin">
+                <form role="form" class="form-for-update-offer" onsubmit="">
+                    <label class="input-field">Unique ID</label>
+                    <br>
         
-    <input type="text" id="unique_id_of_offer" required/>
-<br>
-    <button type="submit" id="find-details">Find Details</button>
+                    <input type="text" id="unique_id_of_offer" required>
+                    <br>
+                    <button type="submit" id="find-details">Find Details</button>
 
-    <label class="input-field">Offer Name</label>
-        
+                    <label class="input-field">Offer Name</label>
             
-    <input type="text" id="text-for-offer-name" required/>
-    <!--  -->
-    <label class="input-field">Image of Offer</label>
-    
+                    <input type="text" id="text-for-offer-name" required>
+                    <!--  -->
+                    <label class="input-field">Image of Offer</label>
         
-    <input type="text" id="photo-of-offer" required />
-    <!--  -->
-    <label class="input-field">Offer Description</label>
-    
+                    <input type="text" id="photo-of-offer" required>
+                    <!--  -->
+                    <label class="input-field">Offer Description</label>
         
-    <input type="text" id="text-for-offer-description" required/>
-    <!--  -->
-    <label class="input-field">About Offer</label>
+                    <input type="text" id="text-for-offer-description" required>
+                    <!--  -->
+                    <label class="input-field">About Offer</label>
 
-    <textarea class="about_offer" id="about_offer"></textarea>
-    <label class="input-field">Room for Offer</label>
-  
+                    <textarea class="about_offer" id="about_offer"></textarea>
+                    <label class="input-field">Room for Offer</label>
         
-    <input type="text" id="text-for-room-offer" required/>
-    <!--  -->
-    <label class="input-field">Offer: Children price</label>
-  
+                    <input type="text" id="text-for-room-offer" required>
+                    <!--  -->
+                    <label class="input-field">Offer: Children price</label>
         
-    <input type="text" id="children-price-for-offer" required/>
-    <!--  -->
-    <label class="input-field">Offer: Adult price</label>
-  
+                    <input type="text" id="children-price-for-offer" required>
+                    <!--  -->
+                    <label class="input-field">Offer: Adult price</label>
         
-    <input type="text" id="adult-price-for-offer" required/>
-    <!--  -->
-    <label class="input-field">Inclusion 1</label>
-  
+                    <input type="text" id="adult-price-for-offer" required>
+                    <!--  -->
+                    <label class="input-field">Inclusion 1</label>
         
-    <input type="text" id="offer-inclusion-1" required/>
-    <!--  -->
-    <label class="input-field">Inclusion 2</label>
-  
+                    <input type="text" id="offer-inclusion-1" required>
+                    <!--  -->
+                    <label class="input-field">Inclusion 2</label>
         
-    <input type="text" id="offer-inclusion-2" required/>
-    <!--  -->
-    <label class="input-field">Terms & conditions: 1</label>
-  
+                    <input type="text" id="offer-inclusion-2" required>
+                    <!--  -->
+                    <label class="input-field">Terms & conditions: 1</label>
         
-    <input type="text" id="terms-and-condition-1" required/>
-    <!--  -->
-    <label class="input-field">Terms & conditions: 2</label>
-  
+                    <input type="text" id="terms-and-condition-1" required>
+                    <!--  -->
+                    <label class="input-field">Terms & conditions: 2</label>
         
-    <input type="text" id="terms-and-condition-2"/>
-    <!--  -->
+                    <input type="text" id="terms-and-condition-2">
+                    <!--  -->
 
-    <!-- button started -->
-    <button type="submit" id="btn_update">Update Offer</button>
-&nbsp;
-    <button type="button" id="btn_cancel">Cancel</button>
-    <button type="submit" id="btn_delete">Delete Offer</button>
-    </form>
-    </div>
-    </section>
+                    <!-- button started -->
+                    <button type="submit" id="btn_update">Update Offer</button>
+                    &nbsp;
+                    <button type="button" id="btn_cancel">Cancel</button>
+                    <button type="submit" id="btn_delete">Delete Offer</button>
+                </form>
+            </div>
+        </section>
 
-    <script>
+        <script>const find_details_btn_offer = document.getElementById("find-details");
 
-        const find_details_btn_offer = document.getElementById("find-details")
+        find_details_btn_offer.addEventListener("click", (event) => {
+          event.preventDefault();
 
-        find_details_btn_offer.addEventListener('click', (event) => {
-            event.preventDefault();
+          const uniqueId = document.getElementById("unique_id_of_offer").value;
+          const update_offer_name = document.getElementById("text-for-offer-name");
+          const update_offer_image = document.getElementById("photo-of-offer");
+          const update_offer_desc = document.getElementById(
+    "text-for-offer-description"
+          );
+  const update_offer_about = document.getElementById("about_offer");
+          const update_offer_room = document.getElementById("text-for-room-offer");
+          const update_offer_price_for_children = document.getElementById(
+    "children-price-for-offer"
+  );
+          const update_offer_price_for_adult = document.getElementById(
+    "adult-price-for-offer"
+          );
+  const update_offer_inclusion1 = document.getElementById("offer-inclusion-1");
+          const update_offer_inclusion2 = document.getElementById("offer-inclusion-2");
+          const update_offer_terms_and_condition1 = document.getElementById(
+    "terms-and-condition-1"
+          );
+  const update_offer_terms_and_condition2 = document.getElementById(
+    "terms-and-condition-2"
+  );
 
-            const uniqueId = document.getElementById("unique_id_of_offer").value;
-            const update_offer_name = document.getElementById("text-for-offer-name");
-            const update_offer_image = document.getElementById("photo-of-offer");
-            const update_offer_desc = document.getElementById("text-for-offer-description");
-            const update_offer_about = document.getElementById("about_offer");
-            const update_offer_room = document.getElementById("text-for-room-offer");
-            const update_offer_price_for_children = document.getElementById("children-price-for-offer");
-            const update_offer_price_for_adult = document.getElementById("adult-price-for-offer");
-            const update_offer_inclusion1 = document.getElementById("offer-inclusion-1");
-            const update_offer_inclusion2 = document.getElementById("offer-inclusion-2");
-            const update_offer_terms_and_condition1 = document.getElementById("terms-and-condition-1");
-            const update_offer_terms_and_condition2 = document.getElementById("terms-and-condition-2");
-
-
-            const whole_offers = ['offer_details'];
-            for(const offer of whole_offers){
-                const details = JSON.parse(localStorage.getItem(offer));
-             if (!details) continue;
-              // Skip iteration if details is null or undefined
-                const OFFERS = details.find(item =>
-                item.offer_uuid === uniqueId);
-            
+          const whole_offers = ["offer_details"];
+          for (const offer of whole_offers) {
+            const details = JSON.parse(localStorage.getItem(offer));
+            if (!details) continue;
+            // Skip iteration if details is null or undefined
+            const OFFERS = details.find((item) => item.offer_uuid === uniqueId);
+        
             if (OFFERS) {
-           // Set offer details if found
-           update_offer_name.value = OFFERS.offer_name;
-           update_offer_image.value = OFFERS.offer_image;
-           update_offer_desc.value = OFFERS.offer_desc;
-           update_offer_about.value = OFFERS.offer_about;
-           update_offer_room.value = OFFERS.offer_room;
-           update_offer_price_for_children.value = OFFERS.offer_price_for_children;
-           update_offer_price_for_adult.value = OFFERS.offer_price_for_adult;
-           update_offer_inclusion1.value = OFFERS.offer_inclusion1;
-           update_offer_inclusion2.value = OFFERS.offer_inclusion2;
-           update_offer_terms_and_condition1.value = OFFERS.terms_and_condition1;
-           update_offer_terms_and_condition2.value = OFFERS.terms_and_conditions2;
+              // Set offer details if found
+              update_offer_name.value = OFFERS.offer_name;
+              update_offer_image.value = OFFERS.offer_image;
+              update_offer_desc.value = OFFERS.offer_desc;
+              update_offer_about.value = OFFERS.offer_about;
+              update_offer_room.value = OFFERS.offer_room;
+              update_offer_price_for_children.value = OFFERS.offer_price_for_children;
+              update_offer_price_for_adult.value = OFFERS.offer_price_for_adult;
+              update_offer_inclusion1.value = OFFERS.offer_inclusion1;
+              update_offer_inclusion2.value = OFFERS.offer_inclusion2;
+              update_offer_terms_and_condition1.value = OFFERS.terms_and_condition1;
+              update_offer_terms_and_condition2.value = OFFERS.terms_and_conditions2;
 
+      // Add event listener to update_offer button
+              document
+        .getElementById("btn_update")
+        .addEventListener("click", (event) => {
+                  event.preventDefault();
+                  const OfferName = update_offer_name.value;
+          const OfferImage = update_offer_image.value;
+                  const OfferDesc = update_offer_desc.value;
+                  const OfferAbout = update_offer_about.value;
+                  const OfferRoom = update_offer_room.value;
+                  const OfferPriceForChildren = update_offer_price_for_children.value;
+                  const OfferPriceForAdult = update_offer_price_for_adult.value;
+                  const OfferInclusion1 = update_offer_inclusion1.value;
+                  const OfferInclusion2 = update_offer_inclusion2.value;
+                  const TermsAndCondition1 = update_offer_terms_and_condition1.value;
+                  const TermsAndCondition2 = update_offer_terms_and_condition2.value;
 
-           // Add event listener to update_offer button
-        document.getElementById("btn_update").addEventListener("click", (event) => {
-        event.preventDefault();
-        let OfferName = update_offer_name.value 
-        let OfferImage =  update_offer_image.value
-        let OfferDesc = update_offer_desc.value
-        let OfferAbout = update_offer_about.value 
-        let OfferRoom = update_offer_room.value
-        let OfferPriceForChildren = update_offer_price_for_children.value
-        let OfferPriceForAdult = update_offer_price_for_adult.value
-        let OfferInclusion1 = update_offer_inclusion1.value
-        let OfferInclusion2 = update_offer_inclusion2.value
-        let TermsAndCondition1 = update_offer_terms_and_condition1.value
-        let TermsAndCondition2 = update_offer_terms_and_condition2.value
+                  // Update product details in localStorage
+                  OFFERS.offer_name = OfferName;
+                  OFFERS.offer_image = OfferImage;
+                  OFFERS.offer_desc = OfferDesc;
+                  OFFERS.offer_about = OfferAbout;
+                  OFFERS.offer_room = OfferRoom;
+                  OFFERS.offer_price_for_children = OfferPriceForChildren;
+                  OFFERS.offer_price_for_adult = OfferPriceForAdult;
+                  OFFERS.offer_inclusion1 = OfferInclusion1;
+                  OFFERS.offer_inclusion2 = OfferInclusion2;
+                  OFFERS.terms_and_condition1 = TermsAndCondition1;
+                  OFFERS.terms_and_conditions2 = TermsAndCondition2;
 
-        
-        // Update product details in localStorage
-        OFFERS.offer_name = OfferName;
-        OFFERS.offer_image = OfferImage;
-        OFFERS.offer_desc = OfferDesc;
-        OFFERS.offer_about = OfferAbout;
-        OFFERS.offer_room = OfferRoom;
-        OFFERS.offer_price_for_children = OfferPriceForChildren;
-        OFFERS.offer_price_for_adult = OfferPriceForAdult;
-        OFFERS.offer_inclusion1 = OfferInclusion1;
-        OFFERS.offer_inclusion2 = OfferInclusion2;
-        OFFERS.terms_and_condition1 = TermsAndCondition1;
-        OFFERS.terms_and_conditions2 = TermsAndCondition2;
-
-
-       
-        localStorage.setItem(offer, JSON.stringify(details));
-        // Alert user that product details have been updated
-        alert("Offer Updated");
-        // Reset form
-        document.querySelector('form').reset();
-        // document.getElementById("update_product").setAttribute("disabled", true);
-      });
-      break; 
+                  localStorage.setItem(offer, JSON.stringify(details));
+                  // Alert user that product details have been updated
+                  alert("Offer Updated");
+                  // Reset form
+                  document.querySelector("form").reset();
+                  document.getElementById("btn_update").setAttribute("disabled", true);
+                  // document.getElementById("update_product").setAttribute("disabled", true);
+        });
+      break;
       // Exit loop if product found in any company
     }
-}
-   });
+  }
+});
 
+//Delete Offer
 
-   //Delete Offer
+const delete_btn = document.getElementById("btn_delete");
+delete_btn.addEventListener("click", (event) => {
+  event.preventDefault();
+  const uniqueId = document.getElementById("unique_id_of_offer").value;
+  const whole_offers = ["offer_details"];
 
-   const delete_btn = document.getElementById('btn_delete');
-   delete_btn.addEventListener('click', (event) => {
-   event.preventDefault();
-   const uniqueId = document.getElementById('unique_id_of_offer').value;
-   const whole_offers = ['offer_details'];
-
-   for(const offer of whole_offers){
-        const details = JSON.parse(localStorage.getItem(offer));
+  for (const offer of whole_offers) {
+            const details = JSON.parse(localStorage.getItem(offer));
     if (!details) continue;
-    const index = details.findIndex(item => item.offer_uuid === uniqueId);
+    const index = details.findIndex((item) => item.offer_uuid === uniqueId);
     if (index !== -1) {
       // Remove product from details array and update localStorage
       details.splice(index, 1);
@@ -210,12 +203,12 @@
       // Alert user that product has been deleted
       alert("Product Deleted");
       // Reset form
-      document.querySelector('form').reset();
-      break; 
+      document.querySelector("form").reset();
+      break;
       // Exit loop if product found in any company
-    }    
-}
-})
+    }
+  }
+});
     </script>
     </body>
-    </html>
+</html>

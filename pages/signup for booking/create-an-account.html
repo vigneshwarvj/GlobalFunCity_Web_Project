@@ -1,82 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
 
-<title> Global Fun City - Registration</title>
-<link rel="stylesheet" href="../../assets/signup for booking/create-an-account.css"/>
+        <title> Global Fun City - Registration</title>
+        <link rel="stylesheet" href="../../assets/signup for booking/create-an-account.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-</head>
-<body>
+    </head>
+    <body>
+
+        <div class="image-signup">    
+            <div class="image">
+                <img src="../../assets/images/circus.gif" alt="gif">
+            </div>    
     
-
-<div class="image-signup">    
-<div class="image">
-   <img src="../../assets/images/circus.gif" alt="gif"/>
-</div>    
-    
-<div class="sign-up">
-    <img src="../../assets/images/global-account-logo.png" width="250" alt="global-account"/>
-    <h3>Create Your Account</h3>
-    <div class="information-of-users">
-    <form role="form" onsubmit="create(event);" class="register">
-            <input type="text" id="first_name" placeholder="First Name" required="true" pattern="[a-zA-Z]+" /> &nbsp;
-            <input type="text" id="middle_name" placeholder="Middle Name (optional)" pattern="[a-zA-Z]+"/> &nbsp;
-            <input type="text" id="last_name" placeholder="Last Name" required="true" pattern="[a-zA-Z]+"/> &nbsp;
-            <input type="email" id="email" placeholder="Email Address" required="true" /> &nbsp;
-            <input type="password" id="password" placeholder="Password"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="8" 
-            title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters"  required="true" /> &nbsp;
-            <input type="password" id="re_enter_password" placeholder="Re-Enter Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="8" 
-            title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters" required="true"  /> &nbsp;
-            <input onfocus="(this.type = 'date')" id="date" placeholder="Date of Birth" required="true" min="2023-01-01" max="2023-12-31"/>
+            <div class="sign-up">
+                <img src="../../assets/images/global-account-logo.png" width="250" alt="global-account">
+                <h3>Create Your Account</h3>
+                <div class="information-of-users">
+                    <form role="form" onsubmit="create(event);" class="register">
+                        <input type="text" id="first_name" placeholder="First Name" required="true" pattern="[a-zA-Z]+"> &nbsp;
+                        <input type="text" id="middle_name" placeholder="Middle Name (optional)" pattern="[a-zA-Z]+"> &nbsp;
+                        <input type="text" id="last_name" placeholder="Last Name" required="true" pattern="[a-zA-Z]+"> &nbsp;
+                        <input type="email" id="email" placeholder="Email Address" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" required="true"> &nbsp;
+                        <input type="password" id="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="8" 
+                            title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters" required="true"> &nbsp;
+                        <span class="pattern_for_password" id="patternPassword" style="display: inline-block; width: 300px; font-family: 'poppins', sans-serif; font-size: 0.8rem;">
+                            Must contain at least one number, one uppercase, lowercase and one special character, and at least 8 - 10 characters.
+                        </span>
+                        &nbsp;
+                        <input type="password" id="re_enter_password" placeholder="Re-Enter Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="8" 
+                            title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters" required="true"> &nbsp;
    
-    </div> 
-    &nbsp;     
-    <div class="right-checkbox">  
-            <input type="checkbox" id="right" name="right" value="right" required>
-            <label for="right">Yes! I would like to receive updates, special offers, and other information from Global Fun City & Resorts businesses.</label>
-    </div>
-    &nbsp;
-    <!-- <div class="right-terms-conditions">
-        <input type="checkbox" id="right" name="right" value="right" required>
-        <label for="right">I have read and agree to the Global Fun City Terms and Conditions.</label>
+    </div>     
+                        <div class="right-checkbox">  
+                            <input type="checkbox" id="right" name="right" value="right">
+                            <label for="right">Yes! I would like to receive updates, special offers, and other information from Global Fun City & Resorts businesses.</label>
+                        </div>
+                        &nbsp;
+                        <!-- <div class="right-terms-conditions">
+                            <input type="checkbox" id="right" name="right" value="right" required>
+                            <label for="right">I have read and agree to the Global Fun City Terms and Conditions.</label>
 
-    </div> -->
-    <br>
-    <label>By creating an account, I agree to the Terms of Use and acknowledge that I have read the <a href="../../pages/footer other pages/privacypolicy.html"> Privacy Policy </a></label>
+                            </div> -->
+                        <br>
+                        <label>
+                            By creating an account, I agree to the Terms of Use and acknowledge that I have read the <a href="../../pages/footer other pages/privacypolicy.html"> Privacy Policy </a>
+                        </label>
 
-    <br><br/>
-    <button class="btn-create-account" type="submit">Create Account</button>
+                        <br>
+                        <br>
+                        <button class="btn-create-account" type="submit">Create Account</button>
 
-    <h5>Already have an account? <a href="../../pages/signup for booking/signup.html">Sign In</a></h5>
-</form> 
-</div>
-</div>
+                        <h5>
+                            Already have an account? <a href="../../pages/signup for booking/signup.html">Sign In</a>
+                        </h5>
+                    </form> 
+                </div>
+            </div>
 
-<!-- <div class="request">
-    <p>Privacy Notice</p>
-    <p>Terms of Use</p>
-    <p>Help</p>
-</div> -->
+            <!-- <div class="request">
+                <p>Privacy Notice</p>
+                <p>Terms of Use</p>
+                <p>Help</p>
+                </div> -->
 
-
-
-
-<script>
-
-
+            <script>
+// const patternPassword = document.getElementById("password");
+// patternPassword.addEventListener("focus", function(){
+//     const passwordInstructions = document.getElementById("patternPassword");
+//     passwordInstructions.setAttribute("style", "display:block;")
+// })
 </script>
-<script src="../../js/create-an-account.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+            <script src="../../js/create-an-account.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 </body>
 </html>    

@@ -1,93 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body>
-<head>
+    <body>
+        <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+            <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
 
-<title> Global Fun City - Sign In</title>
-<link rel="stylesheet" href="../../assets/signup for booking/signup.css"/>
+            <title> Global Fun City - Sign In</title>
+            <link rel="stylesheet" href="../../assets/signup for booking/signup.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-</head>
+        </head>
 
+        <div class="image-signup">    
+            <div class="image">
+                <img src="../../assets/images/circus.gif" alt="gif">
+            </div>    
 
-
-<div class="image-signup">    
-<div class="image">
-    <img src="../../assets/images/circus.gif" alt="gif"/>
-</div>    
-
-<div class="sign-up">
-    <img src="../../assets/images/global-account-logo.png" width="250" alt="global-account"/>
-    <h3>Welcome Back!</h3>
-    <form role="form" class="signin-data" onsubmit="signIn(event);">
-        <input type="email" id="email" name="email" placeholder="Email Address" required /> &nbsp;
-        <input type="password" id="password" name="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="8" 
-        title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum 10 characters" required="true" />
-        
+            <div class="sign-up">
+                <img src="../../assets/images/global-account-logo.png" width="250" alt="global-account">
+                <h3>Welcome Back!</h3>
+                <form role="form" class="signin-data" onsubmit="signIn(event);">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required> &nbsp;
+                    <input type="password" id="password" name="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="8" 
+                        title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum 10 characters" required="true">
     
-    <a href="../../pages/signup for booking/forgot-password.html"> <h4>Forgot Password?</h4> </a>
-    <button type="submit">Sign In</button>
-</form>
-    <h4>New to Global Account?</h4>
-    <a href="../../pages/signup for booking/create-an-account.html"><button >Create an Account</button></a>
+                    <a href="../../pages/signup for booking/forgot-password.html">
+                        <h4>Forgot Password?</h4> 
+                    </a>
+                    <button type="submit">Sign In</button>
+                </form>
+                <h4>New to Global Account?</h4>
+                <a href="../../pages/signup for booking/create-an-account.html">
+                    <button >Create an Account</button>
+                </a>
 
-</div>
-</div>
+            </div>
+        </div>
 
-<!-- <script>
+        <!-- <script>
 
-function signin(){
-    const email = document.getElementById("email") .value
-const password = document.getElementById("password") .value
+            function signin(){
+            const email = document.getElementById("email") .value
+            const password = document.getElementById("password") .value
 
-console.log(email)
-console.log(password)
+            console.log(email)
+            console.log(password)
 
-localStorage.setItem("email", email)
-localStorage.setItem("password", password)
+            localStorage.setItem("email", email)
+            localStorage.setItem("password", password)
 
-window.location.href =
+            window.location.href =
 
-}    
+            }    
 
-</script> -->
+            </script> -->
 
-<script>
-const signIn = e => {
-    let email = document.getElementById("email") .value
-    let password = document.getElementById("password") .value
+        <script>
+const signIn = (e) => {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const login = "login";
 
-    let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
-    let exist = user_list.length &&
-    JSON.parse(localStorage.getItem('user_list')).some(data =>
-    data.email.toLowerCase() == email.toLowerCase() &&
-    data.password.toLowerCase() == password.toLowerCase());
+  const user_list = JSON.parse(localStorage.getItem("user_list")) || [];
+  const exist =
+    user_list.length &&
+    JSON.parse(localStorage.getItem("user_list")).some(
+      (data) =>
+        data.email.toLowerCase() == email.toLowerCase() &&
+        data.password.toLowerCase() == password.toLowerCase()
+    );
 
-    if(!exist){
-        alert("Incorrect email or password");
-    }
-    else{
-        localStorage.setItem("unique_id", JSON.stringify(email));
-        alert("Welcome to the Global Fun City!");
-        location.href = "../homepage/index-profile.html";
-    }
-    e.preventDefault();
-}
-
-
+  if (!exist) {
+    alert("Incorrect email or password");
+  } else {
+    localStorage.setItem("unique_id", JSON.stringify(email));
+    localStorage.setItem("userStatus", login);
+    alert("Welcome to the Global Fun City!");
+    location.href = "../../index.html";
+  }
+  e.preventDefault();
+};
 </script>
-
-</body>
+    </body>
 </html> 

@@ -1,175 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset='UTF-8'>
-	<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
 
-<title> Checkout - Shop - Global Fun City</title>
-<link rel="stylesheet" href="../../assets/store css/checkout.css" />
+        <title> Checkout - Shop - Global Fun City</title>
+        <link rel="stylesheet" href="../../assets/store css/checkout.css">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
-<body>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
 
 <div class="bag">
-   <a href="../../pages/shop/cart.html"> <h3> <i class="fa-solid fa-angle-left"></i> My Bag </h3> </a>
+<a href="../../pages/shop/cart.html">
+    <h3>
+        <i class="fa-solid fa-angle-left"></i> My Bag 
+    </h3> 
+</a>
 </div>
 
 <div class="shop-logo">
-    <img src="../../assets/images/global-shop-logo.png" width="250" alt="shop-logo"/>
+    <a href="../../pages/shop/shop.html">
+<img src="../../assets/images/global-shop-logo.png" width="250" alt="shop-logo"> </a>
 </div>
 
 <div class="checkout">
-        <h1>Checkout</h1>
+<h1>Checkout</h1>
 </div>
 
 <!--div for billing details-->
 <div class="billing-details-orders-payments">
 <div class="billing-details-of-users">
-<div class="billing">
-    <h1>Complete Your Order</h1>
+    <div class="billing">
+        <h1>Complete Your Order</h1>
+    </div>
+
+    <form role="form" class="checkoutUser" onsubmit="checkoutFormDataFromUser(event)">
+        <div class="first-last-name">
+            <div class="first-name">
+                <p>
+                    First name <g>*</g>
+                </p>
+                <input type="text" id="first_name" name="firstname" pattern="[a-zA-Z]+" required>
+            </div>
+            &nbsp; &nbsp;
+            <div class="last-name">        
+                <p>
+                    Last name <g>*</g>
+                </p>
+                <input type="text" id="last_name" name="lastname" pattern="[a-zA-Z]+" required>
+            </div>
+        </div>
+
+        <div class="content-of-others">
+            <p>
+                Country/Region <g>*</g>
+            </p>
+
+            <select class="country_region" required>
+                <option id="africa">Africa</option>
+                <option id="australia">Australia</option>
+                <option id="belgium">Belgium</option>
+                <option id="brazil">Brazil</option>
+                <option id="britain">Britain</option>
+                <option id="canada">Canada</option>
+                <option id="china">China</option>
+                <option id="england">England</option>
+                <option id="france">France</option>
+                <option id="georgia">Gerogia</option>
+                <option id="germany">Germany</option>
+                <option id="india">India</option>
+                <option id="italy">Italy</option>
+                <option id="japan">Japan</option>
+                <option id="mexico">Mexico</option>
+                <option id="netherland">Netherland</option>
+                <option id="norway">Norway</option>
+                <option id="pakisthan">Pakisthan</option>
+                <option id="poland">Poland</option>
+                <option id="russia">Russia</option>
+                <option id="south_korea">South Korea</option>
+                <option id="spain">Spain</option>
+                <option id="srilanka">Srilanka</option>
+                <option id="switzerland">Switzerland</option>
+                <option id="ukrain">Ukrain</option>
+                <option id="unitedkingdom">United Kingdom</option>
+                <option id="united-states-of-america">United States of America</option>
+            </select>
+
+            <p>
+                Door.No <g>*</g>
+            </p>
+            <input type="text" id="door_no" required>
+
+            <p>
+                Street address <g>*</g>
+            </p>
+            <input type="text" id="street_address" required>
+
+            <p>
+                Town/City <g>*</g>
+            </p>
+            <input type="text" id="town_city" required>
+
+            <p>
+                State <g>*</g>
+            </p>
+            <input type="text" id="state" required>
+
+            <p>
+                ZIP Code <g>*</g>
+            </p>
+            <input type="text" id="zip_code" oninput="this.value = this.value.replace(/[^0-9]/g,'')" minlength="6" maxlength="6" required>
+
+            <p>
+                Phone <g>*</g>
+            </p>
+            <input type="tel" id="phone" pattern="[0-9]{10}" minlength="10" maxlength="10" required>
+
+            <p>
+                Email address <g>*</g>
+            </p>
+            <input type="email" id="email" required>
+
+            <p>Order notes (optional)</p>
+            <input type="text" id="order_notes">
+
+        </div>
 </div>
 
-<div class="first-last-name">
-<div class="first-name">
-        <p>First name <g>*</g></p>
-        <input type="text" id="username" name="firstname" required></div>
-        &nbsp; &nbsp;
-<div class="last-name">        
-        <p>Last name <g>*</g></p>
-        <input type="text" id="password" name="lastname" required>
+        <!--To link the orders & payment-->
+        <div class="orders-payments">
+            <div class="your-order">
+                <h1>Your Orders</h1>
+            </div>
+
+            <table class="orders">
+                <!-- <tr>
+                    <th id="t-shirt">White T-shirt With Logo x 1</th>
+                    <th id="price">$199.00</th>
+                </tr> -->
+
+                <!-- <tr>
+                    <th id="t-shirt">Black T-Shirt with Events x 1</th>
+                    <th id="price">$299.00</th>
+                </tr> -->
+
+                <!-- <tr>
+                    <th id="total-font">Total</th>
+                    <th id="total-price">$498.00</th>
+                </tr>  -->
+            </table>
+
+            <div class="payto-shirts">
+                <h1>Payment</h1>
+            </div>
+
+            <div class="tickets">
+                <div class="payment-methods">
+                    <ul>
+                        <li>
+                            <input type="radio" id="creditcard_debitcard" name="payment-method" required> Credit Card/Debit Card 
+                        </li>    
+                        <li>
+                            <input type="radio" id="paytm" name="payment-method" required>Paytm
+                        </li>
+                        <li>
+                            <input type="radio" id="gpay" name="payment-method" required> Google pay 
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn-proceed" style="cursor: pointer; " type="submit">Proceed</button>
+                <a href="../../pages/shop/shop.html">
+                    <button class="btn-cancel">Cancel Order</button>
+                </a>
+            </div>
+        </div>
 </div>
-</div>
-
-<div class="content-of-others">
-    <p>Country/Region <g>*</g></p>
-        
-        <select required>
-            <option value="india">India</option>
-            <option value="australia">Australia</option>
-            <option value="switzerland">Switzerland</option>
-            <option value="united-states-of-america">United States of America</option>
-            <option value="russia">Russia</option>
-            <option value="germany">Germany</option>
-            <option value="belgium">Belgium</option>
-            <option value="srilanka">Srilanka</option>
-            <option value="japan">Japan</option>
-            <option value="china">China</option>
-            <option value="norway">Norway</option>
-            <option value="poland">Poland</option>
-            <option value="pakisthan">Pakisthan</option>
-            <option value="ukrain">Ukrain</option>
-            <option value="netherland">Netherland</option>
-            <option value="africa">Africa</option>
-            <option value="britain">Britain</option>
-            <option value="england">England</option>
-            <option value="georgia">Gerogia</option>
-            <option value="france">France</option>
-        </select>
-
-        <p>Door.No <g>*</g></p>
-        <input type="text" id="door-no" name="door-no" required>
-
-        <p>Street address <g>*</g></p>
-        <input type="text" id="door-no" name="door-no" required>
-
-        <p>Town/City <g>*</g></p>
-        <input type="text" id="town-city" name="town-city" required>
-
-        <p>State <g>*</g></p>
-        <input type="text" id="state" name="state" required>
-
-        <p>ZIP Code <g>*</g></p>
-        <input type="text" id="code" name="code" required>
-
-        <p>Phone <g>*</g></p>
-        <input type="tel" id="phone" name="phone" required>
-
-        <p>Email address <g>*</g></p>
-        <input type="email" id="email" name="email" required>
-
-        <p>Order notes (optional)</p>
-        <input type="text" id="order-notes" name="order-notes">
-
-</div>
-</div>
-
-
-<!--To link the orders & payment-->
-<div class="orders-payments">
-<div class="your-order">
-    <h1>Your Orders</h1>
-</div>
-
-<table class="orders">
-    <tr>
-        <th id="t-shirt">White T-shirt With Logo x 1</th>
-        <th id="price">$199.00</th>
-    </tr>
-
-    <tr>
-        <th id="t-shirt">Black T-Shirt with Events x 1</th>
-        <th id="price">$299.00</th>
-    </tr>
-
-    <tr>
-        <th id="total">Total</th>
-        <th id="price">$498.00</th>
-    </tr>
-</table>
-
-<div class="payto-shirts">
-    <h1>Payment</h1>
-</div>
-
-<div class="tickets">
-    <ul>
-
-            <li><input type="radio" name="payment-method"> Credit Card/Debit Card </li>    
-        <li><input type="radio" name="payment-method">
-        Paytm</li>
-        <li><input type="radio" name="payment-method"> Google pay </li>
-        
-    </ul>
-    <a href="../../pages/shop/proceedcheckout.html"><button class="btn-proceed">Proceed</button></a>
-    <a href="../../pages/shop/shop.html"> <button class="btn-cancel">Cancel Order</button></a>
-</div>
-</div>
-</div>
-
+    </form>
 
 <footer>
-    <div class="background-footer">
-    
-    <div class="navbar-footer-logo">
-        <img src="../../assets/images/globalfuncitylogo.png" width="200" alt="logo"/>
-    </div>
-    
-    <div class="address">
-        <p>11113 W Baldwin RD, Monrovia, MD 21770, USA</p>
-        <h4><i class="fa-solid fa-phone"></i> +1 860 817 1080</h4>
-        <h4><i class="fa-solid fa-envelope"></i> info@globalfuncity.in</h4>
-    </div>
-    
-    <div class="other-policies">
-        <a href="#" >Book now Policy</a>
-    </div>
-    </div>
+        <div class="background-footer">
+
+            <div class="navbar-footer-logo">
+                <img src="../../assets/images/globalfuncitylogo.png" width="200" alt="logo">
+            </div>
+
+            <div class="address">
+                <p>11113 W Baldwin RD, Monrovia, MD 21770, USA</p>
+                <h4>
+                    <i class="fa-solid fa-phone"></i> +1 860 817 1080
+                </h4>
+                <h4>
+                    <i class="fa-solid fa-envelope"></i> info@globalfuncity.in
+                </h4>
+            </div>
+
+            <div class="other-policies">
+                <a href="#">Book now Policy</a>
+            </div>
+        </div>
+</footer>
+
+<script>
+const orderDataFromtheUser = [];
+
+const productUserUniqueId = JSON.parse(localStorage.getItem("unique_id"));
+
+//Checkout form details function
+function checkoutFormDataFromUser(event) {
+  event.preventDefault();
+
+  const firstName = document.getElementById("first_name").value;
+  const lastName = document.getElementById("last_name").value;
+  const countryRegion = document.querySelector(".country_region").value;
+  const doorNo = document.getElementById("door_no").value;
+  const streetAddress = document.getElementById("street_address").value;
+  const townCity = document.getElementById("town_city").value;
+  const state = document.getElementById("state").value;
+  const zipCode = document.getElementById("zip_code").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const orderNotes = document.getElementById("order_notes").value;
+  const paymentMethod = document.querySelector(".payment-methods").value;
+  const orderId = crypto.randomUUID();
+
+  const existingUsers = JSON.parse(localStorage.getItem("usersfromCheckoutData")) || [];
+
+  const formDatainCheckout = {
+    firstName,
+    lastName,
+    countryRegion,
+    doorNo,
+    streetAddress,
+    townCity,
+    state,
+    zipCode,
+    phone,
+    email,
+    orderNotes,
+    paymentMethod,
+    orderId,
+    productUserUniqueId
+  };
+
+  const productFromTheUserBag = JSON.parse(localStorage.getItem("add_to_cart_products"));
+
+ 
+
+//   const productFromTheUserBag = productFromTheUserBag.find(productid => productid.product_uuid === ).product_uuid;
+
+for(let i=0; i<productFromTheUserBag.length; i++){
+    const productIdFromTheUserBag = productFromTheUserBag[i]["product_uuid"];
+    //console.log(productIdFromTheUserBag);
+
+    const productQty = productFromTheUserBag[i]["product_qty"];
+    //console.log(productQty);
+
+    const productSize = productFromTheUserBag[i]["productSize"];
+
+    const nowDate = new Date();
+console.log(nowDate.toISOString()); 
+
+const deliveryStatus = "notdelivered";
+
+    const orderData = {
+    productIdFromTheUserBag,
+    productQty,
+    productSize,
+    nowDate,
+    deliveryStatus,
+    orderId,
+    productUserUniqueId
+}
+
+orderDataFromtheUser.push(orderData);
+localStorage.setItem("orderDataFromUser" , JSON.stringify(orderDataFromtheUser));
+//console.log(orderDataFromtheUser);
+
+}
+
+// const nowDate = new Date();
+// console.log(nowDate.toISOString()); 
+
+// const deliveryStatus = "notdelivered";
 
 
 
+// orderDataFromtheUser.push(orderData);
+// localStorage.setItem("orderDataFromUser" , JSON.stringify(orderDataFromtheUser));
+// console.log(orderDataFromtheUser);
 
-    
+  sessionStorage.setItem("checkOutDetail", JSON.stringify(formDatainCheckout));
+  
+  existingUsers.push(formDatainCheckout);
+
+  localStorage.setItem("usersfromCheckoutData", JSON.stringify(existingUsers));
+
+  document.querySelector("form").reset();
+
+  alert("Your Product has been Ordered!")
+  // Redirect to the checkout confirmation page
+  window.location.href = "../../pages/shop/proceedcheckout.html";
+}
+
+// create table element
+// const table = document.createElement('table');
+// table.classList.add('card-totals');
+// // create first row for T-Shirt item
+// const row1 = document.createElement('tr');
+// const tShirt = document.createElement('th');
+// tShirt.setAttribute('id', 'products-in-orders');
+// tShirt.textContent = 'Black T-Shirt with Events x 1';
+// const tShirtPrice = document.createElement('th');
+// tShirtPrice.setAttribute('id', 'price');
+// tShirtPrice.textContent = '$299.00';
+// row1.appendChild(tShirt);
+// row1.appendChild(tShirtPrice);
+
+// document.querySelector(".orders").prepend(row1);
+
+const detailsFromUserBag = JSON.parse(localStorage.getItem("add_to_cart_products"));
+let totalAmountOfTheProductClient = 0;
+
+for (let i=0; i<detailsFromUserBag.length; i++){
+
+    const table = document.createElement('table');
+    table.classList.add('card-totals');
+
+    const row1 = document.createElement('tr');
+    const tShirt = document.createElement('th');
+    tShirt.setAttribute('id', 'products-in-orders');
+    tShirt.textContent = detailsFromUserBag[i]["product_name"] + " x " + detailsFromUserBag[i]["product_qty"];
+    const subTotal = parseInt(detailsFromUserBag[i]["product_price"]) * parseInt(detailsFromUserBag[i]["product_qty"]);
+//To adding the total price
+    totalAmountOfTheProductClient += subTotal
+
+    const tShirtPrice = document.createElement('th');
+    tShirtPrice.setAttribute('id', 'price');
+    tShirtPrice.textContent = '$' + subTotal + ".00";
+    row1.appendChild(tShirt);
+    row1.appendChild(tShirtPrice);
+
+    document.querySelector(".orders").append(row1);
+
+}
+
+
+
+const row2 = document.createElement('tr');
+const totalPriceText = document.createElement('th');
+totalPriceText.setAttribute('id', 'total-font');
+totalPriceText.textContent = 'Total Price';
+
+const totalPriceOfTheProduct = document.createElement('th');
+totalPriceOfTheProduct.setAttribute('id','total-price-of-the-product');
+
+// const totalPriceOfTheProductClient = parseInt(detailsFromUserBag["product_price"]);
+
+// let totalAmount = parseInt(totalPriceOfTheProduct.textContent.replace("$",""));
+// totalPriceOfTheProductClient.push(totalAmount);
+
+totalPriceOfTheProduct.textContent = '$' + totalAmountOfTheProductClient +'.00';
+
+row2.append(totalPriceText);
+row2.appendChild(totalPriceOfTheProduct);
+
+document.querySelector(".orders").append(row2);
+
+</script>
 
 </body>
 </html>    
+
+
+<!-- To give the story  -->

@@ -126,7 +126,7 @@ nav ul.menu-area ul li a:hover{
 	justify-content: center;
 }
 .words{
-	font-family: 'league spartan', sans-serif;
+	font-family: 'poppins', sans-serif;
 	font-size:x-large;
 	text-align: center;
     color: #838485;
@@ -209,16 +209,6 @@ nav ul.menu-area ul li a:hover{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 .brands h1{
 	font-family: 'league spartan', sans-serif;
 	width: 500px;
@@ -235,37 +225,80 @@ nav ul.menu-area ul li a:hover{
 	padding-top: 50px;
 
 }
-.contact-us{
-	text-align: center;
-}
-.contact-us h2{
-	font-family: 'Poppins', sans-serif;
-	color: #ff4612;
-}
-.contact-us h1{
-	font-family: 'league spartan', sans-serif;
-	font-size: 50px;
-}
-.contact-address{
-	display: flex;
-	justify-content: space-evenly; 
-}
-.contact-address h2{
-    font-family: 'poppins', sans-serif;
-	color: #ff4612;
-}
-.contact-address p{
-	font-family: 'open sans', sans-serif;
-}
-.address-info p{
-	width: 200px;
-}
-.background-for-contact{
-	width: 1485px;
-	height: 400px;
+
+
+
+/* faq css */
+.background{
 	background-color: #eee;
-	padding: 50px 0px 0px 0px ;
+	/* margin: 70px 0px 0px 0px; */
 }
+.main-faq{
+	min-height: 80vh;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.title{
+	padding: 40px 0px 0px 0px;
+	/* text-align: center; */
+	font-size: 3rem;
+	margin: 2rem 0rem;
+	font-family: 'league spartan', sans-serif;
+}
+hr{
+	width: 60%;
+}
+.faq{
+	max-width: 700px;
+	/* margin-top: 2rem; */
+	padding-bottom: 0.3rem;
+	cursor: pointer;
+}
+.question{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.question h3{
+	font-size: 1.5rem;
+	font-family: 'poppins', sans-serif;
+}
+.answer p{
+	color: #838485;
+	font-family: 'league spartan', sans-serif;
+	padding-top: 1rem;
+	line-height:1.6 ;
+	font-size: 1.3rem;
+}
+.answer{
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1.4s ease;
+}
+.faq.active .answer{
+	max-height: 300px;
+	animation: fade 1s ease-in-out;
+}
+.faq.active .i{
+	transform: rotate(90deg);
+}
+i{
+	transition: transform 0.5s ease;
+}
+@keyframes fade{
+	from{
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+/* faq completed */
 
 
 
@@ -288,15 +321,6 @@ footer{
 	justify-content:space-evenly;
 	text-align: left;
 	padding: 0px 0px 30px 0px;
-}
-.address h3, .open-hours h3, .contact-for-more h3{
-	font-family: 'league spartan', sans-serif;
-	color: #ffa51d;
-}
-.address p, .contact-for-more p, .open-hours p{
-	font-family: 'poppins', sans-serif;
-	color: white;
-	width: 300px;
 }
 .social-medias a{
 	display: inline-block;
@@ -330,13 +354,17 @@ footer{
 .youtube a:hover{
 	background-color: #FF0000;
 }
-/* footer-for-about-us-etc */
-.navbar-footer ul{
+/* shop footer main */
+.shop-footer-main{
 	display: flex;
-	justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    line-height: 20px;
 }
+/* footer-for-about-us-etc */
 .navbar-footer ul li a{
-	padding: 10px;
 	color: white;
 	text-decoration:none;
 }
@@ -348,12 +376,22 @@ footer{
 	color:#ff5757;
 }
 /* footer-for-privacy-etc */
-.other-navbar-footer ul{
+.shop-footer ul li{
+	list-style: none;
+	font-family: 'league spartan', sans-serif;
+}
+.shop-footer ul li a{
+	color: white;
+	text-decoration:none;	
+} 
+.shop-footer a:hover{
+	color:#ff5757;	
+}
+/* .other-navbar-footer ul{
     display: flex;
 	justify-content: center;
-}
+} */
 .other-navbar-footer ul li{
-	padding: 10px;
 	font-family: 'league spartan', sans-serif;
 	list-style: none;
 }
@@ -363,6 +401,9 @@ footer{
 }
 .other-navbar-footer a:hover{
 	color: #ff5757;
+}
+.footer-hr{
+	width: 99.9%;
 }
 .copyright{
 	text-align: center;

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
+
+        <title>Update Rooms form - Global Fun City</title>
+        <link rel="stylesheet" href="../../../admin/admin css/product-upload.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="logo">
+            <img src="../../../assets/images/globalfuncitylogo.png" width="200" alt="logo">
+        </div>
+
+        <section class="background">
+            <div class="products">
+                <h2>Update Rooms</h2>
+            </div>
+
+            <div class="products-details-from-admin">
+                <form role="form" onsubmit="" class="form-for-admin">
+                    <label class="input-field">Unique ID</label>
+                    <br>
+        
+                    <input type="text" id="unique_id_of_product" required>
+                    <br>
+                    <button type="submit" id="find-details">Find Details</button>
+<br>
+                    <label class="input-field">Image of room</label>
+                    <br>
+            
+                    <input type="url" id="image_of_room" required>
+                    <br>
+
+                    <label class="input-field">Hotel Name</label>
+                    <br>
+            
+                    <input type="text" id="hotel_name" pattern="[a-zA-Z]+" required>
+                    <br>
+
+                    <label class="input-field">Room name</label>
+                    <br>
+            
+                    <input type="text" id="room_name" required>
+                    <br>
+                    <label class="input-field">Room Price</label>
+                    <br>
+            
+                    <input type="tel" id="room_price" pattern="[0-9$.]+" required>
+                    <br>
+
+                    <label class="input-field">Room Strikeout Price</label>
+                    <br>
+            
+                    <input type="tel" id="room_strikeout_price" pattern="[0-9$.]+" required>
+                    <br>
+
+                    <label class="input-field">Adult</label>
+                    <br>
+            
+                    <input type="tel" id="no_of_adult" pattern="[0-9$.]+" required>
+                    <br>
+                    <label class="input-field">Children</label>
+                    <br>
+            
+                    <input type="tel" id="no_of_children" pattern="[0-9$.]+" required>
+                    <br>
+                    <label class="input-field">Room Size</label>
+                    <br>
+            
+                    <input type="tel" id="room_size" pattern="[0-9$.]+" required>
+                    <br>
+                    <label class="input-field">Room Discount</label>
+                    <br>
+            
+                    <input type="tel" id="offer_discount" pattern="[0-9$.]+" required>
+                    <br>
+                    <label class="input-field">Amenties 1</label>
+                    <br>
+                    <input type="tel" id="amenties_1" pattern="[a-zA-Z]+" required>
+                    <br>
+
+                    <label class="input-field">Amenties 2</label>
+                    <br>
+                    <input type="tel" id="amenties_2" pattern="[a-zA-Z]+" required>
+                    <br>
+                    &NonBreakingSpace;
+                    <!-- button started -->
+                    <button type="submit" id="btn_update">Update Room</button>
+                    <br>
+                    <button type="button" id="btn_cancel">Cancel</button>
+                    <br>
+                    <button type="submit" id="btn_delete">Delete Room</button>
+                </form>
+            </div>
+
+        </section>
+
+    </body>
+<script>
+
+const find_details_btn = document.getElementById("find-details");
+
+find_details_btn.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const uniqueIdRoom = document.getElementById("unique_id_of_product").value;
+  const updateImageRoom = document.getElementById("image_of_room");
+  const updateHotelName = document.getElementById("hotel_name");
+  const updateRoomName = document.getElementById("room_name");
+  const updateRoomPrice = document.getElementById("room_price");
+  const updateRoomStrikeoutPrice = document.getElementById("room_strikeout_price");
+  const updateAdult = document.getElementById("no_of_adult");
+  const updateChildren = document.getElementById("no_of_children");
+  const updateRoomSize = document.getElementById("room_size");
+  const updateDiscount = document.getElementById("offer_discount");
+  const updateAmenties1 = document.getElementById("amenties_1");
+  const updateAmenties2 = document.getElementById("amenties_2");
+
+  const companies = ["hotelDetails", "resortDetails"];
+  for(const company of companies){
+    const details = JSON.parse(localStorage.getItem(company));
+    if(!details) continue;
+    const rooms = details.find((item) => item.uniqueIdForRooms === uniqueIdRoom);
+    if(rooms){
+        updateImageRoom.value = rooms.roomImage;
+        updateHotelName.value = rooms.hotelResortName;
+        updateRoomName.value = rooms.roomName;
+        updateRoomPrice.value = rooms.roomPrice;
+        updateRoomStrikeoutPrice.value = rooms.roomStrikeoutPrice;
+        updateAdult.value = rooms.noOfAdultsInRoom;
+        updateChildren.value = rooms.noOfChildrenInRoom;
+        updateRoomSize.value = rooms.roomSize;
+        updateDiscount.value = rooms.roomDiscount;
+        updateAmenties1.value = rooms.roomAmenties1;
+        updateAmenties2.value = rooms.roomAmenties2;
+
+        document.getElementById("btn_update").addEventListener("click" , function () {
+            event.preventDefault();
+
+            const imageRoomconst = updateImageRoom.value;
+            const hotelNameconst = updateHotelName.value;
+            const roomNameconst = updateRoomName.value;
+            const roomPriceconst = updateRoomPrice.value;
+            const roomStrikeoutPriceconst = updateRoomStrikeoutPrice.value;
+            const roomAdultconst = updateAdult.value;
+            const roomChildrenconst = updateChildren.value;
+            const roomSizeconst = updateRoomSize.value;
+            const roomDiscountconst = updateDiscount.value;
+            const roomAmenties1const = updateAmenties1.value;
+            const roomAmenties2const = updateAmenties2.value;
+
+            rooms.roomImage = imageRoomconst;
+            rooms.hotelResortName = hotelNameconst;
+            rooms.roomName = roomNameconst;
+            rooms.roomPrice = roomPriceconst;
+            rooms.roomStrikeoutPrice = roomStrikeoutPriceconst;
+            rooms.noOfAdultsInRoom = roomAdultconst;
+            rooms.noOfChildrenInRoom = roomChildrenconst;
+            rooms.roomSize = roomSizeconst;
+            rooms.roomDiscount = roomDiscountconst;
+            rooms.roomAmenties1 = roomAmenties1const;
+            rooms.roomAmenties2 = roomAmenties2const;
+
+            localStorage.setItem(company, JSON.stringify(details));
+
+            alert("Room Created");
+
+            document.querySelector("form").reset();
+
+        }); break;
+    }
+  }
+
+});
+
+//Delete Room
+const delete_btn = document.getElementById("btn_delete");
+delete_btn.addEventListener("click", (event) => {
+  event.preventDefault();
+  const uniqueId = document.getElementById("unique_id_of_product").value;
+  const companies = ["hotelDetails", "resortDetails"];
+  for (const company of companies) {
+    const details = JSON.parse(localStorage.getItem(company));
+    if (!details) continue; // Skip iteration if details is null or undefined
+    const index = details.findIndex((item) => item.uniqueIdForRooms === uniqueId);
+    if (index !== -1) {
+      // Remove product from details array and update localStorage
+      details.splice(index, 1);
+      localStorage.setItem(company, JSON.stringify(details));
+      // Alert user that product has been deleted
+      alert("Room Deleted");
+      // Reset form
+      document.querySelector("form").reset();
+      break; // Exit loop if product found in any company
+    }
+  }
+});
+
+</script>
+
+    </html>

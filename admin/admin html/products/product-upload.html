@@ -1,179 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset='UTF-8'>
-	<link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
 
-<title>Product form - Global Fun City</title>
-<link rel="stylesheet" href="../../../admin/admin css/product-upload.css" />
+        <title>Product form - Global Fun City</title>
+        <link rel="stylesheet" href="../../../admin/admin css/product-upload.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
-<body>
+        <div class="logo">
+            <img src="../../../assets/images/global-shop-logo.png" width="200" alt="logo">
+        </div>
 
-<div class="logo">
-	<img src="../../../assets/images/global-shop-logo.png" width="200" alt="logo"/>
-</div>
+        <section class="background">
+            <div class="products">
+                <h2>Add Products</h2>
+            </div>
 
-<section class="background">
-<div class="products">
-    <h2>Add Products</h2>
-</div>
-
-<div class="products-details-from-admin">
-    <form role="form" onsubmit="createProduct(event)" class="form-for-admin">
-        <label class="input-field">Select Category</label>
-        <br>
-        <select class="category-for-shop" id="category" required>
-            <option value="cloth" id="clothing">Clothing</option>
-            <option value="access" id="accessories">Accessories</option>
-            <option value="home" id="home">Home</option>
-        </select>
-<br>
-        <label class="input-field">Product Name</label>
-        <br>
+            <div class="products-details-from-admin">
+                <form role="form" onsubmit="createProduct(event)" class="form-for-admin">
+                    <label class="input-field">Select Category</label>
+                    <br>
+                    <select class="category-for-shop" id="category" required>
+                        <option value="Clothing" id="clothing">Clothing</option>
+                        <option value="Accessories" id="accessories">Accessories</option>
+                        <option value="Home" id="home">Home</option>
+                    </select>
+                    <br>
+                    <label class="input-field">Product Name</label>
+                    <br>
             
-        <input type="text" id="text-for-product-name" required/>
-<br>
-        <label class="input-field">Image of Product</label>
-        <br>
+                    <input type="text" id="text-for-product-name" pattern="[a-zA-Z]+" required>
+                    <br>
+                    <label class="input-field">Image of Product</label>
+                    <br>
             
-        <input type="url" id="photo-of-product" required />
-<br>
-        <label class="input-field">Product Description</label>
-        <br>
+                    <input type="url" id="photo-of-product" required>
+                    <br>
+                    <label class="input-field">Product Description</label>
+                    <br>
             
-        <input type="text" id="text-for-product-desc" required/>
-<br>
-        <label class="input-field">Product Price</label>
-        <br>
+                    <input type="text" id="text-for-product-desc" required>
+                    <br>
+                    <label class="input-field">Product Price</label>
+                    <br>
             
-        <input type="text" id="price-of-product" pattern="(*[!@#$%^&amp;*_=+-][0-9])" required/>
-&NonBreakingSpace;
-        <!-- button started -->
-        <button type="submit" id="save_details">Save</button>
-&nbsp;
-        <button type="reset">Cancel</button>
-    </form>
-</div>
+                    <input type="tel" id="price-of-product" pattern="[0-9$.]+" required>
+                    &NonBreakingSpace;
+                    <!-- button started -->
+                    <button type="submit" id="save_details">Save</button>
+                    &nbsp;
+                    <button type="reset">Cancel</button>
+                </form>
+            </div>
 
-</section>
+        </section>
 
-<script>
-
+        <script>
     document.getElementById("save_details").addEventListener("click",
-    
+  
     function createProduct(e) {
-    e.preventDefault();
+      e.preventDefault();
 
+      const selecting = document.getElementById("category").value;
 
-    let selecting = document.getElementById("category").value;
+      const clothing = document.getElementById("clothing").value;
 
-    let clothing = document.getElementById("clothing").value
+      const accessories = document.getElementById("accessories").value;
 
-    let accessories = document.getElementById("accessories").value;
+      const home = document.getElementById("home").value;
 
-    let home = document.getElementById("home").value;
+      const product_name = document.getElementById("text-for-product-name").value;
+    const product_photo = document.getElementById("photo-of-product").value;
 
-    let product_name = document.getElementById("text-for-product-name").value 
-    let product_photo = document.getElementById("photo-of-product").value 
+      const product_desc = document.getElementById("text-for-product-desc").value;
+      const product_price = document.getElementById("price-of-product").value;
+      const product_uuid = uuidv4();
 
-    // document.querySelector("#photo-of-product").addEventListener("change" , function () {
-    //     console.log(this.files);
-    // })
+      
+      // Selecting the Clothing Product
+      if (selecting == clothing) {
+        const clothing_details =
+          JSON.parse(localStorage.getItem("clothing_details")) || [];
 
-    let product_desc = document.getElementById("text-for-product-desc").value 
-    let product_price = document.getElementById("price-of-product").value 
-    let product_uuid = uuidv4();
+        const exit = clothing_details.some(
+          (data) => data.clothing_details == clothing_details
+        );
+        if (!exit) {
+          clothing_details.push({
+            selecting,
+            product_name,
+            product_photo,
+            product_desc,
+            product_price,
+            product_uuid,
+          });
 
-    // Selecting the Clothing Product
-if(selecting == clothing){
-    
-    let clothing_details= JSON.parse(localStorage.getItem('clothing_details')) || [];
+          localStorage.setItem(
+            "clothing_details",
+            JSON.stringify(clothing_details)
+          );
+        }
+      }
+      // Selecting the Accessories Product
+      else if (selecting == accessories) {
+        const accessories_details =
+          JSON.parse(localStorage.getItem("accessories_details")) || [];
 
-    let exit = clothing_details.some(data =>
-         data.clothing_details == clothing_details 
-         );
-         if(!exit){
-            clothing_details.push({
-        selecting,
-        product_name,
-        product_photo,
-        product_desc,
-        product_price,
-        product_uuid,
-        });
+        const exit = accessories_details.some(
+          (data) => data.accessories_details == accessories_details
+        );
+        if (!exit) {
+          accessories_details.push({
+            selecting,
+            product_name,
+            product_photo,
+            product_desc,
+            product_price,
+            product_uuid,
+          });
 
+          localStorage.setItem(
+            "accessories_details",
+            JSON.stringify(accessories_details)
+          );
+        }
+      }
+      // Selecting the Home Product
+      else if (selecting == home) {
+        const home_details =
+          JSON.parse(localStorage.getItem("home_details")) || [];
 
-    localStorage.setItem('clothing_details',JSON.stringify(clothing_details));
+        const exit = home_details.some(
+          (data) => data.home_details == home_details
+        );
+        if (!exit) {
+          home_details.push({
+            selecting,
+            product_name,
+            product_photo,
+            product_desc,
+            product_price,
+            product_uuid,
+          });
 
-}
-}
-    // Selecting the Accessories Product
-else if(selecting == accessories){
-    
-    let accessories_details= JSON.parse(localStorage.getItem('accessories_details')) || [];
+          localStorage.setItem("home_details", JSON.stringify(home_details));
+        }
+      }
+      document.querySelector("form").reset();
 
-    let exit = accessories_details.some(data =>
-         data.accessories_details == accessories_details 
-         );
-         if(!exit){
-            accessories_details.push({
-        selecting,
-        product_name,
-        product_photo,
-        product_desc,
-        product_price,
-        product_uuid,
-        });
-
-
-    localStorage.setItem('accessories_details',JSON.stringify(accessories_details));
-
-}
-}
-    // Selecting the Home Product
-else if(selecting == home){
-    
-    let home_details= JSON.parse(localStorage.getItem('home_details')) || [];
-
-    let exit = home_details.some(data =>
-         data.home_details == home_details 
-         );
-         if(!exit){
-            home_details.push({
-        selecting,
-        product_name,
-        product_photo,
-        product_desc,
-        product_price,
-        product_uuid,
-        });
-
-
-    localStorage.setItem('home_details',JSON.stringify(home_details));
- 
-
-}
-}
-document.querySelector('form').reset();
-
-alert('Product created successfully!');
-    window.location.href = "#";
-}
-    )
+      alert("Product created successfully!");
+      window.location.href = "#";
+  }
+  );
 </script>
-<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
-</body>
+    </body>
 </html>

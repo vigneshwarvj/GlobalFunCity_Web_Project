@@ -37,7 +37,7 @@ body{
 
 
 .background-color{
-	height: 2000px;
+	height: 1294px;
 	width: 1485px;
 	background-color: #eee;
 }
@@ -49,7 +49,7 @@ body{
 }
 .store-things{
 	width: 97%;
-	height: 200vh;
+	height: 130vh;
     padding: 15px;
 	display: flex;
 	flex-wrap: wrap;

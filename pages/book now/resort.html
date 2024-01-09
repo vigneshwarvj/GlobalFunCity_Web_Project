@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+<title>Book Now | Select Rooms | Global Fun City </title>
+<link rel="stylesheet" href="../../assets/book now css/selectrooms.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    </head>
+    <body>
+
+
+<div class="header">
+<a href="../../index.html">
+<img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo">
+</a>
+<nav class="navbar">
+    <ul>
+        <li>
+            <a class="navigation__link" href="">
+                <b>HOME</b>
+            </a>
+        </li>    
+        <li>
+            <a class="navigation__link" href="">
+                <b>ABOUT</b> 
+            </a> 
+        </li>
+        <li>
+            <a class="navigation__link" href="">
+                <b>EVENTS </b> 
+            </a> 
+        </li>
+        <li>
+            <a class="navigation__link" href="">
+                <b>OFFERS </b> 
+            </a> 
+        </li>
+        <li>
+            <a class="navigation__link" href="">
+                <b>TICKET  PRICES </b>
+            </a> 
+        </li>
+        <li>
+            <a class="navigation__link" href="">
+                <b>SHOP</b>
+            </a> 
+        </li>
+        <li>
+            <a class="navigation__link" href="">
+                <b>ATTRACTIONS </b>
+            </a> 
+        </li>
+        <li>
+            <a class="navigation__link" href="">
+                <b>CONTACT </b> 
+            </a> 
+        </li>
+    </ul>
+
+</nav>
+<div>
+    <button>
+        <b>
+            <a href=""> BOOK NOW </b> </button> </a>
+</div>
+</div>
+
+            <div class="background-0">
+                <div class="book-now">
+                    <h1>Book Now</h1>
+                </div>
+
+                <!-- <div class="background-color">
+                    background color for search-->
+                <!-- <div class="search-modify"> <!--search-modify-->    
+                <!-- <div class="search">
+                    <h2><button><i class="fa-solid fa-check"></i></button> 1. Search</h2>
+                    </div>
+
+                    <div class="btn-modify">
+                    <a href="../../pages/other pages/booknow.html"><button><i class="fa-solid fa-pen-to-square"></i> Modify</a></button>
+                    </div>
+                    </div>
+                    <hr> -->
+
+<div class="paddingFortotalAssign">
+
+<div class="search-2">
+    <h2> Select Rooms</h2>
+</div>
+
+<div class="hotels-resorts">
+    <input type="radio" id="hotels" name="hotels">  Hotels
+    <input type="radio" id="resorts" name="hotels" checked>Resorts 
+
+</div>
+<hr>
+<section class="total_section_to_rooms">
+
+</section>
+</div>
+</div>
+
+
+<script>
+    const hotelsRadio = document.getElementById('hotels');
+const resortsRadio = document.getElementById('resorts');
+
+//Getting from LS
+const resortDetailsForm = JSON.parse(localStorage.getItem("resortDetails"));
+
+
+// Add event listener to resorts radio button
+resortsRadio.addEventListener('click', function() {
+    // Redirect to the resort page
+    window.location.href = '../../pages/book now/resort.html'; // Replace with the actual URL of the resort page
+});
+
+// Add event listener to hotels radio button
+hotelsRadio.addEventListener('click', function() {
+    // Redirect to the hotel page
+    window.location.href = '../../pages/book now/selectrooms.html'; // Replace with the actual URL of the hotel page
+});
+
+
+for(let i = 0; i < resortDetailsForm.length; i++){
+
+// Create the main container element
+const photoOfRoomAbout = document.createElement('div');
+photoOfRoomAbout.classList.add('photo-of-room-about');
+
+// Create the photo of room element
+const photoOfRoom = document.createElement('div');
+photoOfRoom.classList.add('photo-of-room');
+const roomImage = document.createElement('img');
+roomImage.src = resortDetailsForm[i]._resortImage;
+roomImage.width = '250';
+roomImage.height = '170';
+roomImage.alt = resortDetailsForm[i]._resortroomName;
+photoOfRoom.appendChild(roomImage);
+photoOfRoomAbout.appendChild(photoOfRoom);
+
+// Create the about and price elements
+const aboutPrice = document.createElement('div');
+aboutPrice.classList.add('about-price');
+const about = document.createElement('div');
+about.classList.add('about');
+const roomTitle = document.createElement('h3');
+roomTitle.textContent = resortDetailsForm[i]._resortName;
+const roomType = document.createElement('h4');
+roomType.textContent = resortDetailsForm[i]._resortroomName;
+const bedSelection = document.createElement('h5');
+bedSelection.textContent = 'How many room did you want:';
+
+const br1 = document.createElement("br");
+const br2 = document.createElement("br");
+const br3 = document.createElement("br");
+
+bedSelection.appendChild(br1);
+bedSelection.appendChild(br2);
+
+const bedOptions = document.createElement('div');
+const bedLabels = ['1 room', '2 rooms', '3 rooms'];
+bedLabels.forEach(label => {
+  const bedRadio = document.createElement('input');
+  bedRadio.type = 'radio';
+  bedRadio.id = 'number' + label;
+  bedRadio.name = 'number_of_bed';
+  bedRadio.required = true;
+
+  bedRadio.addEventListener('click', function() {
+    // Get the selected number of beds
+    const selectedBeds = parseInt(label.split(' ')[0]);
+    
+    // Calculate the updated room price based on the selected number of beds
+    const originalPrice = parseFloat(resortDetailsForm[i]._resortPrice.replace('$', ''));
+    const updatedPrice = originalPrice * selectedBeds;
+    
+    // Update the room price in the DOM
+    roomPriceTot.textContent = '$' + updatedPrice;
+  });
+
+  if (label === '1 room') {
+    bedRadio.checked = true; // Set the default selection to 2 beds
+}
+
+
+  const bedLabel = document.createElement('label');
+  bedLabel.htmlFor = 'number' + label;
+  bedLabel.textContent = label;
+  bedOptions.appendChild(bedRadio);
+  bedOptions.appendChild(bedLabel);
+});
+
+bedSelection.appendChild(bedOptions);
+about.appendChild(roomTitle);
+about.appendChild(roomType);
+about.appendChild(bedSelection);
+aboutPrice.appendChild(about);
+photoOfRoomAbout.appendChild(aboutPrice);
+
+// Create the break, price, and button elements
+const breakPriceButton = document.createElement('div');
+breakPriceButton.classList.add('break-price-button');
+const roomWithBreak = document.createElement('div');
+roomWithBreak.classList.add('room-with-break');
+const discountTag = document.createElement('g');
+const discountIcon = document.createElement('i');
+discountIcon.classList.add('fa-solid', 'fa-tags');
+discountTag.appendChild(discountIcon);
+discountTag.textContent = resortDetailsForm[i]._resortDiscount + '% Off on room price';
+const amenitiesTitle = document.createElement('h4');
+amenitiesTitle.textContent = 'Amenties';
+const amenitiesList = document.createElement('ul');
+const amenities = [resortDetailsForm[i]._resortAmenties1, resortDetailsForm[i]._resortAmenties2 ];
+amenities.forEach(amenity => {
+  const amenityItem = document.createElement('li');
+  amenityItem.textContent = amenity;
+  amenitiesList.appendChild(amenityItem);
+});
+const bookingMessage = document.createElement('p');
+bookingMessage.textContent = 'Book your stay now at Global Fun City at best available rates!!';
+roomWithBreak.appendChild(discountTag);
+roomWithBreak.appendChild(amenitiesTitle);
+roomWithBreak.appendChild(amenitiesList);
+roomWithBreak.appendChild(bookingMessage);
+
+const price = document.createElement('div');
+price.classList.add('price');
+const strickOutPrice = document.createElement('h5');
+strickOutPrice.classList.add('strick_out_price');
+strickOutPrice.textContent = '$' + resortDetailsForm[i]._resortStrikeoutPrice;
+const roomPriceTot = document.createElement('span');
+roomPriceTot.textContent = '$' + resortDetailsForm[i]._resortPrice;
+const bookNowLink = document.createElement('a');
+bookNowLink.href = '../../pages/book now/guestinformation.html';
+const bookNowButton = document.createElement('button');
+bookNowButton.textContent = 'Book Now';
+bookNowLink.appendChild(bookNowButton);
+price.appendChild(strickOutPrice);
+price.appendChild(roomPriceTot);
+price.appendChild(document.createElement('br'));
+price.appendChild(document.createTextNode('\u00A0'));
+price.appendChild(bookNowLink);
+
+breakPriceButton.appendChild(roomWithBreak);
+breakPriceButton.appendChild(price);
+
+// Create the horizontal rule element
+const hr = document.createElement('hr');
+
+
+document.querySelector("section.total_section_to_rooms").prepend(photoOfRoomAbout, breakPriceButton, hr);
+
+}
+</script>
+
+<script src="../../js/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+
+        <title> Global Fun City </title>
+        <link rel="stylesheet" href="../../assets/homepage css/user_orders.css">
+        <link rel="stylesheet" href="../../assets/homepage_css/footer_gfc.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="header">
+            <a href="../../index.html">
+                <img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <a class="navigation__link" href="../../index.html">
+                            <b>HOME</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/home.html">
+                            <b>ABOUT</b> 
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/events.html">
+                            <b>EVENTS </b> 
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/offer.html">
+                            <b>OFFERS </b> 
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/ticketprices.html">
+                            <b>TICKET  PRICES </b>
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/shop/shop.html">
+                            <b>SHOP</b>
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/attractions.html">
+                            <b>ATTRACTIONS </b>
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/contact.html">
+                            <b>CONTACT </b> 
+                        </a> 
+                    </li>
+         
+                </ul>
+    
+            </nav>
+            <div>
+                <button>
+                    <a href="../../pages/other pages/booknow.html">
+                        <b>BOOK NOW </b> 
+                    </a>
+                </button>
+            </div>
+        </div>
+
+        <div class="total-homepages-div"> 
+            <!-- Total Homepage div -->
+        <div class="homepages">
+            <a href="../../index.html">Home <i class="fa-light fa-greater-than" style="color: #655b5b;"></i></a>
+        </div> &nbsp;
+        <div class="homepages">
+            <a href="../../pages/homepage/main.profile.html">Account <i class="fa-light fa-greater-than" style="color: #655b5b;"></i></a>
+        </div> &nbsp;
+        <div class="homepages">
+            <a href="../../pages/homepage/user_orders.html">Your Orders </a>
+        </div>
+
+        </div>
+        <!-- Completing Div --> 
+
+        <div class="font-your-orders">
+            <h2>Your Orders</h2>
+            </div>
+        
+            <div class="total-div-for-the-user-products">
+
+        <!-- <div class="total-div-for-user-order" style="display: flex;
+        flex-wrap: wrap;">
+
+
+        <!-- <div class="image-of-product">
+            <img src = "https://iili.io/HX7ia1I.jpg" width="200px" height="200px" alt="shirt">
+        </div>
+
+        <div class="product-name">
+            <h3>White T- Shirt with logo</h3>
+            <p>$10.00</p>
+            <a href=""><p>View Details</p></a>
+        </div> -->
+
+<!--         
+
+        <div class="card">
+            <div class="card-details">
+              <img src = "https://iili.io/HX7ia1I.jpg" class="text-title" width="180px" height="180px" alt="shirt">
+              <p class="text-title">White T - shirt</p>
+              <p class="text-body">$100.00</p>
+            </div>
+            <button class="card-button"><a href ="../../pages/homepage/user_order_detail.html"> View Details </a></button>
+          </div>
+
+          </div> --> 
+
+         </div> 
+
+         <footer class="footer_for_gfc">
+
+         </footer>
+
+        <script src="../../js/header.js"></script>
+        <script src="../../js/footer-gfc.js"></script>
+
+<script>
+    const gettingArrayProductUser = JSON.parse(localStorage.getItem("orderDataFromUser"));
+console.log(gettingArrayProductUser);
+    
+const clothingDetails = JSON.parse(localStorage.getItem("clothing_details"));
+
+const accessoriesDetails = JSON.parse(localStorage.getItem("accessories_details"));
+
+const homeProducts = JSON.parse(localStorage.getItem("home_details"));
+
+const orderIdfromTheUser = JSON.parse(localStorage.getItem("usersfromCheckoutData"));
+
+const allProductIds = clothingDetails.concat(accessoriesDetails,homeProducts);
+console.log(allProductIds)
+
+
+const findOrdersDetails = allProductIds.filter(data  =>
+gettingArrayProductUser.some((p) => p.productIdFromTheUserBag === data.product_uuid))
+console.log(findOrdersDetails);
+
+
+//let orderId = [];
+
+// for(let i=0; i<orderIdfromTheUser.length; i++){
+//     const orderIdfromtheUserbag = orderIdfromTheUser["orderId"]; 
+// console.log(orderIdfromtheUserbag);
+//}
+
+ 
+
+
+
+
+for(let i =0; i<findOrdersDetails.length; i++){
+// Create the main container
+const totalDiv = document.createElement('div');
+totalDiv.className = 'total-div-for-user-order';
+totalDiv.style.display = 'flex';
+totalDiv.style.flexWrap = 'wrap';
+
+// Create a card element
+const card = document.createElement('div');
+card.className = 'card';
+
+// Create the card details element
+const cardDetails = document.createElement('div');
+cardDetails.className = 'card-details';
+
+// Create the image element
+const img = document.createElement('img');
+img.src = findOrdersDetails[i]["product_photo"];
+img.className = findOrdersDetails[i]["product_name"];
+img.width = '180';
+img.height = '180';
+img.alt = findOrdersDetails[i]["product_name"];
+cardDetails.appendChild(img);
+
+// Create the title element
+const title = document.createElement('p');
+title.className = 'text-title';
+title.textContent = findOrdersDetails[i]["product_name"];
+cardDetails.appendChild(title);
+
+// Create the price element
+const price = document.createElement('p');
+price.className = 'text-body';
+price.textContent = '$' + findOrdersDetails[i]["product_price"];
+cardDetails.appendChild(price);
+
+// Append the card details to the card element
+card.appendChild(cardDetails);
+
+// Create the button element
+const button = document.createElement('button');
+button.className = 'card-button';
+
+//Getting OrderId when user clicks proceed in checkout:
+const gettingOrderIdInls = gettingArrayProductUser[i]["orderId"];
+console.log(gettingOrderIdInls);
+
+//Getting ProductId when user clicks procced in checkout:
+const gettingProductIdInls = gettingArrayProductUser[i]["productIdFromTheUserBag"];
+console.log(gettingProductIdInls);
+
+
+// Create the link element
+const pathForProductDetail = window.location.origin;
+const productIdShow = gettingProductIdInls  ; 
+const linkForProductDetail = `${pathForProductDetail}/pages/homepage/user_order_detail.html?userProduct=${encodeURIComponent(productIdShow)}&&orderId=${gettingOrderIdInls}` ;
+
+
+const link = document.createElement('a');
+link.href = linkForProductDetail;
+link.textContent = 'View Details';
+
+// Append the link to the button element
+button.appendChild(link);
+
+// Append the card and button elements to the main container
+totalDiv.appendChild(card);
+card.appendChild(button);
+
+// Add the main container to the document
+document.querySelector(".total-div-for-the-user-products").appendChild(totalDiv);
+
+
+
+
+}
+
+
+
+
+
+
+
+
+// // Filter product ids from clothingDetails array
+// const clothingProductIds = clothingDetails.map(item => item.product_uuid);
+// allProductIds.push(clothingProductIds);
+
+// // Filter product ids from accessoriesDetails array
+// const accessoriesProductIds = accessoriesDetails.map(item => item.product_uuid);
+// allProductIds.push(accessoriesProductIds);
+
+// // Filter product ids from homeProducts array
+// const homeProductIds = homeProducts.map(item => item.product_uuid);
+// allProductIds.push(homeProductIds);
+
+// console.log(allProductIds);
+
+// const filteredArrayForProductId = gettingArrayProductUser.filter(item => item.productIdFromTheUserBag == );
+// console.log(filteredArrayForProductId);
+    // for(let i =0; i<; i++){
+
+    // }
+</script>
+
+    </body>
+</html>

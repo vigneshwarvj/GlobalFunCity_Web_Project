@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Global Fun City - Admin Login </title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+
+        <style>
+.welcome{
+    font-family: 'open sans', sans-serif; 
+    text-align: center;
+    position: relative;
+    top: 40px;
+    font-size: 30px;
+}
+.form_for_admin{
+    width: 100px;
+}
+.details_from_admin{
+    background-color:  rgb(249, 249, 249);
+    width: 300px;
+    border: 2px solid rgb(231, 224, 224);
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    padding: 50px;
+    border-radius: 10px;
+    position: relative;
+    top:85px ;
+    left: 550px;
+}
+.details_from_admin h4{
+    font-family: 'poppins', sans-serif;
+}
+.form_for_admin input{
+    padding: 10px;
+    width: 276px;
+    border: 2px solid #eee;
+    border-radius: 3px;
+}
+.btn-login{
+    padding: 10px;
+    color: white;
+    background-color: #1c314d;
+    border: none;
+    width: 300px;
+    font-family: 'poppins',sans-serif;
+    cursor: pointer;
+}
+    </style>
+    </head>
+    <body>
+        <div class="welcome">
+            <h2>Welcome Admin!</h2>
+        </div>
+
+        <section class="details_from_admin">
+            <img src="../../../assets/images/global-account-logo.png" width="250" alt="global-account">
+            <h4>Enter your credentails</h4>
+            <form role="form" class="form_for_admin" onsubmit="signIn_admin(event)">
+                <input type="text" id="text_id" name="id" placeholder="Login ID" oninput="this.value = this.value.replace(/[^0-9]/g,'')" required> &nbsp;
+                <input type="password" id="password" name="password" placeholder="Password" pattern="[a-zA-Z]+" required>
+                &nbsp;
+                <button class="btn-login" type="submit">Login</button>
+            </form>
+        </section>
+    </body>
+    <script>
+function signIn_admin(event) {
+  // prevent the default form submission behavior
+  event.preventDefault();
+
+  // retrieve the entered login credentials
+//   const loginId = document.getElementById("text_id").value;
+//   const password = document.getElementById("password").value;
+
+  // perform some validation on the entered credentials
+  // ...
+
+  // redirect to the home page
+  window.location.href = "../../../admin/admin html/admin/admin_index.html";
+}
+</script>
+</html>

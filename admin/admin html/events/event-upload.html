@@ -1,256 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset='UTF-8'>
-    <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
 
-    <title>Event form - Global Fun City</title>
-    <link rel="stylesheet" href="../../../admin/admin css/product-upload.css" />
+        <title>Event Upload form - Global Fun City</title>
+        <link rel="stylesheet" href="../../../admin/admin css/product-upload.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap"
-        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap"
+            rel="stylesheet">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap"
+            rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap"
-        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
 
-    <style>
-        table {
-          font-family: arial, sans-serif;
-          width: 100%;
-          padding-top: 200px;
-        }
-        
-        td, th {
-          border: 1px solid #dddddd;
-          text-align: left;
-          padding: 8px;
-        }
-        
-        tr:nth-child(even) {
-          background-color: #dddddd;
-        }
-        </style>
+    <body>
 
-</head>
-
-<body>
-
-    <div class="logo">
-        <img src="../../../assets/images/globalfuncitylogo.png" width="200" alt="logo" />
-    </div>
-
-    <section class="background">
-        <div class="products">
-            <h2>Add Events</h2>
+        <div class="logo">
+            <img src="../../../assets/images/globalfuncitylogo.png" width="200" alt="logo">
         </div>
-        <!-- Div for Events -->
-        <div class="products-details-from-admin">
-            <form role="form" onsubmit="createEvents(event)" class="form-for-admin">
-                <label class="input-field">Select Category</label>
-                <br>
-                <select class="category-for-shop" id="category" required>
-                    <option value="events" id="events">Events</option>
-                    <option value="upcoming_events" id="upcoming_events">Upcoming events</option>
-                </select>
+
+        <section class="background">
+            <div class="products">
+                <h2>Add Events</h2>
+            </div>
+            <!-- Div for Events -->
+            <div class="products-details-from-admin">
+                <form role="form" onsubmit="createEvents(event)" class="form-for-admin">
+                    <label class="input-field">Select Category</label>
+                    <br>
+                    <select class="category-for-shop" id="category" required>
+                        <option value="events" id="events">Events</option>
+                        <option value="upcoming_events" id="upcoming_events">Upcoming events</option>
+                    </select>
 
             </br>
-                <button type="button" class="input_field">Show</button>
-                <br>
-                <div class="input-field-for-event-name_image">
-                    <label class="input-field">Event Name</label>
+                    <button type="button" class="input_field">Show</button>
                     <br>
-
-                    <input type="text" id="text-for-event-name" required />
-                    <br>
-
-                    <label class="input-field">Image of Event</label>
-                    <br>
-
-                    <input type="text" id="photo-of-event" required />
-                    <br>
-                </div>
-                 &nbsp;
-
-                <!-- Div for UpcomingEvents -->
-
-                <div class="new-upcoming" style="display: none;">
-                    <form role="form" class="form-for-admin">
+                    <div class="input-field-for-event-name_image">
                         <label class="input-field">Event Name</label>
-                        <input type="text" id="upcoming-event-name" required style="width: 100%; padding: 10px;">
+                        <br>
+
+                        <input type="text" id="text-for-event-name" required>
+                        <br>
+
+                        <label class="input-field">Image of Event</label>
+                        <br>
+
+                        <input type="text" id="photo-of-event" required>
+                        <br>
+                    </div>
+                    &nbsp;
+
+                    <!-- Div for UpcomingEvents -->
+
+                    <div class="new-upcoming" style="display: none;">
+                        <form role="form" class="form-for-admin">
+                            <label class="input-field">Event Name</label>
+                            <input type="text" id="upcoming-event-name" required style="width: 100%; padding: 10px;">
         
-                        <label class="input-field">Event Image</label>
-                        <input type="text" id="upcoming-event-img" required>
+                            <label class="input-field">Event Image</label>
+                            <input type="text" id="upcoming-event-img" required>
         
-                        <label class="input-field">Event Description</label>
-                        <textarea id="upcoming-event-desc"></textarea>
+                            <label class="input-field">Event Description</label>
+                            <textarea id="upcoming-event-desc"></textarea>
         
-                        <label class="input-field">Video of Event</label>
-                        <input type="text" id="upcoming-event-video">
+                            <label class="input-field">Video of Event</label>
+                            <input type="text" id="upcoming-event-video">
         
-                        <label class="input-field">Event Start</label>
-                        <input type="datetime-local" id="date-start">
+                            <label class="input-field">Event Start</label>
+                            <input type="datetime-local" id="date-start">
         
-                        <label class="input-field">Event End</label>
-                        <input type="datetime-local" id="date-end">
+                            <label class="input-field">Event End</label>
+                            <input type="datetime-local" id="date-end">
         
-                        <label class="input-field">Event Category</label>
-                        <input type="text" id="upcoming-event-category">
+                            <label class="input-field">Event Category</label>
+                            <input type="text" id="upcoming-event-category">
         
-                        <label class="input-field">Organizer Name</label>
-                        <input type="text" id="upcoming-event-organizer">
+                            <label class="input-field">Organizer Name</label>
+                            <input type="text" id="upcoming-event-organizer">
         
-                        <label class="input-field">Organizer Phone number</label>
-                        <input type="text" id="upcoming-event-organizer-ph.no">
+                            <label class="input-field">Organizer Phone number</label>
+                            <input type="text" id="upcoming-event-organizer-ph.no">
         
-                        <label class="input-field">Organizer Email</label>
-                        <input type="email" id="upcoming-event-organizer-email">
+                            <label class="input-field">Organizer Email</label>
+                            <input type="email" id="upcoming-event-organizer-email">
         
-                    </form>
-                </div>
-                &nbsp;
-                <!-- button started -->
-                <button type="submit" id="save_details" style="padding: 10px;
+                        </form>
+                    </div>
+                    &nbsp;
+                    <!-- button started -->
+                    <button type="submit" id="save_details" style="padding: 10px;
                 color: white;
                 background-color: #1c314d;
                 border: none;
                 width: 107%;
                 font-family: 'poppins',sans-serif;
                 cursor: pointer;">Save</button>
-                &nbsp;
-                <button type="reset" style="padding: 10px;
+                    &nbsp;
+                    <button type="reset" style="padding: 10px;
                 color: white;
                 background-color: #1c314d;
                 border: none;
                 width: 107%;
                 font-family: 'poppins',sans-serif;
                 cursor: pointer;"
-                >Cancel</button>
-            </form>
-        </div>
-    </section>
+                    >Cancel</button>
+                </form>
+            </div>
+        </section>
 
-    <script>
+
+
+        <script>
         //Changing for Upcoming Events
-        let eventUpcoming = document.querySelector(".input_field");
-        eventUpcoming.addEventListener("click", showform)
+        const eventUpcoming = document.querySelector(".input_field");
+        eventUpcoming.addEventListener("click", showform);
 
         function showform() {
+  const NewUpcoming = document.querySelector(".new-upcoming");
+          const Events = document.querySelector(".input-field-for-event-name_image");
 
-            let NewUpcoming = document.querySelector(".new-upcoming");
-            let Events = document.querySelector(".input-field-for-event-name_image")
-
-            Events.setAttribute("style", "display:none");
-            NewUpcoming.setAttribute("style", "display:inline")
-
+          Events.setAttribute("style", "display:none");
+          NewUpcoming.setAttribute("style", "display:inline");
         }
 
         //Updateing the Events
-        document.getElementById("save_details").addEventListener("click", 
+        document.getElementById("save_details").addEventListener(
+  "click",
         
-        function createEvents(e){
+          function createEvents(e) {
             e.preventDefault();
 
-            let selectingCategory = document.getElementById("category").value;
+            const selectingCategory = document.getElementById("category").value;
 
-            let event = document.getElementById("events").value;
+            const event = document.getElementById("events").value;
 
-            let upcoming_event = document.getElementById("upcoming_events").value;
+            const upcoming_event = document.getElementById("upcoming_events").value;
 
             //Events
-            let eventName = document.getElementById("text-for-event-name").value;
-            let eventPhoto = document.getElementById("photo-of-event").value;
-            let events_uuid = uuidv4();
+            const eventName = document.getElementById("text-for-event-name").value;
+            const eventPhoto = document.getElementById("photo-of-event").value;
+            const events_uuid = uuidv4();
 
             //Upcoming_events
-        let upcoming_event_name = document.getElementById("upcoming-event-name").value;
-        let upcoming_event_img = document.getElementById("upcoming-event-img").value;
-        let upcoming_event_desc = document.getElementById("upcoming-event-desc").value;
-        let upcoming_event_video = document.getElementById("upcoming-event-video").value;
-        let upcoming_event_start = document.getElementById("date-start").value;
-        let upcoming_event_end = document.getElementById("date-end").value;
-        let upcoming_event_category = document.getElementById("upcoming-event-category").value;
-        let upcoming_event_organizer = document.getElementById("upcoming-event-organizer").value;
-        let upcoming_event_organizer_ph_no = document.getElementById("upcoming-event-organizer-ph.no").value;
-        let upcoming_event_organizer_email = document.getElementById("upcoming-event-organizer-email").value;
-        let upcoming_event_uuid = uuidv4();
+            const upcoming_event_name = document.getElementById(
+      "upcoming-event-name"
+    ).value;
+            const upcoming_event_img =
+      document.getElementById("upcoming-event-img").value;
+            const upcoming_event_desc = document.getElementById(
+      "upcoming-event-desc"
+    ).value;
+            const upcoming_event_video = document.getElementById(
+      "upcoming-event-video"
+    ).value;
+            const upcoming_event_start = document.getElementById("date-start").value;
+            const upcoming_event_end = document.getElementById("date-end").value;
+            const upcoming_event_category = document.getElementById(
+      "upcoming-event-category"
+    ).value;
+            const upcoming_event_organizer = document.getElementById(
+      "upcoming-event-organizer"
+    ).value;
+            const upcoming_event_organizer_ph_no = document.getElementById(
+      "upcoming-event-organizer-ph.no"
+    ).value;
+            const upcoming_event_organizer_email = document.getElementById(
+      "upcoming-event-organizer-email"
+    ).value;
+            const upcoming_event_uuid = uuidv4();
 
-        //selecting the Event category
-        if(selectingCategory == event){
-            let event_details = JSON.parse(localStorage.getItem('event_details')) || [];
+            //selecting the Event category
+            if (selectingCategory == event) {
+              const event_details =
+        JSON.parse(localStorage.getItem("event_details")) || [];
 
-        //Check if the event details already exists in the array
-        let exit = event_details.some(data =>
-        data.event_details == event_details );
+              //Check if the event details already exists in the array
+              const exit = event_details.some(
+        (data) => data.event_details == event_details
+      );
 
-        //Add the new event to the array.
-        if(!exit){
-        if (eventName !== "" && eventPhoto !== ""){
-        event_details.push({
-        eventName,
-        eventPhoto,
-        events_uuid
-    });
-    //Store the updated event details in local storage
-    localStorage.setItem('event_details', JSON.stringify(event_details));
-
+              //Add the new event to the array.
+              if (!exit) {
+                if (eventName !== "" && eventPhoto !== "") {
+                  event_details.push({
+                    eventName,
+                    eventPhoto,
+                    events_uuid,
+                  });
+                  //Store the updated event details in local storage
+                  localStorage.setItem("event_details", JSON.stringify(event_details));
         }
-    }
-} 
-else if(selectingCategory == upcoming_event){
+      }
+    } else if (selectingCategory == upcoming_event) {
+      const upcoming_event_details =
+        JSON.parse(localStorage.getItem("upcoming_event_details")) || [];
 
-    let upcoming_event_details = JSON.parse(localStorage.getItem('upcoming_event_details')) || [];
+      const exit = upcoming_event_details.some(
+        (data) => data.upcoming_event_details == upcoming_event_details
+      );
+      if (!exit) {
+                
+                upcoming_event_details.push({
+                  upcoming_event_name,
+                  upcoming_event_img,
+                  upcoming_event_desc,
+                  upcoming_event_video,
+                  upcoming_event_start,
+                  upcoming_event_end,
+                  upcoming_event_category,
+                  upcoming_event_organizer,
+                  upcoming_event_organizer_ph_no,
+                  upcoming_event_organizer_email,
+                  upcoming_event_uuid,
+                });
 
-    let exit = upcoming_event_details.some(data => 
-    data.upcoming_event_details == upcoming_event_details
-    );
-    if(!exit){
-        if(upcoming_event_name !== "" ){
-            upcoming_event_details.push({
-                upcoming_event_name,
-                upcoming_event_img,
-                upcoming_event_desc,
-                upcoming_event_video,
-                upcoming_event_start,
-                upcoming_event_end,
-                upcoming_event_category,
-                upcoming_event_organizer,
-                upcoming_event_organizer_ph_no,
-                upcoming_event_organizer_email,
-                upcoming_event_uuid
-            });
+                localStorage.setItem(
+                  "upcoming_event_details",
+                  JSON.stringify(upcoming_event_details)
+        );
+      }
+            }
 
-            localStorage.setItem('upcoming_event_details',JSON.stringify(upcoming_event_details));
-
-        }
-    }
-}
-                //Reset the form and and show a alert
-                document.querySelector('form').reset();
-                alert('Event Created!');
-                window.location.href = "#";
-                }
-
-
-            
-        
+    //Reset the form and and show a alert
+            document.querySelector("form").reset();
+            alert("Event Created!");
+            window.location.href = "#";
+          }
         );
 
 
-
-
-
     </script>
-<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    </body>
 
 </html>

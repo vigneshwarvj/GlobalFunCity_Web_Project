@@ -1,131 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset='UTF-8'>
-	<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
-<title> Cart - Global Fun City </title>
-<link rel="stylesheet" href="../../assets/store css/cart.css" />
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+        <title> Cart - Global Fun City </title>
+        <link rel="stylesheet" href="../../assets/store css/cart.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap"
+            rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Work+Sans:wght@300&display=swap"
+            rel="stylesheet">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
-<body>
+    <body>
 
-    <div class="shipping">
-        <p>Free Shipping on orders of $99 or more! Code: SHIPGLOBAL</p>
+        <div class="shipping">
+            <p>Free Shipping on orders of $99 or more! Code: SHIPGLOBAL</p>
+        </div>
+
+        <!-- div for shop logo & others -->
+        <div class="header-navbar">
+
+            <div class="icons-info">
+                <a href="../../index.html">
+                    <i class="fa-sharp fa-solid fa-house"></i> &nbsp; Back to Home 
+                </a> &nbsp;
+                <a href="../../pages/other pages/contact.html">
+                    <i class="fa-solid fa-phone"></i> &nbsp; Contact 
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-cc-visa"></i> &nbsp; Global Visa Card 
+                </a>
+            </div>
+
+            <div class="logo-global">
+                <a href="../../pages/shop/shop.html">
+                    <img src="../../assets/images/global-shop-logo.png" width="210" alt="global-shop-logo">
+                </a>
+            </div>
+
+            <div class="icons-info" id="sign-in">
+
+                <a href="#" id="wishlist_anchor">
+                    <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (0)
+                </a> &nbsp;
+                <a href="#" id="mybag_anchor">
+                    <i class="fa-solid fa-bag-shopping"></i> &nbsp; <p class="mybag" style="display: inline;"></p>
+                </a>
+            </div>
+        </div>
+
+        <div class="background-color">
+
+            <div class="cart">
+                <h1>My Bag</h1>
+            </div>
+<div class="toshow-error-div">
+            <table class="product-table">
+                <tbody class="tbody-for-products">
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Size</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th>Remove</th>
+                    </tr>
+
+                    <!-- <tr>
+                        <td><img src="../../assets/images/shopping/t-shirt.jpg" width="150px" height="130px" alt="White-T-Shirt"/> <p>White-T-Shirt with Logo</p></td>
+                        <td>$199.00</td>
+                        <td>M</td>
+                        <td>$199.00</td>
+                        <td><a href="../../pages/shop/shop.html"><i class="fa-solid fa-xmark"></i></a></td>
+                        </tr> -->
+
+                    <!-- <tr>
+                        <td><img src="../../assets/images/shopping/black.jpg" width="150px" height="130px" alt="White-T-Shirt"/> <p>Black-T-Shirt with Events</p></td>
+                        <td>$299.00</td>
+                        <td>XL</td>
+                        <td>1</td>
+                        <td>$299.00</td>
+                        <td><a href="../../pages/shop/shop.html"><i class="fa-solid fa-xmark"></i></a></td>
+                        </tr> -->
+                </tbody>
+            </table>
+
+            <button class="btn-shopping">
+                <a href="../../pages/shop/shop.html"> Continue Shopping </a>
+            </button>
+
+            <div class="order-of-summary">
+                <!-- <div class="cart-details">
+                    <h2>Order of Summary</h2>
+                </div>
+
+                <table class="card-totals">
+                    <tr>
+                        <th id="total">Subtotals</th>
+                        <th id="price">$498.00</th>
+                    </tr>
+
+                    <tr>
+                        <th id="total">Total</th>
+                        <th id="price">$498.00</th>
+                    </tr>
+                </table> -->
+
+                <button class="btn-checkout">
+                    <a href="../../pages/shop/checkout.html">Proceed to Checkout </a>
+                </button>
+            </div>
+        </div>
     </div>
-    
-    <!-- div for shop logo & others -->
-    <div class="header-navbar">
-    
-    <div class="icons-info">
-        <a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i> &nbsp; Back to Home </a> &nbsp;
-        <a href=""><i class="fa-solid fa-phone"></i> &nbsp; Contact </a> 
-        <a href=""><i class="fa-brands fa-cc-visa"></i> &nbsp; Global Visa Card </a>
-    </div>	
-    
-    <div class="logo-global">
-        <a href=""><img src="../../assets/images/global-shop-logo.png" width="210" alt="global-shop-logo"/></a>
+
     </div>
-    
-    <div class="icons-info">
-        <a href="../../pages/signup for shopping/signup_shop.html"> <i class="fa-solid fa-user"></i> &nbsp; Sign In | Sign Up </a> &nbsp;
-        <a href=""> <i class="fa-solid fa-heart"></i> &nbsp; My Wishlist (2)</a> &nbsp;
-        <a href="../../pages/shop/cart.html"> <i class="fa-solid fa-bag-shopping"></i> &nbsp; My Bag (2)</a>
-    </div>
-    </div>
-
-
-<div class="background-color">
-
-    <div class="cart">
-        <h1>My Bag</h1>
-    </div>
-
-<table class="product-table">
-    <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Size</th>
-        <th>Quantity</th>
-        <th>Subtotal</th>
-        <th>Remove</th>
-    </tr>
-    
-    <tr>
-        <td><img src="../../assets/images/shopping/t-shirt.jpg" width="150px" height="130px" alt="White-T-Shirt"/> <p>White-T-Shirt with Logo</p></td>
-        <td>$199.00</td>
-        <td>M</td>
-        <td><input type="number" id="quantity" name="quantity"
-            placeholder="1" min="0" max="100"></td>
-        <td>$199.00</td>
-        <td><a href="../../pages/shop/shop.html"><i class="fa-solid fa-xmark"></i></a></td>
-        </tr>
-       
-        <tr>
-            <td><img src="../../assets/images/shopping/black.jpg" width="150px" height="130px" alt="White-T-Shirt"/> <p>Black-T-Shirt with Events</p></td>
-            <td>$299.00</td>
-            <td>XL</td>
-            <td><input type="number" id="quantity" name="quantity"
-                placeholder="1" min="0" max="100"></td>
-            <td>$299.00</td>
-            <td><a href="../../pages/shop/shop.html"><i class="fa-solid fa-xmark"></i></a></td>
-            </tr>
-</table> 
-
-<button class="btn-shopping"><a href="../../pages/shop/shop.html"> Continue Shopping </a></button>
-
-
-
-<div class="order-of-summary">
-<div class="cart-details">
-    <h2>Order of Summary</h2>
 </div>
 
-<table class="card-totals">
-    <tr>
-        <th id="total">Subtotals</th>
-        <th id="price">$498.00</th>
-    </tr>
 
-    <tr>
-        <th id="total">Total</th>
-        <th id="price">$498.00</th>
-    </tr>
-</table>
+        <footer>
+            <div class="background-footer">
 
-<button class="btn-checkout"><a href="../../pages/shop/checkout.html">Proceed to Checkout </a></button>
-</div>
-</div>
-</div>
+                <div class="navbar-footer-logo">
+                    <img src="../../assets/images/globalfuncitylogo.png" width="200" alt="logo">
+                </div>
 
-</div>
+                <div class="address">
+                    <p>11113 W Baldwin RD, Monrovia, MD 21770, USA</p>
+                    <h4>
+                        <i class="fa-solid fa-phone"></i> +1 860 817 1080
+                    </h4>
+                    <h4>
+                        <i class="fa-solid fa-envelope"></i> info@globalfuncity.in
+                    </h4>
+                </div>
+
+                <div class="other-policies">
+                    <a href="#">Book now Policy</a>
+                </div>
+            </div>
+
+        </footer>
+
+        <script>
+const addtoBag = JSON.parse(localStorage.getItem("add_to_cart_products"));
+let total_amount = [];
+
+//To Increasing the value in the my bag in the header:
+let myBagPara = document.querySelector(".mybag")
+
+let cartArray = JSON.parse(localStorage.getItem("add_to_cart_products"))
+
+if(localStorage.getItem("add_to_cart_products")){
+
+ function bag(){
+   return myBagPara.innerHTML = "My Bag"+" "+"("+cartArray.length+")";
+
+}
+bag()
+}
+else{
+myBag.innerHTML = "My Bag"+" "+"("+0+")"
+}
+
+        for (let i = 0; i < addtoBag.length; i++) {
+          // create the tr element
+          const tr = document.createElement("tr");
+          tr.setAttribute("class", "productsInBag");
+
+          document.querySelector(".tbody-for-products").appendChild(tr);
+          // create the td elements and their content
+          const td1 = document.createElement("td");
+          const img = document.createElement("img");
+          img.src = addtoBag[i].product_photo;
+          img.width = "150";
+          img.height = "130";
+          img.alt = addtoBag[i].product_name;
+          const p = document.createElement("p");
+          p.textContent = addtoBag[i].product_name;
+          td1.appendChild(img);
+          td1.appendChild(p);
+
+          const td2 = document.createElement("td");
+          td2.textContent = `$${addtoBag[i].product_price}`;
+
+          const td3 = document.createElement("td");
+          td3.textContent = addtoBag[i]["productSize"];
+
+          const td4 = document.createElement("td");
+          td4.setAttribute("style", "padding-left:44px;");
+          td4.setAttribute("class", "td_for_quantity");
+          td4.setAttribute("data-remove", addtoBag[i].product_uuid);
+
+          const plusBtn = document.createElement("button");
+          plusBtn.setAttribute("class", "btn-sub");
+          // plusBtn.setAttribute('onclick', 'totalClick(-1)')
+          const plusIcon = document.createElement("i");
+          plusIcon.setAttribute("class", "fa-solid fa-minus");
+          plusIcon.setAttribute("style", "font-size:initial;");
+          plusBtn.appendChild(plusIcon);
+          td4.appendChild(plusBtn);
+
+          const quantityInput = document.createElement("span");
+          quantityInput.setAttribute("class", "total_clicks_span");
+          quantityInput.setAttribute("id", "totalClicks");
+          quantityInput.setAttribute("style", "padding:10px;");
+          quantityInput.textContent = addtoBag[i]["product_qty"];
+          td4.appendChild(quantityInput);
+
+          const minusBtn = document.createElement("button");
+          minusBtn.setAttribute("class", "btn-add");
+          // minusBtn.setAttribute('onclick', 'totalClick(1)');
+          const minusIcon = document.createElement("i");
+          minusIcon.setAttribute("class", "fa-solid fa-plus");
+          minusIcon.setAttribute("style", "font-size:initial;");
+          minusBtn.appendChild(minusIcon);
+
+          td4.appendChild(minusBtn);
+
+         const td5 = document.createElement("td");
+         td5.textContent = "$" + addtoBag[i]["product_qty"] * addtoBag[i]["product_price"] + ".00";
+
+         let amount = parseInt(td5.textContent.replace("$",""));
+         total_amount.push(amount);
+
+          const td6 = document.createElement("td");
+          const i_icon = document.createElement("i");
+          i_icon.classList.add("fa-solid", "fa-xmark");
+          i_icon.setAttribute("data-remove", addtoBag[i].product_uuid);
+          i_icon.id = "remove_product_icon";
+          td6.appendChild(i_icon);
+
+          // append all the td elements to the tr element
+
+          tr.appendChild(td1);
+          tr.appendChild(td2);
+          tr.appendChild(td3);
+          tr.appendChild(td4);
+          tr.appendChild(td5);
+          tr.appendChild(td6);
+        }
+
+        let totalAmount = 0;
+        for (let i = 0; i < total_amount.length; i++){
+            totalAmount += total_amount[i];
+        }
+
+        //Remove Product from the cart
+        const removeProduct_from_cart = document.querySelectorAll("#remove_product_icon");
+        removeProduct_from_cart.forEach(function (remove) {
+        remove.addEventListener("click", function () {
+        const customAttribute = this.dataset.remove;
+        localStorage.setItem("removeProducts_from_my_Bag",JSON.stringify(customAttribute));
+    console.log(customAttribute);
+
+    const product_uuid_of_bag = JSON.parse(localStorage.getItem("removeProducts_from_my_Bag"));
+
+    const toGet_the_products = JSON.parse(localStorage.getItem("add_to_cart_products"));
+
+    const toCheck_product_uuid = toGet_the_products.find((e) => e.product_uuid == product_uuid_of_bag);
+
+    const indexOfProduct = toGet_the_products.indexOf(toCheck_product_uuid);
+
+    toGet_the_products.splice(indexOfProduct, 1);
+
+    localStorage.setItem("add_to_cart_products",JSON.stringify(toGet_the_products));
+
+alert("Are you sure to remove this product from your's bag?")
+
+    window.location.reload();
+  });
+        });
+
+        // Adding the value quantity (Increment)
+
+        // let totalClicks = 1;
+
+        const product_quantity_add = document.querySelectorAll(".btn-add");
+        product_quantity_add.forEach(function (add) {
+          add.addEventListener("click", function () {
+            const parent = this.closest(".productsInBag");
+            // console.log(parent);
+            const count = parent.querySelector(".total_clicks_span").innerText;
+            // console.log(count)
+            const get = parseInt(count) + 1;
+            console.log(get);
+
+            parent.querySelector(".total_clicks_span").innerText = get;
+
+            //To Multiple products
+            const pro_id = parent.querySelector("#remove_product_icon").dataset.remove;
+            // console.log(pro_id);
+
+            const add_to_cart_products = JSON.parse(localStorage.getItem("add_to_cart_products"))
+            // console.log(add_to_cart_products[0]["product_uuid"])
+
+            const findData = add_to_cart_products.filter(data => data.product_uuid == pro_id);
+            // console.log(findData)
+
+            findData[0]["product_qty"] = get
+
+            localStorage.setItem("add_to_cart_products", JSON.stringify(add_to_cart_products))
+
+            window.location.reload()
+
+          });
+        });
+        // Decreasing the value quantity (Decrement)
+        const product_quantity_sub = document.querySelectorAll(".btn-sub");
+        product_quantity_sub.forEach(function (sub) {
+          sub.addEventListener("click", function () {
+            const parent = this.closest(".productsInBag");
+            console.log(parent);
+            const count = parent.querySelector(".total_clicks_span").innerText;
+            console.log(count);
+
+            let get = 0;
+            if (count == 1) {
+              get = parseInt(count);
+            } else {
+              get = parseInt(count) - 1;
+            }
+
+            // console.log(get)
+
+    parent.querySelector(".total_clicks_span").innerText = get;
+
+    const pro_id = parent.querySelector("#remove_product_icon").dataset.remove;
+    // console.log(pro_id);
+
+    const add_to_cart_products = JSON.parse(localStorage.getItem("add_to_cart_products"))
+    // console.log(add_to_cart_products[0]["product_uuid"])
+
+    const findData = add_to_cart_products.filter(data => data.product_uuid == pro_id);
+    // console.log(findData)
+
+    findData[0]["product_qty"] = get
+
+    localStorage.setItem("add_to_cart_products", JSON.stringify(add_to_cart_products))
+
+    window.location.reload();
 
 
-<footer>
-    <div class="background-footer">
+          });
+        });
+
+
+// const productIncreasingValue = document.querySelectorAll(".btn-add");
+// productIncreasingValue.forEach(function (addingValue){
+// addingValue.addEventListener("change", function () {
+//     const parent = this.closest(".productsInBag");
+//     console.log(parent);
+//     const pro_id = parent.querySelector("#remove_product_icon").data.remove;
+//     console.log(pro_id);
+
+//     const addingValue = parent.getElementById("totalClicks");
+//     console.log(addingValue);
     
-    <div class="navbar-footer-logo">
-        <img src="../../assets/images/globalfuncitylogo.png" width="200" alt="logo"/>
-    </div>
-    
-    <div class="address">
-        <p>11113 W Baldwin RD, Monrovia, MD 21770, USA</p>
-        <h4><i class="fa-solid fa-phone"></i> +1 860 817 1080</h4>
-        <h4><i class="fa-solid fa-envelope"></i> info@globalfuncity.in</h4>
-    </div>
-    
-    <div class="other-policies">
-        <a href="#" >Book now Policy</a>
-    </div>
-    </div>
+// })
+// })
 
+//To create the Order summary DOM:
+// create container div with class 'cart-details'
+const container = document.createElement('div');
+container.classList.add('cart-details');
+
+// create h2 element
+const summaryHeading = document.createElement('h2');
+summaryHeading.textContent = 'Order of Summary';
+
+// append h2 element to container div
+container.appendChild(summaryHeading);
+
+// create table element with class 'card-totals'
+const table = document.createElement('table');
+table.classList.add('card-totals');
+
+// create first row of table with subtotal information
+const subtotalRow = document.createElement('tr');
+
+const subtotalTitle = document.createElement('th');
+subtotalTitle.setAttribute('id', 'sub_total');
+subtotalTitle.textContent = 'Subtotal';
+
+const subtotalPrice = document.createElement('th');
+subtotalPrice.setAttribute('id', 'sub_price');
+subtotalPrice.textContent = '$' + totalAmount + ".00";
+
+subtotalRow.appendChild(subtotalTitle);
+subtotalRow.appendChild(subtotalPrice);
+
+// create second row of table with total information
+const totalRow = document.createElement('tr');
+
+const totalTitle = document.createElement('th');
+totalTitle.setAttribute('id', 'total');
+totalTitle.textContent = 'Total';
+
+const totalPrice = document.createElement('th');
+totalPrice.setAttribute('id', 'total_price');
+totalPrice.textContent = '$' + totalAmount + ".00";
+
+totalRow.appendChild(totalTitle);
+totalRow.appendChild(totalPrice);
+
+// append both rows to the table
+table.appendChild(subtotalRow);
+table.appendChild(totalRow);
+
+// append table element to container div
+container.appendChild(table);
+
+document.querySelector(".order-of-summary").prepend(container);
+
+
+
+    </script>
+        <script src="../../js/shop.js"></script>
+
+    </body>
+
+</html>

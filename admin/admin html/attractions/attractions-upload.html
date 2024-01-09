@@ -1,103 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset='UTF-8'>
-    <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.png">
 
-    <title>Attractions form - Global Fun City</title>
-    <link rel="stylesheet" href="../../../admin/admin css/product-upload.css" />
+        <title>Attractions form - Global Fun City</title>
+        <link rel="stylesheet" href="../../../admin/admin css/product-upload.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap"
-        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap"
+            rel="stylesheet">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap"
+            rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&family=Rubik+Microbe&display=swap"
-        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
+    <body>
 
-<body>
-
-    <div class="logo">
-        <img src="../../../assets/images/globalfuncitylogo.png" width="200" alt="logo" />
-    </div>
-
-    <section class="background">
-        <div class="products">
-            <h2>Add Attractions</h2>
+        <div class="logo">
+            <img src="../../../assets/images/globalfuncitylogo.png" width="200" alt="logo">
         </div>
 
-        <div class="products-details-from-admin">
-            <form role="form" onsubmit="createAttractions(event)" class="form-for-admin">
-                <label class="input-field">Attraction Name</label>
-                <br>
+        <section class="background">
+            <div class="products">
+                <h2>Add Attractions</h2>
+            </div>
 
-                <input type="text" id="text-for-attraction-name" required />
-                <br>
-                <label class="input-field">Image of Attraction</label>
-                <br>
+            <div class="products-details-from-admin">
+                <form role="form" onsubmit="createAttractions(event)" class="form-for-admin">
+                    <label class="input-field">Attraction Name</label>
+                    <br>
 
-                <input type="url" id="photo-of-attractions" required />
-                &NonBreakingSpace;
-                <!-- button started -->
-                <button type="submit" id="save_details">Save</button>
-                &nbsp;
-                <button type="reset">Cancel</button>
-            </form>
-        </div>
+                    <input type="text" id="text-for-attraction-name" required>
+                    <br>
+                    <label class="input-field">Image of Attraction</label>
+                    <br>
 
-    </section>
+                    <input type="url" id="photo-of-attractions" required>
+                    &NonBreakingSpace;
+                    <!-- button started -->
+                    <button type="submit" id="save_details">Save</button>
+                    &nbsp;
+                    <button type="reset">Cancel</button>
+                </form>
+            </div>
 
-    <script>
-        document.getElementById("save_details").addEventListener("click",
+        </section>
 
-            function createAttractions(e) {
+        <table class="attraction_show" style="position: relative; top: 180px; padding: 50px;
+    width: 1300px;">
+            <tbody>
+                <tr>
+                    <th id="photo">Attraction Photo</th>
+                    <th id="name">Attraction Name</th>
+                    <th id="option">Options</th>
+                    <th id="publish_id">Publish</th>
+                </tr>
 
-                let attractionName = document.getElementById("text-for-attraction-name").value;
-                let attractionPhoto = document.getElementById("photo-of-attractions").value;
-                let attraction_uuid = uuidv4();
+                <tr>
+                    <th id="image">
+                        <img src="../../../assets/images/globalfuncitylogo.png" width="180px" alt="logo"> 
+                    </th>
+                    <th id="name">QWERTYU</th>
+                    <th id="options_main">
+                        <button id="edit">EDIT</button>
+                        <br>
+                        <button id="remove">REMOVE</button>
+                        <br>
+                    </th>
+                    <th id="publish_btn">
+                        <button id="publish">PUBLISH</button>
+                    </th>
 
-                let attraction_details = JSON.parse(localStorage.getItem('attraction_details')) || [];
+                </tr>
+            </tbody>
+        </table>
 
-                //Check if the event details already exists in the array
-                let exit = attraction_details.some(data =>
-                    data.attractionName == attractionName &&
-                    data.attractionPhoto == attractionPhoto &&
-                    data.attraction_uuid == attraction_uuid);
+        <script>
+        document.getElementById("save_details").addEventListener(
+  "click",
 
-                //Add the new event to the array.
-                if (!exit) {
-                    if (attractionName !== "" && attractionPhoto !== "") {
-                        attraction_details.push({
-                            attractionName,
-                            attractionPhoto,
-                            attraction_uuid
-                        });
-                        //Store the updated event details in local storage
-                        localStorage.setItem('attraction_details', JSON.stringify(attraction_details));
+          function createAttractions(e) {
+    const attractionName = document.getElementById(
+      "text-for-attraction-name"
+    ).value;
+            const attractionPhoto = document.getElementById(
+      "photo-of-attractions"
+    ).value;
+            const attraction_uuid = uuidv4();
 
-                        //Reset the form and and show a alert
-                        document.querySelector('form').reset();
-                        alert('Attraction Created!');
-                        window.location.href = "#";
-                    }
+            const attraction_details =
+      JSON.parse(localStorage.getItem("attraction_details")) || [];
 
+            //Check if the event details already exists in the array
+            const exit = attraction_details.some(
+      (data) =>
+        data.attractionName == attractionName &&
+        data.attractionPhoto == attractionPhoto &&
+        data.attraction_uuid == attraction_uuid
+    );
 
+    //Add the new event to the array.
+            if (!exit) {
+              if (attractionName !== "" && attractionPhoto !== "") {
+                attraction_details.push({
+                  attractionName,
+                  attractionPhoto,
+                  attraction_uuid,
+                });
+                //Store the updated event details in local storage
+                localStorage.setItem(
+                  "attraction_details",
+                  JSON.stringify(attraction_details)
+                );
 
-                }
-            }
+        //Reset the form and and show a alert
+                document.querySelector("form").reset();
+                alert("Attraction Created!");
+                window.location.href = "#";
+              }
+    }
+          }
         );
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
-</body>
+    </body>
 
 </html>

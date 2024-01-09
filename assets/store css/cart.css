@@ -80,6 +80,15 @@ body{
     margin: 80px 0px 0px 1100px;
     
 }
+/* buttonplus&minus */
+.btn-sub, .btn-add{
+	padding: 4px 6px 4px 6px;
+    background-color: white;
+    border: #646464 2px solid;
+    color: #ffa51d;
+    border-radius: 110px;
+	
+}
 .btn-shopping a{
     text-decoration: none;
     color: white;

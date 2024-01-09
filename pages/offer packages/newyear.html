@@ -1,235 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset='UTF-8'>
-<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
-    <title> New Year Offer - Global Fun City </title>
-<link rel="stylesheet" href="../../assets/offer css/newyear.css" />
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+        <title> New Year Offer - Global Fun City </title>
+        <link rel="stylesheet" href="../../assets/offer css/newyear.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&family=Open+Sans:wght@700&family=Poppins:wght@300;500&family=Reem+Kufi&family=Sacramento&display=swap" rel="stylesheet">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
 
-</head>
-<body>
+        <header>
 
-	<header>
-		<div class="visit-signin">
+            <div class="header">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a class="navigation__link" href="../../index.html">HOME</a>
+                    <a class="active" href="../../pages/other pages/home.html"> ABOUT</a>
+                    <a class="navigation__link" href="../../pages/other pages/events.html"> EVENTS  </a> 
+                    <a class="navigation__link" href="../../pages/other pages/offer.html"> OFFERS  </a> 
+                    <a class="navigation__link" href="../../pages/other pages/ticketprices.html"> TICKET  PRICES </a> 
+                    <a class="navigation__link" href="../../pages/shop/shop.html"> SHOP </a> 
+                    <a class="navigation__link" href="../../pages/other pages/attractions.html"> ATTRACTIONS </a> 
+                    <a class="navigation__link" href="../../pages/other pages/contact.html"> CONTACT </a>
+                    <hr>
+                    <a href="../signup for booking/signup.html">BOOK TICKETS</a>
+                    <hr>
+                    <a href="../../pages/footer other pages/safetyofvisitors.html">Safety of visitors</a>
+                    <a href="../../pages/footer other pages/rulesandregulations.html">Rules & Regulations</a>
+                    <a href="../../pages/footer other pages/greeninitiatives.html">Green Initiatives</a>
+                    <a href="../../pages/footer other pages/csrinitiatives.html">CSR Initiatives</a>
+                    <hr>
+                    <a href="../../pages/signup for booking/signup.html">Sign In</a> 
+                </div>
+                <div class="icon-bar">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                </div>
+                <a href="../../index.html">
+                    <img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo">
+                </a>
+                <nav class="navbar">
+                    <ul>
+                        <li>
+                            <a class="navigation__link" href="../../index.html">
+                                <b>HOME</b>
+                            </a></a>
+                        </li>   
+                        <li>
+                            <a class="navigation__link" href="../../pages/other pages/home.html">
+                                <b>ABOUT</b> 
+                            </a> 
+                        </li>
+                        <li>
+                            <a class="navigation__link" href="../../pages/other pages/events.html">
+                                <b>EVENTS </b> 
+                            </a> 
+                        </li>
+                        <li>
+                            <a class="active" href="../../pages/other pages/offer.html">
+                                <b>OFFERS </b> 
+                            </a> 
+                        </li>
+                        <li>
+                            <a class="navigation__link" href="../../pages/other pages/ticketprices.html">
+                                <b>TICKET  PRICES </b>
+                            </a> 
+                        </li>
+                        <li>
+                            <a class="navigation__link" href="../../pages/shop/shop.html">
+                                <b>SHOP</b>
+                            </a> 
+                        </li>
+                        <li>
+                            <a class="navigation__link" href="../../pages/other pages/attractions.html">
+                                <b>ATTRACTIONS </b>
+                            </a> 
+                        </li>
+                        <li>
+                            <a class="navigation__link" href="../../pages/other pages/contact.html">
+                                <b>CONTACT </b> 
+                            </a> 
+                        </li>
+                    </ul>
 
-			<div class="visit-global">
-				<p>	Visit global1.com</p>
-			</div>	
-			
-			<div class="sign-in">
-				
-		<p><a href="../../pages/signup for booking/signup.html"> Sign In </a>| <a href="../signup for booking/create-an-account.html"> Create Account</a> | <i class="fa-solid fa-globe"></i> United states (English)</p>
-			</div>
-			
-		</div>
+                </nav>
+                <div>
+                    <button id = "btn-booknow">
+                        <b>BOOK NOW </b> 
+                    </button>
+                </div>
+            </div>
+        </header>
 
-<div class="header" >
-	<div id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a class="navigation__link" href="../../index.html">HOME</a>
-		 <a class="active" href="../../pages/other pages/home.html"> ABOUT</a>
-		 <a class="navigation__link" href="../../pages/other pages/events.html"> EVENTS  </a> 
-		<a class="navigation__link" href="../../pages/other pages/offer.html"> OFFERS  </a> 
-		  <a class="navigation__link" href="../../pages/other pages/ticketprices.html"> TICKET  PRICES </a> 
-		<a class="navigation__link" href="../../pages/shop/shop.html"> SHOP </a> 
-		 <a class="navigation__link" href="../../pages/other pages/attractions.html"> ATTRACTIONS </a> 
-		 <a class="navigation__link" href="../../pages/other pages/contact.html"> CONTACT </a>
-		<hr>
-		<a href="../signup for booking/signup.html">BOOK TICKETS</a>
-		<hr>
-		<a href="../../pages/footer other pages/safetyofvisitors.html">Safety of visitors</a>
-		<a href="../../pages/footer other pages/rulesandregulations.html">Rules & Regulations</a>
-		<a href="../../pages/footer other pages/greeninitiatives.html">Green Initiatives</a>
-		<a href="../../pages/footer other pages/csrinitiatives.html">CSR Initiatives</a>
-		<hr>
-		<a href="../../pages/signup for booking/signup.html">Sign In</a> 
-	  </div>
-	<div class="icon-bar">
-		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-	</div>
-<a href="../../index.html" >
-<img src="../../assets/images/globalfuncitylogo.png" class="header-logo" width="200px" alt="logo"/>
-</a>
-   	 <nav class="navbar">
-	 <ul>
-     <li> <a class="navigation__link" href="../../index.html"><b>HOME</b></a></a></li>   
-	 <li> <a class="navigation__link" href="../../pages/other pages/home.html"> <b>ABOUT</b> </a> </li>
-	 <li> <a class="navigation__link" href="../../pages/other pages/events.html"> <b>EVENTS </b> </a> </li>
-	 <li> <a class="active" href="../../pages/other pages/offer.html"> <b>OFFERS </b> </a> </li>
-	 <li> <a class="navigation__link" href="../../pages/other pages/ticketprices.html"> <b>TICKET  PRICES </b></a> </li>
-     <li> <a class="navigation__link" href="../../pages/shop/shop.html"><b>SHOP</b></a> </li>
-	 <li> <a class="navigation__link" href="../../pages/other pages/attractions.html"> <b>ATTRACTIONS </b></a> </li>
-	 <li> <a class="navigation__link" href="../../pages/other pages/contact.html"> <b>CONTACT </b> </a> </li>
-	 </ul>
+        <section class="offers">
 
-	 </nav>
-	 <div>
-	 	<a href="../../pages/other pages/booknow.html"> <button> <b>BOOK NOW </b> </button> </a>
-</div>
-</div>
-</header>
+            <!-- <div class="book">
+                <p>New Year at Global Fun City</p>
+                </div>
 
-<section class="offers">
+                <div class="newyear">
+                <img src="../../assets/images/newyear.jpg" class="new-year-photo-offer" alt="new-year-image"/>
+                <p>The new year party is one of the things that we all wait for every year, and one of the most sought-after venues
+                for such parties is Global Fun City. This New Year’s Eve, head to Global Fun City Resort and be part of the 
+                most amazing New Year party in town. It will be a fun-filled night with an exclusive DJ performance by DJ Montez from California with a gala dinner, 
+                unlimited cocktails and stunning fireworks. You can also find a kid's zone here, making it a
+                favourite place for people with children. The Package includes a night stay at the Resort with breakfast, a Fastrack ticket to
+                the Amusement park, and entry to the New year Celebration. You could join the party all night, or stay back for the night</p>
 
-<!-- <div class="book">
-    <p>New Year at Global Fun City</p>
-</div>
-
-<div class="newyear">
-    <img src="../../assets/images/newyear.jpg" class="new-year-photo-offer" alt="new-year-image"/>
-    <p>The new year party is one of the things that we all wait for every year, and one of the most sought-after venues
-     for such parties is Global Fun City. This New Year’s Eve, head to Global Fun City Resort and be part of the 
-    most amazing New Year party in town. It will be a fun-filled night with an exclusive DJ performance by DJ Montez from California with a gala dinner, 
-    unlimited cocktails and stunning fireworks. You can also find a kid's zone here, making it a
-     favourite place for people with children. The Package includes a night stay at the Resort with breakfast, a Fastrack ticket to
-     the Amusement park, and entry to the New year Celebration. You could join the party all night, or stay back for the night</p>
-
-
-<div class="instructions-for-offer">
-    <div class="con">
-    <p>New Year Celebration with Stay and Park Tickets</p>
-    <ul>
-        <li>Executive or Deluxe Room</li>
-        <li>Price: $800 + Taxes per Couple</li>
-    </ul>
+                <div class="instructions-for-offer">
+                <div class="con">
+                <p>New Year Celebration with Stay and Park Tickets</p>
+                <ul>
+                <li>Executive or Deluxe Room</li>
+                <li>Price: $800 + Taxes per Couple</li>
+                </ul>
         
-    <p>Inclusions</p>
-    <ul>  
-    <li>Stay for a couple in an Executive or Deluxe Room</li>
-    <li>New Year's Eve Celebration - including DJ</li>
-    <li>Gala Dinner and Unlimited Cocktails</li>
-    <li>Breakfast the next day</li>
-    </ul>
-    
+                <p>Inclusions</p>
+                <ul>  
+                <li>Stay for a couple in an Executive or Deluxe Room</li>
+                <li>New Year's Eve Celebration - including DJ</li>
+                <li>Gala Dinner and Unlimited Cocktails</li>
+                <li>Breakfast the next day</li>
+                </ul>
 
-    <p>Extras</p>
-    <ul>
-        <li>Child between the ages of 5 and 11 years - $500</li>
-        <li>Child 12 years & above and extra-person - $600</li>
-    </ul>
-    <p>For more details, reach out to us at +1 8608171080</p>
-</div>  
-</div>
+                <p>Extras</p>
+                <ul>
+                <li>Child between the ages of 5 and 11 years - $500</li>
+                <li>Child 12 years & above and extra-person - $600</li>
+                </ul>
+                <p>For more details, reach out to us at +1 8608171080</p>
+                </div>  
+                </div>
 
+                <a href="../../pages/other pages/booknow.html">
+                <button class="btn"> <b>BOOK NOW </b></button>
+                </a>
 
-<a href="../../pages/other pages/booknow.html">
-    <button class="btn"> <b>BOOK NOW </b></button>
-</a>
+                <div class="termsandconditions">    
+                <h2>Terms & Conditions</h2>
+                <ul>
+                <li>New Year Resort packages are only for couples and families.</li>
+                <li> This offer is available only on tickets booked on offers.globalfuncity.com</li>
+                <li>No separate bed will be provided for children under the age of 12.</li>
+                <li>This offer cannot be clubbed with any other offer.</li>
+                </ul>
+                </div>
+                </div> -->
+        </section>
 
-<div class="termsandconditions">    
-     <h2>Terms & Conditions</h2>
-    <ul>
-        <li>New Year Resort packages are only for couples and families.</li>
-        <li> This offer is available only on tickets booked on offers.globalfuncity.com</li>
-        <li>No separate bed will be provided for children under the age of 12.</li>
-        <li>This offer cannot be clubbed with any other offer.</li>
-    </ul>
-</div>
-</div> -->
-</section>
+        <footer>
+            <div class="logo">
+                <img src="../../assets/images/globalfuncitylogo.png" class="footer-logo" alt="logo">
+            </div>
 
+            <div class="address-open-hours-contact">	
+                <div class="address">
+                    <h3>Location</h3>
+                    <p>11113 W Baldwin RD, Monrovia, MD 21770, United States of America.</p>
+                </div>
 
-<footer>
-    <div class="logo">
-		<img src="../../assets/images/globalfuncitylogo.png" class="footer-logo" alt="logo"/>
-	</div>
+                <div class="open-hours">
+                    <h3>Open Hours</h3>
+                    <p>
+                        Weekdays: 09.30 am - 06:00 pm.<br>
+                        Weekends and Holidays: 09.30 am - 06.30 pm.
+                    </p>
+                </div>
 
+                <div class="contact-for-more">
+                    <h3>Contact</h3>
+                    <p>+1 860 817 1080</p>
+                    <p>info@globalfuncity.in</p>
+                </div>
+            </div>
 
-<div class="address-open-hours-contact">	
-<div class="address">
-	<h3>Location</h3>
-	<p>11113 W Baldwin RD, Monrovia, MD 21770, United States of America.</p>
-</div>
+            <div class="navbar-footer">
+                <ul>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/home.html"> ABOUT US </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/events.html"> EVENTS  </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/offer.html"> OFFERS  </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/ticketprices.html"> TICKET  PRICES </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/shop/shop.html"> SHOP </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/attractions.html"> ATTRACTIONS </a> 
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="../../pages/other pages/contact.html"> CONTACT  </a> 
+                    </li>
+                </ul>
 
-<div class="open-hours">
-	<h3>Open Hours</h3>
-	<p>
-		Weekdays: 09.30 am - 06:00 pm.<br>
-		Weekends and Holidays: 09.30 am - 06.30 pm.
-	</p>
-</div>
+            </div>
 
-<div class="contact-for-more">
-	<h3>Contact</h3>
-	<p>+1 860 817 1080</p>
-	<p>info@globalfuncity.in</p>
-</div>
-</div>
+            <div class="other-navbar-footer">
+                <ul>
+                    <li>
+                        <a class="other-navigation-link" href="../../pages/footer other pages/privacypolicy.html">PRIVACY POLICY</a>
+                    </li>
+                    <li>
+                        <a class="other-navigation-link" href="../../pages/footer other pages/safetyofvisitors.html">SAFETY AND HYGIENE</a>
+                    </li>
+                    <li>
+                        <a class="other-navigation-link" href="../../pages/footer other pages/rulesandregulations.html">RULES & REGULTIONS</a>
+                    </li>
+                    <li>
+                        <a class="other-navigation-link" href="../../pages/footer other pages/greeninitiatives.html">GREEN INITIATIVES</a>
+                    </li>
+                    <li>
+                        <a class="other-navigation-link" href="../../pages/footer other pages/csrinitiatives.html">CSR INITIATIVES</a>
+                    </li>
+                </ul>
+            </div>
 
+            <div class="social-medias">
+                <div class="facebook">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
 
+                <div class="twitter">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
 
-
-
-
-    <div class="navbar-footer">
-		<ul>
-			<li> <a class="navigation__link" href="../../pages/other pages/home.html"> ABOUT US </a> </li>
-			<li> <a class="navigation__link" href="../../pages/other pages/events.html"> EVENTS  </a> </li>
-			<li> <a class="navigation__link" href="../../pages/other pages/offer.html"> OFFERS  </a> </li>
-			<li> <a class="navigation__link" href="../../pages/other pages/ticketprices.html"> TICKET  PRICES </a> </li>
-			<li> <a class="navigation__link" href="../../pages/shop/shop.html"> SHOP </a> </li>
-			<li> <a class="navigation__link" href="../../pages/other pages/attractions.html"> ATTRACTIONS </a> </li>
-			<li> <a class="navigation__link" href="../../pages/other pages/contact.html"> CONTACT  </a> </li>
-		</ul>
-
-
-	</div>
-
-<div class="other-navbar-footer">
-	<ul>
-		<li> <a class="other-navigation-link" href="../../pages/other pages/privacypolicy.html">PRIVACY POLICY</a></li>
-        <li> <a class="other-navigation-link" href="../../pages/other pages/safetyofvisitors.html">SAFETY AND HYGIENE</a></li>
-		<li> <a class="other-navigation-link" href="../../pages/other pages/rulesandregulations.html">RULES & REGULTIONS</a></li>
-		<li> <a class="other-navigation-link" href="../../pages/other pages/greeninitiatives.html">GREEN INITIATIVES</a></li>
-		<li> <a class="other-navigation-link" href="../../pages/other pages/csrinitiatives.html">CSR INITIATIVES</a></li>
-	</ul>
-</div>
-
-	<div class="social-medias">
-		<div class="facebook">
-		<a href="#"><i class="fab fa-facebook-f"></i></a>
-		</div>
-
-		<div class="twitter">
-	    <a href="#"><i class="fab fa-twitter"></i></a>
-		</div>
-
-		<div class="pinterest">
-		<a href="#"><i class="fab fa-pinterest"></i></a>
-		</div>
+                <div class="pinterest">
+                    <a href="#">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                </div>
 	
-		<div class="instagram">
-	    <a href="#"><i class="fab fa-instagram"></i></a>
-		</div>
+                <div class="instagram">
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
 
-		<div class="youtube">
-		<a href="#"><i class="fab fa-youtube"></i></a>
-		</div>
-	
-
-		
+                <div class="youtube">
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
 	    
-	</div>
-	<hr>
-	<div class="copyright">
-	<p>Global Fun City &#169; 2022. All rights Reserved.
-        <br>Site designed by Vignesh.in</p>
-	</div>
-</footer>
+            </div>
+            <hr>
+            <div class="copyright">
+                <p>Global Fun City &#169; 2022. All rights Reserved.
+                    <br>Site designed by Vignesh.in
+                </p>
+            </div>
+        </footer>
 
-<script>
+        <script>
+// Data get from Url Params
+
+const OfferUniqueID = new URLSearchParams(window.location.search).get(
+  "offerslist"
+);
+
+const offer_details = JSON.parse(localStorage.getItem("offer_details"));
+
+const getOfferData = offer_details.find(
+  (data) => data.offer_uuid === OfferUniqueID
+);
 
 // Create a div element with class name "book"
 const bookDiv = document.createElement("div");
@@ -237,7 +290,7 @@ bookDiv.className = "book";
 
 // Create a paragraph element and add it to the bookDiv
 const bookPara = document.createElement("p");
-bookPara.textContent = "New Year at Global Fun City";
+bookPara.textContent = getOfferData.offer_name;
 bookDiv.appendChild(bookPara);
 
 // Create a div element with class name "newyear"
@@ -246,14 +299,14 @@ newYearDiv.className = "newyear";
 
 // Create an image element and add it to the newYearDiv
 const newYearImg = document.createElement("img");
-newYearImg.src = "../../assets/images/newyear.jpg";
-newYearImg.alt = "new-year-image";
+newYearImg.src = getOfferData.offer_image;
+newYearImg.alt = getOfferData.offer_name;
 newYearImg.className = "new-year-photo-offer";
 newYearDiv.appendChild(newYearImg);
 
 // Create a paragraph element and add it to the newYearDiv
 const newYearPara = document.createElement("p");
-newYearPara.textContent = "The new year party is one of the things that we all wait for every year, and one of the most sought-after venues for such parties is Global Fun City. This New Year’s Eve, head to Global Fun City Resort and be part of the most amazing New Year party in town. It will be a fun-filled night with an exclusive DJ performance by DJ Montez from California with a gala dinner, unlimited cocktails and stunning fireworks. You can also find a kid's zone here, making it a favourite place for people with children. The Package includes a night stay at the Resort with breakfast, a Fastrack ticket to the Amusement park, and entry to the New year Celebration. You could join the party all night, or stay back for the night";
+newYearPara.textContent = getOfferData.offer_about;
 newYearDiv.appendChild(newYearPara);
 
 // Create a div element with class name "instructions-for-offer"
@@ -268,7 +321,7 @@ instructionsDiv.appendChild(conDiv);
 
 // Create a paragraph element and add it to the conDiv
 const conPara = document.createElement("p");
-conPara.textContent = "New Year Celebration with Stay and Park Tickets";
+conPara.textContent = "Book your offer & Enjoy!";
 conDiv.appendChild(conPara);
 
 // Create an unordered list and add it to the conDiv
@@ -277,21 +330,20 @@ conDiv.appendChild(conList);
 
 // Create list items and add them to the conList
 const conListItem1 = document.createElement("li");
-conListItem1.textContent = "Executive or Deluxe Room";
+conListItem1.textContent = getOfferData.offer_room;
 conList.appendChild(conListItem1);
 
 const conListItem2 = document.createElement("li");
-conListItem2.textContent = "Price: $800 + Taxes per Couple";
+conListItem2.textContent = getOfferData.offer_price_for_children;
 conList.appendChild(conListItem2);
 
 const conListItem3 = document.createElement("li");
-conListItem3.textContent = "Child between the ages of 5 and 11 years - $500";
+conListItem3.textContent = getOfferData.offer_price_for_adult;
 conList.appendChild(conListItem3);
 
-const conListItem4 = document.createElement("li");
-conListItem4.textContent = "Child 12 years & above and extra-person - $600 ";
-conList.appendChild(conListItem4);
-
+// const conListItem4 = document.createElement("li");
+// conListItem4.textContent = "Child 12 years & above and extra-person - $600 ";
+// conList.appendChild(conListItem4);
 
 // Create a paragraph element and add it to the conDiv
 const conInclusionsPara = document.createElement("p");
@@ -304,20 +356,20 @@ conDiv.appendChild(conInclusionsList);
 
 // Create list items and add them to the conInclusionsList
 const conInclusionsListItem1 = document.createElement("li");
-conInclusionsListItem1.textContent = "Stay for a couple in an Executive or Deluxe Room";
+conInclusionsListItem1.textContent = getOfferData.offer_inclusion1;
 conInclusionsList.appendChild(conInclusionsListItem1);
 
 const conInclusionsListItem2 = document.createElement("li");
-conInclusionsListItem2.textContent = "New Year's Eve Celebration - including DJ";
+conInclusionsListItem2.textContent = getOfferData.offer_inclusion2;
 conInclusionsList.appendChild(conInclusionsListItem2);
 
 const conInclusionsListItem3 = document.createElement("li");
-conInclusionsListItem3.textContent = "Gala Dinner and Unlimited Cock";
+conInclusionsListItem3.textContent = "Breakfast free for the next day";
 conInclusionsList.appendChild(conInclusionsListItem3);
 
-const conInclusionsListItem4 = document.createElement("li");
-conInclusionsListItem4.textContent = "Breakfast the next day";
-conInclusionsList.appendChild(conInclusionsListItem4);
+// const conInclusionsListItem4 = document.createElement("li");
+// conInclusionsListItem4.textContent = "Breakfast free for the next day";
+// conInclusionsList.appendChild(conInclusionsListItem4);
 
 const paraDetails = document.createElement("p");
 paraDetails.textContent = "For more details, reach out to us at +1 8608171080";
@@ -325,15 +377,14 @@ conDiv.append(paraDetails);
 
 //A tag from link
 const anchor = document.createElement("a");
-anchor.href = "../../pages/other pages/booknow.html";
-newYearDiv.appendChild(anchor)
-
+anchor.href = "";
+newYearDiv.appendChild(anchor);
 
 //Button to book now
 const buttonBook = document.createElement("button");
 buttonBook.className = "btn";
 buttonBook.textContent = "BOOK NOW";
-anchor.append(buttonBook)
+anchor.append(buttonBook);
 
 //Div for terms and conditions
 const termsDiv = document.createElement("div");
@@ -348,22 +399,53 @@ const Termsul = document.createElement("ul");
 termsDiv.appendChild(Termsul);
 
 const Termsli1 = document.createElement("li");
-Termsli1.textContent = "New Year Resort packages are only for couples and families."
+Termsli1.textContent = getOfferData.terms_and_condition1;
 Termsul.appendChild(Termsli1);
 
+const Termsli11 = document.createElement("li");
+Termsli11.textContent = getOfferData.terms_and_conditions2;
+Termsul.appendChild(Termsli11);
+
 const Termsli2 = document.createElement("li");
-Termsli2.textContent = "This offer is available only on tickets booked on offers.globalfuncity.com";
+Termsli2.textContent =
+  "This offer is available only on tickets booked on offers.globalfuncity.com";
 Termsul.appendChild(Termsli2);
 
 const Termsli3 = document.createElement("li");
 Termsli3.textContent = "This offer cannot be clubbed with any other offer.";
 Termsul.appendChild(Termsli3);
 
+document.querySelector("section.offers").append(bookDiv, newYearDiv);
 
-document.querySelector("section.offers").append(bookDiv, newYearDiv );
+//Alert in booknow button in offer:
+// let user_id = JSON.parse(localStorage.getItem("unique_id"));
 
+// let existing_user = JSON.parse(localStorage.getItem("unique_id"));
 
+// let user_list = JSON.parse(localStorage.getItem("user_list"));
+
+// let existing = user_list.length &&
+// 			   JSON.parse(localStorage.getItem("user_list")).some(data => data.email === existing_user)
+
+// if (!existing) {
+
+// 	alert("You are not logged in. Please login to continue!")
+
+// }
+// else{
+// 	window.location.href = "../../pages/other pages/booknow.html"
+// }
+
+// btnWishlist.addEventListener("click", function () {
+//   if (bookingUser) {
+//     window.location.href = "../../pages/shop/wishlist.html";
+//   } else {
+//     alert("A reminder to make sure you are not logged in");
+//   }
+// });
 </script>
 
-</body>
+        <script src="../../js/header.js"></script>
+
+    </body>
 </html>
